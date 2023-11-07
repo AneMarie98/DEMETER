@@ -9,3 +9,6 @@ Pagine da creare:
 - Calendario: [Nota: hover con cursore]
 - News (NOTA: deve essere aggiunta anche sezione in HOME)
 - Segnalazioni: _FORM_ 
+
+## MILESTONES
+1. HTML: creazione degli scheletri con HTML + TESTI
