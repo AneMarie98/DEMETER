@@ -1,6 +1,10 @@
 # DEMETER
 ## NOTE
 
+### Server Discord:
+ 
+ [DEMETER](https://discord.gg/ErnG4NVh)
+
 ### Pagine da creare:
 - HOME: descrizione dell'azienda
 - Dove lo butto: pagina informativa sul riciclo
