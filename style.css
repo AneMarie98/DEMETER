@@ -39,7 +39,7 @@ header{
     border-radius: 3px;
 }
 
-.navigationHelp{
+.navigationhelp{
     position: absolute;
     text-indent: -999em;
 }
@@ -58,7 +58,7 @@ a:visited{
     color: var(--visitedLinkColor);
 }
 
-header #logo{
+header > h1{
     float: left;
     width: 20%;
     margin-right: 0em;
