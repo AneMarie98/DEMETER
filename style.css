@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --headerBgColor: rgb(156, 191, 165);/*1E352F*/
+    --headerTxtColor: #023723;
+    --bgColor: #f5fbe4;/*f5fbe4*/
+    --txtColor:rgb(11, 11, 11); /*3D3D00*/
+    --footerBgColor: #f5fbe4;/*#1E352F*/
+    --footerTxtColor: rgb(11, 11, 11); /*#fffefb*/
+    --linkColor: #7c0048;/*F49720*/
+    --visitedLinkColor:#3f3401;
+    --flagColor: rgb(218,103,66);
+    --font-body-family: "Futura", sans-serif;
+}
+
+html{
+    font-size: 100%;
+    font-family: var(--font-body-family);
+    line-height: 1.5em;
+    margin: auto;
+    background-image: url(./images/bg.png);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bgColor);
+}
+
+header{
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+    padding: 1em;
+    border-bottom: 3px solid var(--footerTxtColor); 
+    border-radius: 3px;
+}
+
+.navigationHelp{
+    position: absolute;
+    text-indent: -999em;
+}
+
+ header nav #menu{
+    margin-left: 10%;
+    text-align: right;
+    font-size: 1em;
+}
+
+a:link{
+    color: var(--linkColor);
+}
+
+a:visited{
+    color: var(--visitedLinkColor);
+}
+
+header #logo{
+    float: left;
+    width: 20%;
+    margin-right: 0em;
+    font-size: 2.3em;
+}
+
+#menu ul{
+    margin-left: 10%;
+    text-align: right;
+    font-size: 1em;
+    padding: 1em;
+    list-style-type: none;
+}
+
+#menu ul li{
+    text-align: center;
+    display: inline-block;
+    width: 13%;
+    margin: auto;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav #breadcrumb{
+    padding: 1em;
+    margin: auto;
+}
+
+
+main{
+    background-color: var(--bgColor);
+    color: var(--txtColor);
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+#wrapper{
+    display: grid; 
+    grid-template-columns: 1fr 1fr  1fr; 
+    grid-gap: 2em; 
+    grid-template-areas: "t t i" ;
+}
+
+#wrapper > .left{
+    grid-area: t;
+}
+
+#wrapper > .right{
+    grid-area: i;
+    border-radius: 10px;
+    background-image: url(./img/designImg_1_H.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer{
+    background-color: var(--footerBgColor);
+    color: var(--footerTxtColor);
+    padding: 1.0em;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 0px;
+    width: 80%;
+    border-top: 3px solid var(--footerTxtColor); 
+    border-radius: 3px;
+}
+
+#socialList{
+    max-width: 1024px;
+    margin: auto;
+    padding: 1em;
+    list-style-type: none;
+    text-align: center;
+}
+
+#socialList li{
+    display: inline-block;
+    width: 15%;
+    margin: 0 0.5em;
+    
+}
+
+
