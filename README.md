@@ -12,12 +12,26 @@
 - Servizi: (verbose)
 - Calendario: [Nota: hover con cursore]
 - News (NOTA: deve essere aggiunta anche sezione in HOME)
-- Segnalazioni: _FORM_ 
+- Segnalazioni: _FORM_
+- Accedi / Profilo
 
 ### In corso d'opera
 * Header delle pagine non ha senso che lo facciamo tutti, anche perche deve essere uguale, quindi tanto vale che lo faccia uno solo. Lo facciamo come quello del LAB PTN
 * Titolo delle pagine (visualizzato scheda browser): DEMETER  
 * Lingua ITALIANO per la parola DEMETER
+* Nomeclatura: id e classi di servizi.html saranno "servizi_...", di news.html saranno "news_...", di doveLoButto.html saranno "dove_..."
+* Dimensioni schermi, punti di rottura: 0-768px , 769-1200px
+* COLORI:
+  * --headerBgColor: #9cbfa5;
+  * --headerTxtColor:#000000;
+  * --bgColor: #f5fbe4;
+  * --txtColor:#0b0b0b; 
+  * --footerBgColor: #f5fbe4;
+  *  --footerTxtColor: #0b0b0b; 
+  *  --linkColor: #3f3401;
+  *  --visitedLinkColor:#7c0048;
+  *  --flagColor: rgb(218,103,66);
+  * --font-body-family: "Futura", sans-serif;
 
 ### Appunti presi al seminario sull'accessibilità:
 
@@ -28,3 +42,4 @@
 
 ## MILESTONES
 1. HTML: creazione degli scheletri con HTML + TESTI
+2. CSS: dopo la decisione di uno stile comune, applicarlo alle pagine create
