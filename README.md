@@ -5,6 +5,14 @@
  
  [DEMETER](https://discord.gg/ErnG4NVh)
 
+
+### Relazione:
+ 
+ [DEMETER](https://docs.google.com/document/d/1VeiM7UjxuieDsXCvlyHot3A8Q-D6VrHWb0FopTJx--E/edit?usp=sharing)
+
+
+
+
 ### Pagine da creare:
 - HOME: descrizione dell'azienda
 - Dove lo butto: pagina informativa sul riciclo
