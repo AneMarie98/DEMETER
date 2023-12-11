@@ -1,34 +1,23 @@
-<!DOCTYPE html>
-<html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <title>Demeter</title>
-        <meta name="keywords" content="Demeter, Raccolta, Rifiuti">
-        <meta name="description" content="Servizio completo di trattamento dei rifiuti per ogni tipo di intervento. Garantiamo lavori rapidi, convenienti e a norma di legge">
-        <link rel="stylesheet" href="style.css" media="screen">
-    </head>
-    <body>
-        <header>
-            <h1>Demeter</h1>
-        
-            <nav aria-label="Aiuti alla navigazione" class="navigationhelp">
-                <a href="#content">Vai al contenuto</a>
-            </nav>
-            <nav id="menu">
-                <ul>
-                    <li><a href="index.html"><span lang="en">Home</span></a></li>
-                    <li><a href="calendario.html">Calendario</a></li>
-                    <li><a href="servizi.html">Servizi</a></li>
-                    <li><a href="doveLoButto.html">Dove lo butto?</a></li>
-                    <li><span lang="en">News</span></li>
-                    <li><a href="login.php">Accedi</a></li>
-                </ul>
-            </nav>
-        <nav id="breadcrumb">
-            <p>Ti trovi in: <a lang="en" href="./index.html">Home</a> &gt; &gt; <span lang="en">News</span></p>
-        </nav>
-    </header>
-    <main id="content" class="news">
+<?php 
+include("functions.php") ;
+$html = file_get_contents("header.html"); // Leggi il contenuto dell'HTML
+
+$head_keywords = "Demeter, Raccolta, Rifiuti"; // Valore da assegnare a {head_keywords}
+$html = str_replace("{head_keywords}", $head_keywords, $html);
+
+$head_description = "Servizio completo di trattamento dei rifiuti per ogni tipo di intervento. Garantiamo lavori rapidi, convenienti e a norma di legge"; // Valore da assegnare a {head_description}
+$html = str_replace("{head_description}", $head_description, $html);
+
+removeLinkFromNavItem($html, "news"); //  funzione per rimuovere link circolari
+
+$breadcrumb_path = "&gt; &gt; <span lang=\"en\">News</span>"; // Valore da assegnare a {breadcrumb_path}
+$html = str_replace("{breadcrumb_path}", $breadcrumb_path, $html);
+
+echo $html; 
+?>
+
+
+<main id="content" class="news">
         <h2>Ultime <span lang="en">news</span></h2>   
         <article>
             <h3> Emergenza alluvione - Demeter invia uomini e mezzi per lo sgombero e la pulizia nei Comuni alluvionati </h3>
@@ -64,17 +53,5 @@
                 </p>
         </article> 
     </main>
-    <footer>
-        <h3>Segui i nostri canali social</h3>
-        <p>
-            Seguici su <span lang="en">Facebook</span>, <span lang="en">Instagram</span> e <span lang="en">X</span> per rimanere
-            aggiornato su tutte le iniziative e i progetti futuri. <span>Per un mondo più libero e verde.</span>
-        </p>
-        <ul id="socialList">
-            <li id="facebook"><a href=""><span lang="en">Facebook</span></a></li>
-            <li id="instagram"><a href=""><span lang="en">Instagram</span></a></li>
-            <li id="x"><a href=""><span lang="en">X</span></a></li>
-        </ul>
-    </footer>
-</body>
-</html>
+
+<?php echo file_get_contents('footer.html'); ?>
