@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
@@ -159,3 +160,236 @@ footer{
     margin-bottom: 0.5em;
     background-color: var(--articleBgColor);
 }
+
+
+/* SERVIZI */
+
+#servizi_content.servizi h2 {
+    text-align: center;
+    margin-top: 1em;
+    
+
+}
+
+#servizi_section1 h3{
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#servizi_wrapper {
+    display: grid; 
+    grid-template-columns: 1fr 1fr  1fr; 
+    grid-gap: 2em; 
+    grid-template-areas: "t t i" ;
+
+    
+}
+
+#servizi_wrapper > .left{
+    grid-area: t;
+    max-width: 80%;  
+    margin-bottom: 10em;
+    margin-top: 2em;
+
+
+    border: 2px solid var(--headerTxtColor); 
+    border-radius: 10px; 
+    padding: 20px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    background-color: #c9dec4;
+}
+
+#servizi_wrapper > .right{
+    grid-area: i;
+    border-radius: 10px;
+    background-image: url(../DEMETER/img/sec1.jpg);
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+
+} 
+
+
+
+
+#servizi_section2 div.servizi_container.servizi_section2Content{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+#servizi_section2 div.servizi_serviceDescription{
+    flex-grow: 0;
+    flex-shrink: 1;
+    text-align: left;
+    width: 70%;
+}
+
+ #servizi_section2  div.servizi_serviceDescription div.sec2{
+    background-image: url(../DEMETER/img/sec22.jpg);
+    display: flex;
+    height: 570px;
+    width: 390px;  
+    margin-top: 2em;
+    background-size: cover;
+    border-radius: 10px;
+
+} 
+
+#servizi_section2 div.servizi_serviceContainer{
+    width: 50%;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+#servizi_section2 div.servizi_serviceBoxContainer{
+    display:flex;
+    align-self: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding: 2em;
+    padding-right: 0;
+
+}
+
+#servizi_section2 div.servizi_serviceBoxContainer h3{
+    padding: 1em;
+    font-size: 100%;
+    max-width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #c9dec4;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid var(--headerTxtColor);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-self: flex-end;
+    width: 100%; 
+}
+
+#servizi_section2 div.servizi_serviceBoxContainer h3 a{
+
+
+    background-color:  #c9dec4 ;
+    color: var(--linkColor);
+    text-align: center;
+    padding-left: 0;
+    border-radius: 10px;
+    padding: 0.5em; 
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    line-height: 1.5em;
+}
+
+#servizi_section2 div.servizi_serviceBoxContainer h3 a:visited{
+    color: var(--visitedLinkColor);
+    background-color: #c9dec4;
+}
+
+
+
+#servizi_section3{
+    text-align: center;
+    margin-top: 4em;
+
+}
+
+
+
+#servizi_section3 h3,p {
+    margin-bottom: 2em;
+}
+
+
+#servizi_section4 {
+
+    text-align: center;
+    margin-bottom: 5em;
+    margin-top: 5em;
+}
+#servizi_section4 h3{
+    text-align: center;
+    margin-bottom: 2em;
+
+}
+
+#servizi_section4 div.servizi_reasonContainer{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+
+}
+
+#servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer{
+    display: flex;
+    padding: 1em;
+    
+
+
+}
+
+#servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer div.servizi_reasonContent{
+
+    background-color:#c9dec4 ;
+    color: var(--headerTxtColor);
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 auto;
+    width: 300px;
+    padding: 2em;
+    padding-bottom: 0;
+}
+
+#servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer h4{
+    text-align: center;
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
+
+}
+#servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer p{
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
