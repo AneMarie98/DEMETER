@@ -5,18 +5,16 @@
     <title>Demeter</title>
     <meta name="keywords" content="Impianti,Smaltimento,Stoccaggio,Depurazione,Recupero, Raccolta,Industrie,Liquidi,Aziende">
     <meta name="description" content="Servizio completo per lo smaltimento dei rifiuti attraverso impianti di depurazione.Servizio svolto in tempi rapidi con personali qualificato.">
+    <link rel="stylesheet" href="../style.css" media="screen">
     
 </head>
 <body>
 
-    <!-- -------------INIZIO HEADER------------------- -->
-    <header>
+<header>
         <h1>Demeter</h1>
-    </header>
-    <!-- -------------FINE HEADER--------------------- -->
-    <a href="#content">Vai al contenuto</a>
-
-    <!-- -------------INIZIO MENU DI NAVIGAZIONE------ -->
+        <nav aria-label="Aiuti alla navigazione" class="navigationhelp">
+            <a href="#content">Vai al contenuto</a>
+        </nav>
     <nav id="menu">
         <ul>
             <li><a href="../index.html"><span lang="en">Home</span></a></li>
@@ -27,13 +25,17 @@
             <li><a href="../login.php">Accedi</a></li>
         </ul>
     </nav>
-    <nav id="breadcrum">
+
+    
+    <nav id="breadcrumb">
         <p>Ti trovi in: <a href = "../index.html" lang="en">Home</a> &gt; &gt; <a href="../servizi.html" lang="it">Servizi</a> &gt; &gt; Impianti di smaltimento e depurazione</p>
     </nav>
-    <!-- ------------FINE MENU DI NAVIGAZIONE--------- -->
+
+</header>
+
 
     <!-- ----------------INIZIO MAIN------------------ -->
-    <main id="content">
+    <main id="impianti_content" >
         <h2>Impianti</h2>
 
         <p><strong>Demeter</strong> opera nel campo della <strong>raccolta</strong> e dello <strong>smaltimento rifiuti</strong> con i suoi <strong>impianti di smaltimento e depurazione</strong>.</p>
@@ -41,12 +43,12 @@
             dallo stoccaggio di rifiuti speciali, alla cernita di rifiuti riciclabili, allo smaltimento di rifiuti solidi e liquidi, alla depurazione delle acque. 
         </p>
 
-        <!-- Faccio un elenco cliccabile degli impianti presenti, ancoro ogni impianto alla section interessata tramite gli id -->
+        
 
         <h3>Scegli l'impianto che si adatta alle tue esigenze</h3>
 
-        <section class="menu-impianti">
-            <div class="container">
+        <section class="impianti_menu-impianti">
+            <div class="impianti_container">
                 <ul>
                     <li><a class="button" href="#impianto1">Stoccaggio provvisorio</a></li>
                     <li><a class="button" href="#impianto2">Selezione e cernita rifiuti</a></li>
@@ -56,15 +58,15 @@
             </div>
         </section>
 
-        <!--Creo una section per ogni impianto -->
 
-        <section class="impianti">
+
+        <section class="impianti_impianti">
             <a href="../servizi/impianti.html"></a>
-            <div class="impianti-container">
+            <div class="impianti_impianti-container">
                 <!-- -----IMPIANTO 1----- -->
                 <div id="impianto1">
                     <h2>Stoccaggio provvisorio</h2>
-                    <div class="impianto-content">
+                    <div class="impianti_impianto-content">
 
                         <p>La ditta <strong>Demeter</strong> effettua stoccaggio provvisorio per <strong>rifiuti solidi speciali</strong> e <strong>assimilabili</strong>, pericolosi e non pericolosi. 
                             L'impianto di stoccaggio provvisorio è dotato di un trituratore per l'adeguamento volumetrico e ampi spazi per 
@@ -95,13 +97,14 @@
 
 
                     </div>
+                    <div class="impianti_img1"></div>
                 </div>
                 <!-- ---FINE IMPIANTO 1--- -->
 
                 <!-- -------IMPIANTO 2---- -->
                 <div id="impianto2">
                     <h2>Selezione e cernita rifiuti</h2>
-                    <div class="impianto-content">
+                    <div class="impianti_impianto-content">
                         <p>La ditta Demeter è specializzata anche nel recupero di rifiuti con proprio impianto di <strong>selezione</strong> e <strong>cernita</strong>. 
                             L'impianto è attrezzato con pressa imballatrice per l'adeguamento volumetrico, compattatori, box,
                             e trituratore oltre a persone formate e addestrate impiegate a tali operazioni.
@@ -136,7 +139,7 @@
                 <!-- -------IMPIANTO 3---- -->
                 <div id="impianto3">
                     <h2>Inertizzazione rifiuti pericolosi</h2>
-                    <div class="impianto-content">
+                    <div class="impianti_impianto-content">
                         
                         <h3>Messa in sicurezza di rifiuti pericolosi</h3>
                         <p>E' possibile rivolgersi a <strong>Demeter</strong> per interventi di <strong>inertizzazione dei rifiuti industriali</strong>.</p>
@@ -168,7 +171,7 @@
                 <!-- -----IMPIANTO 4----- -->
                 <div id="impianto4">
                     <h2>Depurazione acque</h2>
-                    <div class="impianto-content">
+                    <div class="impianti_impianto-content">
                         
                         <h3>Acque pulite e depurate</h3>
                         <p>L’azienda <strong>Demeter</strong> offre interventi di <strong>trattamento delle acque reflue industriali</strong>. </p>
@@ -207,6 +210,19 @@
 
     <!-- -------------------INIZIO FOOTER ------------ -->
 
-    <footer></footer>
+    
+    <footer>
+        <h3>Segui i nostri canali social</h3>
+        <p>
+                Seguici su <span lang="en">Facebook</span>, <span lang="en">Instagram</span> e <span lang="en">X</span> per rimanere
+                aggiornato su tutte le iniziative e i progetti futuri. <span>Per un mondo più libero e verde.</span>
+        </p>
+        <ul id="socialList">
+            <li id="facebook"><a href=""><span lang="en">Facebook</span></a></li>
+            <li id="instagram"><a href=""><span lang="en">Instagram</span></a></li>
+            <li id="x"><a href=""><span lang="en">X</span></a></li>
+        </ul>
+    </footer>
+
 
     <!-- ----------------------FINE FOOTER ----------- -->
