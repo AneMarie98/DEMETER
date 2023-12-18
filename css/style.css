@@ -23,7 +23,7 @@ html{
     font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
-    background-image: url(./images/bg.png);
+    background-image: url(../images/bg.png);
 }
 
 body{
@@ -111,7 +111,7 @@ main{
 #wrapper > .right{
     grid-area: i;
     border-radius: 10px;
-    background-image: url(./img/designImg_1_H.jpg);
+    background-image: url(../img/designImg_1_H.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -203,7 +203,7 @@ footer{
 #servizi_wrapper > .right{
     grid-area: i;
     border-radius: 10px;
-    background-image: url(../DEMETER/img/sec1.jpg);
+    background-image: url(../img/sec1.jpg);
     background-size: cover;
 
     background-repeat: no-repeat;
@@ -232,7 +232,7 @@ footer{
 }
 
  #servizi_section2  div.servizi_serviceDescription div.sec2{
-    background-image: url(../DEMETER/img/sec22.jpg);
+    background-image: url(../img/sec22.jpg);
     display: flex;
     height: 570px;
     width: 390px;  
