@@ -51,3 +51,4 @@
 ## MILESTONES
 1. HTML: creazione degli scheletri con HTML + TESTI
 2. CSS: dopo la decisione di uno stile comune, applicarlo alle pagine create
+3. RELAZIONE: aggiornamento progressivo della relazione 
