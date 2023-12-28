@@ -5,7 +5,7 @@
 }
 
 :root{
-    --headerBgColor: #094e1a;
+    --headerBgColor: #9cbfa5;
     --headerTxtColor:#000000;
     --bgColor: #f5fbe4;
     --txtColor:#0b0b0b; 
@@ -16,6 +16,7 @@
     --flagColor: rgb(218,103,66);
     --font-body-family: "Futura", sans-serif;
     --articleBgColor: #c9dec4;
+    --headerHeigth: 7em;
 }
 
 html{
@@ -39,6 +40,13 @@ header{
     padding: 1em;
     border-bottom: 3px solid var(--headerTxtColor); 
     border-radius: 3px;
+
+    height: var(--headerHeigth);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 .navigationhelp{
@@ -46,11 +54,6 @@ header{
     text-indent: -999em;
 }
 
- header nav #menu{
-    margin-left: 10%;
-    text-align: right;
-    font-size: 1em;
-}
 
 a:link{
     color: var(--linkColor);
@@ -60,33 +63,88 @@ a:visited{
     color: var(--visitedLinkColor);
 }
 
-header > h1{
+header h1{
+    order: 1;
     float: left;
     width: 20%;
     margin-right: 0em;
     font-size: 2.3em;
 }
 
-#menu ul{
-    margin-left: 10%;
-    text-align: right;
-    font-size: 1em;
-    padding: 1em;
-    list-style-type: none;
-}
 
-#menu ul li{
-    text-align: center;
-    display: inline-block;
-    width: 13%;
-    margin: auto;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-nav #breadcrumb{
+header  #breadcrumb{
+    order: 2;
     padding: 1em;
     margin: auto;
+   
+}
+/*icona menu hamburger*/
+header #menu-toggle{
+    display: none; /*ceckbox*/
+}
+
+header .mobile-menu::before,
+header .mobile-menu,
+header .mobile-menu::after{
+    order: 3;
+    margin-right: 1.5em;
+    display: block;
+    background-color: var(--headerTxtColor);
+    height: 0.3em;
+    width: 2.5em;
+    border-radius: 0.25em;
+}
+
+header .mobile-menu::before{
+    content: '';
+    margin-top: -0.8em;
+}
+
+header .mobile-menu::after {
+    content: '';
+    margin-top: 1.3em;
+}
+
+
+#menu {
+    position: absolute;
+    top: 0;
+    margin-top: var(--headerHeigth);
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+#menu {
+    display: none;
+}*/
+
+#menu-toggle:checked + .mobile-menu + #menu {
+    display: none;
+}
+
+#menu-toggle:not(:checked)  #menu {
+    display: block;
+}
+
+main{
+    margin-top: 30em; /*tmp*/
+}
+
+header #menu li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.6em 0;
+    width: 100%;
+    color: var(--headerTxtColor);
+    background-color: var(--headerBgColor);
+    }
+    
+#menu  li:not(:last-child) {
+border-bottom: 0.1em solid #444;
 }
 
 main{
@@ -163,7 +221,7 @@ footer{
 
 
 /* SERVIZI */
-
+/*
 #servizi_content.servizi h2 {
     text-align: center;
     margin-top: 1em;
@@ -377,9 +435,9 @@ footer{
     text-align: left;
 }
 
-
+*/
 /*IMPIANTI*/
-
+/*
 #impianti_content h2 {
     text-align: center;
     margin-top: 1em;
@@ -479,9 +537,9 @@ footer{
     margin-left: 2em;
     
 }
-
+*/
 /*SMALTIMENTO*/
-
+/*
 #smaltimento_content p {
     max-width: 50%;
 
@@ -511,9 +569,9 @@ footer{
     margin-top: 1em;
     margin-bottom: 1em;
 }
-
+*/
 /*RECUPERO E RACCOLTA*/
-
+/*
 #raccolta_content p{
     max-width: 50%;
 
@@ -542,9 +600,9 @@ footer{
     margin-top: 1em;
     margin-bottom: 2em;
 }
-
+*/
 /*BONIFICHE*/
-
+/*
 #bonifiche_content h2 {
     text-align: center;
     margin-top: 1em;
@@ -573,9 +631,9 @@ footer{
     margin-top: 1em;
     margin-bottom: 1em;
 }
-
+*/
 /* PRONTO INTERVENTO */
-
+/*
 #intervento_content h2 {
     text-align: center;
     margin-top: 1em;
@@ -607,7 +665,7 @@ footer{
 }
 
 
-
+*/
 
 
 
