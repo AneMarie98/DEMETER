@@ -123,6 +123,12 @@ main{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    margin-bottom: 1em;
+}
+
+main h2{
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 footer{
@@ -198,13 +204,10 @@ footer{
     max-width: 80%;  
     margin-bottom: 10em;
     margin-top: 2em;
-
-
     border: 2px solid var(--headerTxtColor); 
     border-radius: 10px; 
     padding: 20px;  
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
     background-color: var(--headerBgColor);
 }
 
@@ -213,7 +216,6 @@ footer{
     border-radius: 10px;
     background-image: url(../img/sec1.jpg);
     background-size: cover;
-
     background-repeat: no-repeat;
     background-position: right;
     margin-top: 2em;
@@ -349,17 +351,12 @@ footer{
     list-style: none;
     flex-direction: row;
     justify-content: space-between;
-
-
-
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer{
     display: flex;
     padding: 1em;
     
-
-
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer div.servizi_reasonContent{
@@ -370,7 +367,7 @@ footer{
     border: 2px solid black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1 1 auto;
-    width: 300px;
+    width: 330px;
     padding: 2em;
     padding-bottom: 0;
 }
@@ -399,7 +396,6 @@ footer{
 
 .impianti_menu-impianti {
     margin-top: 1em;
-
     padding: 0.5em;
 }
 
@@ -408,12 +404,9 @@ footer{
     margin-left: 1em;
 
 }
-#impianto1,#impianto2,#impianto3,#impianto4 {
-    max-width: 50%;
-}
+
 #impianto1 h2 {
     text-align: left;
-
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
     padding: 1em;
@@ -426,11 +419,19 @@ footer{
     padding: 0.5em;
 }
 
+#impianto1 div.impianti_img1{
+    background-image: url(../img/impianti_img1.jpg);
+    width: 600px;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
 
 
 #impianto2 h2 {
     text-align: left;
-
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
     padding: 1em;
@@ -449,9 +450,20 @@ footer{
     margin-left: 2em;
 }
 
+#impianto2 div.impianti_img2{
+    background-image: url(../img/impianto2.jpg);
+    width: 600px;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+
 #impianto3 h2 {
     text-align: left;
-
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
     padding: 1em;
@@ -466,9 +478,17 @@ footer{
 
 }
 
+#impianto3 div.impianti_img3{
+    background-image: url(../img/rifiuti_pericolosi.jpg);
+    width: 600px;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
 #impianto4 h2 {
     text-align: left;
-
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
     padding: 1em;
@@ -490,11 +510,7 @@ footer{
 
 /*SMALTIMENTO*/
 
-#smaltimento_content p {
-    max-width: 50%;
 
-    
-}
 
 #smaltimento_content h2 {
     text-align: center;
@@ -505,12 +521,11 @@ footer{
 
 #smaltimento_content h3 {
     background-color:var(--headerBgColor) ;
-
     border: solid black;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-    max-width: 50%;
+
 }
 
 #smaltimento_content ul li {
@@ -520,12 +535,18 @@ footer{
     margin-bottom: 1em;
 }
 
-/*RECUPERO E RACCOLTA*/
-
-#raccolta_content p{
-    max-width: 50%;
+#smaltimento_content div.smaltimento_img1{
+    background-image: url(../img/smaltimento.jpg);
+    width: 500px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1em;
 
 }
+
+/*RECUPERO E RACCOLTA*/
+
 
 #raccolta_content h2 {
     text-align: center;
@@ -536,12 +557,11 @@ footer{
 
 #raccolta_content h3 {
     background-color:var(--headerBgColor) ;
-
     border: solid black;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-    max-width: 50%;
+
 }
 
 #raccolta_content ul li {
@@ -560,19 +580,15 @@ footer{
 
 }
 
-#bonifiche_content p{
-    max-width: 50%;
 
-}
 
 #bonifiche_content h3 {
     background-color:var(--headerBgColor) ;
-
     border: solid black;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-    max-width: 50%;
+
 }
 
 #bonifiche_content ul li {
@@ -591,19 +607,15 @@ footer{
 
 }
 
-#intervento_content p{
-    max-width: 50%;
 
-}
 
 #intervento_content h3 {
     background-color:var(--headerBgColor) ;
-
     border: solid black;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-    max-width: 50%;
+
 }
 
 #intervento_content ul li {
@@ -611,11 +623,89 @@ footer{
     margin-left: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
-    max-width: 50%;
+
+}
+
+/*DOVE LO BUTTO */
+
+
+
+
+#carta h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color:var(--headerBgColor) ;
+    border: solid black;
+    padding: 1em;
+    border-radius: 10px;
+
+}
+
+#cartaImg{
+    background-image: url(../img/carta.jpg);
+    width: 500px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1em;
+    border-radius: 10px;
+} 
+
+#plastica h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color:var(--headerBgColor) ;
+    border: solid black;
+    padding: 1em;
+    border-radius: 10px;
+
+}
+
+
+#plasticaImg{
+    background-image: url(../img/plastica.jpg);
+    width: 500px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1em;
+    border-radius: 10px;
+
+
+}
+#umido h3{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color:var(--headerBgColor) ;
+    border: solid black;
+    padding: 1em;
+    border-radius: 10px;
+
 }
 
 
 
+
+#secco h3{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color:var(--headerBgColor) ;
+    border: solid black;
+    padding: 1em;
+    border-radius: 10px;
+
+}
+
+
+#altro h3{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color:var(--headerBgColor) ;
+    border: solid black;
+    padding: 1em;
+    border-radius: 10px;
+
+}
 
 
 

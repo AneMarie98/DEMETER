@@ -19,6 +19,7 @@
     --headerHeigth: 10em;
 }
 
+
 html{
     font-size: 150%;
     font-family: var(--font-body-family);
@@ -69,6 +70,7 @@ header h1{
     width: 20%;
     margin-right: 0em;
     font-size: 2.3em;
+    line-height: 1em;
 }
 
 
@@ -76,8 +78,9 @@ header  #breadcrumb{
     order: 2;
     padding: 1em;
     margin: auto;
-   
+    font-size: 1em;
 }
+
 /*icona menu hamburger*/
 header #menu-toggle{
     display: none;
@@ -138,6 +141,16 @@ header #menu li {
     background-color: var(--headerBgColor);
 }
 
+/*
+#menu ul li{
+    text-align: right;
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+*/
+
 header #menu ul {
     padding: 0em;
     margin: 0em;
@@ -183,4 +196,315 @@ footer{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 1em;
     background-color: var(--articleBgColor);
+}
+
+/*index*/
+#wrapper > .right{
+display: none;
+}
+
+#wrapper > .left{
+   max-width: 100%;
+}
+
+main h2{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+
+/* servizi*/
+
+#servizi_content.servizi h2 {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.5em;
+    
+}
+
+#servizi_section1 h3{
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1.3em;
+
+}
+
+
+#servizi_section2 div.servizi_container.servizi_section2Content{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+
+#servizi_section2 div.servizi_serviceDescription{
+    flex-grow: 0;
+    flex-shrink: 1;
+    text-align: left;
+    width: 100%;
+}
+
+#servizi_section2  div.servizi_serviceDescription div.sec2{
+    display: none;
+
+} 
+
+#servizi_section2 div.servizi_serviceContainer{
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+#servizi_section2 div.servizi_serviceBoxContainer h3 a{
+
+
+    background-color: var(--headerBgColor) ;
+    color: var(--linkColor);
+    text-align: center;
+    padding-left: 0;
+    border-radius: 10px;
+    padding: 0.5em; 
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    font-size: 1.3em;
+}
+
+#servizi_section2 p {
+    margin-bottom: 2em;
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+#servizi_section2 h3 {
+    font-size: 1.5em;
+}
+
+#servizi_section3{
+    text-align: center;
+    margin-top: 4em;
+    font-size: 1.3em;
+
+
+}
+
+#servizi_section4 div.servizi_reasonContainer{
+    /* display: flex; */
+    flex-wrap: wrap;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+/*IMPIANTI*/
+
+#impianti_content{
+    text-align: center;
+
+
+}
+
+#impianti_content h3{
+    text-align: center;
+}
+
+section.impianti_impianti {
+    text-align: center;
+}
+
+#impianto1,#impianto2,#impianto3,#impianto4 {
+    max-width: 100%;
+    text-align: left;
+}
+
+#impianto1 h2{
+    text-align: center;
+}
+
+#impianto1 h3{
+    text-align: center;
+}
+
+#impianto1 div.impianti_img1{
+    background-image: url(../img/impianti_img1.jpg);
+    width: 400px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+#impianto2 h2{
+    text-align: center;
+}
+#impianto2 h3{
+    text-align: center;
+}
+
+#impianto2 div.impianti_img2{
+    background-image: url(../img/impianto2.jpg);
+    width: 400px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+#impianto3 h2{
+    text-align: center;
+}
+#impianto3 h3{
+    text-align: center;
+}
+
+#impianto3 div.impianti_img3{
+    background-image: url(../img/rifiuti_pericolosi.jpg);
+    width: 400px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+#impianto4 h2{
+    text-align: center;
+}
+#impianto4 h3{
+    text-align: center;
+}
+
+
+
+
+/*SMALTIMENTO*/
+#smaltimento_content h3{
+    max-width: 100%;
+    text-align: center;
+}
+#smaltimento_content p {
+    max-width: 100%;
+
+}
+
+/*RECUPERO E RACCOLTA*/
+
+#raccolta_content p{
+    max-width: 100%;
+
+}
+#raccolta_content h3{
+    max-width: 100%;
+    text-align: center;
+}
+
+/*BONIFICHE*/
+
+#bonifiche_content h3{
+    max-width: 100%;
+    text-align: center;
+
+}
+#bonifiche_content p{
+    max-width: 100%;
+}
+
+
+
+/* PRONTO INTERVENTO */
+
+#intervento_content h3 {
+    max-width: 100%;
+    text-align: center;
+    
+
+}
+
+#intervento_content p{
+    max-width: 100%;
+
+}
+
+#intervento_content ul li {
+    list-style: circle;
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    max-width: 100%;
+}
+
+
+/*DOVE LO BUTTO */
+
+#carta p{
+    max-width: 100%;
+}
+
+#carta h3{
+    max-width: 100%;
+    text-align: center;
+}
+#cartaImg{
+    background-image: url(../img/carta.jpg);
+    width: 400px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+#plastica p{
+    max-width: 100%;
+}
+#plastica h3{
+    max-width: 100%;
+    text-align: center;
+}
+
+#plasticaImg{
+    background-image: url(../img/plastica.jpg);
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1em;
+    border-radius: 10px;
+
+
+}
+
+#umido p{
+    max-width: 100%;
+}
+#umido h3{
+    max-width: 100%;
+    text-align: center;
+}
+
+
+#secco p{
+    max-width: 100%;
+}
+#secco h3{
+    max-width: 100%;
+    text-align: center;
+}
+
+#altro p{
+    max-width: 100%;
+
+}
+
+#altro h3{
+    max-width: 100%;
+    text-align: center;
+
 }

@@ -5,19 +5,24 @@
 
     require_once "functions/dbAccess.php";
 
-    session_start();
+    $db=new DB\DBAccess;
+    $connOk=$db->openDBConnection();
+    $id_news = $_GET["id"];
 
-    $paginaHTML=file_get_contents("templates/detailedNewsTemplate.html");
+    echo file_get_contents("templates/header.html");
 
-    if(isset($_SESSION["email"])){
-        $profile=$_SESSION["firstname"];
-        $profilelink="functions/logout.php";
+    $newsFromDB ;
+    $htmlToInsert = "<main id=\"content\" class=\"detailedNews\"> ";
+   
+    if($connOk){
+        [$titolo, $articolo, $urlImg, $data] = $db -> getDetailedNews($id_news);
+        $htmlToInsert .= "<img src=\"".$urlImg."\" alt=\"\" ><h2>".$titolo."</h2> <h3>".$data."</h3><div class=\"newsArticle\">".$articolo."</div>";
+      
+    } else{
+        $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
     }
-    else{
-        $profile="Accedi";
-        $profilelink="login.php";
-    }
 
-    $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
-    $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
-    echo $paginaHTML;
+    $htmlToInsert .= "</main>";
+    echo $htmlToInsert;
+    echo file_get_contents("templates/footer.html");
+?>
