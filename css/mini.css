@@ -16,11 +16,11 @@
     --flagColor: rgb(218,103,66);
     --font-body-family: "Futura", sans-serif;
     --articleBgColor: #c9dec4;
-    --headerHeigth: 7em;
+    --headerHeigth: 10em;
 }
 
 html{
-    font-size: 100%;
+    font-size: 150%;
     font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
@@ -108,7 +108,7 @@ header .mobile-menu::after {
 
 #menu {
     position: absolute;
-    top: 0;
+    top: 0em;
     margin-top: var(--headerHeigth);
     left: 0;
     width: 100%;
@@ -116,33 +116,28 @@ header .mobile-menu::after {
     align-items: center;
 }
 
-/*
-#menu {
-    display: none;
-}*/
 
-#menu-toggle:checked + .mobile-menu + #menu {
+#menu {
     display: none;
 }
 
-#menu-toggle:not(:checked)  #menu {
+#menu-toggle:checked + .mobile-menu + #menu {
     display: block;
 }
 
-main{
-    margin-top: 30em; /*tmp*/
+#menu-toggle:not(:checked)  #menu {
+    display: none;
 }
 
 header #menu li {
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0.6em 0;
+    padding: 1.5em;
     width: 100%;
     color: var(--headerTxtColor);
     background-color: var(--headerBgColor);
     }
-    
+
 #menu  li:not(:last-child) {
 border-bottom: 0.1em solid #444;
 }
@@ -211,11 +206,11 @@ footer{
 }
 
 #content.news article{
-    border: 2px solid var(--headerTxtColor); 
-    border-radius: 10px; 
-    padding: 20px; 
+    border: 0.05em solid var(--headerTxtColor); 
+    border-radius: 0.5em; 
+    padding: 1em; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     background-color: var(--articleBgColor);
 }
 
