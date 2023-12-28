@@ -359,7 +359,7 @@ footer{
     border: 2px solid black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1 1 auto;
-    width: 300px;
+    width: 330px;
     padding: 2em;
     padding-bottom: 0;
 }
