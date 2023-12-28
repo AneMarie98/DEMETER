@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root{
     --headerBgColor: #9cbfa5;
     --headerTxtColor:#000000;
@@ -10,11 +16,38 @@
     --flagColor: rgb(218,103,66);
     --font-body-family: "Futura", sans-serif;
     --articleBgColor: #c9dec4;
+    --headerHeigth: 10em;
 }
 
-header h1 {
-    font-size: 2.3em;
-    line-height: 1em;
+
+html{
+    font-size: 150%;
+    font-family: var(--font-body-family);
+    line-height: 1.5em;
+    margin: auto;
+    /*background-image: url(../images/bg.png);*/
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bgColor);
+}
+
+header{
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+    padding: 1em;
+    border-bottom: 3px solid var(--headerTxtColor); 
+    border-radius: 3px;
+
+    height: var(--headerHeigth);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 .navigationhelp{
@@ -22,6 +55,93 @@ header h1 {
     text-indent: -999em;
 }
 
+
+a:link{
+    color: var(--linkColor);
+}
+
+a:visited{
+    color: var(--visitedLinkColor);
+}
+
+header h1{
+    order: 1;
+    float: left;
+    width: 20%;
+    margin-right: 0em;
+    font-size: 2.3em;
+    line-height: 1em;
+}
+
+
+header  #breadcrumb{
+    order: 2;
+    padding: 1em;
+    margin: auto;
+    font-size: 1em;
+}
+
+/*icona menu hamburger*/
+header #menu-toggle{
+    display: none;
+}
+
+header .mobile-menu::before,
+header .mobile-menu,
+header .mobile-menu::after{
+    order: 3;
+    margin-right: 1.5em;
+    display: block;
+    background-color: var(--headerTxtColor);
+    height: 0.3em;
+    width: 2.5em;
+    border-radius: 0.25em;
+}
+
+header .mobile-menu::before{
+    content: '';
+    margin-top: -0.8em;
+}
+
+header .mobile-menu::after {
+    content: '';
+    margin-top: 1.3em;
+}
+
+
+#menu {
+    position: absolute;
+    top: 0em;
+    margin-top: var(--headerHeigth);
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#menu {
+    display: none;
+}
+
+#menu-toggle:checked + .mobile-menu + #menu {
+    display: block;
+}
+
+#menu-toggle:not(:checked)  #menu {
+    display: none;
+}
+
+header #menu li {
+    display: flex;
+    justify-content: center;
+    padding: 1.5em;
+    width: 100%;
+    color: var(--headerTxtColor);
+    background-color: var(--headerBgColor);
+}
+
+/*
 #menu ul li{
     text-align: right;
     margin: auto;
@@ -29,9 +149,53 @@ header h1 {
     font-size: 1.3em;
     text-transform: uppercase;
 }
+*/
 
-#breadcrumb p {
-    font-size: 1em;
+header #menu ul {
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+}
+
+#menu  li:not(:last-child) {
+border-bottom: 0.1em solid #444;
+}
+
+main{
+    background-color: var(--bgColor);
+    color: var(--txtColor);
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+footer{
+    background-color: var(--footerBgColor);
+    color: var(--footerTxtColor);
+    padding: 1.0em;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 0px;
+    width: 80%;
+    border-top: 3px solid var(--footerTxtColor); 
+    border-radius: 3px;
+}
+
+/* News */
+
+#content.news h2{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#content.news article{
+    border: 0.05em solid var(--headerTxtColor); 
+    border-radius: 0.5em; 
+    padding: 1em; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    background-color: var(--articleBgColor);
 }
 
 /*index*/
@@ -342,4 +506,5 @@ section.impianti_impianti {
 #altro h3{
     max-width: 100%;
     text-align: center;
+
 }

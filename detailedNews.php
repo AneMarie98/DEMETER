@@ -25,5 +25,4 @@
     $htmlToInsert .= "</main>";
     echo $htmlToInsert;
     echo file_get_contents("templates/footer.html");
-
 ?>
