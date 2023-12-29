@@ -200,7 +200,6 @@ footer{
 
 #servizi_wrapper > .left{
     grid-area: t;
-    max-width: 80%;  
     margin-bottom: 10em;
     margin-top: 2em;
     border: 2px solid var(--headerTxtColor); 
@@ -237,7 +236,7 @@ footer{
     flex-grow: 0;
     flex-shrink: 1;
     text-align: left;
-    width: 70%;
+
 }
 
  #servizi_section2  div.servizi_serviceDescription div.sec2{
@@ -264,6 +263,7 @@ footer{
     align-items: flex-end;
     width: 100%;
     padding: 2em;
+    padding-left:1em;
     padding-right: 0;
 
 }

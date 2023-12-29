@@ -222,6 +222,37 @@ main h2{
 
 /* servizi*/
 
+#servizi_wrapper{
+    display: grid; 
+    grid-template-columns: repeat(1,2fr) ; 
+    grid-gap: 2em; 
+    grid-template-areas: "t" "i" ;
+
+}
+
+#servizi_wrapper > .left{
+    grid-area: t;
+  
+    margin-bottom: 2em;
+    margin-top: 2em;
+    border: 2px solid var(--headerTxtColor); 
+    border-radius: 10px; 
+    /* padding: 20px;   */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--headerBgColor);
+}
+
+#servizi_wrapper > .right {
+
+    border-radius: 10px;
+    background-image: url(./img/sec1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+}
+
 #servizi_content.servizi h2 {
     text-align: center;
     margin-top: 1em;
@@ -278,7 +309,7 @@ main h2{
     flex-direction: column;
     text-transform: uppercase;
     line-height: 1.5em;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 #servizi_section2 p {
@@ -306,6 +337,25 @@ main h2{
     flex-direction: row;
     justify-content: space-between;
 
+}
+
+#servizi_section4 div.servizi_reasonContainer h4{
+    font-size: 1.2em;
+    text-align: center;
+    padding-right: 0em;
+
+}
+
+#servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer div.servizi_reasonContent p{
+
+    text-align: center;
+
+
+}
+
+#servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer div.servizi_reasonContent {
+    padding:1em;
+    
 }
 
 /*IMPIANTI*/
