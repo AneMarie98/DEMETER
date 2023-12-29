@@ -199,13 +199,19 @@ footer{
 }
 
 /*index*/
-#wrapper > .right{
-display: none;
+
+#wrapper{
+    display: grid; 
+    grid-template-rows: 1fr 1fr; 
+    grid-gap: 2em;  
+    grid-template-areas: "t" "i";
 }
 
-#wrapper > .left{
-   max-width: 100%;
-}
+
+
+
+
+
 
 main h2{
     margin-top: 1em;
@@ -318,66 +324,43 @@ section.impianti_impianti {
     text-align: center;
 }
 
-#impianto1,#impianto2,#impianto3,#impianto4 {
+#impianto1-wrapper,#impianto2-wrapper,#impianto3-wrapper,#impianto4-wrapper {
     max-width: 100%;
     text-align: left;
 }
 
-#impianto1 h2{
+#impianto1-wrapper h2{
     text-align: center;
 }
 
-#impianto1 h3{
+#impianto1-wrapper h3{
     text-align: center;
 }
 
-#impianto1 div.impianti_img1{
-    background-image: url(../img/impianti_img1.jpg);
-    width: 400px;
-    height: 150px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-}
 
 
-#impianto2 h2{
+
+#impianto2-wrapper h2{
     text-align: center;
 }
-#impianto2 h3{
+#impianto2-wrapper h3{
     text-align: center;
 }
 
-#impianto2 div.impianti_img2{
-    background-image: url(../img/impianto2.jpg);
-    width: 400px;
-    height: 150px;
-    background-repeat: no-repeat;
-    background-size:cover;
-    text-align: center;
-    border-radius: 10px;
 
-}
 
-#impianto3 h2{
+#impianto3-wrapper h2{
     text-align: center;
 }
-#impianto3 h3{
+#impianto3-wrapper h3{
     text-align: center;
 }
 
-#impianto3 div.impianti_img3{
-    background-image: url(../img/rifiuti_pericolosi.jpg);
-    width: 400px;
-    height: 300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-}
-#impianto4 h2{
+
+#impianto4-wrapper h2{
     text-align: center;
 }
-#impianto4 h3{
+#impianto4-wrapper h3{
     text-align: center;
 }
 
@@ -385,22 +368,22 @@ section.impianti_impianti {
 
 
 /*SMALTIMENTO*/
-#smaltimento_content h3{
+#smaltimento_content-wrapper h3{
     max-width: 100%;
     text-align: center;
 }
-#smaltimento_content p {
+#smaltimento_content-wrapper p {
     max-width: 100%;
 
 }
 
 /*RECUPERO E RACCOLTA*/
 
-#raccolta_content p{
+#raccolta_content-wrapper p{
     max-width: 100%;
 
 }
-#raccolta_content h3{
+#raccolta_content-wrapper h3{
     max-width: 100%;
     text-align: center;
 }
@@ -451,15 +434,6 @@ section.impianti_impianti {
     max-width: 100%;
     text-align: center;
 }
-#cartaImg{
-    background-image: url(../img/carta.jpg);
-    width: 400px;
-    height: 150px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 1em;
-    border-radius: 10px;
-}
 
 #plastica p{
     max-width: 100%;
@@ -469,17 +443,6 @@ section.impianti_impianti {
     text-align: center;
 }
 
-#plasticaImg{
-    background-image: url(../img/plastica.jpg);
-    width: 400px;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 1em;
-    border-radius: 10px;
-
-
-}
 
 #umido p{
     max-width: 100%;

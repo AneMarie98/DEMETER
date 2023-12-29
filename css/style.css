@@ -110,7 +110,7 @@ main{
     grid-template-columns: 1fr 1fr  1fr; 
     grid-gap: 2em; 
     grid-template-areas: "t t i" ;
-}
+}  
 
 #wrapper > .left{
     grid-area: t;
@@ -196,7 +196,6 @@ footer{
     grid-gap: 2em; 
     grid-template-areas: "t t i" ;
 
-    
 }
 
 #servizi_wrapper > .left{
@@ -405,89 +404,91 @@ footer{
 
 }
 
-#impianto1 h2 {
+#impianto1-wrapper h2 {
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
-    padding: 1em;
+    padding: 1em; 
     border: solid black;
 }
 
-#impianto1 h3 {
+#impianto1-wrapper h3 {
     border: solid black;
     border-radius: 10px;
     padding: 0.5em;
 }
 
-#impianto1 div.impianti_img1{
-    background-image: url(../img/impianti_img1.jpg);
-    width: 600px;
-    height: 550px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
+#impianto1-wrapper{
+    display: grid; 
+    grid-template-rows: repeat(1,0.4fr) ; 
+    grid-gap: 2em; 
+    grid-template-areas: "t" "i" ;
+
 }
 
+#impianto1-wrapper #impianti_img1{
+    border-radius: 10px;
+    background-image: url(../img/impianti_img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+}
 
+#impianto2-wrapper{
+    display: grid; 
+    grid-template-rows: repeat(1,0.4fr) ; 
+    grid-gap: 2em; 
+    grid-template-areas: "t" "i" ;
 
-#impianto2 h2 {
+}
+
+#impianto2-wrapper h2 {
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
     padding: 1em;
-    border: solid black;
+    border: solid black; 
+
 }
 
-#impianto2 h3 {
+#impianto2-wrapper h3 {
     border: solid black;
     border-radius: 10px;
     padding: 0.5em;
     margin-top: 1em;
 }
 
-#impianto2 ul li {
+#impianto2-wrapper ul li {
     list-style:circle;
     margin-left: 2em;
 }
 
-#impianto2 div.impianti_img2{
+
+
+#impianto2-wrapper #impianti_img2{
+    border-radius: 10px;
     background-image: url(../img/impianto2.jpg);
-    width: 600px;
-    height: 550px;
-    background-repeat: no-repeat;
-    background-size:cover;
-    text-align: center;
-    border-radius: 10px;
-
-}
-
-
-#impianto3 h2 {
-    text-align: left;
-    background-color:var(--headerBgColor) ;
-    border-radius: 10px;
-    padding: 1em;
-    border: solid black;
-}
-
-#impianto3 h3 {
-    border: solid black;
-    border-radius: 10px;
-    padding: 0.5em;
-    margin-top: 1em;
-
-}
-
-#impianto3 div.impianti_img3{
-    background-image: url(../img/rifiuti_pericolosi.jpg);
-    width: 600px;
-    height: 550px;
-    background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+
+
 }
 
-#impianto4 h2 {
+#impianto3-wrapper{
+    display: grid; 
+    grid-template-rows: repeat(1,0.4fr) ; 
+    grid-gap: 2em; 
+    grid-template-areas: "t" "i" ;
+
+}
+
+
+#impianto3-wrapper h2 {
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
@@ -495,31 +496,83 @@ footer{
     border: solid black;
 }
 
-#impianto4 h3 {
+#impianto3-wrapper h3 {
+    border: solid black;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-top: 1em;
+
+}
+
+#impianto3-wrapper #impianti_img3{
+    border-radius: 10px;
+    background-image: url(../img/rifiutipericolosi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+}
+
+#impianto4-wrapper{
+    display: grid; 
+    grid-template-rows: repeat(1,0.4fr) ; 
+    grid-gap: 2em; 
+    grid-template-areas: "t" "i" ;
+
+}
+
+#impianto4-wrapper h2 {
+    text-align: left;
+    background-color:var(--headerBgColor) ;
+    border-radius: 10px;
+    padding: 1em;
+    border: solid black;
+}
+
+#impianto4-wrapper h3 {
     border: solid black;
     border-radius: 10px;
     padding: 0.5em;
     margin-top: 1em;
 }
 
-#impianto4 ul li {
+#impianto4-wrapper ul li {
     list-style: circle;
     margin-left: 2em;
     
 }
 
+#impianto4-wrapper #impianti_img4{
+    border-radius: 10px;
+    background-image: url(../img/acque.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+
+
+}
+
 /*SMALTIMENTO*/
 
+#smaltimento_content-wrapper{
+    display: grid; 
+    grid-template-rows: repeat(1,0.4fr) ; 
+    grid-gap: 2em; 
+    grid-template-areas: "t" "i" ;
 
+}
 
-#smaltimento_content h2 {
+#smaltimento_content-wrapper h2 {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 2em;
 }
 
 
-#smaltimento_content h3 {
+#smaltimento_content-wrapper h3 {
     background-color:var(--headerBgColor) ;
     border: solid black;
     padding: 1em;
@@ -528,20 +581,23 @@ footer{
 
 }
 
-#smaltimento_content ul li {
+#smaltimento_content-wrapper ul li {
     list-style: circle;
     margin-left: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-#smaltimento_content div.smaltimento_img1{
+#smaltimento_content-wrapper #smaltimento_img1{
+    border-radius: 10px;
     background-image: url(../img/smaltimento.jpg);
-    width: 500px;
-    height: 400px;
-    background-repeat: no-repeat;
     background-size: cover;
-    margin: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+
+
 
 }
 
@@ -628,6 +684,27 @@ footer{
 
 /*DOVE LO BUTTO */
 
+ #doveLoButto-wrapper{
+    display: grid; 
+    grid-template-rows: repeat(7,0.4fr) ; 
+    grid-gap: 2em; 
+    grid-template-areas: "t" "i" ;
+
+} 
+
+
+
+#doveLoButto-wrapper > #cartaImg{
+
+    border-radius: 10px;
+    background-image: url(../img/carta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+
+}
 
 
 
@@ -641,15 +718,9 @@ footer{
 
 }
 
-#cartaImg{
-    background-image: url(../img/carta.jpg);
-    width: 500px;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 1em;
-    border-radius: 10px;
-} 
+
+
+
 
 #plastica h3 {
     margin-top: 1em;
@@ -661,18 +732,22 @@ footer{
 
 }
 
-
-#plasticaImg{
-    background-image: url(../img/plastica.jpg);
-    width: 500px;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 1em;
+#doveLoButto-wrapper > #plasticaImg{
+ 
     border-radius: 10px;
+    background-image: url(../img/plastica.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+
+} 
 
 
-}
+
+
+
 #umido h3{
     margin-top: 1em;
     margin-bottom: 1em;
@@ -682,6 +757,19 @@ footer{
     border-radius: 10px;
 
 }
+
+#doveLoButto-wrapper > #umidoImg{
+ 
+    border-radius: 10px;
+    background-image: url(../img/umido2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+
+} 
+
 
 
 
@@ -696,6 +784,19 @@ footer{
 
 }
 
+#doveLoButto-wrapper > #seccoImg{
+ 
+    border-radius: 10px;
+    background-image: url(../img/secco.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+
+} 
+
+
 
 #altro h3{
     margin-top: 1em;
@@ -706,6 +807,19 @@ footer{
     border-radius: 10px;
 
 }
+
+#doveLoButto-wrapper > #altroImg{
+
+    border-radius: 10px;
+    background-image: url(../img/altro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+
+}
+
 
 
 
