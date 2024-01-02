@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --headerBgColor: #9cbfa5;
+    --headerTxtColor:#000000;
+    --bgColor: #f5fbe4;
+    --txtColor:#0b0b0b; 
+    --footerBgColor: #f5fbe4;
+    --footerTxtColor: #0b0b0b; 
+    --linkColor: #3f3401;
+    --visitedLinkColor:#7c0048;
+    --flagColor: rgb(218,103,66);
+    --font-body-family: "Futura", sans-serif;
+    --articleBgColor: #c9dec4;
+    --calTitleBgColor:#004d00;
+    --calHeaderWeekBgColor:#ccffcc;
+    --calHeaderWeekendBgColor:#cc9900;
+    --calTitleColor:#ffffff;
+    --calBgColor:#000000;
+    --calElemBgColor:#ffffff;
+}
+
+html{
+    font-size: 100%;
+    font-family: var(--font-body-family);
+    line-height: 1.5em;
+    margin: auto;
+    /*background-image: url(../images/bg.png);*/
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bgColor);
+}
+
+.navigationhelp{
+    position: absolute;
+    text-indent: -999em;
+}
+
+main{
+    background-color: var(--bgColor);
+    color: var(--txtColor);
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+footer{
+    background-color: var(--footerBgColor);
+    color: var(--footerTxtColor);
+    padding: 1.0em;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 0px;
+    width: 80%;
+    border-top: 3px solid var(--footerTxtColor); 
+    border-radius: 3px;
+}
+
+a:link{
+    color: var(--linkColor);
+}
+
+a:visited{
+    color: var(--visitedLinkColor);
+}
+
+#socialList{
+    max-width: 1024px;
+    margin: auto;
+    padding: 1em;
+    list-style-type: none;
+    text-align: center;
+}
+
+#socialList li{
+    display: inline-block;
+    width: 15%;
+    margin: 0 0.5em;  
+}
+
+/*calendario.php*/
+
+/*header*/
+header{
+    background-color: var(--headerBgColor);
+}
+
+header h1{
+    text-indent: -999em;
+    background-image: url("../img/icons/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 1.5em;
+    color:var(--headerTxtColor);
+    background-position: center;
+    font-size: 3em;
+    margin:0.2em 0 0.2em 0;
+}
+
+#menu ul{
+    margin: auto;
+    padding: 1em;
+    list-style-type: none;
+    text-align: center;
+    border-bottom: 3px solid var(--headerTxtColor);
+    border-radius: 3px;
+}
+
+#menu ul li{
+    display: inline-block;
+    width: 12.5%;
+    margin: 0 0.5em; 
+    font-weight: bold;
+    text-transform: uppercase; 
+}
+
+#breadcrumb{
+    background-color: var(--bgColor);
+}
+
+#breadcrumb p{
+    max-width: 1024px;
+    padding:1em;
+    margin:auto;
+}
+
+/*main*/
+#calendar{
+    height:70vh;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: 3.5em 2em auto auto auto auto auto;
+    background-color: var(--calBgColor);
+    border-radius: 20px;
+    padding:1px;
+}
+
+#calTitle{
+    background-color:var(--calTitleBgColor);
+    color:var(--calTitleColor);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    grid-column: 1/8;
+    padding-top:0.75em;
+    border-radius: 20px 20px 0px 0px;
+    border:1px solid black;
+}
+
+#calCornerBL{
+    border-radius: 0px 0px 0px 20px;
+}
+
+#calCornerBR{
+    border-radius: 0px 0px 20px 0px;
+}
+
+.calHeaderWeek{
+    background-color: var(--calHeaderWeekBgColor);
+    text-align: center;
+    border:1px solid black;
+    padding:0.25em;
+}
+
+.calHeaderWeekend{
+    background-color: var(--calHeaderWeekendBgColor);
+    text-align: center;
+    border:1px solid black;
+    padding:0.25em;
+}
+
+.calElem{
+    background-color: var(--calElemBgColor);
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+.dayNum{
+    padding:0.5em;
+}
+
+/*footer*/
+.footericons{
+    text-indent: -999em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 1.5em;
+    color:black;
+    background-position: center;
+}
+
+.footericons a{
+    display: block;
+}
+
+#facebook{
+    background-image: url("../img/icons/facebook.png");
+}
+
+#instagram{
+    background-image: url("../img/icons/instagram.png");
+}
+
+#x{
+    background-image: url("../img/icons/x.png");
+}
