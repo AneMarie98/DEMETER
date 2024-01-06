@@ -1,25 +1,25 @@
 <?php
-    function getCurrentMY(){
-        $month=date("m");
+    function getCurrentMY($currentmonth){
+        $month=date("m",strtotime($currentmonth));
         switch($month){
-            case "1": $my="Gennaio ".date("Y");break;
-            case "2": $my="Febbraio ".date("Y");break;
-            case "3": $my="Marzo ".date("Y");break;
-            case "4": $my="Aprile ".date("Y");break;
-            case "5": $my="Maggio ".date("Y");break;
-            case "6": $my="Giugno ".date("Y");break;
-            case "7": $my="Luglio ".date("Y");break;
-            case "8": $my="Agosto ".date("Y");break;
-            case "9": $my="Settembre ".date("Y");break;
-            case "10": $my="Ottobre ".date("Y");break;
-            case "11": $my="Novembre ".date("Y");break;
-            case "12": $my="Dicembre ".date("Y");break;
-            default: $my="Errore";break;
+            case "1": $m="Gennaio ";break;
+            case "2": $m="Febbraio ";break;
+            case "3": $m="Marzo ";break;
+            case "4": $m="Aprile ";break;
+            case "5": $m="Maggio ";break;
+            case "6": $m="Giugno ";break;
+            case "7": $m="Luglio ";break;
+            case "8": $m="Agosto ";break;
+            case "9": $m="Settembre ";break;
+            case "10": $m="Ottobre ";break;
+            case "11": $m="Novembre ";break;
+            case "12": $m="Dicembre ";break;
+            default: $m="Errore";break;
         }
-        return $my;
+        return $m.date("Y",strtotime($currentmonth));
     }
 
     function replaceBox($boxId,$boxDay,$paginaHTML){
-        $boxContent="<p class='dayNum'>$boxDay</p><div class='bidsvuot'></div>";
+        $boxContent="<p class='dayNum'>$boxDay</p><div id='bidC' class='bidsvuot'>C</div><div id='bidP' class='bidsvuot'>P</div>";
         return str_replace("{{$boxId}}",$boxContent,$paginaHTML);
     }

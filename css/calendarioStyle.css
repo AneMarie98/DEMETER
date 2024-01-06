@@ -16,7 +16,7 @@
     --flagColor: rgb(218,103,66);
     --font-body-family: "Futura", sans-serif;
     --articleBgColor: #c9dec4;
-    --calTitleBgColor:#004d00;
+    --calTitleBgColor:#225a22;
     --calHeaderWeekBgColor:#ccffcc;
     --calHeaderWeekendBgColor:#cc9900;
     --calTitleColor:#ffffff;
@@ -138,7 +138,7 @@ header h1{
     margin-bottom: 1em;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
-    grid-template-rows: 3.5em 2em auto auto auto auto auto;
+    grid-template-rows: 3.5em 2em auto auto auto auto auto auto;
     background-color: var(--calBgColor);
     border-radius: 20px;
     padding:1px;
@@ -164,6 +164,24 @@ header h1{
     border-radius: 0px 0px 20px 0px;
 }
 
+#calMonth{
+    display: inline;
+}
+
+#monthLeft{
+    float:left;
+    color:var(--calTitleColor);
+    margin-left:1.5em;
+    text-decoration: none;
+}
+
+#monthRight{
+    float:right;
+    color:var(--calTitleColor);
+    margin-right:1.5em;
+    text-decoration: none;
+}
+
 .calHeaderWeek{
     background-color: var(--calHeaderWeekBgColor);
     text-align: center;
@@ -185,7 +203,27 @@ header h1{
 }
 
 .dayNum{
-    padding:0.5em;
+    padding:0.3em;
+}
+
+.bidsvuot{
+    float:right;
+    height:2em;
+    width:2em;
+    border-radius: 1em;
+    text-align: center;
+    line-height: 2em;  
+    margin-right:1em;
+}
+
+#bidC{
+    background-color: blue;
+    color:white;
+}
+
+#bidP{
+    background-color: yellow;
+    color:black;
 }
 
 /*footer*/
