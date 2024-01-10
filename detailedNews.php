@@ -23,7 +23,7 @@
 
     if($connOk){
         [$titolo, $articolo, $urlImg, $data] = $db -> getDetailedNews($id_news);
-        $htmlToInsert .= "<img src=\"".$urlImg."\" alt=\"\" ><h2>".$titolo."</h2> <h3>".$data."</h3><div class=\"newsArticle\">".$articolo."</div>";
+        $htmlToInsert .= "<img src=\"./img/".$urlImg."\" alt=\"\" ><h2>".$titolo."</h2> <h3>".$data."</h3><div class=\"newsArticle\">".$articolo."</div>";
       
     } else{
         $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
