@@ -118,8 +118,6 @@ header .mobile-menu::after {
 }
 
 
-
-
 #menu {
     position: absolute;
     top: 0em;
@@ -152,15 +150,6 @@ header #menu li {
     background-color: var(--headerBgColor);
 }
 
-/*
-#menu ul li{
-    text-align: right;
-    margin: auto;
-    font-weight: bold;
-    font-size: 1.3em;
-    text-transform: uppercase;
-}
-*/
 
 header #menu ul {
     padding: 0em;
@@ -239,11 +228,15 @@ footer{
 
 /* Detailed News */
 
+#content.detailedNews{
+    margin-top: 0em;
+}
+
 #content.detailedNews img{
     display: block;
     margin: auto;
     width: 80%;
-    margin-top: 0em;
+    margin-top: 2em;
 }
 
 #content.detailedNews h2{ 
