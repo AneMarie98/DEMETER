@@ -160,6 +160,10 @@ footer{
 
 /* News */
 
+#content.news {
+    margin-top: 0em;
+}
+
 #content.news h2{
     margin-top: 1em;
     margin-bottom: 1em;
