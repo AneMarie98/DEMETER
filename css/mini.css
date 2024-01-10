@@ -229,6 +229,14 @@ footer{
     background-color: var(--articleBgColor);
 }
 
+
+#content.news article p a{
+    display: block; 
+    text-align: center; 
+    font-size: 1.2em; 
+    margin-top: 0.8em;
+}
+
 /* Detailed News */
 #content.detailedNews img{
     color: var(--txtColor); /*tmp*/
