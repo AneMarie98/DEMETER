@@ -27,7 +27,7 @@
         foreach ($newsFromDB as $news) {
             $htmlToInsert .= "<article class >
             <h3> ". $news["titolo"] ." </h3>
-            <p> ". $news["descrizione"]." <a href=\"../detailedNews.php?id=".$news["idNotizia"]."\">Scopri di più</a>
+            <p> ". $news["descrizione"]." <a href=\"./detailedNews.php?id=".$news["idNotizia"]."\">Scopri di più</a>
             </p>
             </article> ";
             }
