@@ -183,37 +183,45 @@ footer{
 
 
 /* Detailed News */
-/*
+
 #content.detailedNews{
-    margin-top: 0em;
+    margin-top: 2em;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-}
-
-#content.detailedNews img{
-    display: block;
-    margin: auto;
-    width: 80%;
-    margin-top: 2em;
+    grid-template-rows: min-content auto auto;
 }
 
 #content.detailedNews h2{ 
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-top: 0em;
+    grid-row: 1 ;
+    grid-column: 1;
 }
 
 #content.detailedNews h3{
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    font-weight: normal;
+    font-size: 1em;
+    grid-row: 2 / span 2;
+    grid-column: 1;
+}
+
+#content.detailedNews img{
+    background-color: var(--bgColor);
+    display: block;
+    margin: auto;
+    width: 80%;
+    grid-row: 1 / span 2;
+    grid-column: 2;
 }
 
 #content.detailedNews .newsArticle{
-    margin-top: 0.5em;
+    margin-top: 1em;
     margin-bottom: 1em;
+    grid-row: 3;
+    grid-column: 1 / span 2;
 }
 
-*/
+
 /* SERVIZI */
 
 #servizi_content.servizi h2 {
