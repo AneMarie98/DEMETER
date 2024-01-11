@@ -105,18 +105,19 @@ main{
     max-width: 1200px;
 }
 
-#wrapper{
+/* index */
+.home #wrapper{
     display: grid; 
     grid-template-columns: 1fr 1fr  1fr; 
     grid-gap: 2em; 
     grid-template-areas: "t t i" ;
 }  
 
-#wrapper > .left{
+.home #wrapper > .left{
     grid-area: t;
 }
 
-#wrapper > .right{
+.home #wrapper > .right{
     grid-area: i;
     border-radius: 10px;
     background-image: url(../img/designImg_1_H.jpg);
@@ -126,11 +127,12 @@ main{
     margin-bottom: 1em;
 }
 
-main h2{
+main.home h2{
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
+/* footer */
 footer{
     background-color: var(--footerBgColor);
     color: var(--footerTxtColor);
@@ -180,6 +182,38 @@ footer{
 }
 
 
+/* Detailed News */
+/*
+#content.detailedNews{
+    margin-top: 0em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+#content.detailedNews img{
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-top: 2em;
+}
+
+#content.detailedNews h2{ 
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+#content.detailedNews h3{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#content.detailedNews .newsArticle{
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+*/
 /* SERVIZI */
 
 #servizi_content.servizi h2 {
