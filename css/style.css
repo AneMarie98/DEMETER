@@ -821,6 +821,72 @@ footer{
 }
 
 
+/*LOGIN*/
+
+#content h2 {
+    text-align: center;
+    
+}
+
+#content legend {
+    text-align: left;
+    font-size: 20px; 
+    
+} 
+
+#content fieldset {
+    
+    border-radius: 10px;
+    text-align: center;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em; 
+    margin-bottom: 5em;
+    width: 60%; 
+    
+   
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+input{
+    padding:1.5em;
+    margin: 2em; 
+    
+    border-radius: 10px;
+    background-color: var(--headerBgColor);
+    
+}
+input#loginemail {
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--txtColor);
+    
+}
+
+
+input#loginpass {
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--txtColor);
+}
+
+input:hover{
+    background-color: var(--visitedLinkColor);
+    color: var(--bgColor);
+}
+
 
 
 
