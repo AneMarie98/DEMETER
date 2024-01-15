@@ -89,6 +89,27 @@
            
         }
 
+        public function getSegnalazioni(){
+            $query="SELECT idSegnalazione, inCarico, indirizzo, dataS FROM segnalazioni ";
+            try{
+                $queryResult = mysqli_query($this -> connection, $query);
+                if(mysqli_num_rows($queryResult) != 0){
+                    $result = array();
+                    while($row = mysqli_fetch_array($queryResult)){
+                        $result[] = $row;
+                    }
+                    $queryResult -> free();
+                    return $result;
+                }else{
+                    return null;
+                }
+            }catch(\Exception $e){
+
+            }
+            return null;
+           
+        }
+
         public function getDetailedNews($id){
             $query="SELECT * FROM notizie WHERE idNotizia='$id' ";
             try{
@@ -106,4 +127,34 @@
             }
             return null;
         }
+
+        public function getDetailedSegnalazione($id){
+            $query="SELECT * FROM segnalazioni WHERE idSegnalazione='$id' ";
+            try{
+                $queryResult = mysqli_query($this -> connection, $query);
+                if(mysqli_num_rows($queryResult) != 0){
+                    $row = mysqli_fetch_array($queryResult);
+                    $queryResult -> free();
+                    return array( $row['indirizzo'], $row['dataS'], $row['testo'], $row['inCarico']);
+    
+                }else{
+                    return null;
+                }
+            }catch(\Exception $e){
+
+            }
+            return null;
+        }
+
+    public function insertSegnalazione($indirizzo, $data, $testo){
+        $query="INSERT INTO segnalazioni (indirizzo, dataS, testo) VALUES ('$indirizzo', '$data', '$testo')";
+        try{
+            $queryResult = mysqli_query($this -> connection, $query);
+        }catch(\Exception $e){
+
+        }
+        return mysqli_affected_rows($this->connection) >0;
     }
+}
+
+?> 
