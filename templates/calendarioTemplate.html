@@ -5,9 +5,10 @@
         <title>Demeter</title>
         <meta name="keywords" content="Demeter, Raccolta, Rifiuti, Servizi, Calendario, Svuotamenti">
         <meta name="description" content="Servizio completo di trattamento dei rifiuti per ogni tipo di intervento. Garantiamo lavori rapidi, convenienti e a norma di legge">
+       <!-- <link rel="stylesheet" href="css/style.css"> -->
         <link rel="stylesheet" href="css/calendarioStyle.css">
-        <!--<script src="../functions/createCalendar.js"></script> Sistemare-->
-        <script> /* NO BUONO */
+        <script src="functions/createCalendar.js"></script> 
+        <!--<script> /* NO BUONO */
             function createCalendar(){
                 const td=new Date();
                 const tda=new Date();
@@ -203,7 +204,7 @@
                 }
                 return svuotId;
             }
-        </script>
+        </script> -->
     </head>
     <body onload="createCalendar()">
         <header>
@@ -226,6 +227,7 @@
             </nav>
         </header>
         <main id="content">
+            
             <div id="calendar">
                 <div id="calTitle"><button id="monthLeft" onclick="changeMonth(-1)"></button><p id="calMonth"></p><button id="monthRight" onclick="changeMonth(1)"></button><a href="" id="navigationHelpCal">Vai a oggi</a></div> <!--Non va bene < e >-->
                 <div class="calHeaderWeek" id="lun" aria-hidden="true">Lunedì</div>
@@ -286,6 +288,7 @@
                 <div class="bidsvuotlegend bidU">U</div><p id="legendU">Umido</p>
                 <div class="bidsvuotlegend bidV">V</div><p id="legendV">Vetro</p>
             </div>
+
         </main>
         <footer>
             <h3>Segui i nostri canali social</h3>
