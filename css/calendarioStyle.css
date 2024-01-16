@@ -19,9 +19,16 @@
     --calTitleBgColor:#225a22;
     --calHeaderWeekBgColor:#ccffcc;
     --calHeaderWeekendBgColor:#cc9900;
+    --calToday:#a3dca3;
     --calTitleColor:#ffffff;
     --calBgColor:#000000;
     --calElemBgColor:#ffffff;
+    --bidU:#6f4c41;
+    --bidS:#9ca4ad;
+    --bidC:#00579c;
+    --bidP:#ffd500;
+    --bidV:#337b2b;
+    --warningmsg:#a00000;
 }
 
 html{
@@ -134,14 +141,14 @@ header h1{
 
 /*main*/
 #calendar{
-    height:70vh;
-    margin-bottom: 1em;
+    height:80vh;
+    margin-bottom: 0.3em;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
     grid-template-rows: 3.5em 2em auto auto auto auto auto auto;
-    background-color: var(--calBgColor);
     border-radius: 20px;
     padding:1px;
+    background-color: var(--calBgColor);
 }
 
 #calTitle{
@@ -173,6 +180,14 @@ header h1{
     color:var(--calTitleColor);
     margin-left:1.5em;
     text-decoration: none;
+    cursor: pointer;
+    background-color: var(--calTitleBgColor);
+    border:0;
+    background-image: url("../img/icons/left-arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:1.5em;
+    width:1.5em;
 }
 
 #monthRight{
@@ -180,6 +195,26 @@ header h1{
     color:var(--calTitleColor);
     margin-right:1.5em;
     text-decoration: none;
+    cursor: pointer;
+    background-color: var(--calTitleBgColor);
+    border:0;
+    background-image: url("../img/icons/right-arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:1.5em;
+    width:1.5em;
+}
+
+#navigationHelpCal{
+    position: absolute;
+    text-indent: -999em;
+}
+
+#calwarning{
+    text-align: center;
+    font-size: 0.85em;
+    color:var(--warningmsg);
+    margin-bottom:0.5em;
 }
 
 .calHeaderWeek{
@@ -202,8 +237,21 @@ header h1{
     border-collapse: collapse;
 }
 
-.dayNum{
+.calElemToday{
+    background-color: var(--calToday);
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+.calElemToday span{
     padding:0.3em;
+    display: block;
+    font-weight: bold;
+}
+
+.calElem span{
+    padding:0.3em;
+    display: block;
 }
 
 .bidsvuot{
@@ -216,14 +264,55 @@ header h1{
     margin-right:1em;
 }
 
-#bidC{
-    background-color: blue;
+.bidsvuotlegend{
+    float:left;
+    height:2em;
+    width:2em;
+    border-radius: 1em;
+    text-align: center;
+    line-height: 2em;  
+    margin-right:1em;
+}
+
+.legend{
+    width: 66%;
+    margin:auto;
+    margin-bottom: 6em;
+}
+
+.legend p{
+    float: left;
+    line-height: 2em;
+    margin-right:5em;
+}
+
+#legendV{
+    margin-right:0;
+}
+
+.bidC{
+    background-color: var(--bidC);
     color:white;
 }
 
-#bidP{
-    background-color: yellow;
+.bidP{
+    background-color: var(--bidP);
     color:black;
+}
+
+.bidU{
+    background-color: var(--bidU);
+    color:white;
+}
+
+.bidS{
+    background-color: var(--bidS);
+    color:black;
+}
+
+.bidV{
+    background-color: var(--bidV);
+    color:white;
 }
 
 /*footer*/

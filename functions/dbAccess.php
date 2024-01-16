@@ -106,4 +106,23 @@
             }
             return null;
         }
+
+        public function getSvuotDays(){
+            $query="SELECT * FROM svuotamenti";
+            try{
+                $queryResult = mysqli_query($this -> connection, $query);
+                if(mysqli_num_rows($queryResult) != 0){
+                    while($row = mysqli_fetch_array($queryResult)){
+                        $result[] = $row;
+                    }
+                    $queryResult -> free();
+                    return $result;
+                }else{
+                    return null;
+                }
+            }catch(\Exception $e){
+                
+            }
+            return null;
+        }
     }
