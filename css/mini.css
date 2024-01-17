@@ -521,3 +521,33 @@ section.impianti_impianti {
     text-align: center;
 
 }
+
+
+/*SEGNALAZIONI*/
+.segnalazioni thead{
+    display: none;
+}
+
+.segnalazioni tr, .segnalazioni  th, .segnalazioni  td{
+    display: block;
+}
+
+.segnalazioni th{
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor)
+}
+
+.segnalazioni td[data-title]:before{
+    content: attr(data-title) ":\00A0"; /*SPAZIO*/
+    font-weight: bold;;
+}
+
+.segnalazioni tr{
+    border: 1px solid black;
+}
+
+.segnalazioni td.inCarico {
+
+    font-size: 2em;
+    height: 2em; 
+}

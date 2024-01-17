@@ -17,6 +17,37 @@ function updateSegnalazione(id, isChecked) {
     window.location.href = "updateSegnalazione.php?id=" + id + "&inCarico=" + isChecked;
 }
 
+function assignDay(num) {
+    let dayofweek = "";
+    switch (num) {
+        case '0':
+            dayofweek = "domenica";
+            break;
+        case '1':
+            dayofweek = "lunedì";
+            break;
+        case '2':
+            dayofweek = "martedì";
+            break;
+        case '3':
+            dayofweek = "mercoledì";
+            break;
+        case '4':
+            dayofweek = "giovedì";
+            break;
+        case '5':
+            dayofweek = "venerdì";
+            break;
+        case '6':
+            dayofweek = "sabato";
+            break;
+        default:
+            dayofweek = "";
+            break;
+    }
+    return dayofweek;
+}
+
 /**
  * Ricerca da SearchBar in DoveLoButto e visualizza risultati 
 */
@@ -56,7 +87,7 @@ function searchResults() {
                         var giornodt = document.createElement('dt');
                         giornodt.textContent = "Giorno: ";
                         var giornodd = document.createElement('dd');
-                        giornodd.textContent = item.giorno;
+                        giornodd.textContent = assignDay(item.giorno);
                         dlElement.appendChild(giornodt);
                         dlElement.appendChild(giornodd);
                         results.appendChild(dlElement);

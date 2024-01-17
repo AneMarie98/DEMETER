@@ -4,6 +4,7 @@
     setlocale(LC_ALL,'it_IT');
 
     require_once "functions/dbAccess.php";
+    require_once "functions/functions.php";
 
     $db=new DB\DBAccess;
     $connOk=$db->openDBConnection();
@@ -27,13 +28,17 @@
         foreach ($segnalazioniFromDB as $segnalazione) {
             $htmlToInsert .= "
             <tr>
-                <td>".$segnalazione["idSegnalazione"]."</td>
-                <td>".$segnalazione["dataS"]."</td>
-                <td>".$segnalazione["indirizzo"]."</td>
-                <td>
-                    <input type=\"checkbox\" id=\"checkbox".$segnalazione["idSegnalazione"]."\" ".($segnalazione["inCarico"] ? "checked" : "")." onclick=\"updateSegnalazione(".$segnalazione["idSegnalazione"].", this.checked)\">
-                    <label for=\"checkbox".$segnalazione["idSegnalazione"]."\">Presa in carico</label>
-                </td>
+                <th scope= \"row\"><a href=\"detailedSegnalazione.php?id=".$segnalazione["idSegnalazione"]."\">".$segnalazione["idSegnalazione"]."</a></th>
+                <td data-title=\"Data\">  <time datetime=\"".$segnalazione["dataS"]."\">".convertDateFormatString($segnalazione["dataS"])."</time></td>
+                <td data-title=\"Indirizzo\">".$segnalazione["indirizzo"]."</td>
+                <td";
+            if($segnalazione["inCarico"] == 1){
+                $htmlToInsert .= " class=\"inCarico\"><a href=\"updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=0\"><span>Si</span></a>";
+            }else{
+                $htmlToInsert .= " class=\"NonInCarico\"><a href=\"updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=1\"><span>No</span></a>";
+            }
+            $htmlToInsert .= " </td>
+
             </tr>
             ";
         }

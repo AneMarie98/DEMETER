@@ -821,46 +821,44 @@ footer{
 }
 
 /*Search*/
-#searchBar{
-   border-top: var(--headerBgColor) 0.3em solid;
-   margin-top: 0.3em;
-   display: flex;
-    width: 100%;
-}
-
-
-#searchResults{
+#searchContainer{
+    border-top: var(--headerBgColor) 0.3em solid;
+    margin-top: 0.3em;
     border-bottom: var(--headerBgColor) 0.3em solid;
     margin-bottom: 0.3em;
+}
+#searchBar{
+    
+     width: 100%;
+     display: flex;
+ } 
+ 
+ #searchInput{
+     margin-top: 2em;
+     margin-bottom: 2em;
+     background-color: var(--bgColor);
+     border-radius: 10px;
+     flex: 1 1 70%;
+     padding: 10px;
+     
  }
  
-
-#searchInput{
-    margin-top: 2em;
-    margin-bottom: 2em;
-    background-color: var(--bgColor);
-    border-radius: 10px;
-    flex: 1;
-    padding: 10px;
-    
-}
-
-#searchButton {
-    padding: 10px;
-    margin: auto;
-    height: auto;
-    border-radius: 10px;
-    background-color: var(--headerBgColor);
-    color: var(--headerTxtColor);
-}
-
-#searchInput:hover{
-    background-color: var(--visitedLinkColor);
-    
-}
-
-/*Search Result*/
-
+ #searchButton {
+     padding: 10px;
+     margin: auto;
+     height: auto;
+     flex: 1 1 auto;
+     border-radius: 10px;
+     background-color: var(--headerBgColor);
+     color: var(--headerTxtColor);
+ }
+ 
+ #searchInput:hover{
+     background-color: var(--visitedLinkColor);
+     
+ }
+ 
+ /*Search Result*/
 #searchResults dd, #searchResults dt{
     display: inline-block;
     margin: 0 0.5em;
@@ -944,18 +942,15 @@ input:hover{
 
 
 
+
 /*SEGNALAZIONI*/
-
-
 
 main#content.segnalazioni h2{ 
     text-align: center;
 
 } 
 
-
-
-table {
+.segnalazioni table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 40px;
@@ -963,27 +958,59 @@ table {
 
 }
   
-th, td {
+.segnalazioni th, .segnalazioni td {
     padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
     
 }
-  
 
-tr:nth-child(even) {
+.segnalazioni tr:nth-child(even) {
 background-color: #f2f2f2;
 }
-  
 
-tr:hover {
+
+.segnalazioni tr:hover, .segnalazioni thead {
 background-color: #e5e5e5;
 }
 
-caption {
+.segnalazioni caption {
 padding: 0.5em;
 }
 
+.segnalazioni td.inCarico {
+    position: relative;
+    background-image: url(../img/icons/yes.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1em;
+    height: 1em; 
+}
+
+.segnalazioni td span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-indent: -9999px; 
+}
+
+.segnalazioni td a{
+    display: block;
+    height: 1em;
+}
+
+.segnalazioni td.NonInCarico {
+    position: relative;
+    background-image: url(../img/icons/no.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1em;
+    height: 1em; 
+    line-height: 1.5em;
+}
 
 /*PROFILO*/
 
@@ -1091,34 +1118,6 @@ main#content .dashboard h2{
 #news-button{
     margin-bottom: 2em;
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

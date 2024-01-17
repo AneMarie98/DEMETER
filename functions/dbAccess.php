@@ -21,7 +21,7 @@
             return $this->connection;
         }
         public function verifyUser($email){
-            $query="SELECT * FROM users WHERE email='$email'";
+            $query="SELECT * FROM utenti WHERE email='$email'";
             try{
                 $queryResult = mysqli_query($this -> connection, $query);
             }catch(\Exception $e){
@@ -35,12 +35,10 @@
         }
 
         public function getUserPassword($email){
-            $query="SELECT password FROM users WHERE email='$email'";
+            $query="SELECT password FROM utenti WHERE email='$email'";
             try{
                 $queryResult = mysqli_query($this -> connection, $query);
-            }catch(\Exception $e){
-
-            }
+           
             if(mysqli_num_rows($queryResult) != 0){
                 while($row = mysqli_fetch_array($queryResult)){
                     $dbpassword=$row["password"];
@@ -50,15 +48,16 @@
             }else{
                 return null;
             }
-        }
-
-        public function getAuthUserInfo($email){
-            $query="SELECT firstname,lastname FROM users WHERE email='$email'";
-            try{
-                $queryResult = mysqli_query($this -> connection, $query);
             }catch(\Exception $e){
 
             }
+        }
+
+        public function getAuthUserInfo($email){
+            $query="SELECT nome,cognome FROM utenti WHERE email='$email'";
+            try{
+                $queryResult = mysqli_query($this -> connection, $query);
+            
             if(mysqli_num_rows($queryResult) != 0){
                 while($row = mysqli_fetch_array($queryResult)){
                     $_SESSION["email"]=$email;
@@ -66,6 +65,27 @@
                     $_SESSION["lastname"] = $row["lastname"];
                 }
                 $queryResult -> free();
+            }else{
+                return null;
+            }
+        }catch(\Exception $e){
+
+        }
+        }
+
+        public function getUserId($email){
+            $query="SELECT idUtente FROM utenti WHERE email='$email'";
+            try{
+                $queryResult = mysqli_query($this -> connection, $query);
+            }catch(\Exception $e){
+
+            }
+            if(mysqli_num_rows($queryResult) != 0){
+                while($row = mysqli_fetch_array($queryResult)){
+                    $id=$row["idUtente"];
+                }
+                $queryResult -> free();
+                return $id;
             }else{
                 return null;
             }
@@ -168,12 +188,15 @@
             }
             return null;
         }
-
-    public function insertSegnalazione($indirizzo, $data, $testo){
+    
+    
+    public function insertSegnalazione($indirizzo, $data, $testo, $email){
         cleanInput($indirizzo, $this->connection);
         cleanInput($data, $this->connection);
         cleanInput($testo, $this->connection);
-        $query="INSERT INTO segnalazioni (indirizzo, dataS, testo) VALUES ('$indirizzo', '$data', '$testo')";
+        $idUtente = $this->getUserId($email);  
+        $query="INSERT INTO segnalazioni (indirizzo, dataS, testo, fkUtenteS) VALUES ('$indirizzo', '$data', '$testo', '$idUtente')";
+        echo $query;
         try{
             $queryResult = mysqli_query($this -> connection, $query);
         }catch(\Exception $e){
@@ -184,6 +207,7 @@
 
     public function searchRifiuto($rifiuto){
         $query="SELECT * FROM rifiuti WHERE nomeRifiuto LIKE '%$rifiuto%'";
+
         try{
             $queryResult = mysqli_query($this -> connection, $query);
             if(mysqli_num_rows($queryResult) != 0){

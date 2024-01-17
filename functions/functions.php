@@ -1,7 +1,5 @@
 
 <?php
-
-
 function cleanInput($value, $connection){
         // elimina gli spazi
         $value = trim($value);
@@ -13,4 +11,11 @@ function cleanInput($value, $connection){
 
         return $value;
 
-    }
+}
+
+function convertDateFormatString($date){
+    $elements = explode("-", $date);
+    $date = $elements[2]."/".$elements[1]."/".$elements[0];
+    return $date;
+}
+
