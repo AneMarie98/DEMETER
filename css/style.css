@@ -820,9 +820,169 @@ footer{
 
 }
 
+/*Search*/
+#searchBar{
+   border-top: var(--headerBgColor) 0.3em solid;
+   margin-top: 0.3em;
+   display: flex;
+    width: 100%;
+}
+
+
+#searchResults{
+    border-bottom: var(--headerBgColor) 0.3em solid;
+    margin-bottom: 0.3em;
+ }
+ 
+
+#searchInput{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: var(--bgColor);
+    border-radius: 10px;
+    flex: 1;
+    padding: 10px;
+    
+}
+
+#searchButton {
+    padding: 10px;
+    margin: auto;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+}
+
+#searchInput:hover{
+    background-color: var(--visitedLinkColor);
+    
+}
+
+/*Search Result*/
+
+#searchResults dd, #searchResults dt{
+    display: inline-block;
+    margin: 0 0.5em;
+    width: 14%;
+}
+
+
+#searchResults dt{
+   font-weight: bold;
+}
+
+#searchResults dt{
+    margin: auto;
+    text-align: center;
+}
+/*LOGIN*/
+
+#content h2 {
+    text-align: center;
+    
+}
+
+#content legend {
+    text-align: left;
+    font-size: 20px; 
+    
+} 
+
+#content fieldset {
+    
+    border-radius: 10px;
+    text-align: center;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em; 
+    margin-bottom: 5em;
+    width: 60%; 
+    
+   
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 
 
+input{
+    padding:1.5em;
+    margin: 2em; 
+    
+    border-radius: 10px;
+    background-color: var(--headerBgColor);
+    
+}
+input#loginemail {
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--txtColor);
+    
+}
+
+
+input#loginpass {
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--txtColor);
+}
+
+input:hover{
+    background-color: var(--visitedLinkColor);
+    color: var(--bgColor);
+}
+
+
+
+/*SEGNALAZIONI*/
+
+
+
+main#content.segnalazioni h2{ 
+    text-align: center;
+
+} 
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+}
+  
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    
+}
+  
+
+tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+  
+
+tr:hover {
+background-color: #e5e5e5;
+}
+
+caption {
+padding: 0.5em;
+}
 
 
 

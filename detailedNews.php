@@ -8,12 +8,19 @@
     $db=new DB\DBAccess;
     $connOk=$db->openDBConnection();
     $id_news = $_GET["id"];
-
-    echo file_get_contents("templates/header.html");
-
     $newsFromDB ;
-    $htmlToInsert = "<main id=\"content\" class=\"detailedNews\"> ";
-   
+    $htmlToInsert = "";
+    $paginaHTML=file_get_contents("templates/detailedNewsTemplate.html");
+
+    if(isset($_SESSION["email"])){
+        $profile=$_SESSION["firstname"];
+        $profilelink="profilo.php";
+    }
+    else{
+        $profile="Accedi";
+        $profilelink="login.php";
+    }
+
     if($connOk){
         [$titolo, $articolo, $urlImg, $data] = $db -> getDetailedNews($id_news);
         $htmlToInsert .= "<img src=\"".$urlImg."\" alt=\"\" ><h2>".$titolo."</h2> <h3>".$data."</h3><div class=\"newsArticle\">".$articolo."</div>";
@@ -22,7 +29,11 @@
         $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
     }
 
-    $htmlToInsert .= "</main>";
-    echo $htmlToInsert;
-    echo file_get_contents("templates/footer.html");
-?>
+
+    $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
+    $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
+    $paginaHTML=str_replace("{detailedTitle}",$titolo,$paginaHTML);
+    $paginaHTML=str_replace("{detailedArticle}",$htmlToInsert,$paginaHTML);
+
+    echo $paginaHTML;
+

@@ -2,13 +2,14 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
-        <title>News-Demeter</title> 
-        <meta name="keywords" content="Demeter, News,Raccolta, Rifiuti,Notizia,Aggiornamento">
-        <meta name="description" content="Scopri le ultime notizie e aggiornamenti su Demeter,azienda all'avanguardia da sempre impegnata nel rispetto dell'ambiente">
+        <title>Demeter</title>
+        <meta name="keywords" content="Demeter, Raccolta, Rifiuti">
+        <meta name="description" content="">
         <link rel="stylesheet" href="css/style.css" media="screen">
         <link rel="stylesheet" href="css/mini.css" media="only screen and (max-device-width: 768px)">
+        <script src="js/segnalazione_formcheck.js"></script>
     </head>
-    <body>
+    <body onload="caricamento()">
         <header>
             <nav aria-label="Aiuti alla navigazione" class="navigationhelp">
                 <a href="#content">Vai al contenuto</a>
@@ -27,12 +28,37 @@
                 </ul>
             </nav>
             <nav id="breadcrumb">
-                <p>Ti trovi in: <a lang="en" href="index.php">Home </a>&gt;&gt;<span lang="en"> News</span></p>
+                <p>Ti trovi in: <a lang="en" href="index.php">Home</a>&gt;&gt;Profilo&gt;&gt;<a href="">Inserisci Segnalazione</a></p>
             </nav>
         </header>
-        <main id="content" class="news">
-            <h2>Ultime <span lang="en">news</span></h2>
-            {news}
+        <main id="content" class="FormSegnalazione">
+            <h2>Inserisci la tua segnalazione</h2>
+        <p>Inserisci un indirizzo di riferimento vicino ai rifiuti abbandonati che vuoi segnalare, la data in cui li hai visti ed un eventuale testo che descriva quello che vuoi segnalare. Ti ringraziamo per la collaborazione!</p>
+
+          <!-- <form id="segnalazione" action="#" method="post" onsubmit="return validazioneForm()">
+
+                <fieldset>
+                    <legend>Segnalazione</legend>
+                    <div class="form-linegroup">
+                        <label for="indirizzo">Indirizzo:</label>
+                        <input type="text" id="indirizzo" name="indirizzo" placeholder="Piazza San Marco" required>
+                    </div>
+                    <div class="form-linegroup">
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" name="data" required >    
+                    </div>
+                    <div class="form-linegroup"></div>
+                        <label for="testo">Testo:</label>
+                        <textarea id="testo" name="testo" placeholder="Rifiuti abbandonati sul ciglio della strada"></textarea>   
+                    </div>
+                    <div class="form-linegroup">
+                        <button type="submit">Invia</button>
+                    </div>
+                </fieldset>
+
+            </form>--> 
+
+           {form}
         </main>
         <footer>
             <h3>Segui i nostri canali social</h3>

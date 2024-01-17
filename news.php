@@ -7,11 +7,19 @@
 
     $db=new DB\DBAccess;
     $connOk=$db->openDBConnection();
-
-    echo file_get_contents("templates/header.html");
-
     $newsFromDB = array();
-    $htmlToInsert = "<main id=\"content\" class=\"news\"> <h2>Ultime <span lang=\"en\">news</span></h2>";
+    $htmlToInsert = "";
+    $paginaHTML=file_get_contents("templates/newsTemplate.html");
+
+
+    if(isset($_SESSION["email"])){
+        $profile=$_SESSION["firstname"];
+        $profilelink="profilo.php";
+    }
+    else{
+        $profile="Accedi";
+        $profilelink="login.php";
+    }
    
     if($connOk){
        $newsFromDB = $db->getNews();
@@ -32,8 +40,9 @@
         $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
     }
 
-    $htmlToInsert .= "</main>";
-    echo $htmlToInsert;
-    echo file_get_contents("templates/footer.html");
+    $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
+    $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
+    $paginaHTML=str_replace("{news}",$htmlToInsert,$paginaHTML);
+    echo $paginaHTML;
 
 ?>

@@ -2,11 +2,12 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
-        <title>Demeter</title>
-        <meta name="keywords" content="Servizi Ecologici, Impianti, Smaltimento Rifiuti,Raccolta,Bonifiche Ambientali">
-        <meta name="description" content="Servizio completo di trattamento dei rifiuti per ogni tipo di intervento. Garantiamo lavori rapidi, convenienti e a norma di legge">
+        <title>DoveLoButto-Demeter</title>
+        <meta name="keywords" content="Servizi Ecologici, Impianti, Smaltimento Rifiuti,Raccolta,Bonifiche Ambientali,Riciclo,Contenitori,Plastica,Carta,Cartone,Metallo,Umido,Vetro">
+        <meta name="description" content="Demeter aiuta nel riconoscere il contenitore corretto per un riciclo adeguato dei rifiuti.">
         <link rel="stylesheet" href="css/style.css" media="screen">
         <link rel="stylesheet" href="css/mini.css" media="screen and (max-width:768px)">
+        <script src="js/functions.js"></script>
     </head>
     <body>
         <header>
@@ -25,10 +26,17 @@
                 </ul>
             </nav>
             <nav id="breadcrumb">
-                <p>Ti trovi in: <a href="index.php" lang="en">Home</a>&gt;&gt;Dove lo butto?</p>
+                <p>Ti trovi in: <a href="index.php" lang="en">Home </a>&gt;&gt; Dove lo butto?</p>
             </nav>
         </header>
         <main id="content">
+            <div id="searchBar">
+                <h3>Cerca un rifuto per sapere dove va buttato: </h3>
+                <input type="text" id="searchInput" placeholder="Cerca un rifiuto">
+                <button id="searchButton">Cerca</button>
+            </div>
+            <div id="searchResults">
+            </div> 
             <div id="doveLoButto-wrapper">
                 <div id="carta" class="waste-category">
                     <h3>Carta</h3>
@@ -106,9 +114,11 @@
                     <p>Gli <strong>indumenti usati</strong>, come abiti usati, maglieria, biancheria, borse, cappelli e cinture, vanno gettati negli appositi contenitori presso i centri di raccolta e altri punti sul territorio</p>
                 </div>
                 <div id="altroImg"></div>
-            </div>
+            </div>           
+            
         </main>
-        <div></div>
+        
+
         <footer>
             <h3>Segui i nostri canali social</h3>
             <p>
