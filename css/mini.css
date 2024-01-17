@@ -209,21 +209,26 @@ footer{
     text-align: center;
 }
 
+#content.news img{
+    background-color: var(--bgColor);
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 1em; 
+}
+
+#content.news h3{
+    margin-top: 0.5em;
+}
+
 #content.news article{
+    display: block;
     border: 0.05em solid var(--headerTxtColor); 
     border-radius: 0.5em; 
     padding: 1em; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 1em;
     background-color: var(--articleBgColor);
-}
-
-
-#content.news article p a{
-    display: block; 
-    text-align: center; 
-    font-size: 1.2em; 
-    margin-top: 0.8em;
 }
 
 /* Detailed News */
