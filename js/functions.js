@@ -9,6 +9,71 @@ function cleanInput(value) {
     return value;
 }
 
+
+/**
+ * aggiorna la segnalazione con l'inCarico specificato
+ */
 function updateSegnalazione(id, isChecked) {
     window.location.href = "updateSegnalazione.php?id=" + id + "&inCarico=" + isChecked;
 }
+
+/**
+ * Ricerca da SearchBar in DoveLoButto e visualizza risultati 
+*/
+function searchResults() {
+    document.getElementById('searchButton').addEventListener('click', function() {
+        var searchInput = document.getElementById('searchInput').value;
+
+        try {
+            fetch('functions/search.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'rifiuto=' + encodeURIComponent(searchInput),
+            })
+            .then(response => response.json())
+            .then(data => {
+                var results = document.getElementById('searchResults');
+                results.innerHTML = '';
+                  
+                if (data.length > 0) {
+                   
+                    data.forEach(function(item) {
+                        var dlElement = document.createElement('dl');
+                        var rifiutodt = document.createElement('dt');
+                        rifiutodt.textContent = "Rifiuto: ";
+                        var rifiutodd = document.createElement('dd');
+                        rifiutodd.textContent = item.nomeRifiuto;
+                        dlElement.appendChild(rifiutodt);
+                        dlElement.appendChild(rifiutodd);
+                        var bidonedt = document.createElement('dt');
+                        bidonedt.textContent = "Bidone: ";
+                        var bidonedd = document.createElement('dd');
+                        bidonedd.textContent = item.bidone;
+                        dlElement.appendChild(bidonedt);
+                        dlElement.appendChild(bidonedd);
+                        var giornodt = document.createElement('dt');
+                        giornodt.textContent = "Giorno: ";
+                        var giornodd = document.createElement('dd');
+                        giornodd.textContent = item.giorno;
+                        dlElement.appendChild(giornodt);
+                        dlElement.appendChild(giornodd);
+                        results.appendChild(dlElement);
+                    });
+                  
+                   
+                } else {
+                    results.appendChild(document.createTextNode('Nessun risultato trovato'));
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    searchResults();
+});
