@@ -36,4 +36,4 @@
     $paginaHTML=str_replace("{detailedArticle}",$htmlToInsert,$paginaHTML);
 
     echo $paginaHTML;
-?>
+

@@ -42,4 +42,4 @@
     $paginaHTML=str_replace("{detailedSegnalazione}",$htmlToInsert,$paginaHTML);
 
     echo $paginaHTML;
-?>
+

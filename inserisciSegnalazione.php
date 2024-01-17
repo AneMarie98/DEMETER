@@ -4,36 +4,43 @@
     setlocale(LC_ALL,'it_IT');
 
     require_once "functions/dbAccess.php";
+    require_once "functions/functions.php";
 
+    $db=new DB\DBAccess;
+    $connOk=$db->openDBConnection();
   
     $paginaHTML=file_get_contents("templates/inserisciSegnalazioneTemplate.html");
     $htmlToInsert = "";
 
-    
-    if(isset($_POST["indirizzo"]) && isset($_POST["data"]) && isset($_POST["testo"])){
-        $indirizzo=cleanInput($_POST["indirizzo"]);
-        $data=cleanInput($_POST["data"]);
-        $testo=cleanInput($_POST["testo"]);
-        $db=new DB\DBAccess;
-        $connOk=$db->openDBConnection();
-        if($connOk){
-            $db->insertSegnalazione($indirizzo,$data,$testo);
-            $htmlToInsert .= "<p>Segnalazione inserita correttamente</p>";
+
+    if($connOk){
+        if(isset($_POST["indirizzo"]) && isset($_POST["data"]) && isset($_POST["testo"])){
+            $indirizzo=cleanInput($_POST["indirizzo"], $db->getConnection());
+            $data=cleanInput($_POST["data"],$db->getConnection());
+            $testo=cleanInput($_POST["testo"], $db->getConnection());
+            $db=new DB\DBAccess;
+            $connOk=$db->openDBConnection();
+            if($connOk){
+                if( $db->insertSegnalazione($indirizzo,$data,$testo)){
+                    $htmlToInsert .= "<p>Segnalazione inserita correttamente. Torna alla <a href=\"index.php\" lang=\"en\"> Home </a></p>";
+                }
+            }
+            else{
+                die("<script>location.href='error.php'</script>");
+            }
         }
         else{
-            die("<script>location.href='error.php'</script>");
+            $htmlToInsert .= "<p>Compila tutti i campi</p>";
         }
     }
-    else{
-        $htmlToInsert .= "<p>Compila tutti i campi</p>";
-    }
+   
 
     if(isset($_SESSION["email"])){
         $profile=$_SESSION["firstname"];
         $profilelink="profilo.php";
         $htmlToInsert .= " 
         <legend>Segnalazione</legend>
-        <form id=\"segnalazione\" action=\"#\" method=\"post\" onsubmit=\"return validazioneForm()\">
+        <form id=\"segnalazione\" action=\"inserisciSegnalazione.php\" method=\"post\" onsubmit=\"validazioneForm()\">
             <fieldset>
                 <div class=\"form-linegroup\">
                     <label for=\"indirizzo\">Indirizzo:</label>
@@ -66,4 +73,3 @@
     $paginaHTML=str_replace("{form}",$htmlToInsert,$paginaHTML);
     echo $paginaHTML;
 
-?>

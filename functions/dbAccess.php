@@ -17,6 +17,9 @@
             mysqli_close($this->connection);
         }
 
+        public function getConnection(){
+            return $this->connection;
+        }
         public function verifyUser($email){
             $query="SELECT * FROM users WHERE email='$email'";
             try{
@@ -147,6 +150,9 @@
         }
 
     public function insertSegnalazione($indirizzo, $data, $testo){
+        cleanInput($indirizzo, $this->connection);
+        cleanInput($data, $this->connection);
+        cleanInput($testo, $this->connection);
         $query="INSERT INTO segnalazioni (indirizzo, dataS, testo) VALUES ('$indirizzo', '$data', '$testo')";
         try{
             $queryResult = mysqli_query($this -> connection, $query);

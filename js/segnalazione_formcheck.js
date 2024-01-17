@@ -26,7 +26,7 @@ function removeChildInput(tag){
 function validateIndirizzo(input){
     removeChildInput(input);
 
-    if(input.value.length <= 5 || !input.includes(' ')){
+    if(input.value.length <= 5 || !input.includes(',')){
         showError(input, "Indirizzo non valido!"); 
 
         inputURL.focus(); 
