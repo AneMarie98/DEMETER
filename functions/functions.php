@@ -1,4 +1,7 @@
-<?php 
+
+<?php
+
+
 function cleanInput($value, $connection){
         // elimina gli spazi
         $value = trim($value);
@@ -9,4 +12,5 @@ function cleanInput($value, $connection){
         $value = mysqli_real_escape_string($connection, $value);
 
         return $value;
+
     }

@@ -131,6 +131,22 @@
             return null;
         }
 
+
+        public function getSvuotDays(){
+            $query="SELECT * FROM svuotamenti";
+            try{
+                $queryResult = mysqli_query($this -> connection, $query);
+                if(mysqli_num_rows($queryResult) != 0){
+                    while($row = mysqli_fetch_array($queryResult)){
+                        $result[] = $row;
+                    }
+                    $queryResult -> free();
+                    return $result;
+                }
+            return null;
+            }
+      }
+
         public function getDetailedSegnalazione($id){
             $query="SELECT * FROM segnalazioni WHERE idSegnalazione='$id' ";
             try{
@@ -140,6 +156,7 @@
                     $queryResult -> free();
                     return array( $row['indirizzo'], $row['dataS'], $row['testo'], $row['inCarico']);
     
+
                 }else{
                     return null;
                 }
