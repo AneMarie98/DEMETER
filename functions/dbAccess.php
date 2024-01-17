@@ -144,8 +144,11 @@
                     return $result;
                 }
             return null;
+            }catch(\Exception $e){
+
             }
-      }
+            return null;
+        }
 
         public function getDetailedSegnalazione($id){
             $query="SELECT * FROM segnalazioni WHERE idSegnalazione='$id' ";
