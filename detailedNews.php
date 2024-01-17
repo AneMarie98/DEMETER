@@ -26,8 +26,8 @@
         $htmlToInsert .= 
         "<h2>".$titolo."</h2> 
         <h3>".$data."</h3>
-        <img src=\"./img/".$urlImg."\" alt=\"\" >
-        <div class=\"newsArticle\">".$articolo."</div>";
+        <img src=\"./img/news/".$urlImg."\" alt=\"\" >
+        <div class=\"newsArticle\">".$articolo."</div>"; // le immagini non devono essere di contenuto
       
     } else{
         $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
