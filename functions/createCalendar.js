@@ -41,12 +41,12 @@ function changeMonth(index){
     let currentMonthDisp=document.getElementById("calMonth").dataset.mm;
     let currentYearDisp=document.getElementById("calMonth").dataset.yyyy;
     let dateDisp=new Date(currentMonthDisp+"/1/"+currentYearDisp);
-    console.log(dateDisp);
     let newDateDisp = new Date(dateDisp.setMonth(dateDisp.getMonth()+index));
-    console.log(newDateDisp);
+    let tda=new Date(newDateDisp);
     document.getElementById("calMonth").innerHTML=getMY(newDateDisp);
     document.getElementById("calMonth").dataset.yyyy=newDateDisp.getFullYear();
     document.getElementById("calMonth").dataset.mm=(newDateDisp.getMonth()+1);
+    setCalArrows(getMY(new Date(tda.setMonth(tda.getMonth()-1))),getMY(new Date(tda.setMonth(tda.getMonth()+2))));
     updateCalendar(getStartingB(newDateDisp.getFullYear(),newDateDisp.getMonth()),daysInMonth(newDateDisp.getFullYear(),newDateDisp.getMonth()+1),(newDateDisp.getMonth()+1),newDateDisp.getFullYear());
 }
 
