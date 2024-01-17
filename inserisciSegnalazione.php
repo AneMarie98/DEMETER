@@ -30,7 +30,7 @@
 
     if(isset($_SESSION["email"])){
         $profile=$_SESSION["firstname"];
-        $profilelink="functions/logout.php";
+        $profilelink="profilo.php";
         $htmlToInsert .= " 
         <legend>Segnalazione</legend>
         <form id=\"segnalazione\" action=\"#\" method=\"post\" onsubmit=\"return validazioneForm()\">
