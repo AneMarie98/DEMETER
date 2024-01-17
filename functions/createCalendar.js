@@ -2,17 +2,18 @@ function createCalendar(){
     const td=new Date();
     const tda=new Date();
     document.getElementById("calMonth").innerHTML=getMY(td);
-    document.getElementById("calMonth").dataset.yyyymm=td.getFullYear()+"-"+(td.getMonth()+1);
+    document.getElementById("calMonth").dataset.yyyy=td.getFullYear();
+    document.getElementById("calMonth").dataset.mm=(td.getMonth()+1);
     setCalArrows(getMY(new Date(tda.setMonth(tda.getMonth()-1))),getMY(new Date(tda.setMonth(tda.getMonth()+2))));
     let startingB=getStartingB(td.getFullYear(),td.getMonth());
     let daysinMonth=daysInMonth(td.getFullYear(),td.getMonth());
     for(let i=startingB;i<=daysinMonth+startingB-1;i++){
         document.getElementById("numd"+i).innerHTML=i-startingB+1;
-        setDataDisp("numd"+i,td.getFullYear()+"-"+(td.getMonth()+1)+"-"+i);
-        setLabel("numd"+i,td.getFullYear()+"-"+(td.getMonth()+1)+"-"+i);
+        setDataDisp("numd"+i,(td.getMonth()+1)+"/"+i+"/"+td.getFullYear());
+        setLabel("numd"+i,(td.getMonth()+1)+"/"+i+"/"+td.getFullYear());
         if(i==td.getDate()){highlightToday("numd"+i);}
     }
-    getSvuot(td.getFullYear()+"-"+(td.getMonth()+1)+"-1",startingB);
+    getSvuot((td.getMonth()+1)+"/1/"+td.getFullYear(),startingB);
 }
 
 function getMY(d){
@@ -37,15 +38,19 @@ function getStartingB(year,month){
 }
 
 function changeMonth(index){
-    let currentMonthDisp=document.getElementById("calMonth").dataset.yyyymm;
-    let dateDisp=new Date(currentMonthDisp);
+    let currentMonthDisp=document.getElementById("calMonth").dataset.mm;
+    let currentYearDisp=document.getElementById("calMonth").dataset.yyyy;
+    let dateDisp=new Date(currentMonthDisp+"/1/"+currentYearDisp);
+    console.log(dateDisp);
     let newDateDisp = new Date(dateDisp.setMonth(dateDisp.getMonth()+index));
+    console.log(newDateDisp);
     document.getElementById("calMonth").innerHTML=getMY(newDateDisp);
-    document.getElementById("calMonth").dataset.yyyymm=newDateDisp.getFullYear()+"-"+(newDateDisp.getMonth()+1);
-    updateCalendar(getStartingB(newDateDisp.getFullYear(),newDateDisp.getMonth()),daysInMonth(newDateDisp.getFullYear(),newDateDisp.getMonth()+1),newDateDisp.getFullYear()+"-"+(newDateDisp.getMonth()+1));
+    document.getElementById("calMonth").dataset.yyyy=newDateDisp.getFullYear();
+    document.getElementById("calMonth").dataset.mm=(newDateDisp.getMonth()+1);
+    updateCalendar(getStartingB(newDateDisp.getFullYear(),newDateDisp.getMonth()),daysInMonth(newDateDisp.getFullYear(),newDateDisp.getMonth()+1),(newDateDisp.getMonth()+1),newDateDisp.getFullYear());
 }
 
-function updateCalendar(startingB,daysinMonth,newDateDisp){
+function updateCalendar(startingB,daysinMonth,newMonthDisp,newYearDisp){
     const td=new Date();
     for(let i=1;i<=startingB;i++){
         document.getElementById("numd"+i).innerHTML="";
@@ -54,8 +59,8 @@ function updateCalendar(startingB,daysinMonth,newDateDisp){
     }
     for(let i=startingB;i<=daysinMonth+startingB-1;i++){
         document.getElementById("numd"+i).innerHTML=i-startingB+1;
-        setDataDisp("numd"+i,newDateDisp+"-"+(i-startingB+1));
-        setLabel("numd"+i,newDateDisp+"-"+(i-startingB+1));
+        setDataDisp("numd"+i,newMonthDisp+"/"+(i-startingB+1)+"/"+newYearDisp);
+        setLabel("numd"+i,newMonthDisp+"/"+(i-startingB+1)+"/"+newYearDisp);
         if(i==td.getDate()){highlightToday("numd"+i);}
     }
     for(let i=daysinMonth+startingB;i<=42;i++){
@@ -63,8 +68,8 @@ function updateCalendar(startingB,daysinMonth,newDateDisp){
         removeDataDisp("numd"+i);
         removeLabel("numd"+i);
     }
-    limitCalendar(newDateDisp);
-    getSvuot(new Date(newDateDisp),startingB);
+    limitCalendar(newMonthDisp+"/1/"+newYearDisp);
+    getSvuot(new Date(newMonthDisp+"/1/"+newYearDisp),startingB);
 }
 
 function limitCalendar(newDateDisp){
@@ -144,7 +149,7 @@ function getSvuot(monthDisp,startingB){
         let j=1;
         do{
             if((rifDate.getFullYear()==d.getFullYear()) && (rifDate.getMonth()==d.getMonth())){
-                svuotdays[i][j]=rifDate.getFullYear()+"-"+(rifDate.getMonth()+1)+"-"+rifDate.getDate();
+                svuotdays[i][j]=(rifDate.getMonth()+1)+"/"+rifDate.getDate()+"/"+rifDate.getFullYear();
                 j++;
             }
             rifDate=new Date(rifDate.setDate(rifDate.getDate()+(svuot[i][2]*7)));
