@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Profilo-Demeter</title>
+        <meta name="keywords" content="Demeter, Raccolta, Rifiuti, Servizi,Segnalazioni,Smaltimento, Calendario">
+        <meta name="description" content="Profilo Demeter.">
+        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="css/mini.css" media="screen and (max-width:768px)">
+    </head>
+    <body>
+        <header>
+            <nav aria-label="Aiuti alla navigazione" class="navigationhelp">
+                <a href="#content">Vai al contenuto</a>
+            </nav>
+            <h1>Demeter</h1>
+            <nav id="menu">
+                <ul>
+                    <li><span lang="en">Home</span></li>
+                    <li><a href="calendario.php">Calendario</a></li>
+                    <li><a href="servizi.php">Servizi</a></li>
+                    <li><a href="doveLoButto.php">Dove lo butto?</a></li>
+                    <li><a href="news.php"><span lang="en">News</span></a></li>
+                    <li><a href="{profilelink}">{profile}</a></li>
+                </ul>
+            </nav>
+            <nav id="breadcrumb">
+                <p>Ti trovi in: <a lang="en" href="index.php">Home</a> &gt;&gt; <a href="profilo.php">Profilo</a></p>
+            </nav>
+        </header>
+        <main id="content" class="profilo">
+            <h2>Profilo</h2>
+
+            <form id="profile-form" action="" method="post">
+                <fieldset>
+                    <legend>Dati utente</legend>
+                    <label for="profiloemail">Username</label>
+                    <input type="email" id="profiloemail" name="profiloemail" placeholder="Username"> <!--Dovrebbe rimanere scritto il nome utente -->
+                    <label for="loginpass">Password</label>
+                    <input type="password" id="profilopass" name="profilopass" placeholder="123?@abc"> <!--Dovrebbe rimanere scritta la password nascosta -->
+                    <input type="submit" id="profiloannulla" value="Annulla" name="profilosubmit">
+                    <input type="submit" id="profilosalva" value="Salva" name="profilosubmit">
+
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <h3>Segui i nostri canali social</h3>
+            <p>
+                Seguici su <span lang="en">Facebook</span>, <span lang="en">Instagram</span> e <span lang="en">X</span> per rimanere
+                aggiornato su tutte le iniziative e i progetti futuri. <span>Per un mondo più libero e verde.</span>
+            </p>
+            <ul id="socialList">
+                <li id="facebook"><a href=""><span lang="en">Facebook</span></a></li>
+                <li id="instagram"><a href=""><span lang="en">Instagram</span></a></li>
+                <li id="x"><a href=""><span lang="en">X</span></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
