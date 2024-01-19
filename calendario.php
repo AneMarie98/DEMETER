@@ -13,8 +13,12 @@
     $paginaHTML=file_get_contents("templates/calendarioTemplate.html");
 
     if(isset($_SESSION["email"])){
+        if(isset($_SESSION["admin"])){
+            $profile="Dashboard";
+            $profilelink="dashboard.php";
+        }
         $profile=$_SESSION["firstname"];
-        $profilelink="functions/logout.php";
+        $profilelink="profilo.php";
     }
     else{
         $profile="Accedi";

@@ -54,17 +54,20 @@
         }
 
         public function getAuthUserInfo($email){
-            $query="SELECT nome,cognome FROM utenti WHERE email='$email'";
+            $query="SELECT nome, cognome FROM utenti WHERE email='$email'";
             try{
                 $queryResult = mysqli_query($this -> connection, $query);
             
             if(mysqli_num_rows($queryResult) != 0){
+                $result = array();
                 while($row = mysqli_fetch_array($queryResult)){
                     $_SESSION["email"]=$email;
-                    $_SESSION["firstname"] = $row["firstname"];
-                    $_SESSION["lastname"] = $row["lastname"];
+                    $_SESSION["firstname"] = $row["nome"];
+                    $_SESSION["lastname"] = $row["cognome"];
+                    $result = array($row["nome"], $row["cognome"], $email);
                 }
                 $queryResult -> free();
+                return $result;
             }else{
                 return null;
             }

@@ -9,7 +9,10 @@
 
     session_start();
     if(isset($_SESSION["email"])){
-        die("<script>location.href='index.php'</script>");
+        if(isset($_SESSION["admin"])){
+            die("<script>location.href='dashboard.php'</script>");
+        }
+        die("<script>location.href='profilo.php'</script>");
     }
 
     $paginaHTML=file_get_contents("templates/loginTemplate.html");

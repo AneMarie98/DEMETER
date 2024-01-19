@@ -10,6 +10,10 @@
     $paginaHTML=file_get_contents("templates/doveLoButtoTemplate.html");
 
     if(isset($_SESSION["email"])){
+        if(isset($_SESSION["admin"])){
+            $profile="Dashboard";
+            $profilelink="dashboard.php";
+        }
         $profile=$_SESSION["firstname"];
         $profilelink="profilo.php";
     }
