@@ -92,7 +92,7 @@
         }
 
         public function getNews(){
-            $query="SELECT idNotizia, titolo, descrizione FROM notizie ";
+            $query="SELECT idNotizia, titolo, urlImg, descrizione FROM notizie ";
             try{
                 $queryResult = mysqli_query($this -> connection, $query);
                 if(mysqli_num_rows($queryResult) != 0){

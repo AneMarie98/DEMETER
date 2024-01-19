@@ -105,14 +105,15 @@ main{
     max-width: 1200px;
 }
 
-#wrapper{
+/* index */
+.home #wrapper{
     display: grid; 
     grid-template-columns: 1fr 1fr  1fr; 
     grid-gap: 2em; 
     grid-template-areas: "t t i" ;
 }  
 
-#wrapper > .left{
+.home #wrapper > .left{
     grid-area: t;
 }
 
@@ -124,11 +125,10 @@ main{
     margin-bottom: 5em;
     max-width: 300px;
     text-align: center;
-
 }
 
 
-#wrapper > .right{
+.home #wrapper > .right{
     grid-area: i;
     border-radius: 10px;
     background-image: url(../img/index.jpg);
@@ -138,11 +138,12 @@ main{
     margin-bottom: 1em;
 }
 
-main h2{
+main.home h2{
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
+/* footer */
 footer{
     background-color: var(--footerBgColor);
     color: var(--footerTxtColor);
@@ -172,6 +173,10 @@ footer{
 
 /* News */
 
+#content.news {
+    margin-top: 0em;
+}
+
 #content.news h2{
     margin-top: 1em;
     margin-bottom: 1em;
@@ -179,12 +184,76 @@ footer{
 }
 
 #content.news article{
-    border: 2px solid var(--headerTxtColor); 
-    border-radius: 10px; 
-    padding: 20px; 
+    border: 0.075em solid var(--headerTxtColor); 
+    border-radius: 0.5em; 
+    padding: 1em; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
     background-color: var(--articleBgColor);
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: min-content 1fr;
+}
+
+#content.news img{
+    background-color: var(--bgColor);
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 1em; 
+    grid-row: 1 / span 2;
+    grid-column: 2;
+ }
+ 
+ #content.news h3{
+    margin-top: 0.5em;
+    grid-row: 1;
+    grid-column: 1;
+} 
+
+#content.news article p{
+    grid-row: 2;
+    grid-column: 1;
+}
+
+
+/* Detailed News */
+
+#content.detailedNews{
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content 1fr auto;
+}
+
+#content.detailedNews h2{ 
+    margin-top: 0em;
+    grid-row: 1 ;
+    grid-column: 1;
+}
+
+#content.detailedNews h3{
+    margin-top: 0.5em;
+    font-weight: normal;
+    font-size: 1em;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#content.detailedNews img{
+    background-color: var(--bgColor);
+    display: block;
+    margin: auto;
+    width: 80%;
+    grid-row: 1 / span 2;
+    grid-column: 2;
+}
+
+#content.detailedNews .newsArticle{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    grid-row: 3;
+    grid-column: 1 / span 2;
 }
 
 
@@ -339,7 +408,7 @@ footer{
 
 
 
-#servizi_section3 h3,p {
+#servizi_section3 h3, #servizi_section3 p {
     margin-bottom: 2em;
 }
 
