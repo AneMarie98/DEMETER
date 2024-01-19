@@ -17,49 +17,52 @@
         if(isset($_SESSION["admin"])){
             $profile="Dashboard";
             $profilelink="dashboard.php";
+            if($connOk){
+                $segnalazioniFromDB = $db->getSegnalazioni();
+                if(is_array($segnalazioniFromDB) && count($segnalazioniFromDB) > 0){
+                 foreach ($segnalazioniFromDB as $segnalazione) {
+                     $htmlToInsert .= "
+                     <tr>
+                         <th scope= \"row\"><a href=\"detailedSegnalazione.php?id=".$segnalazione["idSegnalazione"]."\">".$segnalazione["idSegnalazione"]."</a></th>
+                         <td data-title=\"Data\">  <time datetime=\"".$segnalazione["dataS"]."\">".convertDateFormatString($segnalazione["dataS"])."</time></td>
+                         <td data-title=\"Indirizzo\">".$segnalazione["indirizzo"]."</td>
+                         <td";
+                     if($segnalazione["inCarico"] == 1){
+                         $htmlToInsert .= " class=\"inCarico\"><a href=\"updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=0\"><span>Si</span></a>";
+                     }else{
+                         $htmlToInsert .= " class=\"NonInCarico\"><a href=\"updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=1\"><span>No</span></a>";
+                     }
+                     $htmlToInsert .= " </td>
+         
+                     </tr>
+                     ";
+                 }
+         
+                     
+                }else{
+                 $htmlToInsert .= "<p>Al momento non ci sono segnalazioni!</p>"; 
+                }
+                
+             }
+             else{
+                 $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
+             }
+         
+             $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
+             $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
+             $paginaHTML=str_replace("{segnalazioni}",$htmlToInsert,$paginaHTML);
+             echo $paginaHTML;
+         
         }
         $profile=$_SESSION["firstname"];
         $profilelink="profilo.php";
+        header("Location: index.php");
     }
     else{
         $profile="Accedi";
         $profilelink="login.php";
+        header("Location: index.php");
     }
    
-    if($connOk){
-       $segnalazioniFromDB = $db->getSegnalazioni();
-       if(is_array($segnalazioniFromDB) && count($segnalazioniFromDB) > 0){
-        foreach ($segnalazioniFromDB as $segnalazione) {
-            $htmlToInsert .= "
-            <tr>
-                <th scope= \"row\"><a href=\"detailedSegnalazione.php?id=".$segnalazione["idSegnalazione"]."\">".$segnalazione["idSegnalazione"]."</a></th>
-                <td data-title=\"Data\">  <time datetime=\"".$segnalazione["dataS"]."\">".convertDateFormatString($segnalazione["dataS"])."</time></td>
-                <td data-title=\"Indirizzo\">".$segnalazione["indirizzo"]."</td>
-                <td";
-            if($segnalazione["inCarico"] == 1){
-                $htmlToInsert .= " class=\"inCarico\"><a href=\"updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=0\"><span>Si</span></a>";
-            }else{
-                $htmlToInsert .= " class=\"NonInCarico\"><a href=\"updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=1\"><span>No</span></a>";
-            }
-            $htmlToInsert .= " </td>
-
-            </tr>
-            ";
-        }
-
-            
-       }else{
-        $htmlToInsert .= "<p>Al momento non ci sono segnalazioni!</p>"; 
-       }
-       
-    }
-    else{
-        $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
-    }
-
-    $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
-    $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
-    $paginaHTML=str_replace("{segnalazioni}",$htmlToInsert,$paginaHTML);
-    echo $paginaHTML;
-
+  
 ?>
