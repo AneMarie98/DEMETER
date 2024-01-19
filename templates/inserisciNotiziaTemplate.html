@@ -2,13 +2,14 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
-        <title>Accedi-Demeter</title>
-        <meta name="keywords" content="Demeter, Raccolta, Rifiuti, Servizi, Accedi">
-        <meta name="description" content="Servizio completo di trattamento dei rifiuti per ogni tipo di intervento. Garantiamo lavori rapidi, convenienti e a norma di legge">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/mini.css" media="screen and (max-device-width: 768px)">
+        <title>Demeter</title>
+        <meta name="keywords" content="Demeter, Raccolta, Rifiuti">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="css/style.css" media="screen">
+        <link rel="stylesheet" href="css/mini.css" media="only screen and (max-device-width: 768px)">
+        <script src="js/segnalazione_formcheck.js"></script>
     </head>
-    <body>
+    <body onload="caricamento()">
         <header>
             <nav aria-label="Aiuti alla navigazione" class="navigationhelp">
                 <a href="#content">Vai al contenuto</a>
@@ -22,27 +23,28 @@
                     <li><a href="calendario.php">Calendario</a></li>
                     <li><a href="servizi.php">Servizi</a></li>
                     <li><a href="doveLoButto.php">Dove lo butto?</a></li>
-                    <li><a href="news.php"><span lang="en">News</span></a></li>
-                    <li>Accedi</li>
+                    <li><span lang="en">News</span></li>
+                    <li><a href="{profilelink}">{profile}</a></li>
                 </ul>
             </nav>
             <nav id="breadcrumb">
-                <p>Ti trovi in: <a lang="en" href="index.php">Home</a> &gt;&gt; <span lang="en">Accedi</span></p>
+                <p>Ti trovi in: <a lang="en" href="index.php">Home</a>&gt;&gt; Dashboard &gt; gt;<a href="">Inserisci Notizia</a></p>
             </nav>
         </header>
-        <main id="content">
-            <h2>Accedi</h2>
-            <form action="login.php" method="post">
+        <main id="content" class="FormSegnalazione">
+            <h2>Inserisci una nuova notizia</h2>
+        <p>Inserisci un titolo, una data di riferimento, il testo dell'articolo e volendo un'immagine di presentazione:</p>
+
+        <form id="segnalazione" action="#" method="post" onsubmit="return validazioneForm()">
+
                 <fieldset>
-                    <legend>Dati</legend>
-                    <label for="loginemail">Email</label>
-                    <input type="email" id="loginemail" name="loginemail" placeholder="username">
-                    <label for="loginpass">Password</label>
-                    <input type="password" id="loginpass" name="loginpass" placeholder="password">
-                    <input type="submit" value="Accedi" name="loginsubmit">
+                    <legend>Nuova Notizia</legend>
+                    
                 </fieldset>
-            </form>
-            <span id="loginerror"></span>
+
+            </form> 
+
+           {form}
         </main>
         <footer>
             <h3>Segui i nostri canali social</h3>

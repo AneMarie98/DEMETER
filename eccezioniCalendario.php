@@ -7,11 +7,11 @@
 
     session_start();
 
-    $paginaHTML=file_get_contents("templates/doveLoButtoTemplate.html");
+    $paginaHTML=file_get_contents("templates/eccezioniCalendarioTemplate.html");
 
     if(isset($_SESSION["email"])){
         $profile=$_SESSION["firstname"];
-        $profilelink="profilo.php";
+        $profilelink="functions/logout.php";
     }
     else{
         $profile="Accedi";

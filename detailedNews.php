@@ -14,7 +14,7 @@
 
     if(isset($_SESSION["email"])){
         $profile=$_SESSION["firstname"];
-        $profilelink="functions/logout.php";
+        $profilelink="profilo.php";
     }
     else{
         $profile="Accedi";
@@ -40,4 +40,4 @@
     $paginaHTML=str_replace("{detailedArticle}",$htmlToInsert,$paginaHTML);
 
     echo $paginaHTML;
-?>
+

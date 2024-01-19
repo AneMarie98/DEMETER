@@ -2,11 +2,11 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
-        <title>Accedi-Demeter</title>
-        <meta name="keywords" content="Demeter, Raccolta, Rifiuti, Servizi, Accedi">
+        <title>Home-Demeter</title>
+        <meta name="keywords" content="Demeter, Raccolta, Rifiuti, Servizi,Segnalazioni,Smaltimento, Calendario">
         <meta name="description" content="Servizio completo di trattamento dei rifiuti per ogni tipo di intervento. Garantiamo lavori rapidi, convenienti e a norma di legge">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/mini.css" media="screen and (max-device-width: 768px)">
+        <link rel="stylesheet" href="css/mini.css" media="screen and (max-device-width:768px)">
     </head>
     <body>
         <header>
@@ -14,35 +14,40 @@
                 <a href="#content">Vai al contenuto</a>
             </nav>
             <h1>Demeter</h1>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='mobile-menu' for="menu-toggle"></label>
             <nav id="menu">
                 <ul>
-                    <li><a href="index.php"><span lang="en">Home</span></a></li>
+                    <li><span lang="en">Home</span></li>
                     <li><a href="calendario.php">Calendario</a></li>
                     <li><a href="servizi.php">Servizi</a></li>
                     <li><a href="doveLoButto.php">Dove lo butto?</a></li>
                     <li><a href="news.php"><span lang="en">News</span></a></li>
-                    <li>Accedi</li>
+                    <li><a href="{profilelink}">{profile}</a></li>
                 </ul>
             </nav>
             <nav id="breadcrumb">
-                <p>Ti trovi in: <a lang="en" href="index.php">Home</a> &gt;&gt; <span lang="en">Accedi</span></p>
+                <p>Ti trovi in: <a lang="en" href="index.php">Home</a> &gt;&gt; <a href="segnalazioni.php">Segnalazioni</a></p>
             </nav>
         </header>
-        <main id="content">
-            <h2>Accedi</h2>
-            <form action="login.php" method="post">
-                <fieldset>
-                    <legend>Dati</legend>
-                    <label for="loginemail">Email</label>
-                    <input type="email" id="loginemail" name="loginemail" placeholder="username">
-                    <label for="loginpass">Password</label>
-                    <input type="password" id="loginpass" name="loginpass" placeholder="password">
-                    <input type="submit" value="Accedi" name="loginsubmit">
-                </fieldset>
-            </form>
-            <span id="loginerror"></span>
+        <main id="content" class="segnalazioni">
+            <h2>Segnalazioni</h2>
+            <span id="sumTable">La tabella offre informazioni sulle segnalazioni effettuate dai clienti, in particolare i dati vengono suddivisi per: codice della segnalazione, la data in cui è stata effettuata la segnalazione,l'ambito della segnalazione e se la segnalazione è stata presa in carico o meno.</span>
+            <table>
+                <caption>Segnalazioni - Demeter</caption>
+                <thead>
+
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Indirizzo</th>
+                        <th scope="col">In carico</th>
+                    </tr>
+                </thead>
+                <tbody>
+ 
+                    {segnalazioni}
+
+                </tbody>
+            </table>
         </main>
         <footer>
             <h3>Segui i nostri canali social</h3>

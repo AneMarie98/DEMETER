@@ -117,10 +117,21 @@ main{
     grid-area: t;
 }
 
+#segnalazioni-button{
+    background-color: var(--headerBgColor);
+    padding: 2em;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 5em;
+    max-width: 300px;
+    text-align: center;
+}
+
+
 .home #wrapper > .right{
     grid-area: i;
     border-radius: 10px;
-    background-image: url(../img/designImg_1_H.jpg);
+    background-image: url(../img/index.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -282,7 +293,7 @@ footer{
 #servizi_wrapper > .right{
     grid-area: i;
     border-radius: 10px;
-    background-image: url(../img/sec1.jpg);
+    background-image: url(../img/servizi_sec1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -310,7 +321,7 @@ footer{
 }
 
  #servizi_section2  div.servizi_serviceDescription div.sec2{
-    background-image: url(../img/sec22.jpg);
+    background-image: url(../img/servizi_sec22.jpg);
     display: flex;
     height: 570px;
     width: 390px;  
@@ -539,7 +550,7 @@ footer{
 
 #impianto2-wrapper #impianti_img2{
     border-radius: 10px;
-    background-image: url(../img/impianto2.jpg);
+    background-image: url(../img/impianti_img2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -576,7 +587,7 @@ footer{
 
 #impianto3-wrapper #impianti_img3{
     border-radius: 10px;
-    background-image: url(../img/rifiutipericolosi.jpg);
+    background-image: url(../img/impianti_rifiutipericolosi.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -615,7 +626,7 @@ footer{
 
 #impianto4-wrapper #impianti_img4{
     border-radius: 10px;
-    background-image: url(../img/acque.jpg);
+    background-image: url(../img/impianti_acque.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -754,6 +765,12 @@ footer{
 
 /*DOVE LO BUTTO */
 
+#searchBar h3{
+    margin-top: 2em;
+}
+
+#searchBar 
+
  #doveLoButto-wrapper{
     display: grid; 
     grid-template-rows: repeat(7,0.4fr) ; 
@@ -767,7 +784,7 @@ footer{
 #doveLoButto-wrapper > #cartaImg{
 
     border-radius: 10px;
-    background-image: url(../img/carta.jpg);
+    background-image: url(../img/DLB_carta.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -781,7 +798,8 @@ footer{
 #carta h3 {
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color:var(--headerBgColor) ;
+    background-color: cornflowerblue ;
+    color: white;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
@@ -795,17 +813,18 @@ footer{
 #plastica h3 {
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color:var(--headerBgColor) ;
+    
     border: solid black;
     padding: 1em;
     border-radius: 10px;
+    background-color: gold;
 
 }
 
 #doveLoButto-wrapper > #plasticaImg{
  
     border-radius: 10px;
-    background-image: url(../img/plastica.jpg);
+    background-image: url(../img/DLB_plastica.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -814,6 +833,29 @@ footer{
 
 } 
 
+#vetro h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+    border: solid black;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+
+}
+
+#doveLoButto-wrapper > #vetroImg{
+    border-radius: 10px;
+    background-image: url(../img/DLB_vetro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1em;
+    height: 300px;
+
+}
+
 
 
 
@@ -821,7 +863,8 @@ footer{
 #umido h3{
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color:var(--headerBgColor) ;
+    background-color:sienna ;
+    color: white;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
@@ -831,7 +874,7 @@ footer{
 #doveLoButto-wrapper > #umidoImg{
  
     border-radius: 10px;
-    background-image: url(../img/umido2.jpg);
+    background-image: url(../img/DLB_umido.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -847,7 +890,8 @@ footer{
 #secco h3{
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color:var(--headerBgColor) ;
+    background-color:grey ;
+    color: white;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
@@ -857,7 +901,7 @@ footer{
 #doveLoButto-wrapper > #seccoImg{
  
     border-radius: 10px;
-    background-image: url(../img/secco.jpg);
+    background-image: url(../img/DLB_secco.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -881,7 +925,7 @@ footer{
 #doveLoButto-wrapper > #altroImg{
 
     border-radius: 10px;
-    background-image: url(../img/altro.jpg);
+    background-image: url(../img/DLB_altro.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -890,37 +934,304 @@ footer{
 
 }
 
+/*Search*/
+#searchContainer{
+    border-top: var(--headerBgColor) 0.3em solid;
+    margin-top: 0.3em;
+    border-bottom: var(--headerBgColor) 0.3em solid;
+    margin-bottom: 0.3em;
+}
+#searchBar{
+    
+     width: 100%;
+     display: flex;
+ } 
+ 
+ #searchInput{
+     margin-top: 2em;
+     margin-bottom: 2em;
+     background-color: var(--bgColor);
+     border-radius: 10px;
+     flex: 1 1 70%;
+     padding: 10px;
+     
+ }
+ 
+ #searchButton {
+     padding: 10px;
+     margin: auto;
+     height: auto;
+     flex: 1 1 auto;
+     border-radius: 10px;
+     background-color: var(--headerBgColor);
+     color: var(--headerTxtColor);
+ }
+ 
+ #searchInput:hover{
+     background-color: var(--visitedLinkColor);
+     
+ }
+ 
+ /*Search Result*/
+#searchResults dd, #searchResults dt{
+    display: inline-block;
+    margin: 0 0.5em;
+    width: 14%;
+}
+
+
+#searchResults dt{
+   font-weight: bold;
+}
+
+#searchResults dt{
+    margin: auto;
+    text-align: center;
+}
+/*LOGIN*/
+
+#content h2 {
+    text-align: center;
+    
+}
+
+#content legend {
+    text-align: left;
+    font-size: 20px; 
+    
+} 
+
+#content fieldset {
+    
+    border-radius: 10px;
+    text-align: center;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em; 
+    margin-bottom: 5em;
+    width: 60%; 
+    
+   
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+input{
+    padding:1.5em;
+    margin: 2em; 
+    
+    border-radius: 10px;
+    background-color: var(--headerBgColor);
+    
+}
+input#loginemail {
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--txtColor);
+    
+}
+
+
+input#loginpass {
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--txtColor);
+}
+
+input:hover{
+    background-color: var(--visitedLinkColor);
+    color: var(--bgColor);
+}
 
 
 
 
+/*SEGNALAZIONI*/
+
+main#content.segnalazioni h2{ 
+    text-align: center;
+
+} 
+
+.segnalazioni table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+}
+  
+.segnalazioni th, .segnalazioni td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    
+}
+
+.segnalazioni tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+
+
+.segnalazioni tr:hover, .segnalazioni thead {
+background-color: #e5e5e5;
+}
+
+.segnalazioni caption {
+padding: 0.5em;
+}
+
+.segnalazioni td.inCarico {
+    position: relative;
+    background-image: url(../img/icons/yes.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1em;
+    height: 1em; 
+}
+
+.segnalazioni td span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-indent: -9999px; 
+}
+
+.segnalazioni td a{
+    display: block;
+    height: 1em;
+}
+
+.segnalazioni td.NonInCarico {
+    position: relative;
+    background-image: url(../img/icons/no.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1em;
+    height: 1em; 
+    line-height: 1.5em;
+}
+
+/*PROFILO*/
+
+main#content.profilo{
+    margin: 0;
+    text-align: center;
+    max-width: none;
+    width: 100%;
+    
+}
+
+#content legend {
+    text-align: left;
+    font-size: 20px; 
+    
+} 
+
+#content fieldset {
+    
+    border-radius: 10px;
+    text-align: center;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em; 
+    margin-bottom: 5em;
+    width: 60%; 
+    
+   
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 
 
+input{
+    padding:1.5em;
+    margin: 2em; 
+    
+    border-radius: 10px;
+    background-color: var(--headerBgColor);
+    
+}
+input#profiloemail {
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--txtColor);
+    
+}
 
 
+input#profilopass {
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--txtColor);
+    
+}
 
+input:hover{
+    background-color: var(--visitedLinkColor);
+    color: var(--bgColor);
+    
+}
 
+input#profiloannulla,input#profilosalva{
+    width: 30%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
 
+}
 
+/*DASHBOARD*/
 
+.dashboard-button {
 
+    text-align: center;
 
+    margin: 0.5em;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 3em;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    
+}
 
+.dashboard-button a{
+    text-align: center;
+}
 
+main#content .dashboard h2{
+    margin:1em;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+#news-button{
+    margin-bottom: 2em;
+} 
 
 
 
