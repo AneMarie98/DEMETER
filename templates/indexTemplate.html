@@ -7,6 +7,7 @@
         <meta name="description" content="Servizio completo di trattamento dei rifiuti per ogni tipo di intervento. Garantiamo lavori rapidi, convenienti e a norma di legge">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/mini.css" media="screen and (max-device-width: 768px)">
+        <script src="js/togglemenu.js"></script>
     </head>
     <body>
         <header>
@@ -14,8 +15,7 @@
                 <a href="#content">Vai al contenuto</a>
             </nav>
             <h1>Demeter</h1>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='mobile-menu' for="menu-toggle"></label>
+            <button id="togglemenu" onclick="toggleMenu()"></button>
             <nav id="menu">
                 <ul>
                     <li><span lang="en">Home</span></li>
@@ -43,13 +43,13 @@
                         all'indirizzo demeter@gmail.com per ottenere informazioni e chiarire i dubbi in merito al nostro servizio.
                     </p>
                     <p>
-                        Consulta il <a href="calendar.html">calendario</a> e rimani aggiornato su tutto ciò che accade nel mondo, nel nostro mondo. Aiutaci a migliorare la nostra casa, 
+                        Consulta il <a href="calendario.php">calendario</a> e rimani aggiornato su tutto ciò che accade nel mondo, nel nostro mondo. Aiutaci a migliorare la nostra casa, 
                         in modo tale che sia vivibile ancora per migliaia di anni. Ognuno di noi, sebbene possa sembrare poco, è importante e insieme riusciremo 
                         a rendere questo mondo un posto migliore dove vivere per le prossime generazioni.
                     </p>
                     <p>Hai bisogno di un nostro intervento? Accedi al tuo profilo e inviaci una segnalazione cliccando qui sotto!</p>
                     <div id="index_segnalazioni-button">
-                        <a href="InserisciSegnalazioneTemplate.html">Invia segnalazione</a>
+                        <a href="inserisciSegnalazione.php">Invia segnalazione</a>
                     </div>
                 </div>
                 <div class="right"></div>
@@ -62,9 +62,9 @@
                 aggiornato su tutte le iniziative e i progetti futuri. <span>Per un mondo più libero e verde.</span>
             </p>
             <ul id="socialList">
-                <li id="facebook"><a href=""><span lang="en">Facebook</span></a></li>
-                <li id="instagram"><a href=""><span lang="en">Instagram</span></a></li>
-                <li id="x"><a href=""><span lang="en">X</span></a></li>
+                <li id="facebook" class="footericons"><a href=""><span lang="en">Facebook</span></a></li>
+                <li id="instagram" class="footericons"><a href=""><span lang="en">Instagram</span></a></li>
+                <li id="x" class="footericons"><a href=""><span lang="en">X</span></a></li>
             </ul>
         </footer>
     </body>

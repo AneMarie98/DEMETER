@@ -6,7 +6,8 @@
         <meta name="keywords" content="Demeter, Raccolta, Rifiuti, Servizi">
         <meta name="description" content="Servizio completo di trattamento dei rifiuti per ogni tipo di intervento. Garantiamo lavori rapidi, convenienti e a norma di legge">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/mini.css" media="screen and (max-width:768px)">
+        <link rel="stylesheet" href="css/mini.css" media="screen and (max-device-width:768px)">
+        <script src="js/togglemenu.js"></script>
     </head>
     <body>
         <header>
@@ -14,6 +15,7 @@
                 <a href="#content">Vai al contenuto</a>
             </nav>
             <h1>Demeter</h1>
+            <button id="togglemenu" onclick="toggleMenu()"></button>
             <nav id="menu">
                 <ul>
                     <li><span lang="en">Home</span></li>
@@ -53,9 +55,9 @@
                 aggiornato su tutte le iniziative e i progetti futuri. <span>Per un mondo più libero e verde.</span>
             </p>
             <ul id="socialList">
-                <li id="facebook"><a href=""><span lang="en">Facebook</span></a></li>
-                <li id="instagram"><a href=""><span lang="en">Instagram</span></a></li>
-                <li id="x"><a href=""><span lang="en">X</span></a></li>
+                <li id="facebook" class="footericons"><a href=""><span lang="en">Facebook</span></a></li>
+                <li id="instagram" class="footericons"><a href=""><span lang="en">Instagram</span></a></li>
+                <li id="x" class="footericons"><a href=""><span lang="en">X</span></a></li>
             </ul>
         </footer>
     </body>

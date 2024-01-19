@@ -7,6 +7,7 @@
         <meta name="description" content="Scopri le ultime notizie e aggiornamenti su Demeter,azienda all'avanguardia da sempre impegnata nel rispetto dell'ambiente">
         <link rel="stylesheet" href="css/style.css" media="screen">
         <link rel="stylesheet" href="css/mini.css" media="screen and (max-device-width: 768px)">
+        <script src="js/togglemenu.js"></script>
     </head>
     <body>
         <header>
@@ -14,8 +15,7 @@
                 <a href="#content">Vai al contenuto</a>
             </nav>
             <h1>Demeter</h1>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='mobile-menu' for="menu-toggle"></label>
+            <button id="togglemenu" onclick="toggleMenu()"></button>
             <nav id="menu">
                 <ul>
                     <li><a href="index.php"><span lang="en">Home</span></a></li>
@@ -41,9 +41,9 @@
                 aggiornato su tutte le iniziative e i progetti futuri. <span>Per un mondo più libero e verde.</span>
             </p>
             <ul id="socialList">
-                <li id="facebook"><a href=""><span lang="en">Facebook</span></a></li>
-                <li id="instagram"><a href=""><span lang="en">Instagram</span></a></li>
-                <li id="x"><a href=""><span lang="en">X</span></a></li>
+                <li id="facebook" class="footericons"><a href=""><span lang="en">Facebook</span></a></li>
+                <li id="instagram" class="footericons"><a href=""><span lang="en">Instagram</span></a></li>
+                <li id="x" class="footericons"><a href=""><span lang="en">X</span></a></li>
             </ul>
         </footer>
     </body>

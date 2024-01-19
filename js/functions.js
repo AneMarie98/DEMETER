@@ -108,3 +108,6 @@ function searchResults() {
 document.addEventListener('DOMContentLoaded', function() {
     searchResults();
 });
+
+
+

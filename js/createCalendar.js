@@ -9,6 +9,11 @@ function createCalendar(){
     let daysinMonth=daysInMonth(td.getFullYear(),td.getMonth());
     for(let i=startingB;i<=daysinMonth+startingB-1;i++){
         document.getElementById("numd"+i).innerHTML=i-startingB+1;
+        let accessDay=document.createElement("span");
+        accessDay.className="accessDay";
+        accessDay.setAttribute("aria-hidden","true");
+        accessDay.innerHTML=" "+assignFullDay((td.getMonth()+1)+"/"+i+"/"+td.getFullYear());
+        document.getElementById("numd"+i).appendChild(accessDay);
         setDataDisp("numd"+i,(td.getMonth()+1)+"/"+i+"/"+td.getFullYear());
         setLabel("numd"+i,(td.getMonth()+1)+"/"+i+"/"+td.getFullYear());
         if(i==td.getDate()){highlightToday("numd"+i);}
@@ -59,6 +64,11 @@ function updateCalendar(startingB,daysinMonth,newMonthDisp,newYearDisp){
     }
     for(let i=startingB;i<=daysinMonth+startingB-1;i++){
         document.getElementById("numd"+i).innerHTML=i-startingB+1;
+        let accessDay=document.createElement("span");
+        accessDay.className="accessDay";
+        accessDay.setAttribute("aria-hidden","true");
+        accessDay.innerHTML=" "+assignFullDay(newMonthDisp+"/"+(i-startingB+1)+"/"+newYearDisp);
+        document.getElementById("numd"+i).appendChild(accessDay);
         setDataDisp("numd"+i,newMonthDisp+"/"+(i-startingB+1)+"/"+newYearDisp);
         setLabel("numd"+i,newMonthDisp+"/"+(i-startingB+1)+"/"+newYearDisp);
         if(i==td.getDate()){highlightToday("numd"+i);}
@@ -112,6 +122,23 @@ function assignDay(data){
         case 4: dayofweek="gio";break;
         case 5: dayofweek="ven";break;
         case 6: dayofweek="sab";break;
+        default: dayofweek="";break;
+    }
+    return dayofweek;
+}
+
+function assignFullDay(data){
+    let d=new Date(data);
+    let day=d.getDay();
+    let dayofweek="";
+    switch(day){
+        case 0: dayofweek="Domenica";break;
+        case 1: dayofweek="Lunedì";break;
+        case 2: dayofweek="Martedì";break;
+        case 3: dayofweek="Mercoledì";break;
+        case 4: dayofweek="Giovedì";break;
+        case 5: dayofweek="Venerdì";break;
+        case 6: dayofweek="Sabato";break;
         default: dayofweek="";break;
     }
     return dayofweek;
