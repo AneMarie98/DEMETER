@@ -1133,6 +1133,7 @@ padding: 0.5em;
 
 .dashboard div.dashboard-button> a{
     text-align: center;
+    display: block;
 }
 
 main#content .dashboard h2{
@@ -1193,6 +1194,51 @@ main#content .dashboard h2{
 
 .profilo a{
     text-transform: uppercase;
+    display: block;
 }
 
+
+/*404*/
+
+main#content.p404{
+    background-color: var(--bgColor);
+    margin: auto;
+}
+
+main#content.p404 h1{
+    text-align: center;
+    background-color: var(--headerBgColor);
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 3em;
+    line-height: 1.5em;
+}
+
+main#content.p404 p {
+    text-align: center;
+    padding: 2em;
+}
+
+
+/*503*/
+
+
+main#content.p503{
+    background-color: var(--bgColor);
+    margin: auto;
+}
+
+main#content.p503 h1{
+    text-align: center;
+    background-color: var(--headerBgColor);
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 3em;
+    line-height: 1.5em;
+}
+
+main#content.p503 p {
+    text-align: center;
+    padding: 2em;
+}
 
