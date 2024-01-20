@@ -3,6 +3,8 @@
     ini_set('display_startup_errors',1);
     setlocale(LC_ALL,'it_IT');
 
+    session_start();
+
     require_once "functions/dbAccess.php";
     require_once "functions/functions.php";
 
@@ -14,7 +16,7 @@
 
 
     if(isset($_SESSION["email"])){
-        if(isset($_SESSION["admin"])){
+        if(isset($_SESSION["admin"])&&$_SESSION["admin"]){
             $profile="Dashboard";
             $profilelink="dashboard.php";
             if($connOk){
@@ -43,8 +45,7 @@
                  $htmlToInsert .= "<p>Al momento non ci sono segnalazioni!</p>"; 
                 }
                 
-             }
-             else{
+             }else{
                  $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
              }
          
@@ -53,10 +54,11 @@
              $paginaHTML=str_replace("{segnalazioni}",$htmlToInsert,$paginaHTML);
              echo $paginaHTML;
          
-        }
+        }else{
         $profile=$_SESSION["firstname"];
         $profilelink="profilo.php";
         header("Location: index.php");
+        }
     }
     else{
         $profile="Accedi";
@@ -64,5 +66,3 @@
         header("Location: index.php");
     }
    
-  
-?>

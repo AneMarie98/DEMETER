@@ -251,4 +251,16 @@
         }
         return mysqli_affected_rows($this->connection) >0;
     }
+
+    public function updateSegnalazione($idSegnalazione, $inCarico){
+        $query="UPDATE segnalazioni SET inCarico='$inCarico' WHERE idSegnalazione='$idSegnalazione'";
+        try{
+            $queryResult = mysqli_query($this -> connection, $query);
+        }catch(\Exception $e){
+
+        }
+        return mysqli_affected_rows($this->connection) >0;
+    }
 }
+
+
