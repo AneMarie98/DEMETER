@@ -199,6 +199,14 @@ footer{
 
 /* News */
 
+#news_1{
+	background-image: url('../img/news/url_immagine_1.jpg');
+}
+
+#news_2{
+	background-image: url('../img/news/url_immagine_2.jpg');
+}
+
 #content.news {
     margin-top: 0em;
 }
@@ -209,9 +217,13 @@ footer{
     text-align: center;
 }
 
-#content.news img{
-    background-color: var(--bgColor);
-    width: 80%;
+#content.news .newsImg{
+    /*le immagini vanno messe con rateo 3:2*/
+    background-color: var(--articleBgColor);
+    background-size:cover;
+    background-position: center;
+    height: 15.5em; /*tmp*/
+    width: 23.25em;
     display: block;
     margin: auto;
     border-radius: 1em; 
