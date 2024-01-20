@@ -70,9 +70,9 @@ header h1{
 }
 
 #breadcrumb{
-    padding: 0.5em;
+    padding: 0em;
     margin: auto;
-    font-size: 1;
+    font-size: 1.75em;
     background-color: var(--headerBgColor);
     border-bottom:3px solid black;
     text-align: center;
