@@ -1040,6 +1040,11 @@ input:hover{
     color: var(--bgColor);
 }
 
+input:focus{
+    outline: 3px solid #007bff;
+}
+
+
 
 
 
