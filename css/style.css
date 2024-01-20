@@ -230,6 +230,10 @@ footer{
 
 /* Detailed News */
 
+#detailedNewsImage{
+	background-image: url('../img/news/url_immagine_1.jpg');
+}
+
 #content.detailedNews{
     margin-top: 2em;
     display: grid;
@@ -238,6 +242,7 @@ footer{
 }
 
 #content.detailedNews h2{ 
+    text-align: left;
     margin-top: 0em;
     grid-row: 1 ;
     grid-column: 1;
@@ -251,11 +256,14 @@ footer{
     grid-column: 1;
 }
 
-#content.detailedNews img{
+#content.detailedNews #detailedNewsImage {
     background-color: var(--bgColor);
+    background-size:cover;
+    background-position: center;
+    height: 15.5em; 
+    width: 23.25em;
     display: block;
     margin: auto;
-    width: 80%;
     grid-row: 1 / span 2;
     grid-column: 2;
 }

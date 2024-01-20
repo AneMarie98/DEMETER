@@ -46,19 +46,14 @@
     //inizio modifica al css
     $cssStyles = "";
     foreach ($newsFromDB as $news) {
-        echo '<script>'; //tmp
-        echo 'console.log(\'news\')'; //tmp
-        echo '</script>'; //tmp
         $cssStyles = "#news_".$news["idNotizia"]."{\n\tbackground-image: url('../img/news/".$news["urlImg"]."');\n}";
-        
         //desktop style
-        dynamicAppendCSS('css/style.css',$cssStyles);
+        dynamicNewsCSS('css/style.css',$cssStyles);
         //mini
-        dynamicAppendCSS('css/mini.css',$cssStyles);
+        dynamicNewsCSS('css/mini.css',$cssStyles);
     }
     
     //fine modifica al css
-
     $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
     $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
     $paginaHTML=str_replace("{news}",$htmlToInsert,$paginaHTML);

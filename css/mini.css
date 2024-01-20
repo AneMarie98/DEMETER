@@ -245,12 +245,17 @@ footer{
 
 /* Detailed News */
 
+#detailedNewsImage{
+	background-image: url('../img/news/url_immagine_1.jpg');
+}
+
 #content.detailedNews{
     display: block;
     margin-top: 0em;
 }
 
 #content.detailedNews h2{ 
+    text-align: left;
     margin-top: 1em;
 }
 
@@ -260,11 +265,15 @@ footer{
     font-size: 1em;
 }
 
-#content.detailedNews img{
+#content.detailedNews #detailedNewsImage {
+    /*le immagini vanno messe con rateo 3:2*/
     background-color: var(--bgColor);
+    background-size:cover;
+    background-position: center;
+    height: 15.5em; 
+    width: 23.25em;
     display: block;
     margin: auto;
-    width: 80%;
     margin-top: 1em;
 }
 
