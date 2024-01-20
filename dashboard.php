@@ -4,20 +4,24 @@
     setlocale(LC_ALL,'it_IT');
 
 
+    session_start();
     $paginaHTML=file_get_contents("templates/dashboardTemplate.html");
-
-
-    
         
-   if(isset($_SESSION["email"]) && isset($_SESSION["admin"])){
+    if(!isset($_SESSION["email"])){
+
+    }else{
+        if(isset($_SESSION["admin"])){
         $profile="Dashboard";
         $profilelink="dashboard.php";
         $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
         $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
         echo $paginaHTML;
-
-   }
-    else{
-        header("Location: login.php");
-        
+           
+            
+        }else{
+            header("Location: profilo.php");
+        }
+       
     }
+
+

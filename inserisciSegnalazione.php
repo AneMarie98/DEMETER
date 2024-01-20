@@ -35,7 +35,7 @@
         }else{
             $htmlToInsert .= " 
             <legend>Segnalazione</legend>
-            <form id=\"segnalazione\" action=\"inserisciSegnalazione.php\" method=\"GET\" onsubmit=\"validazioneForm()\">
+            <form id=\"segnalazione\" action=\"inserisciSegnalazione.php\" method=\"GET\" onsubmit=\"validazioneFormSegnalazione()\">
                 <fieldset>
                     <div class=\"form-linegroup\">
                         <label for=\"indirizzo\">Indirizzo:</label>

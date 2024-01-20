@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/mini.css" media="only screen and (max-device-width: 768px)">
         <script src="js/segnalazione_formcheck.js"></script>
     </head>
-    <body onload="caricamento()">
+    <body onload="caricamentoNotizia()">
         <header>
             <nav aria-label="Aiuti alla navigazione" class="navigationhelp">
                 <a href="#content">Vai al contenuto</a>
@@ -28,23 +28,13 @@
                 </ul>
             </nav>
             <nav id="breadcrumb">
-                <p>Ti trovi in: <a lang="en" href="index.php">Home</a>&gt;&gt; Dashboard &gt; gt;<a href="">Inserisci Notizia</a></p>
+                <p>Ti trovi in: <a lang="en" href="index.php">Home</a> &gt; &gt; <a lang="en" href="dashboard.php">Dashboard</a> &gt; &gt; Inserisci Notizia</p>
             </nav>
         </header>
-        <main id="content" class="FormSegnalazione">
-            <h2>Inserisci una nuova notizia</h2>
-        <p>Inserisci un titolo, una data di riferimento, il testo dell'articolo e volendo un'immagine di presentazione:</p>
-
-        <form id="segnalazione" action="#" method="post" onsubmit="return validazioneForm()">
-
-                <fieldset>
-                    <legend>Nuova Notizia</legend>
-                    
-                </fieldset>
-
-            </form> 
-
-           {form}
+        <main id="content" class="FormNotizia">
+            
+            {content}
+            
         </main>
         <footer>
             <h3>Segui i nostri canali social</h3>

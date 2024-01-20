@@ -1,10 +1,38 @@
-function caricamento(){
+function caricamentoSegnalazione(){
     let inputIndirizzo = document.getElementById("indirizzo");
     inputIndirizzo.onblur = function (){validateIndirizzo(this)};
     let inputData = document.getElementById("data");
     inputData.onblur = function (){validateData(this)};
-    let inputTesto = document.getElementById("testo");
-    inputTesto.onblur = function (){validate(this)};
+    let inputArticolo = document.getElementById("testo");
+    inputArticolo.onblur = function (){validateTesto(this)};
+}
+
+function caricamentoNotizia(){
+    let inputTitolo = document.getElementById("titolo");
+    inputTitolo.onblur = function (){validateIndirizzo(this)};
+    let inputData = document.getElementById("data");
+    inputData.onblur = function (){validateData(this)};
+    let inputArticolo = document.getElementById("articolo");
+    inputArticolo.onblur = function (){validateTesto(this)};
+    let inputDescrizione = document.getElementById("descrizione");
+    inputDescrizione.onblur = function (){validateTesto(this)};
+    let inputUrl = document.getElementById("urlImg");
+    inputUrl.onblur = function (){validateTesto(this)};
+}
+
+function caricamentoRegistrazione(){
+    let inputNome = document.getElementById("nome");
+    inputNome.onblur = function (){validateNome(this)};
+    let inputCognome = document.getElementById("cognome");
+    inputCognome.onblur = function (){validateNome(this)};
+    let inputUsername = document.getElementById("username");
+    inputUsername.onblur = function (){validateUsername(this)};
+    let inputEmail = document.getElementById("email");
+    inputEmail.onblur = function (){validateEmail(this)};
+    let inputPassword = document.getElementById("password");
+    inputPassword.onblur = function (){validatePassword(this)};
+    let inputConfermaPassword = document.getElementById("confermaPassword");
+    inputConfermaPassword.onblur = function (){validateConfermaPassword(this)};
 }
 
 
@@ -50,16 +78,129 @@ function validateData(input){
 
 function validateTesto(input){
     removeChildInput(input);
-
     return true;
-
-
 }
 
-function validazioneForm(){
+function validateTitolo(input){
+    removeChildInput(input);
+    if(input.value.length <= 10 || !input.includes(',')){
+        showError(input, input.value + " non è un titolo valido!"); 
+
+        inputURL.focus(); 
+        inputURL.select(); 
+        return false;
+    }
+    return true;
+}
+
+function validateDescrizione(input){
+    removeChildInput(input);
+    if(input.value.length >= 25){
+        showError(input, input.value + " è una descrizione troppo lunga!"); 
+
+        inputURL.focus(); 
+        inputURL.select(); 
+        return false;
+    }
+    return true;
+}
+
+function validateUrl(input){
+    removeChildInput(input);
+    //check input like img/folder/file.png with a regular expression: some chars, a slash, chars, a dot, 2/4 chars
+    if(input.value.search(/^[a-zA-Z0-9._%-]+\/[a-zA-Z0-9._%-]+\/[a-zA-Z0-9._%-]+\.(png|jpg|jpeg|gif)$/)!=0){
+        showError(input, input.value + " non è un percorso valido!"); 
+
+        inputURL.focus(); 
+        inputURL.select(); 
+        return false;
+    }
+    return true;
+}
+
+function validateNome(input){
+    removeChildInput(input);
+    if(input.value.search(/^[a-zA-Z]{2,}$/)!=0){
+        showError(input, input.value + " non è un nome valido!"); 
+
+        inputURL.focus(); 
+        inputURL.select(); 
+        return false;
+    }
+    return true;
+}
+
+function validateEmail(input){
+    removeChildInput(input);
+    if(input.value.search(/^[a-zA-Z0-9._%-$&+]{8,}$/)!=0){
+        showError(input, input.value + " non è una email valida!"); 
+
+        inputURL.focus(); 
+        inputURL.select(); 
+        return false;
+    }
+    return true;
+}
+
+function validateUsername(input){
+    removeChildInput(input);
+    if(input.value.search(/^[a-zA-Z0-9._%-]{8,}$/)!=0){
+        showError(input, input.value + " non è un username valido!"); 
+
+        inputURL.focus(); 
+        inputURL.select(); 
+        return false;
+    }
+    return true;
+}
+
+function validatePassword(input){
+    removeChildInput(input);
+    if(input.value.search(/^[a-zA-Z0-9._%-]{8,}$/)!=0){
+        showError(input, input.value + " non è una password valida!"); 
+
+        inputURL.focus(); 
+        inputURL.select(); 
+        return false;
+    }
+    return true;
+}
+
+function validateConfermaPassword(input){
+    removeChildInput(input);
+    if(input.value==inputPassword.value){
+        showError(input, "Le password non coincidono!"); 
+
+        inputURL.focus(); 
+        inputURL.select(); 
+        return false;
+    }
+    return true;
+}
+
+function validazioneFormSegnalazione(){
     let inputIndirizzo = document.getElementById("indirizzo");
     let inputData = document.getElementById("data");
     let inputTesto = document.getElementById("testo");
     return validateIndirizzo(inputIndirizzo) && validateData(inputData) && validateTesto(inputTesto);
 
+}
+
+function validazioneFormNotizia(){
+    let inputTitolo = document.getElementById("titolo");
+    let inputData = document.getElementById("data");
+    let inputArticolo = document.getElementById("articolo");
+    let inputDescrizione = document.getElementById("descrizione");
+    let inputUrl = document.getElementById("urlImg");
+    return validateTitolo(inputTitolo) && validateData(inputData) && validateTesto(inputArticolo) && validateDescrizione(inputDescrizione) && validateUrl(inputUrl);
+}
+
+function validazioneFormRegistrazione(){
+    let inputNome = document.getElementById("nome");
+    let inputCognome = document.getElementById("cognome");
+    let inputUsername = document.getElementById("username");
+    let inputEmail = document.getElementById("email");
+    let inputPassword = document.getElementById("password");
+    let inputConfermaPassword = document.getElementById("confermaPassword");
+    return validateNome(inputNome) && validateNome(inputCognome) && validateUsername(inputUsername) && validateEmail(inputEmail) && validatePassword(inputPassword) && validateConfermaPassword(inputConfermaPassword);
 }
