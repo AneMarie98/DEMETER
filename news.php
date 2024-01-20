@@ -45,12 +45,14 @@
 
     //inizio modifica al css
     $cssStyles = "";
-    foreach ($newsFromDB as $news) {
-        $cssStyles = "#news_".$news["idNotizia"]."{\n\tbackground-image: url('../img/news/".$news["urlImg"]."');\n}";
-        //desktop style
-        dynamicNewsCSS('css/style.css',$cssStyles);
-        //mini
-        dynamicNewsCSS('css/mini.css',$cssStyles);
+    if(is_array($newsFromDB) && count($newsFromDB) > 0){
+        foreach ($newsFromDB as $news) {
+            $cssStyles = "#news_".$news["idNotizia"]."{\n\tbackground-image: url('../img/news/".$news["urlImg"]."');\n}";
+            //desktop style
+            dynamicNewsCSS('css/style.css',$cssStyles);
+            //mini
+            dynamicNewsCSS('css/mini.css',$cssStyles);
+        }
     }
     
     //fine modifica al css

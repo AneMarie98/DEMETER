@@ -35,7 +35,6 @@
         <div id=\"detailedNewsImage\"></div>
         <div class=\"newsArticle\">".$articolo."</div>"; // le immagini non devono essere di contenuto
 
-
         // modifica css
         $cssNewContent = "\n\tbackground-image: url('../img/news/".$urlImg."');";
         //desktop style
