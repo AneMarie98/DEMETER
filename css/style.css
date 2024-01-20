@@ -116,12 +116,13 @@ main{
     grid-area: t;
 }
 
-#segnalazioni-button{
+#index_segnalazioni-button{
     background-color: var(--headerBgColor);
     padding: 2em;
     border: 1px solid black;
     border-radius: 10px;
     margin-bottom: 5em;
+    margin-top: 3em;
     max-width: 300px;
     text-align: center;
 }
@@ -271,15 +272,12 @@ footer{
 }
 
 #servizi_wrapper {
-    display: grid; 
-    grid-template-columns: 1fr 1fr  1fr; 
-    grid-gap: 2em; 
-    grid-template-areas: "t t i" ;
+display: block;
 
 }
 
 #servizi_wrapper > .left{
-    grid-area: t;
+    
     margin-bottom: 10em;
     margin-top: 2em;
     border: 2px solid var(--headerTxtColor); 
@@ -289,18 +287,7 @@ footer{
     background-color: var(--headerBgColor);
 }
 
-#servizi_wrapper > .right{
-    grid-area: i;
-    border-radius: 10px;
-    background-image: url(../img/servizi_sec1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right;
-    margin-top: 2em;
-    margin-bottom: 2em;
 
-
-} 
 
 
 
@@ -1135,6 +1122,7 @@ padding: 0.5em;
     margin-top: 2em;
     display: flex;
     justify-content: center;
+    background-color: var(--headerBgColor);
     
 }
 
@@ -1150,5 +1138,56 @@ main#content .dashboard h2{
     margin-bottom: 2em;
 } 
 
+
+/*ECCEZIONI CALENDARIO*/
+.eccezionicalendario li{
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    list-style: none;
+
+}
+
+.eccezionicalendario h3{
+    margin: 2em;
+    text-align: center;
+}
+
+.eccezionicalendario p{
+    margin: 2em;
+    text-align: center;
+}
+
+.eccezionicalendario h2 {
+    margin-top: 1em;
+}
+
+/*PROFILO*/
+
+.profilo h2{
+    margin-top: 1em;
+    ;
+}
+
+.profilo p{
+    padding: 1.5em;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    width: 70%;
+    text-align: center;
+    background-color: var(--headerBgColor);
+}
+
+.profilo span.nome{
+    text-transform: uppercase;
+}
+
+.profilo a{
+    text-transform: uppercase;
+}
 
 
