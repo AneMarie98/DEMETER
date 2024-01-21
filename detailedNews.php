@@ -51,7 +51,6 @@
 
     $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
     $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
-    $paginaHTML=str_replace("{detailedTitle}",$titolo,$paginaHTML);
     $paginaHTML=str_replace("{detailedArticle}",$htmlToInsert,$paginaHTML);
 
     echo $paginaHTML;

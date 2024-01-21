@@ -172,13 +172,23 @@ footer{
 
 /* News */
 
+#news_4{
+	background-image: url('../img/news/bidoni.jpg');
+}
+
+#news_3{
+	background-image: url('../img/news/calendario.jpg');
+}
+
 #news_2{
-	background-image: url('../img/news/url_immagine_2.jpg');
+	background-image: url('../img/news/educazione.jpg');
 }
 
 #news_1{
-	background-image: url('../img/news/url_immagine_1.jpg');
+	background-image: url('../img/news/alluvione.jpg');
 }
+
+
 
 #content.news {
     margin-top: 0em;
@@ -198,17 +208,18 @@ footer{
     margin-bottom: 0.75em;
     background-color: var(--articleBgColor);
     display: grid;
-    grid-template-columns: 1fr 2fr; 
+    grid-template-columns: 1fr 1fr; 
     grid-template-rows: min-content 1fr;
+    column-gap: 2em;
 }
 
-#content.news .newsImg{ /*in modifica su mini*/
+#content.news .newsImg{
     /*le immagini vanno messe con rateo 3:2*/
     background-color: var(--articleBgColor);
     background-size:cover;
     background-position: center;
-    height: 15.5em; /*tmp*/
-    width: 23.25em;
+    height: 17em; 
+    width: 25em;
     display: block;
     margin: auto;
     border-radius: 1em; 
@@ -223,6 +234,7 @@ footer{
 } 
 
 #content.news article p{
+    margin-top: 1em;
     grid-row: 2;
     grid-column: 1;
 }
@@ -231,13 +243,13 @@ footer{
 /* Detailed News */
 
 #detailedNewsImage{
-	background-image: url('../img/news/url_immagine_1.jpg');
+	background-image: url('../img/news/bidoni.jpg');
 }
 
 #content.detailedNews{
     margin-top: 2em;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: min-content 1fr auto;
 }
 
@@ -260,8 +272,8 @@ footer{
     background-color: var(--bgColor);
     background-size:cover;
     background-position: center;
-    height: 15.5em; 
-    width: 23.25em;
+    height: 20em; 
+    width: 30em;
     display: block;
     margin: auto;
     grid-row: 1 / span 2;
@@ -275,6 +287,9 @@ footer{
     grid-column: 1 / span 2;
 }
 
+#content.detailedNews .newsArticle li{
+    margin-left: 1em;
+}
 
 /* SERVIZI */
 
