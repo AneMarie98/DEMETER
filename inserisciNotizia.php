@@ -3,7 +3,7 @@
     ini_set('display_startup_errors',1);
     setlocale(LC_ALL,'it_IT');
 
-
+    session_start();
     $paginaHTML=file_get_contents("templates/inserisciNotiziaTemplate.html");
     $htmlToInsert="";
 
@@ -21,8 +21,7 @@
             $urlImg = cleanInput($_POST['urlImg'], $db->getConnection());
             $db->insertNotizia($titolo,$articolo,$descrizione,$urlImg,$data);    
         }else{
-            //TODO: gestire errore connessione
-            //TODO: pagina 503
+            header("Location: p503.html");
         }
        
     }
