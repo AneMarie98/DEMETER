@@ -4,6 +4,7 @@
     setlocale(LC_ALL,'it_IT');
 
     require_once "functions/dbAccess.php";
+    require_once "functions/functions.php";
 
     $db=new DB\DBAccess;
     $connOk=$db->openDBConnection();
@@ -33,13 +34,14 @@
        $newsFromDB = $db->getNews();
        if(is_array($newsFromDB) && count($newsFromDB) > 0){
         foreach ($newsFromDB as $news) {
+            // <img src=\"./img/news/".$news["urlImg"]."\" alt=\"\" >
             $htmlToInsert .= 
             "<article class >
-            <img src=\"./img/news/".$news["urlImg"]."\" alt=\"\" >
+            <div id=\"news_".$news["idNotizia"]."\" class=\"newsImg\"></div>
             <h3><a href=\"./detailedNews.php?id=".$news["idNotizia"]."\">". $news["titolo"] ."</a></h3>
             <p> ". $news["descrizione"]."</p>
             </article> ";
-            }
+            } 
        }else{
         //$htmlToInsert .= "<p>Al momento non ci sono novità!</p>"; 
         header("Location: p503.html");
@@ -51,6 +53,17 @@
         header("Location: p503.html");
     }
 
+    //inizio modifica al css
+    $cssStyles = "";
+    foreach ($newsFromDB as $news) {
+        $cssStyles = "#news_".$news["idNotizia"]."{\n\tbackground-image: url('../img/news/".$news["urlImg"]."');\n}";
+        //desktop style
+        dynamicNewsCSS('css/style.css',$cssStyles);
+        //mini
+        dynamicNewsCSS('css/mini.css',$cssStyles);
+    }
+    
+    //fine modifica al css
     $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
     $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
     $paginaHTML=str_replace("{news}",$htmlToInsert,$paginaHTML);
