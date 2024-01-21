@@ -1,5 +1,5 @@
 <?php
-    ini_set('display_errors',1);
+   ini_set('display_errors',1);
     ini_set('display_startup_errors',1);
     setlocale(LC_ALL,'it_IT');
 
@@ -41,12 +41,14 @@
             </article> ";
             }
        }else{
-        $htmlToInsert .= "<p>Al momento non ci sono novità!</p>"; 
+        //$htmlToInsert .= "<p>Al momento non ci sono novità!</p>"; 
+        header("Location: p503.html");
        }
        
     }
     else{
-        $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
+        //$htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
+        header("Location: p503.html");
     }
 
     $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);

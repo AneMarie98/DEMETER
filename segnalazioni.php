@@ -27,7 +27,7 @@
                      <tr>
                          <th scope= \"row\"><a href=\"detailedSegnalazione.php?id=".$segnalazione["idSegnalazione"]."\">".$segnalazione["idSegnalazione"]."</a></th>
                          <td data-title=\"Data\">  <time datetime=\"".$segnalazione["dataS"]."\">".convertDateFormatString($segnalazione["dataS"])."</time></td>
-                         <td data-title=\"Indirizzo\">".$segnalazione["indirizzo"]."</td>
+                         <td data-title=\"Indirizzo\"><address>".$segnalazione["indirizzo"]."</address></td>
                          <td";
                      if($segnalazione["inCarico"] == 1){
                          $htmlToInsert .= " class=\"inCarico\"><a href=\"updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=0\"><span>Si</span></a>";

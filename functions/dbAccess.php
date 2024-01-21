@@ -8,9 +8,14 @@
 
         private $connection;
         public function openDBConnection(){
-            $this -> connection = mysqli_connect(self::HOST_DB, self::USERNAME, self::PASSWORD, self::DB_NAME);
+            try{
+                $this -> connection = mysqli_connect(self::HOST_DB, self::USERNAME, self::PASSWORD, self::DB_NAME);
+                return mysqli_connect_errno() == 0;
+            }catch(\Exception $e){
 
-            return mysqli_connect_errno() == 0;
+            }
+           return null;
+  
         }
 
         public function closeDBConnection(){
