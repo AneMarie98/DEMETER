@@ -5,7 +5,7 @@
 
     require_once "functions/dbAccess.php";
     require_once "functions/functions.php";
-
+    session_start();
     $db=new DB\DBAccess;
     $connOk=$db->openDBConnection();
   
@@ -13,12 +13,13 @@
     $htmlToInsert = "";
 
 
-    if($connOk && isset($_SESSION["email"])){
-
+    if(isset($_SESSION["email"])){
+    
         $profile=$_SESSION["firstname"];
         $profilelink="profilo.php";
 
-        if(isset($_POST["indirizzo"]) && isset($_POST["data"]) && isset($_POST["testo"])){
+
+        if(isset($_POST["indirizzo"]) && isset($_POST["data"]) && isset($_POST["testo"])&&$connOk){
             $indirizzo=cleanInput($_POST["indirizzo"], $db->getConnection());
             $data=cleanInput($_POST["data"],$db->getConnection());
             $testo=cleanInput($$_POST["testo"], $db->getConnection());
@@ -30,12 +31,13 @@
                }
             }
             else{
-                $htmlToInsert .= "<p>Errore di connessione al database. Ti invitiamo a riprovare ad <a href=\"inserisciSegnalazione.php\"> inserire una segnalazione </a></p>";
+                //$htmlToInsert .= "<p>Errore di connessione al database. Ti invitiamo a riprovare ad <a href=\"inserisciSegnalazione.php\"> inserire una segnalazione </a></p>";
+                header("Location: p503.html");
             }
         }else{
             $htmlToInsert .= " 
             <legend>Segnalazione</legend>
-            <form id=\"segnalazione\" action=\"inserisciSegnalazione.php\" method=\"GET\" onsubmit=\"validazioneForm()\">
+            <form id=\"segnalazione\" action=\"inserisciSegnalazione.php\" method=\"GET\" onsubmit=\"validazioneFormSegnalazione()\">
                 <fieldset>
                     <div class=\"form-linegroup\">
                         <label for=\"indirizzo\">Indirizzo:</label>

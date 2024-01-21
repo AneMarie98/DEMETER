@@ -8,9 +8,14 @@
 
         private $connection;
         public function openDBConnection(){
-            $this -> connection = mysqli_connect(self::HOST_DB, self::USERNAME, self::PASSWORD, self::DB_NAME);
+            try{
+                $this -> connection = mysqli_connect(self::HOST_DB, self::USERNAME, self::PASSWORD, self::DB_NAME);
+                return mysqli_connect_errno() == 0;
+            }catch(\Exception $e){
 
-            return mysqli_connect_errno() == 0;
+            }
+           return null;
+  
         }
 
         public function closeDBConnection(){
@@ -54,7 +59,7 @@
         }
 
         public function getAuthUserInfo($email){
-            $query="SELECT nome, cognome FROM utenti WHERE email='$email'";
+            $query="SELECT nome, cognome, admin FROM utenti WHERE email='$email'";
             try{
                 $queryResult = mysqli_query($this -> connection, $query);
             
@@ -64,6 +69,9 @@
                     $_SESSION["email"]=$email;
                     $_SESSION["firstname"] = $row["nome"];
                     $_SESSION["lastname"] = $row["cognome"];
+                    if($row["admin"]==1){
+                        $_SESSION["admin"]=true;
+                    }
                     $result = array($row["nome"], $row["cognome"], $email);
                 }
                 $queryResult -> free();
@@ -228,4 +236,36 @@
         }
         return null;
     }
+
+    public function insertUtente($username,$password,$email,$nome,$cognome){
+        $query="INSERT INTO utenti (username, password, email, nome, cognome) VALUES ('$username','$password','$email','$nome','$cognome')";
+        try{
+            $queryResult = mysqli_query($this -> connection, $query);
+        }catch(\Exception $e){
+
+        }
+        return mysqli_affected_rows($this->connection) >0;
+    }
+
+    public function insertNotizia($titolo,$articolo,$descrizione,$urlImg,$dataN){
+        $query="INSERT INTO notizie (titolo, articolo, urlImg, dataN) VALUES ('$titolo','$articolo','$urlImg','$dataN')";
+        try{
+            $queryResult = mysqli_query($this -> connection, $query);
+        }catch(\Exception $e){
+
+        }
+        return mysqli_affected_rows($this->connection) >0;
+    }
+
+    public function updateSegnalazione($idSegnalazione, $inCarico){
+        $query="UPDATE segnalazioni SET inCarico='$inCarico' WHERE idSegnalazione='$idSegnalazione'";
+        try{
+            $queryResult = mysqli_query($this -> connection, $query);
+        }catch(\Exception $e){
+
+        }
+        return mysqli_affected_rows($this->connection) >0;
+    }
 }
+
+

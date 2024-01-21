@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Demeter</title>
+        <meta name="keywords" content="Demeter, Raccolta, Rifiuti, Servizi">
+        <meta name="description" content="Servizio completo di trattamento dei rifiuti per ogni tipo di intervento. Garantiamo lavori rapidi, convenienti e a norma di legge">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/mini.css" media="screen and (max-width:768px)">
+    </head>
+    <body onload="caricamentoRegistrazione()">
+        <header>
+            <nav aria-label="Aiuti alla navigazione" class="navigationhelp">
+                <a href="#content">Vai al contenuto</a>
+            </nav>
+            <h1>Demeter</h1>
+            <nav id="menu">
+                <ul>
+                    <li><span lang="en">Home</span></li>
+                    <li><a href="calendario.php">Calendario</a></li>
+                    <li><a href="servizi.php">Servizi</a></li>
+                    <li><a href="doveLoButto.php">Dove lo butto?</a></li>
+                    <li><a href="news.php"><span lang="en">News</span></a></li>
+                    <li><a href="{profilelink}">{profile}</a></li>
+                </ul>
+            </nav>
+            <nav id="breadcrumb">
+                <p>Ti trovi in: <a href="index.php" lang="en">Home</a>&gt;&gt; Registrazione</p>
+            </nav>
+        </header>
+        <main id="content">
+            <h2>Registrazione</h2>
+            <p>Inserisci il tuo nome, cognome, indirizzo e-mail ed un username che contenga almeno 8 caratteritra lettere maiuscole, minuscole, numeri o i simboli . _ % -.</p>
+            <p>Inserisci una password di almeno 8 caratteri che contenga lettere maiuscole, minuscole, numeri o i simboli . _ % - $ & + </p>
+            <form id="registrazione" action="#" method="post" onsubmit="return validazioneRegistrazione()">
+
+                <fieldset>
+                    <legend>Registrazione</legend>
+                        <div class="form-linegroup">
+                            <label for="nome">Nome: </label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                        </div>
+                        <div class="form-linegroup">
+                            <label for="cognome">Cognome: </label>
+                            <input type="text" id="cognome" name="cognome" placeholder="Cognome" required >    
+                        </div>
+                        <div class="form-linegroup">
+                            <label for="username">Username: </label>
+                            <input type="text" id="username" name="username" placeholder="userName3" required >    
+                        </div>
+                        <div class="form-linegroup">
+                            <label for="mail">Indirizzo e-mail: </label>
+                            <input type="email" id="mail" name="mail" placeholder="indirizzo@mail.com" required >    
+                        </div>
+
+                        <div class="form-linegroup">
+                            <label for="passowrd">Password: </label>
+                            <input type="password" id="password" name="password" required >    
+                        </div>
+                        <div class="form-linegroup">
+                            <label for="confermapassword">Conferma password: </label>
+                            <input type="password" id="confermapassword" name="confermapassword" required >    
+                        </div>
+                        <div class="form-linegroup">
+                            <button type="submit">Registrati!</button>
+                        </div>
+                </fieldset>
+
+            </form> 
+        </main>
+        <footer>
+            <h3>Segui i nostri canali social</h3>
+            <p>
+                Seguici su <span lang="en">Facebook</span>, <span lang="en">Instagram</span> e <span lang="en">X</span> per rimanere
+                aggiornato su tutte le iniziative e i progetti futuri. <span>Per un mondo più libero e verde.</span>
+            </p>
+            <ul id="socialList">
+                <li id="facebook"><a href=""><span lang="en">Facebook</span></a></li>
+                <li id="instagram"><a href=""><span lang="en">Instagram</span></a></li>
+                <li id="x"><a href=""><span lang="en">X</span></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

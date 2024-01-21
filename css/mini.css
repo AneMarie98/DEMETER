@@ -285,13 +285,32 @@ footer{
 
 /*index*/
 
-#wrapper.home{
-    display: grid; 
-    grid-template-rows: 1fr 1fr; 
-    grid-gap: 2em;  
-    grid-template-areas: "t" "i";
+#wrapper .home {
+
+    display: block;
+    text-align: center;
+    margin: 1em;
 }
 
+#wrapper .home p{
+    margin:1em;
+}
+
+#index_segnalazioni-button{
+    background-color: var(--headerBgColor);
+    padding: 2em;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 3em;
+    margin-top: 3em;
+    max-width: 300px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+} 
 
 main.home h2{
     margin-top: 1em;
@@ -303,34 +322,19 @@ main.home h2{
 /* servizi*/
 
 #servizi_wrapper{
-    display: grid; 
-    grid-template-columns: repeat(1,2fr) ; 
-    grid-gap: 2em; 
-    grid-template-areas: "t" "i" ;
+    display: block;
+    text-align: center;
+    margin: 1em;
 
 }
 
 #servizi_wrapper > .left{
-    grid-area: t;
-  
-    margin-bottom: 2em;
-    margin-top: 2em;
-    border: 2px solid var(--headerTxtColor); 
-    border-radius: 10px; 
-    /* padding: 20px;   */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: var(--headerBgColor);
+    margin-bottom: 3em;
 }
 
 #servizi_wrapper > .right {
+    display: none;
 
-    border-radius: 10px;
-    background-image: url(./img/sec1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
 }
 
 #servizi_content.servizi h2 {
@@ -341,10 +345,7 @@ main.home h2{
 }
 
 #servizi_section1 h3{
-    text-align: left;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    font-size: 1.3em;
+    text-align: center;
 
 }
 
@@ -360,7 +361,7 @@ main.home h2{
 #servizi_section2 div.servizi_serviceDescription{
     flex-grow: 0;
     flex-shrink: 1;
-    text-align: left;
+    text-align: center;
     width: 100%;
 }
 
@@ -411,10 +412,11 @@ main.home h2{
 }
 
 #servizi_section4 div.servizi_reasonContainer{
-    /* display: flex; */
-    flex-wrap: wrap;
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: nowrap;
     list-style: none;
-    flex-direction: row;
+
     justify-content: space-between;
 
 }
@@ -630,4 +632,59 @@ section.impianti_impianti {
 
     font-size: 2em;
     height: 2em; 
+}
+
+
+/*LOGIN*/
+
+#content fieldset{
+    width: 100%;
+    padding: 5em;
+}
+
+input#loginemail{
+    padding: 3em;
+}
+
+input#loginpass{
+    padding: 3em;
+}
+
+input{
+    padding: 2em;
+}
+
+legend{
+    font-size: 40%;
+}
+
+/*DASHBOARD*/
+
+main#content .dashboard{
+    width: 90%;
+    margin-top: 5em ;
+}
+
+.dashboard h2{
+    font-size:50px;
+}
+
+.dashboard-button{
+    font-size: 40px;
+}
+
+
+/*PROFILO*/
+
+.profilo p{
+    padding: 1.5em;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    width: 70%;
+    text-align: center;
+    background-color: var(--headerBgColor);
+    font-size: x-large;
 }

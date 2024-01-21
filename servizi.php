@@ -9,17 +9,21 @@
 
     $paginaHTML=file_get_contents("templates/serviziTemplate.html");
 
-    if(isset($_SESSION["email"])){
+    if(!isset($_SESSION["email"])){
+        $profile="Accedi";
+        $profilelink="login.php";
+
+    }else{
         if(isset($_SESSION["admin"])){
             $profile="Dashboard";
             $profilelink="dashboard.php";
+           
+            
+        }else{
+            $profile=$_SESSION["firstname"];
+            $profilelink="profilo.php";
         }
-        $profile=$_SESSION["firstname"];
-        $profilelink="profilo.php";
-    }
-    else{
-        $profile="Accedi";
-        $profilelink="login.php";
+       
     }
 
     $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
