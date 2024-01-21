@@ -39,7 +39,6 @@
         <div id=\"detailedNewsImage\"></div>
         <div class=\"newsArticle\">".$articolo."</div>"; // le immagini non devono essere di contenuto
 
-
         // modifica css
         $cssNewContent = "\n\tbackground-image: url('../img/news/".$urlImg."');";
         //desktop style
@@ -56,7 +55,6 @@
 
     $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
     $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
-    $paginaHTML=str_replace("{detailedTitle}",$titolo,$paginaHTML);
     $paginaHTML=str_replace("{detailedArticle}",$htmlToInsert,$paginaHTML);
 
     echo $paginaHTML;

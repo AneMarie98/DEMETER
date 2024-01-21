@@ -199,13 +199,23 @@ footer{
 
 /* News */
 
-#news_1{
-	background-image: url('../img/news/url_immagine_1.jpg');
+#news_4{
+	background-image: url('../img/news/bidoni.jpg');
+}
+
+#news_3{
+	background-image: url('../img/news/calendario.jpg');
 }
 
 #news_2{
-	background-image: url('../img/news/url_immagine_2.jpg');
+	background-image: url('../img/news/educazione.jpg');
 }
+
+#news_1{
+	background-image: url('../img/news/alluvione.jpg');
+}
+
+
 
 #content.news {
     margin-top: 0em;
@@ -246,7 +256,7 @@ footer{
 /* Detailed News */
 
 #detailedNewsImage{
-	background-image: url('../img/news/url_immagine_1.jpg');
+	background-image: url('../img/news/bidoni.jpg');
 }
 
 #content.detailedNews{
@@ -282,6 +292,9 @@ footer{
     margin-bottom: 1em;
 }
 
+#content.detailedNews .newsArticle li{
+    margin-left: 1em;
+}
 
 /*index*/
 
