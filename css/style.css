@@ -1164,6 +1164,12 @@ main#content .dashboard h2{
     margin-bottom: 2em;
 } 
 
+.dashboard p {
+    text-align: center;
+    padding: 1.5em;
+    margin: 0.5em;
+}
+
 /*ECCEZIONI CALENDARIO*/
 .eccezionicalendario li{
     border: 1px solid black;
@@ -1214,7 +1220,14 @@ main#content .dashboard h2{
 .profilo a{
     text-transform: uppercase;
     display: block;
+    background-color: var(--headerBgColor);
 }
+
+.profilo .profile_link{
+    background-color: var(--headerBgColor);
+    max-width: 30%;
+}
+
 
 
 /*404*/
