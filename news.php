@@ -44,13 +44,13 @@
             } 
        }else{
         //$htmlToInsert .= "<p>Al momento non ci sono novità!</p>"; 
-        header("Location: p503.html");
+        header("Location: templates/p503.html");
        }
        
     }
     else{
         //$htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
-        header("Location: p503.html");
+       header("Location: templates/p503.html");
     }
 
     //inizio modifica al css
