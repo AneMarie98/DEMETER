@@ -5,16 +5,16 @@
 }
 
 :root{
-    --headerBgColor: #9cbfa5;
+    --headerBgColor: #ffffff;
     --headerTxtColor:#000000;
-    --bgColor: #f5fbe4;
+    --bgColor: #ffffff;
     --txtColor:#0b0b0b; 
-    --footerBgColor: #f5fbe4;
+    --footerBgColor: #ffffff;
     --footerTxtColor: #0b0b0b; 
-    --linkColor: #3f3401;
-    --visitedLinkColor:#7c0048;
-    --font-body-family: "Futura", sans-serif;
-    --articleBgColor: #c9dec4;
+    --linkColor: #000000;
+    --visitedLinkColor:#000000;
+    --font-body-family: "Times New Roman", Times, serif;
+    --articleBgColor: #ffffff;
 }
 
 html{
@@ -22,6 +22,7 @@ html{
     font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
+    font-size:12pt;
     /*background-image: url(../images/bg.png);*/
 }
 
@@ -45,7 +46,8 @@ header{
     text-indent: -999em;
 }
 
- header nav #menu{
+header nav #menu{
+    display: none;
     margin-left: 10%;
     text-align: right;
     font-size: 1em;
@@ -71,29 +73,21 @@ header > h1{
 }
 
 #menu ul{
+    display: none;
     margin-left: 10%;
     text-align: right;
     font-size: 1em;
     padding: 1em;
     list-style-type: none;
 }
-/*
-#menu{
-    display: block;
-}
-*/
-#menu ul li{
-    text-align: center;
-    display: inline-block;
-    width: 13%;
-    margin: auto;
-    font-weight: bold;
-    text-transform: uppercase;
-}
 
-nav #breadcrumb{
+#breadcrumb{
     padding: 1em;
+    padding-left: 0;
+    padding-bottom: 0;
     margin: auto;
+    margin-top: 1em;
+    margin-left: 0em;
 }
 
 main{
@@ -105,43 +99,31 @@ main{
 }
 
 /* index */
-.home #wrapper{
-    display: grid; 
-    grid-template-columns: 1fr 1fr  1fr; 
-    grid-gap: 2em; 
-    grid-template-areas: "t t i" ;
-}  
 
-.home #wrapper > .left{
-    grid-area: t;
+.home {
+    margin-top: 1em;
+}
+
+.home #wrapper {
+    display: block;
+}
+
+.home #wrapper p{
+    margin-top: 0.5em;
 }
 
 #index_segnalazioni-button{
-    background-color: var(--headerBgColor);
-    padding: 2em;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-bottom: 5em;
-    margin-top: 3em;
-    max-width: 300px;
-    text-align: center;
+    display: none;
 }
-
 
 .home #wrapper > .right{
-    grid-area: i;
-    border-radius: 10px;
-    background-image: url(../img/index.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
+    display: none;
 }
 
-main.home h2{
-    margin-top: 1em;
-    margin-bottom: 1em;
+.home #wrapper p:last-child{
+    display: none;
 }
+
 
 /* footer */
 footer{
@@ -208,77 +190,45 @@ footer{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 0.75em;
     background-color: var(--articleBgColor);
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: min-content 1fr;
-    column-gap: 2em;
+    display: block;
 }
 
 #content.news .newsImg{
-    /*le immagini vanno messe con rateo 3:2*/
-    background-color: var(--articleBgColor);
-    background-size:cover;
-    background-position: center;
-    height: 17em; 
-    width: 25em;
-    display: block;
-    margin: auto;
-    border-radius: 1em; 
-    grid-row: 1 / span 2;
-    grid-column: 2;
+    display: none;
  }
  
  #content.news h3{
     margin-top: 0.5em;
-    grid-row: 1;
-    grid-column: 1;
 } 
 
 #content.news article p{
     margin-top: 1em;
-    grid-row: 2;
-    grid-column: 1;
 }
 
 
 /* Detailed News */
 
 #detailedNewsImage{
-	background-image: url('../img/news/alluvione.jpg');
+	background-image: url('../img/news/bidoni.jpg');
 }
 
 #content.detailedNews{
     margin-top: 2em;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: min-content 1fr auto;
 }
 
 #content.detailedNews h2{ 
     text-align: left;
     margin-top: 0em;
-    grid-row: 1 ;
-    grid-column: 1;
 }
 
 #content.detailedNews h3{
     margin-top: 0.5em;
     font-weight: normal;
     font-size: 1em;
-    grid-row: 2;
-    grid-column: 1;
 }
 
 #content.detailedNews #detailedNewsImage {
-    background-color: var(--bgColor);
-    background-size:cover;
-    background-position: center;
-    height: 20em; 
-    width: 30em;
-    display: block;
-    margin: auto;
-    grid-row: 1 / span 2;
-    grid-column: 2;
+    display: none;
 }
 
 #content.detailedNews .newsArticle{
@@ -297,7 +247,6 @@ footer{
 #servizi_content.servizi h2 {
     text-align: center;
     margin-top: 1em;
-    
 }
 
 #servizi_section1 h3{
@@ -308,12 +257,10 @@ footer{
 
 #servizi_wrapper {
 display: block;
-
 }
 
 #servizi_wrapper > .left{
-    
-    margin-bottom: 10em;
+    margin-bottom: 3em;
     margin-top: 2em;
     border: 2px solid var(--headerTxtColor); 
     border-radius: 10px; 
@@ -322,56 +269,30 @@ display: block;
     background-color: var(--headerBgColor);
 }
 
-
-
-
-
-
 #servizi_section2 div.servizi_container.servizi_section2Content{
-    margin-top: 3em;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2em;
+    margin-top: 1em;
 }
 
 #servizi_section2 div.servizi_serviceDescription{
     flex-grow: 0;
     flex-shrink: 1;
     text-align: left;
-
 }
 
  #servizi_section2  div.servizi_serviceDescription div.sec2{
-    background-image: url(../img/servizi_sec22.jpg);
-    display: flex;
-    height: 570px;
-    width: 390px;  
-    margin-top: 2em;
-    background-size: cover;
-    border-radius: 10px;
-
+    display: none;
 } 
 
 #servizi_section2 div.servizi_serviceContainer{
-    width: 50%;
-    flex-grow: 0;
-    flex-shrink: 1;
+    width: 100%;
 }
 
 #servizi_section2 div.servizi_serviceBoxContainer{
-    display:flex;
-    align-self: flex-end;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-    padding: 2em;
-    padding-left:1em;
-    padding-right: 0;
-
+    padding: 0.5em;
 }
 
 #servizi_section2 div.servizi_serviceBoxContainer h3{
-    padding: 1em;
+    padding: 0.5em;
     font-size: 100%;
     max-width: 100%; 
     display: flex;
@@ -386,14 +307,7 @@ display: block;
     width: 100%; 
 }
 
-#servizi_section2 div.servizi_serviceBoxContainer h3:hover{
-    background-color: var(--headerBgColor);
-}
-
-
 #servizi_section2 div.servizi_serviceBoxContainer h3 a{
-
-
     background-color: var(--headerBgColor) ;
     color: var(--linkColor);
     text-align: center;
@@ -407,78 +321,48 @@ display: block;
     line-height: 1.5em;
 }
 
-#servizi_section2 div.servizi_serviceBoxContainer h3 a:hover{
-    background-color: var(--bgColor);
-}
-
-#servizi_section2 div.servizi_serviceBoxContainer h3 a:visited{
-    color: var(--visitedLinkColor);
-    background-color: var(--bgColor);
-}
-
-#servizi_section2 div.servizi_serviceBoxContainer h3 a:visited:hover{
-    background-color: var(--headerBgColor);
-}
-
-
 #servizi_section3{
-    text-align: center;
-    margin-top: 4em;
-
+    text-align: left;
+    margin-top: 3em;
 }
-
-
 
 #servizi_section3 h3, #servizi_section3 p {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
-
 
 #servizi_section4 {
-
     text-align: center;
     margin-bottom: 5em;
-    margin-top: 5em;
+    margin-top: 3em;
 }
+
 #servizi_section4 h3{
-    text-align: center;
-    margin-bottom: 2em;
-
-}
-
-#servizi_section4 div.servizi_reasonContainer{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    flex-direction: row;
-    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 0.5em;
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer{
     display: flex;
-    padding: 1em;
-    
+    padding: 0.5em;
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer div.servizi_reasonContent{
-
     background-color:var(--headerBgColor) ;
     color: var(--headerTxtColor);
     border-radius: 10px;
     border: 2px solid black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 auto;
+    flex: auto;
     width: 330px;
-    padding: 2em;
-    padding-bottom: 0;
+    padding: 1em;
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer h4{
     text-align: center;
     padding-bottom: 0.5em;
     text-transform: uppercase;
-
 }
+
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer p{
     text-align: left;
 }
@@ -495,22 +379,20 @@ display: block;
     margin-top: 1em;
 }
 
-.impianti_menu-impianti {
+#impianti_content h3{
     margin-top: 1em;
-    padding: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .impianti_container ul li {
     list-style: none;
-    margin-left: 1em;
-
 }
 
 #impianto1-wrapper h2 {
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
-    padding: 1em; 
+    padding: 0.5em; 
     border: solid black;
 }
 
@@ -521,27 +403,21 @@ display: block;
 }
 
 #impianto1-wrapper{
-    display: grid; 
+    display: grid;
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
+    grid-gap: 0.5em; 
     grid-template-areas: "t" "i" ;
 
 }
 
 #impianto1-wrapper #impianti_img1{
-    border-radius: 10px;
-    background-image: url(../img/impianti_img1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
+    display: none;
 }
 
 #impianto2-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
+    grid-gap: 0.5em; 
     grid-template-areas: "t" "i" ;
 
 }
@@ -550,9 +426,8 @@ display: block;
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
-    padding: 1em;
+    padding: 0.5em;
     border: solid black; 
-
 }
 
 #impianto2-wrapper h3 {
@@ -567,28 +442,16 @@ display: block;
     margin-left: 2em;
 }
 
-
-
 #impianto2-wrapper #impianti_img2{
-    border-radius: 10px;
-    background-image: url(../img/impianti_img2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
-
+    display: none;
 }
 
 #impianto3-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
+    grid-gap: 0.5em; 
     grid-template-areas: "t" "i" ;
-
 }
-
 
 #impianto3-wrapper h2 {
     text-align: left;
@@ -603,25 +466,18 @@ display: block;
     border-radius: 10px;
     padding: 0.5em;
     margin-top: 1em;
-
 }
 
 #impianto3-wrapper #impianti_img3{
-    border-radius: 10px;
-    background-image: url(../img/impianti_rifiutipericolosi.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
+    display: none;
 }
 
 #impianto4-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
+    grid-gap: 0.5em; 
     grid-template-areas: "t" "i" ;
-
+    margin-bottom: 2em;
 }
 
 #impianto4-wrapper h2 {
@@ -642,37 +498,23 @@ display: block;
 #impianto4-wrapper ul li {
     list-style: circle;
     margin-left: 2em;
-    
 }
 
 #impianto4-wrapper #impianti_img4{
-    border-radius: 10px;
-    background-image: url(../img/impianti_acque.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
-
+    display: none;
 }
 
 /*SMALTIMENTO*/
 
 #smaltimento_content-wrapper{
-    display: grid; 
-    grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
-    grid-template-areas: "t" "i" ;
-
+    margin-bottom: 2em;
 }
 
 #smaltimento_content-wrapper h2 {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
-
 
 #smaltimento_content-wrapper h3 {
     background-color:var(--headerBgColor) ;
@@ -680,36 +522,28 @@ display: block;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
+    margin-top: 1em;
 }
 
 #smaltimento_content-wrapper ul li {
     list-style: circle;
     margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
 }
 
 #smaltimento_content-wrapper #smaltimento_img1{
-    border-radius: 10px;
-    background-image: url(../img/smaltimento.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
-
-
+    display: none;
 }
 
 /*RECUPERO E RACCOLTA*/
 
+#raccolta_content{
+    margin-bottom: 2em;
+}
 
 #raccolta_content h2 {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 
 }
 
@@ -719,14 +553,13 @@ display: block;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
+    margin-top: 1em;
 }
 
 #raccolta_content ul li {
     list-style: circle;
     margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 2em;
+   margin-top: 0.5em;
 }
 
 /*BONIFICHE*/
@@ -738,15 +571,12 @@ display: block;
 
 }
 
-
-
 #bonifiche_content h3 {
     background-color:var(--headerBgColor) ;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
 }
 
 #bonifiche_content ul li {
@@ -756,16 +586,18 @@ display: block;
     margin-bottom: 1em;
 }
 
+
 /* PRONTO INTERVENTO */
+
+#intervento_content{
+    margin-bottom: 2em;
+}
 
 #intervento_content h2 {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 2em;
-
+    margin-bottom: 1em;
 }
-
-
 
 #intervento_content h3 {
     background-color:var(--headerBgColor) ;
@@ -773,257 +605,115 @@ display: block;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
+    margin-top: 1em;
 }
 
 #intervento_content ul li {
     list-style: circle;
     margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-
+    margin-top: 0.5em;
 }
 
 /*DOVE LO BUTTO */
 
-#searchBar h3{
-    margin-top: 2em;
-}
-
-#searchBar 
-
- #doveLoButto-wrapper{
+#doveLoButto-wrapper{
     display: grid; 
     grid-template-rows: repeat(7,0.4fr) ; 
     grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
-
 } 
 
-
-
 #doveLoButto-wrapper > #cartaImg{
-
-    border-radius: 10px;
-    background-image: url(../img/DLB_carta.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
+    display: none;
 }
-
-
 
 #carta h3 {
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color: cornflowerblue ;
-    color: white;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-
 }
-
-
-
-
 
 #plastica h3 {
     margin-top: 1em;
     margin-bottom: 1em;
-    
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-    background-color: gold;
-
 }
 
 #doveLoButto-wrapper > #plasticaImg{
- 
-    border-radius: 10px;
-    background-image: url(../img/DLB_plastica.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
-} 
+    display: none;
+}
 
 #vetro h3 {
     margin-top: 1em;
     margin-bottom: 1em;
-    
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-    background-color: green;
-    color: white;
-
 }
 
 #doveLoButto-wrapper > #vetroImg{
-    border-radius: 10px;
-    background-image: url(../img/DLB_vetro.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
+    display: none;
 }
-
-
-
-
 
 #umido h3{
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color:sienna ;
-    color: white;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-
 }
 
 #doveLoButto-wrapper > #umidoImg{
- 
-    border-radius: 10px;
-    background-image: url(../img/DLB_umido.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
-} 
-
-
-
-
+    display: none;
+}
 
 #secco h3{
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color:grey ;
-    color: white;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-
 }
 
 #doveLoButto-wrapper > #seccoImg{
- 
-    border-radius: 10px;
-    background-image: url(../img/DLB_secco.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
-} 
-
-
+    display: none;
+}
 
 #altro h3{
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color:var(--headerBgColor) ;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-
 }
 
 #doveLoButto-wrapper > #altroImg{
-
-    border-radius: 10px;
-    background-image: url(../img/DLB_altro.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
+    display: none;
 }
+
 
 /*Search*/
 #searchContainer{
-    border-top: var(--headerBgColor) 0.3em solid;
-    margin-top: 0.3em;
-    border-bottom: var(--headerBgColor) 0.3em solid;
-    margin-bottom: 0.3em;
-}
-#searchBar{
-    
-     width: 100%;
-     display: flex;
- } 
- 
- #searchInput{
-     margin-top: 2em;
-     margin-bottom: 2em;
-     background-color: var(--bgColor);
-     border-radius: 10px;
-     flex: 1 1 70%;
-     padding: 10px;
-     
- }
- 
- #searchButton {
-     padding: 10px;
-     margin: auto;
-     height: auto;
-     flex: 1 1 auto;
-     border-radius: 10px;
-     background-color: var(--headerBgColor);
-     color: var(--headerTxtColor);
- }
- 
- #searchInput:hover{
-     background-color: var(--visitedLinkColor);
-     
- }
- 
- /*Search Result*/
-#searchResults dd, #searchResults dt{
-    display: inline-block;
-    margin: 0 0.5em;
-    width: 14%;
+    display: none;
 }
 
-
-#searchResults dt{
-   font-weight: bold;
-}
-
-#searchResults dt{
-    margin: auto;
-    text-align: center;
-}
 /*LOGIN*/
 
 #content h2 {
     text-align: center;
-    
+    margin-top: 1em;
 }
 
 #content legend {
     text-align: left;
     font-size: 20px; 
-    
 } 
 
 #content fieldset {
-    
     border-radius: 10px;
     text-align: center;
     padding: 2em;
@@ -1031,10 +721,7 @@ display: block;
     flex-direction: column;
     margin: 1.5em; 
     margin-bottom: 5em;
-    width: 60%; 
-    
-   
-    
+    width: 60%;
 }
 
 form{
@@ -1044,24 +731,19 @@ form{
     align-items: center;
 }
 
-
-
 input{
     padding:1.5em;
     margin: 2em; 
-    
     border-radius: 10px;
     background-color: var(--headerBgColor);
-    
 }
+
 input#loginemail {
     padding: 1.5em;
     border-radius: 10px;
     background-color: white;
     color: var(--txtColor);
-    
 }
-
 
 input#loginpass {
     padding: 1.5em;
@@ -1080,14 +762,15 @@ input:focus{
 }
 
 
-
-
-
 /*SEGNALAZIONI*/
 
-main#content.segnalazioni h2{ 
-    text-align: center;
+main#content.FormSegnalazione{
+    margin-top: 1em;
+}
 
+main#content.FormSegnalazione h2{ 
+    text-align: left;
+    margin-bottom: 1em;
 } 
 
 .segnalazioni table {
@@ -1095,27 +778,24 @@ main#content.segnalazioni h2{
     border-collapse: collapse;
     margin-bottom: 40px;
     margin-top: 20px;
-
 }
   
 .segnalazioni th, .segnalazioni td {
     padding: 12px;
     text-align: center;
-    border: 1px solid #ddd;
-    
+    border: 1px solid #ddd; 
 }
 
 .segnalazioni tr:nth-child(even) {
-background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
-
 .segnalazioni tr:hover, .segnalazioni thead {
-background-color: #e5e5e5;
+    background-color: #e5e5e5;
 }
 
 .segnalazioni caption {
-padding: 0.5em;
+    padding: 0.5em;
 }
 
 .segnalazioni td.inCarico {
@@ -1163,7 +843,6 @@ padding: 0.5em;
     display: flex;
     justify-content: center;
     background-color: var(--headerBgColor);
-    
 }
 
 .dashboard div.dashboard-button> a{
@@ -1192,7 +871,6 @@ main#content .dashboard h2{
     margin: 1em;
     border-radius: 10px;
     list-style: none;
-
 }
 
 .eccezionicalendario h3{
@@ -1213,7 +891,6 @@ main#content .dashboard h2{
 
 .profilo h2{
     margin-top: 1em;
-    ;
 }
 
 .profilo p{
@@ -1244,7 +921,6 @@ main#content .dashboard h2{
 }
 
 
-
 /*404*/
 
 main#content.p404{
@@ -1268,7 +944,6 @@ main#content.p404 p {
 
 
 /*503*/
-
 
 main#content.p503{
     background-color: var(--bgColor);
