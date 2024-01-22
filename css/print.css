@@ -764,8 +764,13 @@ input:focus{
 
 /*SEGNALAZIONI*/
 
-main#content.segnalazioni h2{ 
-    text-align: center;
+main#content.FormSegnalazione{
+    margin-top: 1em;
+}
+
+main#content.FormSegnalazione h2{ 
+    text-align: left;
+    margin-bottom: 1em;
 } 
 
 .segnalazioni table {
