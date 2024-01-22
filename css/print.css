@@ -519,19 +519,14 @@ display: block;
 /*SMALTIMENTO*/
 
 #smaltimento_content-wrapper{
-    display: grid; 
-    grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
-    grid-template-areas: "t" "i" ;
-
+    margin-bottom: 2em;
 }
 
 #smaltimento_content-wrapper h2 {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
-
 
 #smaltimento_content-wrapper h3 {
     background-color:var(--headerBgColor) ;
@@ -539,27 +534,16 @@ display: block;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
+    margin-top: 1em;
 }
 
 #smaltimento_content-wrapper ul li {
     list-style: circle;
     margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
 }
 
 #smaltimento_content-wrapper #smaltimento_img1{
-    border-radius: 10px;
-    background-image: url(../img/smaltimento.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
-
-
+    display: none;
 }
 
 /*RECUPERO E RACCOLTA*/
