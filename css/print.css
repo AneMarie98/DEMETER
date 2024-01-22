@@ -391,22 +391,20 @@ display: block;
     margin-top: 1em;
 }
 
-.impianti_menu-impianti {
+#impianti_content h3{
     margin-top: 1em;
-    padding: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .impianti_container ul li {
     list-style: none;
-    margin-left: 1em;
-
 }
 
 #impianto1-wrapper h2 {
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
-    padding: 1em; 
+    padding: 0.5em; 
     border: solid black;
 }
 
@@ -417,27 +415,21 @@ display: block;
 }
 
 #impianto1-wrapper{
-    display: grid; 
+    display: grid;
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
+    grid-gap: 0.5em; 
     grid-template-areas: "t" "i" ;
 
 }
 
 #impianto1-wrapper #impianti_img1{
-    border-radius: 10px;
-    background-image: url(../img/impianti_img1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
+    display: none;
 }
 
 #impianto2-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
+    grid-gap: 0.5em; 
     grid-template-areas: "t" "i" ;
 
 }
@@ -446,9 +438,8 @@ display: block;
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
-    padding: 1em;
+    padding: 0.5em;
     border: solid black; 
-
 }
 
 #impianto2-wrapper h3 {
@@ -463,28 +454,16 @@ display: block;
     margin-left: 2em;
 }
 
-
-
 #impianto2-wrapper #impianti_img2{
-    border-radius: 10px;
-    background-image: url(../img/impianti_img2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
-
+    display: none;
 }
 
 #impianto3-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
+    grid-gap: 0.5em; 
     grid-template-areas: "t" "i" ;
-
 }
-
 
 #impianto3-wrapper h2 {
     text-align: left;
@@ -499,25 +478,18 @@ display: block;
     border-radius: 10px;
     padding: 0.5em;
     margin-top: 1em;
-
 }
 
 #impianto3-wrapper #impianti_img3{
-    border-radius: 10px;
-    background-image: url(../img/impianti_rifiutipericolosi.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
+    display: none;
 }
 
 #impianto4-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
+    grid-gap: 0.5em; 
     grid-template-areas: "t" "i" ;
-
+    margin-bottom: 2em;
 }
 
 #impianto4-wrapper h2 {
@@ -538,19 +510,10 @@ display: block;
 #impianto4-wrapper ul li {
     list-style: circle;
     margin-left: 2em;
-    
 }
 
 #impianto4-wrapper #impianti_img4{
-    border-radius: 10px;
-    background-image: url(../img/impianti_acque.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
-    height: 300px;
-
-
+    display: none;
 }
 
 /*SMALTIMENTO*/
