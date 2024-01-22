@@ -226,36 +226,21 @@ footer{
 
 #content.detailedNews{
     margin-top: 2em;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: min-content 1fr auto;
 }
 
 #content.detailedNews h2{ 
     text-align: left;
     margin-top: 0em;
-    grid-row: 1 ;
-    grid-column: 1;
 }
 
 #content.detailedNews h3{
     margin-top: 0.5em;
     font-weight: normal;
     font-size: 1em;
-    grid-row: 2;
-    grid-column: 1;
 }
 
 #content.detailedNews #detailedNewsImage {
-    background-color: var(--bgColor);
-    background-size:cover;
-    background-position: center;
-    height: 20em; 
-    width: 30em;
-    display: block;
-    margin: auto;
-    grid-row: 1 / span 2;
-    grid-column: 2;
+    display: none;
 }
 
 #content.detailedNews .newsArticle{
