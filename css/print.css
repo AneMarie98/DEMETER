@@ -548,11 +548,14 @@ display: block;
 
 /*RECUPERO E RACCOLTA*/
 
+#raccolta_content{
+    margin-bottom: 2em;
+}
 
 #raccolta_content h2 {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 
 }
 
@@ -562,14 +565,13 @@ display: block;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
+    margin-top: 1em;
 }
 
 #raccolta_content ul li {
     list-style: circle;
     margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 2em;
+   margin-top: 0.5em;
 }
 
 /*BONIFICHE*/
@@ -581,15 +583,12 @@ display: block;
 
 }
 
-
-
 #bonifiche_content h3 {
     background-color:var(--headerBgColor) ;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
 }
 
 #bonifiche_content ul li {
@@ -598,6 +597,7 @@ display: block;
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
 
 /* PRONTO INTERVENTO */
 
