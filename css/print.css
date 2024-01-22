@@ -99,43 +99,31 @@ main{
 }
 
 /* index */
-.home #wrapper{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-gap: 2em; 
-    grid-template-areas: "t t i" ;
-}  
 
-.home #wrapper > .left{
-    grid-area: t;
+.home {
+    margin-top: 1em;
+}
+
+.home #wrapper {
+    display: block;
+}
+
+.home #wrapper p{
+    margin-top: 0.5em;
 }
 
 #index_segnalazioni-button{
-    background-color: var(--headerBgColor);
-    padding: 2em;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-bottom: 5em;
-    margin-top: 3em;
-    max-width: 300px;
-    text-align: center;
+    display: none;
 }
-
 
 .home #wrapper > .right{
-    grid-area: i;
-    border-radius: 10px;
-    background-image: url(../img/index.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 1em;
+    display: none;
 }
 
-main.home h2{
-    margin-top: 1em;
-    margin-bottom: 1em;
+.home #wrapper p:last-child{
+    display: none;
 }
+
 
 /* footer */
 footer{
@@ -717,17 +705,15 @@ display: block;
 
 #content h2 {
     text-align: center;
-    
+    margin-top: 1em;
 }
 
 #content legend {
     text-align: left;
     font-size: 20px; 
-    
 } 
 
 #content fieldset {
-    
     border-radius: 10px;
     text-align: center;
     padding: 2em;
@@ -735,10 +721,7 @@ display: block;
     flex-direction: column;
     margin: 1.5em; 
     margin-bottom: 5em;
-    width: 60%; 
-    
-   
-    
+    width: 60%;
 }
 
 form{
@@ -748,24 +731,19 @@ form{
     align-items: center;
 }
 
-
-
 input{
     padding:1.5em;
     margin: 2em; 
-    
     border-radius: 10px;
     background-color: var(--headerBgColor);
-    
 }
+
 input#loginemail {
     padding: 1.5em;
     border-radius: 10px;
     background-color: white;
     color: var(--txtColor);
-    
 }
-
 
 input#loginpass {
     padding: 1.5em;
@@ -784,14 +762,10 @@ input:focus{
 }
 
 
-
-
-
 /*SEGNALAZIONI*/
 
 main#content.segnalazioni h2{ 
     text-align: center;
-
 } 
 
 .segnalazioni table {
@@ -799,27 +773,24 @@ main#content.segnalazioni h2{
     border-collapse: collapse;
     margin-bottom: 40px;
     margin-top: 20px;
-
 }
   
 .segnalazioni th, .segnalazioni td {
     padding: 12px;
     text-align: center;
-    border: 1px solid #ddd;
-    
+    border: 1px solid #ddd; 
 }
 
 .segnalazioni tr:nth-child(even) {
-background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
-
 .segnalazioni tr:hover, .segnalazioni thead {
-background-color: #e5e5e5;
+    background-color: #e5e5e5;
 }
 
 .segnalazioni caption {
-padding: 0.5em;
+    padding: 0.5em;
 }
 
 .segnalazioni td.inCarico {
@@ -867,7 +838,6 @@ padding: 0.5em;
     display: flex;
     justify-content: center;
     background-color: var(--headerBgColor);
-    
 }
 
 .dashboard div.dashboard-button> a{
@@ -896,7 +866,6 @@ main#content .dashboard h2{
     margin: 1em;
     border-radius: 10px;
     list-style: none;
-
 }
 
 .eccezionicalendario h3{
@@ -917,7 +886,6 @@ main#content .dashboard h2{
 
 .profilo h2{
     margin-top: 1em;
-    ;
 }
 
 .profilo p{
@@ -948,7 +916,6 @@ main#content .dashboard h2{
 }
 
 
-
 /*404*/
 
 main#content.p404{
@@ -972,7 +939,6 @@ main#content.p404 p {
 
 
 /*503*/
-
 
 main#content.p503{
     background-color: var(--bgColor);
