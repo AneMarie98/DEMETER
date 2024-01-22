@@ -5,16 +5,16 @@
 }
 
 :root{
-    --headerBgColor: #9cbfa5;
+    --headerBgColor: #ffffff;
     --headerTxtColor:#000000;
-    --bgColor: #f5fbe4;
+    --bgColor: #ffffff;
     --txtColor:#0b0b0b; 
-    --footerBgColor: #f5fbe4;
+    --footerBgColor: #ffffff;
     --footerTxtColor: #0b0b0b; 
-    --linkColor: #3f3401;
-    --visitedLinkColor:#7c0048;
-    --font-body-family: "Futura", sans-serif;
-    --articleBgColor: #c9dec4;
+    --linkColor: #000000;
+    --visitedLinkColor:#000000;
+    --font-body-family: "Times New Roman", Times, serif;
+    --articleBgColor: #ffffff;
 }
 
 html{
@@ -22,6 +22,7 @@ html{
     font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
+    font-size:12pt;
     /*background-image: url(../images/bg.png);*/
 }
 
@@ -45,7 +46,8 @@ header{
     text-indent: -999em;
 }
 
- header nav #menu{
+header nav #menu{
+    display: none;
     margin-left: 10%;
     text-align: right;
     font-size: 1em;
@@ -71,29 +73,21 @@ header > h1{
 }
 
 #menu ul{
+    display: none;
     margin-left: 10%;
     text-align: right;
     font-size: 1em;
     padding: 1em;
     list-style-type: none;
 }
-/*
-#menu{
-    display: block;
-}
-*/
-#menu ul li{
-    text-align: center;
-    display: inline-block;
-    width: 13%;
-    margin: auto;
-    font-weight: bold;
-    text-transform: uppercase;
-}
 
-nav #breadcrumb{
+#breadcrumb{
     padding: 1em;
+    padding-left: 0;
+    padding-bottom: 0;
     margin: auto;
+    margin-top: 1em;
+    margin-left: 0em;
 }
 
 main{
@@ -107,7 +101,7 @@ main{
 /* index */
 .home #wrapper{
     display: grid; 
-    grid-template-columns: 1fr 1fr  1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
     grid-gap: 2em; 
     grid-template-areas: "t t i" ;
 }  
@@ -208,43 +202,26 @@ footer{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 0.75em;
     background-color: var(--articleBgColor);
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: min-content 1fr;
-    column-gap: 2em;
+    display: block;
 }
 
 #content.news .newsImg{
-    /*le immagini vanno messe con rateo 3:2*/
-    background-color: var(--articleBgColor);
-    background-size:cover;
-    background-position: center;
-    height: 17em; 
-    width: 25em;
-    display: block;
-    margin: auto;
-    border-radius: 1em; 
-    grid-row: 1 / span 2;
-    grid-column: 2;
+    display: none;
  }
  
  #content.news h3{
     margin-top: 0.5em;
-    grid-row: 1;
-    grid-column: 1;
 } 
 
 #content.news article p{
     margin-top: 1em;
-    grid-row: 2;
-    grid-column: 1;
 }
 
 
 /* Detailed News */
 
 #detailedNewsImage{
-	background-image: url('../img/news/alluvione.jpg');
+	background-image: url('../img/news/bidoni.jpg');
 }
 
 #content.detailedNews{
