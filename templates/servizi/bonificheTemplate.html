@@ -8,32 +8,29 @@
     <link rel="stylesheet" href="../css/style.css" media="screen">
     <link rel="stylesheet" href="../css/mini.css" media="screen and (max-device-width:768px)">
     <link rel="stylesheet" href="../css/print.css"  media="print">
+    <script src="../js/togglemenu.js"></script>
 </head>
 <body>
-
     <header>
-        <h1>Demeter</h1>
         <nav aria-label="Aiuti alla navigazione" class="navigationhelp">
             <a href="#content">Vai al contenuto</a>
         </nav>
-    <nav id="menu">
-        <ul>
-            <li><a href="index.php"><span lang="en">Home</span></a></li>
-            <li><a href="calendario.php">Calendario</a></li>
-            <li>Servizi</li>
-            <li><a href="doveLoButto.php">Dove lo butto?</a></li>
-            <li><a href="news.php"><span lang="en">News</span></a></li>
-            <li><a href="{profilelink}">{profile}</a></li>
-        </ul>
-    </nav>
-
-    
-    <nav id="breadcrumb">
-        <p>Ti trovi in: <a href = "../index.php" lang="en">Home</a> &gt;&gt; <a href="../servizi.php" lang="it">Servizi</a> &gt;&gt; Bonifiche ambientali</p>
-
-    </nav>
-
-</header>
+        <h1>Demeter</h1>
+        <button id="togglemenu" onclick="toggleMenu()"></button>
+        <nav id="menu">
+            <ul>
+                <li><a href="../index.php"><span lang="en">Home</span></a></li>
+                <li><a href="../calendario.php">Calendario</a></li>
+                <li>Servizi</li>
+                <li><a href="../doveLoButto.php">Dove lo butto?</a></li>
+                <li><a href="../news.php"><span lang="en">News</span></a></li>
+                <li><a href="../{profilelink}">{profile}</a></li>
+            </ul>
+        </nav>
+        <nav id="breadcrumb">
+            <p>Ti trovi in: <a href = "../index.php" lang="en">Home</a> &gt;&gt; <a href="../servizi.php" lang="it">Servizi</a> &gt;&gt; Bonifiche ambientali</p>
+        </nav>
+    </header>
 
 
     <!-- ----------------INIZIO MAIN------------------ -->
@@ -78,13 +75,13 @@
     <footer>
         <h3>Segui i nostri canali social</h3>
         <p>
-                Seguici su <span lang="en">Facebook</span>, <span lang="en">Instagram</span> e <span lang="en">X</span> per rimanere
-                aggiornato su tutte le iniziative e i progetti futuri. <span>Per un mondo più libero e verde.</span>
+            Seguici su <span lang="en">Facebook</span>, <span lang="en">Instagram</span> e <span lang="en">X</span> per rimanere
+            aggiornato su tutte le iniziative e i progetti futuri. <span>Per un mondo più libero e verde.</span>
         </p>
         <ul id="socialList">
-            <li id="facebook"><a href=""><span lang="en">Facebook</span></a></li>
-            <li id="instagram"><a href=""><span lang="en">Instagram</span></a></li>
-            <li id="x"><a href=""><span lang="en">X</span></a></li>
+            <li id="facebook" class="footericons"><a href=""><span lang="en">Facebook</span></a></li>
+            <li id="instagram" class="footericons"><a href=""><span lang="en">Instagram</span></a></li>
+            <li id="x" class="footericons"><a href=""><span lang="en">X</span></a></li>
         </ul>
     </footer>
 
