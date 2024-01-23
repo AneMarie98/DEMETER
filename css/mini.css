@@ -16,16 +16,27 @@
     --flagColor: rgb(218,103,66);
     --font-body-family: "Futura", sans-serif;
     --articleBgColor: #c9dec4;
-    --headerHeigth: 10em;
+    --calTitleBgColor:#225a22;
+    --calHeaderWeekBgColor:#ccffcc;
+    --calHeaderWeekendBgColor:#cc9900;
+    --calToday:#a3dca3;
+    --calTitleColor:#ffffff;
+    --calBgColor:#000000;
+    --calElemBgColor:#ffffff;
+    --bidU:#6f4c41;
+    --bidS:#9ca4ad;
+    --bidC:#00579c;
+    --bidP:#ffd500;
+    --bidV:#337b2b;
+    --warningmsg:#a00000;
 }
 
 
 html{
-    font-size: 150%;
+    font-size: 150%; /*??????*/
     font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
-    /*background-image: url(../images/bg.png);*/
 }
 
 body{
@@ -37,23 +48,12 @@ body{
 
 header{
     background-color: var(--headerBgColor);
-    color: var(--headerTxtColor);
-    padding: 1em;
-    border-bottom: 0.12em solid var(--headerTxtColor); 
-    border-radius: 0.12em;
-
-    height: var(--headerHeigth);
-
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 4em auto;
 }
 
 .navigationhelp{
     position: absolute;
     text-indent: -999em;
 }
-
 
 a:link{
     color: var(--linkColor);
@@ -64,101 +64,50 @@ a:visited{
 }
 
 header h1{
-    grid-row: 1;
-    grid-column: 1;
-    margin-left: 0.5em;
     width: 20%;
-    margin-right: 0em;
-    font-size: 2.5em;
-    line-height: 1em;
-    align-self: center;
+    font-size: 4em;
+    display: inline-block;
 }
 
 header  #breadcrumb{
-    grid-row: 2;
-    grid-column: 1 / span 2;
-    justify-self:auto;
-    padding: 1em;
-    font-size: 1.3em;
+    padding: 0em;
+    margin: auto;
+    font-size: 1.75em;
+    background-color: var(--headerBgColor);
+    border-bottom:3px solid black;
+    text-align: center;
+    line-height: 1.5em;
 }
 
 /*icona menu hamburger*/
-header #menu-toggle{
-    display: none;
-}
-
-header .mobile-menu::before,
-header .mobile-menu,
-header .mobile-menu::after{
-    grid-row: 1;
-    grid-column: 2;
-    
+#togglemenu{
     display: block;
-    background-color: var(--headerTxtColor);
-    height: 0.3em;
-    width: 2.5em;
-    border-radius: 0.25em;
-}
-
-header .mobile-menu{
-    margin-right: 1.5em;
-    align-self: center;
-    justify-self: end;
-}
-
-
-header .mobile-menu::before{
-    content: '';
-    margin-top: -0.8em;
-}
-
-header .mobile-menu::after {
-    content: '';
-    margin-top: 1.3em;
-}
-
-
-#menu {
-    position: absolute;
-    top: 0em;
-    margin-top: var(--headerHeigth);
-    left: 0;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-
-#menu {
-    display: none;
-}
-
-#menu-toggle:checked + .mobile-menu + #menu {
-    display: block;
-}
-
-#menu-toggle:not(:checked)  #menu {
-    display: none;
-}
-
-header #menu li {
-    display: flex;
-    justify-content: center;
-    padding: 1.5em;
-    width: 100%;
-    color: var(--headerTxtColor);
+    cursor: pointer;
     background-color: var(--headerBgColor);
+    border:0;
+    background-image: url("../img/icons/hamburger.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:5em;
+    width:5em;
+    float: right;
+    margin:4em 4em 0em 0em;
 }
 
-
-header #menu ul {
-    padding: 0em;
-    margin: 0em;
-    width: 100%;
+#menu{
+    display: none;
+    width:100%;
+    background-color: var(--headerBgColor);
+    border-top:1px solid black;
 }
 
-#menu  li:not(:last-child) {
-border-bottom: 0.1em solid #444;
+#menu ul li{
+    width:100%;
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    line-height: 3em;
+    background-color: var(--headerBgColor);
 }
 
 main{
@@ -193,12 +142,10 @@ footer{
     display: inline-block;
     width: 15%;
     margin: 0 0.5em;
-    
 }
 
 
 /* News */
-
 #news_4{
 	background-image: url('../img/news/bidoni.jpg');
 }
@@ -214,8 +161,6 @@ footer{
 #news_1{
 	background-image: url('../img/news/alluvione.jpg');
 }
-
-
 
 #content.news {
     margin-top: 0em;
@@ -254,7 +199,6 @@ footer{
 }
 
 /* Detailed News */
-
 #detailedNewsImage{
 	background-image: url('../img/news/alluvione.jpg');
 }
@@ -297,9 +241,7 @@ footer{
 }
 
 /*index*/
-
 #wrapper .home {
-
     display: block;
     text-align: center;
     margin: 1em;
@@ -319,10 +261,8 @@ footer{
     margin-top: 3em;
     max-width: 300px;
     text-align: center;
-
     display: flex;
     flex-direction: column;
-
 } 
 
 main.home h2{
@@ -331,14 +271,11 @@ main.home h2{
     text-align: left;
 }
 
-
 /* servizi*/
-
 #servizi_wrapper{
     display: block;
     text-align: center;
     margin: 1em;
-
 }
 
 #servizi_wrapper > .left{
@@ -354,14 +291,11 @@ main.home h2{
     text-align: center;
     margin-top: 1em;
     font-size: 1.5em;
-    
 }
 
 #servizi_section1 h3{
     text-align: center;
-
 }
-
 
 #servizi_section2 div.servizi_container.servizi_section2Content{
     margin-top: 3em;
@@ -380,7 +314,6 @@ main.home h2{
 
 #servizi_section2  div.servizi_serviceDescription div.sec2{
     display: none;
-
 } 
 
 #servizi_section2 div.servizi_serviceContainer{
@@ -390,8 +323,6 @@ main.home h2{
 }
 
 #servizi_section2 div.servizi_serviceBoxContainer h3 a{
-
-
     background-color: var(--headerBgColor) ;
     color: var(--linkColor);
     text-align: center;
@@ -420,8 +351,6 @@ main.home h2{
     text-align: center;
     margin-top: 4em;
     font-size: 1.3em;
-
-
 }
 
 #servizi_section4 div.servizi_reasonContainer{
@@ -429,36 +358,26 @@ main.home h2{
     flex-direction: column;
     flex-wrap: nowrap;
     list-style: none;
-
     justify-content: space-between;
-
 }
 
 #servizi_section4 div.servizi_reasonContainer h4{
     font-size: 1.2em;
     text-align: center;
     padding-right: 0em;
-
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer div.servizi_reasonContent p{
-
     text-align: center;
-
-
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer div.servizi_reasonContent {
     padding:1em;
-    
 }
 
 /*IMPIANTI*/
-
 #impianti_content{
     text-align: center;
-
-
 }
 
 #impianti_content h3{
@@ -482,82 +401,70 @@ section.impianti_impianti {
     text-align: center;
 }
 
-
-
-
 #impianto2-wrapper h2{
     text-align: center;
 }
+
 #impianto2-wrapper h3{
     text-align: center;
 }
 
-
-
 #impianto3-wrapper h2{
     text-align: center;
 }
+
 #impianto3-wrapper h3{
     text-align: center;
 }
 
-
 #impianto4-wrapper h2{
     text-align: center;
 }
+
 #impianto4-wrapper h3{
     text-align: center;
 }
-
-
-
 
 /*SMALTIMENTO*/
 #smaltimento_content-wrapper h3{
     max-width: 100%;
     text-align: center;
 }
+
 #smaltimento_content-wrapper p {
     max-width: 100%;
 
 }
 
 /*RECUPERO E RACCOLTA*/
-
 #raccolta_content-wrapper p{
     max-width: 100%;
 
 }
+
 #raccolta_content-wrapper h3{
     max-width: 100%;
     text-align: center;
 }
 
 /*BONIFICHE*/
-
 #bonifiche_content h3{
     max-width: 100%;
     text-align: center;
-
 }
+
 #bonifiche_content p{
     max-width: 100%;
 }
 
-
-
 /* PRONTO INTERVENTO */
-
 #intervento_content h3 {
     max-width: 100%;
     text-align: center;
-    
-
 }
 
 #intervento_content p{
     max-width: 100%;
-
 }
 
 #intervento_content ul li {
@@ -568,9 +475,7 @@ section.impianti_impianti {
     max-width: 100%;
 }
 
-
 /*DOVE LO BUTTO */
-
 #carta p{
     max-width: 100%;
 }
@@ -583,24 +488,25 @@ section.impianti_impianti {
 #plastica p{
     max-width: 100%;
 }
+
 #plastica h3{
     max-width: 100%;
     text-align: center;
 }
 
-
 #umido p{
     max-width: 100%;
 }
+
 #umido h3{
     max-width: 100%;
     text-align: center;
 }
 
-
 #secco p{
     max-width: 100%;
 }
+
 #secco h3{
     max-width: 100%;
     text-align: center;
@@ -608,15 +514,12 @@ section.impianti_impianti {
 
 #altro p{
     max-width: 100%;
-
 }
 
 #altro h3{
     max-width: 100%;
     text-align: center;
-
 }
-
 
 /*SEGNALAZIONI*/
 .segnalazioni thead{
@@ -642,14 +545,11 @@ section.impianti_impianti {
 }
 
 .segnalazioni td.inCarico {
-
     font-size: 2em;
     height: 2em; 
 }
 
-
 /*LOGIN*/
-
 #content fieldset{
     width: 100%;
     padding: 5em;
@@ -672,7 +572,6 @@ legend{
 }
 
 /*DASHBOARD*/
-
 main#content .dashboard{
     width: 90%;
     margin-top: 5em ;
@@ -686,9 +585,7 @@ main#content .dashboard{
     font-size: 40px;
 }
 
-
 /*PROFILO*/
-
 .profilo p{
     padding: 1.5em;
     border: 1px solid black;
@@ -700,4 +597,82 @@ main#content .dashboard{
     text-align: center;
     background-color: var(--headerBgColor);
     font-size: x-large;
+}
+
+/* CALENDARIO */
+.legend{
+    flex-direction: column;
+    width: 37vw;
+}
+
+#calendar{
+    height:auto;
+    margin-top:2em;
+    margin-bottom: 0.3em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding:1px;
+    background-color: var(--calBgColor);
+}
+
+#calTitle{
+    background-color:var(--calTitleBgColor);
+    color:var(--calTitleColor);
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    padding-top:0.6em;
+    border-radius: 20px 20px 0px 0px;
+    border:1px solid black;
+    height:2em;
+    line-height: 0.8em;
+}
+
+#calCornerBL{
+    border-radius:0px;
+}
+
+#calCornerBR{
+    border-radius: 0px 0px 20px 20px;
+}
+
+#monthLeft{
+    margin-left: 1em;
+    font-size: 0.5em;
+}
+
+#monthRight{
+    margin-right: 1em;
+    font-size: 0.5em;
+}
+
+.calHeaderWeek{
+    display: none;
+}
+
+.calHeaderWeekend{
+    display: none;
+}
+
+.accessDay{
+    display: block;
+}
+
+.calElemToday p{
+    float: left;
+    font-size: 2.5em;
+    line-height: 1.5em;
+}
+
+.calElem p{
+    float: left;
+    font-size: 2.5em;
+    line-height: 1.5em;
+}
+
+.bidsvuot{
+    margin-top:0.5em;
+    border-radius: 2.5em;
+    font-size: 3em;
 }
