@@ -22,9 +22,8 @@ try {
 
         foreach ($results as $row) {
             $processedResults[] = array(
-                'nomeRifiuto' => $row['nomeRifiuto'],
-                'bidone' => $row['svuotB'],
-                'giorno' => $row['svuotG']
+                'nomeRifiuto' => $row['nome'],
+                'bidone' => $row['fkSvuotB']
             );
         }
 

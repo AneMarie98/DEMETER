@@ -217,7 +217,7 @@
     }
 
     public function searchRifiuto($rifiuto){
-        $query="SELECT * FROM rifiuti WHERE nomeRifiuto LIKE '%$rifiuto%'";
+        $query="SELECT * FROM rifiuti WHERE nome LIKE '%$rifiuto%'";
 
         try{
             $queryResult = mysqli_query($this -> connection, $query);
