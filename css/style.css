@@ -15,6 +15,19 @@
     --visitedLinkColor:#7c0048;
     --font-body-family: "Futura", sans-serif;
     --articleBgColor: #c9dec4;
+    --calTitleBgColor:#225a22;
+    --calHeaderWeekBgColor:#ccffcc;
+    --calHeaderWeekendBgColor:#cc9900;
+    --calToday:#a3dca3;
+    --calTitleColor:#ffffff;
+    --calBgColor:#000000;
+    --calElemBgColor:#ffffff;
+    --bidU:#6f4c41;
+    --bidS:#9ca4ad;
+    --bidC:#00579c;
+    --bidP:#ffd500;
+    --bidV:#337b2b;
+    --warningmsg:#a00000;
 }
 
 html{
@@ -22,7 +35,6 @@ html{
     font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
-    /*background-image: url(../images/bg.png);*/
 }
 
 body{
@@ -35,7 +47,7 @@ body{
 header{
     background-color: var(--headerBgColor);
     color: var(--headerTxtColor);
-    padding: 1em;
+    padding: 1em 1em 0em 1em;
     border-bottom: 3px solid var(--headerTxtColor); 
     border-radius: 3px;
 }
@@ -45,7 +57,7 @@ header{
     text-indent: -999em;
 }
 
- header nav #menu{
+header nav #menu{
     margin-left: 10%;
     text-align: right;
     font-size: 1em;
@@ -60,10 +72,15 @@ a:visited{
 }
 
 header > h1{
-    float: left;
-    width: 20%;
-    margin-right: 0em;
-    font-size: 2.3em;
+    text-indent: -999em;
+    background-image: url("../img/icons/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 1.5em;
+    color:var(--headerTxtColor);
+    background-position: center;
+    font-size: 3em;
+    margin:0.2em 0 0.2em 0;
 }
 
 #menu-toggle{
@@ -71,29 +88,29 @@ header > h1{
 }
 
 #menu ul{
-    margin-left: 10%;
-    text-align: right;
-    font-size: 1em;
+    margin: auto;
     padding: 1em;
     list-style-type: none;
-}
-/*
-#menu{
-    display: block;
-}
-*/
-#menu ul li{
     text-align: center;
-    display: inline-block;
-    width: 13%;
-    margin: auto;
-    font-weight: bold;
-    text-transform: uppercase;
+    border-bottom: 2px solid var(--headerTxtColor);
 }
 
-nav #breadcrumb{
-    padding: 1em;
+#menu ul li{
+    display: inline-block;
+    width: 12.5%;
+    margin: 0 0.5em; 
+    font-weight: bold;
+    text-transform: uppercase; 
+}
+
+#menu ul li a{
+    display: block;
+}
+
+#breadcrumb{
     margin: auto;
+    text-align: center;
+    padding:0.5em;
 }
 
 main{
@@ -156,6 +173,31 @@ footer{
     border-radius: 3px;
 }
 
+.footericons{
+    text-indent: -999em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 1.5em;
+    color:black;
+    background-position: center;
+}
+
+.footericons a{
+    display: block;
+}
+
+#facebook{
+    background-image: url("../img/icons/facebook.png");
+}
+
+#instagram{
+    background-image: url("../img/icons/instagram.png");
+}
+
+#x{
+    background-image: url("../img/icons/x.png");
+}
+
 #socialList{
     max-width: 1024px;
     margin: auto;
@@ -168,11 +210,9 @@ footer{
     display: inline-block;
     width: 15%;
     margin: 0 0.5em;
-    
 }
 
 /* News */
-
 #news_4{
 	background-image: url('../img/news/bidoni.jpg');
 }
@@ -188,8 +228,6 @@ footer{
 #news_1{
 	background-image: url('../img/news/alluvione.jpg');
 }
-
-
 
 #content.news {
     margin-top: 0em;
@@ -240,9 +278,7 @@ footer{
     grid-column: 1;
 }
 
-
 /* Detailed News */
-
 #detailedNewsImage{
 	background-image: url('../img/news/alluvione.jpg');
 }
@@ -293,11 +329,9 @@ footer{
 }
 
 /* SERVIZI */
-
 #servizi_content.servizi h2 {
     text-align: center;
     margin-top: 1em;
-    
 }
 
 #servizi_section1 h3{
@@ -307,12 +341,10 @@ footer{
 }
 
 #servizi_wrapper {
-display: block;
-
+    display: block;
 }
 
 #servizi_wrapper > .left{
-    
     margin-bottom: 10em;
     margin-top: 2em;
     border: 2px solid var(--headerTxtColor); 
@@ -321,11 +353,6 @@ display: block;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: var(--headerBgColor);
 }
-
-
-
-
-
 
 #servizi_section2 div.servizi_container.servizi_section2Content{
     margin-top: 3em;
@@ -338,10 +365,9 @@ display: block;
     flex-grow: 0;
     flex-shrink: 1;
     text-align: left;
-
 }
 
- #servizi_section2  div.servizi_serviceDescription div.sec2{
+#servizi_section2  div.servizi_serviceDescription div.sec2{
     background-image: url(../img/servizi_sec22.jpg);
     display: flex;
     height: 570px;
@@ -349,7 +375,6 @@ display: block;
     margin-top: 2em;
     background-size: cover;
     border-radius: 10px;
-
 } 
 
 #servizi_section2 div.servizi_serviceContainer{
@@ -367,7 +392,6 @@ display: block;
     padding: 2em;
     padding-left:1em;
     padding-right: 0;
-
 }
 
 #servizi_section2 div.servizi_serviceBoxContainer h3{
@@ -390,10 +414,7 @@ display: block;
     background-color: var(--headerBgColor);
 }
 
-
 #servizi_section2 div.servizi_serviceBoxContainer h3 a{
-
-
     background-color: var(--headerBgColor) ;
     color: var(--linkColor);
     text-align: center;
@@ -420,30 +441,24 @@ display: block;
     background-color: var(--headerBgColor);
 }
 
-
 #servizi_section3{
     text-align: center;
     margin-top: 4em;
-
 }
-
-
 
 #servizi_section3 h3, #servizi_section3 p {
     margin-bottom: 2em;
 }
 
-
 #servizi_section4 {
-
     text-align: center;
     margin-bottom: 5em;
     margin-top: 5em;
 }
+
 #servizi_section4 h3{
     text-align: center;
     margin-bottom: 2em;
-
 }
 
 #servizi_section4 div.servizi_reasonContainer{
@@ -457,11 +472,9 @@ display: block;
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer{
     display: flex;
     padding: 1em;
-    
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer div.servizi_reasonContent{
-
     background-color:var(--headerBgColor) ;
     color: var(--headerTxtColor);
     border-radius: 10px;
@@ -477,15 +490,13 @@ display: block;
     text-align: center;
     padding-bottom: 0.5em;
     text-transform: uppercase;
-
 }
+
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer p{
     text-align: left;
 }
 
-
 /*IMPIANTI*/
-
 #impianti_content h2 {
     text-align: center;
     margin-top: 1em;
@@ -503,7 +514,6 @@ display: block;
 .impianti_container ul li {
     list-style: none;
     margin-left: 1em;
-
 }
 
 #impianto1-wrapper h2 {
@@ -525,7 +535,6 @@ display: block;
     grid-template-rows: repeat(1,0.4fr) ; 
     grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
-
 }
 
 #impianto1-wrapper #impianti_img1{
@@ -543,7 +552,6 @@ display: block;
     grid-template-rows: repeat(1,0.4fr) ; 
     grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
-
 }
 
 #impianto2-wrapper h2 {
@@ -552,7 +560,6 @@ display: block;
     border-radius: 10px;
     padding: 1em;
     border: solid black; 
-
 }
 
 #impianto2-wrapper h3 {
@@ -567,8 +574,6 @@ display: block;
     margin-left: 2em;
 }
 
-
-
 #impianto2-wrapper #impianti_img2{
     border-radius: 10px;
     background-image: url(../img/impianti_img2.jpg);
@@ -577,8 +582,6 @@ display: block;
     background-position: center;
     margin-bottom: 1em;
     height: 300px;
-
-
 }
 
 #impianto3-wrapper{
@@ -586,9 +589,7 @@ display: block;
     grid-template-rows: repeat(1,0.4fr) ; 
     grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
-
 }
-
 
 #impianto3-wrapper h2 {
     text-align: left;
@@ -603,7 +604,6 @@ display: block;
     border-radius: 10px;
     padding: 0.5em;
     margin-top: 1em;
-
 }
 
 #impianto3-wrapper #impianti_img3{
@@ -621,7 +621,6 @@ display: block;
     grid-template-rows: repeat(1,0.4fr) ; 
     grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
-
 }
 
 #impianto4-wrapper h2 {
@@ -642,7 +641,6 @@ display: block;
 #impianto4-wrapper ul li {
     list-style: circle;
     margin-left: 2em;
-    
 }
 
 #impianto4-wrapper #impianti_img4{
@@ -653,18 +651,14 @@ display: block;
     background-position: center;
     margin-bottom: 1em;
     height: 300px;
-
-
 }
 
 /*SMALTIMENTO*/
-
 #smaltimento_content-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
     grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
-
 }
 
 #smaltimento_content-wrapper h2 {
@@ -673,14 +667,12 @@ display: block;
     margin-bottom: 2em;
 }
 
-
 #smaltimento_content-wrapper h3 {
     background-color:var(--headerBgColor) ;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
 }
 
 #smaltimento_content-wrapper ul li {
@@ -698,19 +690,13 @@ display: block;
     background-position: center;
     margin-bottom: 1em;
     height: 300px;
-
-
-
 }
 
 /*RECUPERO E RACCOLTA*/
-
-
 #raccolta_content h2 {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 2em;
-
 }
 
 #raccolta_content h3 {
@@ -719,7 +705,6 @@ display: block;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
 }
 
 #raccolta_content ul li {
@@ -730,15 +715,11 @@ display: block;
 }
 
 /*BONIFICHE*/
-
 #bonifiche_content h2 {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 2em;
-
 }
-
-
 
 #bonifiche_content h3 {
     background-color:var(--headerBgColor) ;
@@ -746,7 +727,6 @@ display: block;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
 }
 
 #bonifiche_content ul li {
@@ -757,15 +737,11 @@ display: block;
 }
 
 /* PRONTO INTERVENTO */
-
 #intervento_content h2 {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 2em;
-
 }
-
-
 
 #intervento_content h3 {
     background-color:var(--headerBgColor) ;
@@ -773,7 +749,6 @@ display: block;
     padding: 1em;
     border-radius: 10px;
     margin-bottom: 1em;
-
 }
 
 #intervento_content ul li {
@@ -781,29 +756,21 @@ display: block;
     margin-left: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
-
 }
 
 /*DOVE LO BUTTO */
-
 #searchBar h3{
     margin-top: 2em;
 }
 
-#searchBar 
-
- #doveLoButto-wrapper{
+#searchBar #doveLoButto-wrapper{
     display: grid; 
     grid-template-rows: repeat(7,0.4fr) ; 
     grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
-
 } 
 
-
-
 #doveLoButto-wrapper > #cartaImg{
-
     border-radius: 10px;
     background-image: url(../img/DLB_carta.jpg);
     background-size: cover;
@@ -811,39 +778,29 @@ display: block;
     background-position: center;
     margin-bottom: 1em;
     height: 300px;
-
 }
-
-
 
 #carta h3 {
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color: cornflowerblue ;
+    background-color: var(--bidC) ;
     color: white;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-
 }
-
-
-
-
 
 #plastica h3 {
     margin-top: 1em;
     margin-bottom: 1em;
-    
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-    background-color: gold;
+    background-color: var(--bidP);
 
 }
 
 #doveLoButto-wrapper > #plasticaImg{
- 
     border-radius: 10px;
     background-image: url(../img/DLB_plastica.jpg);
     background-size: cover;
@@ -851,19 +808,16 @@ display: block;
     background-position: center;
     margin-bottom: 1em;
     height: 300px;
-
 } 
 
 #vetro h3 {
     margin-top: 1em;
     margin-bottom: 1em;
-    
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-    background-color: green;
+    background-color: var(--bidV);
     color: white;
-
 }
 
 #doveLoButto-wrapper > #vetroImg{
@@ -874,26 +828,19 @@ display: block;
     background-position: center;
     margin-bottom: 1em;
     height: 300px;
-
 }
-
-
-
-
 
 #umido h3{
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color:sienna ;
+    background-color:var(--bidU) ;
     color: white;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-
 }
 
 #doveLoButto-wrapper > #umidoImg{
- 
     border-radius: 10px;
     background-image: url(../img/DLB_umido.jpg);
     background-size: cover;
@@ -901,26 +848,19 @@ display: block;
     background-position: center;
     margin-bottom: 1em;
     height: 300px;
-
 } 
-
-
-
-
 
 #secco h3{
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color:grey ;
+    background-color:var(--bidS) ;
     color: white;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-
 }
 
 #doveLoButto-wrapper > #seccoImg{
- 
     border-radius: 10px;
     background-image: url(../img/DLB_secco.jpg);
     background-size: cover;
@@ -928,10 +868,7 @@ display: block;
     background-position: center;
     margin-bottom: 1em;
     height: 300px;
-
 } 
-
-
 
 #altro h3{
     margin-top: 1em;
@@ -940,11 +877,9 @@ display: block;
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-
 }
 
 #doveLoButto-wrapper > #altroImg{
-
     border-radius: 10px;
     background-image: url(../img/DLB_altro.jpg);
     background-size: cover;
@@ -952,7 +887,6 @@ display: block;
     background-position: center;
     margin-bottom: 1em;
     height: 300px;
-
 }
 
 /*Search*/
@@ -963,43 +897,39 @@ display: block;
     margin-bottom: 0.3em;
 }
 #searchBar{
-    
-     width: 100%;
-     display: flex;
- } 
+    width: 100%;
+    display: flex;
+} 
  
- #searchInput{
-     margin-top: 2em;
-     margin-bottom: 2em;
-     background-color: var(--bgColor);
-     border-radius: 10px;
-     flex: 1 1 70%;
-     padding: 10px;
-     
- }
+#searchInput{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: var(--bgColor);
+    border-radius: 10px;
+    flex: 1 1 70%;
+    padding: 10px;
+}
  
- #searchButton {
-     padding: 10px;
-     margin: auto;
-     height: auto;
-     flex: 1 1 auto;
-     border-radius: 10px;
-     background-color: var(--headerBgColor);
-     color: var(--headerTxtColor);
- }
+#searchButton {
+    padding: 10px;
+    margin: auto;
+    height: auto;
+    flex: 1 1 auto;
+    border-radius: 10px;
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+}
  
- #searchInput:hover{
-     background-color: var(--visitedLinkColor);
-     
- }
+#searchInput:hover{
+    background-color: var(--visitedLinkColor);
+}
  
- /*Search Result*/
+/*Search Result*/
 #searchResults dd, #searchResults dt{
     display: inline-block;
     margin: 0 0.5em;
     width: 14%;
 }
-
 
 #searchResults dt{
    font-weight: bold;
@@ -1009,21 +939,18 @@ display: block;
     margin: auto;
     text-align: center;
 }
-/*LOGIN*/
 
+/*LOGIN*/
 #content h2 {
     text-align: center;
-    
 }
 
 #content legend {
     text-align: left;
-    font-size: 20px; 
-    
+    font-size: 20px;  
 } 
 
 #content fieldset {
-    
     border-radius: 10px;
     text-align: center;
     padding: 2em;
@@ -1031,10 +958,7 @@ display: block;
     flex-direction: column;
     margin: 1.5em; 
     margin-bottom: 5em;
-    width: 60%; 
-    
-   
-    
+    width: 60%;     
 }
 
 form{
@@ -1044,24 +968,19 @@ form{
     align-items: center;
 }
 
-
-
 input{
     padding:1.5em;
     margin: 2em; 
-    
     border-radius: 10px;
     background-color: var(--headerBgColor);
-    
 }
+
 input#loginemail {
     padding: 1.5em;
     border-radius: 10px;
     background-color: white;
     color: var(--txtColor);
-    
 }
-
 
 input#loginpass {
     padding: 1.5em;
@@ -1079,15 +998,9 @@ input:focus{
     outline: 3px solid #007bff;
 }
 
-
-
-
-
 /*SEGNALAZIONI*/
-
 main#content.segnalazioni h2{ 
     text-align: center;
-
 } 
 
 .segnalazioni table {
@@ -1095,27 +1008,24 @@ main#content.segnalazioni h2{
     border-collapse: collapse;
     margin-bottom: 40px;
     margin-top: 20px;
-
 }
   
 .segnalazioni th, .segnalazioni td {
     padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
-    
 }
 
 .segnalazioni tr:nth-child(even) {
-background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
-
 .segnalazioni tr:hover, .segnalazioni thead {
-background-color: #e5e5e5;
+    background-color: #e5e5e5;
 }
 
 .segnalazioni caption {
-padding: 0.5em;
+    padding: 0.5em;
 }
 
 .segnalazioni td.inCarico {
@@ -1151,7 +1061,6 @@ padding: 0.5em;
     height: 1em; 
 }
 
-
 /*DASHBOARD*/
 .dashboard div.dashboard-button {
     text-align: center;
@@ -1163,7 +1072,6 @@ padding: 0.5em;
     display: flex;
     justify-content: center;
     background-color: var(--headerBgColor);
-    
 }
 
 .dashboard div.dashboard-button> a{
@@ -1192,7 +1100,6 @@ main#content .dashboard h2{
     margin: 1em;
     border-radius: 10px;
     list-style: none;
-
 }
 
 .eccezionicalendario h3{
@@ -1210,10 +1117,8 @@ main#content .dashboard h2{
 }
 
 /*PROFILO*/
-
 .profilo h2{
     margin-top: 1em;
-    ;
 }
 
 .profilo p{
@@ -1243,10 +1148,7 @@ main#content .dashboard h2{
     max-width: 30%;
 }
 
-
-
 /*404*/
-
 main#content.p404{
     background-color: var(--bgColor);
     margin: auto;
@@ -1266,10 +1168,7 @@ main#content.p404 p {
     padding: 2em;
 }
 
-
 /*503*/
-
-
 main#content.p503{
     background-color: var(--bgColor);
     margin: auto;
@@ -1289,3 +1188,190 @@ main#content.p503 p {
     padding: 2em;
 }
 
+/* CALENDARIO */
+#calendar{
+    height:80vh;
+    margin-top:2em;
+    margin-bottom: 0.3em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: 3.5em 2em auto auto auto auto auto auto;
+    border-radius: 20px;
+    padding:1px;
+    background-color: var(--calBgColor);
+}
+
+#calTitle{
+    background-color:var(--calTitleBgColor);
+    color:var(--calTitleColor);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    grid-column: 1/8;
+    padding-top:0.75em;
+    border-radius: 20px 20px 0px 0px;
+    border:1px solid black;
+}
+
+#calCornerBL{
+    border-radius: 0px 0px 0px 20px;
+}
+
+#calCornerBR{
+    border-radius: 0px 0px 20px 0px;
+}
+
+#calMonth{
+    display: inline;
+}
+
+#monthLeft{
+    float:left;
+    color:var(--calTitleColor);
+    margin-left:1.5em;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--calTitleBgColor);
+    border:0;
+    background-image: url("../img/icons/left-arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:1.5em;
+    width:1.5em;
+}
+
+#monthRight{
+    float:right;
+    color:var(--calTitleColor);
+    margin-right:1.5em;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--calTitleBgColor);
+    border:0;
+    background-image: url("../img/icons/right-arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:1.5em;
+    width:1.5em;
+}
+
+#navigationHelpCal{
+    position: absolute;
+    text-indent: -999em;
+}
+
+#calwarning{
+    text-align: center;
+    font-size: 0.85em;
+    color:var(--warningmsg);
+    margin-bottom:0.5em;
+}
+
+.calHeaderWeek{
+    background-color: var(--calHeaderWeekBgColor);
+    text-align: center;
+    border:1px solid black;
+    padding:0.25em;
+}
+
+.calHeaderWeekend{
+    background-color: var(--calHeaderWeekendBgColor);
+    text-align: center;
+    border:1px solid black;
+    padding:0.25em;
+}
+
+.calElem{
+    background-color: var(--calElemBgColor);
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+.calElemToday{
+    background-color: var(--calToday);
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+.calElemToday p{
+    padding:0.3em;
+    display: block;
+    font-weight: bold;
+    margin:0;
+}
+
+.calElem p{
+    padding:0.3em;
+    display: block;
+    margin:0;
+}
+
+.bidsvuot{
+    float:right;
+    height:2em;
+    width:2em;
+    border-radius: 1em;
+    text-align: center;
+    line-height: 2em;  
+    margin-right:1em;
+}
+
+.bidsvuotlegend{
+    float:left;
+    height:2em;
+    width:2em;
+    border-radius: 1em;
+    text-align: center;
+    line-height: 2em;  
+    margin-right:1em;
+}
+
+.legenditem{
+    float:left;
+}
+
+.legend{
+    display: flex;
+    flex-direction: row;
+    margin:auto;
+    width:66%;
+}
+
+.legend p{
+    float: left;
+    line-height: 2em;
+    margin-right:5vw;
+}
+
+#legendV{
+    margin-right:0;
+}
+
+.bidC{
+    background-color: var(--bidC);
+    color:white;
+}
+
+.bidP{
+    background-color: var(--bidP);
+    color:black;
+}
+
+.bidU{
+    background-color: var(--bidU);
+    color:white;
+}
+
+.bidS{
+    background-color: var(--bidS);
+    color:black;
+}
+
+.bidV{
+    background-color: var(--bidV);
+    color:white;
+}
+
+.accessDay{
+    display: none;
+}
