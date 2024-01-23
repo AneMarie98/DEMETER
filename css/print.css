@@ -15,6 +15,20 @@
     --visitedLinkColor:#000000;
     --font-body-family: "Times New Roman", Times, serif;
     --articleBgColor: #ffffff;
+    /*calendario*/
+    --calTitleBgColor: #ffffff;
+    --calHeaderWeekBgColor: #d2d2d2;
+    --calHeaderWeekendBgColor: #afafaf;
+    --calToday: #aaaaaa;
+    --calTitleColor: #000000;
+    --calBgColor: #000000;
+    --calElemBgColor: #ffffff;
+    --bidU: #474747;
+    --bidS: #474747;
+    --bidC: #474747;
+    --bidP: #474747;
+    --bidV: #474747;
+    --warningmsg: #474747;
 }
 
 html{
@@ -862,6 +876,181 @@ main#content .dashboard h2{
     text-align: center;
     padding: 1.5em;
     margin: 0.5em;
+}
+
+/* CALENDARIO */
+#calendar{
+    margin-top: 2em;
+    height:30em;
+    margin-bottom: 0.3em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: 3.5em 2em auto auto auto auto auto auto;
+    border-radius: 20px;
+    padding:1px;
+    background-color: var(--calBgColor);
+}
+
+.legend :last-child{
+    margin-bottom: 2em;
+}
+
+
+#calTitle{
+    background-color:var(--calTitleBgColor);
+    color:var(--calTitleColor);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    grid-column: 1/8;
+    padding-top:0.75em;
+    border-radius: 20px 20px 0px 0px;
+    border:1px solid black;
+}
+
+#calCornerBL{
+    border-radius: 0px 0px 0px 20px;
+}
+
+#calCornerBR{
+    border-radius: 0px 0px 20px 0px;
+}
+
+#calMonth{
+    display: inline;
+}
+
+#monthLeft{
+    display: none;
+}
+
+#monthRight{
+    display: none;
+}
+
+#navigationHelpCal{
+    position: absolute;
+    text-indent: -999em;
+}
+
+#calwarning{
+    text-align: left;
+    font-size: 1em;
+    color:var(--warningmsg);
+    margin-bottom:0.5em;
+}
+
+.calHeaderWeek{
+    background-color: var(--calHeaderWeekBgColor);
+    text-align: center;
+    border:1px solid black;
+    padding:0.25em;
+}
+
+.calHeaderWeekend{
+    background-color: var(--calHeaderWeekendBgColor);
+    text-align: center;
+    border:1px solid black;
+    padding:0.25em;
+}
+
+.calElem{
+    background-color: var(--calElemBgColor);
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+.calElemToday{
+    background-color: var(--calToday);
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+.calElemToday span{
+    padding:0.3em;
+    display: block;
+    font-weight: bold;
+}
+
+.calElem span{
+    padding:0.3em;
+    display: block;
+}
+
+.bidsvuotlegend{
+    float:left;
+    height:2em;
+    width:2em;
+    border-radius: 1em;
+    text-align: center;
+    line-height: 2em;  
+    margin-right:1em;
+}
+
+.legend{
+    width: 66%;
+    margin:auto;
+    margin-bottom: 6em;
+}
+
+.legend p{
+    float: left;
+    line-height: 2em;
+    margin-right:5em;
+    margin-bottom:0.1em;
+    margin-top: 0.1em;
+}
+
+#legendV{
+    margin-right:0;
+}
+
+.bidC{
+    background-color: var(--bidC);
+    color:white;
+    margin-bottom:0.1em;
+    margin-top: 0.1em;
+}
+
+.bidP{
+    background-color: var(--bidP);
+    color:white;
+    margin-bottom:0.1em;
+    margin-top: 0.1em;
+}
+
+.bidU{
+    background-color: var(--bidU);
+    color:white;
+    margin-left: -0.2em;
+    margin-bottom:0.1em;
+    margin-top: 0.1em;
+}
+
+.bidS{
+    background-color: var(--bidS);
+    color:white;
+    margin-bottom:0.1em;
+    margin-top: 0.1em;
+}
+
+.bidV{
+    background-color: var(--bidV);
+    color:white;
+}
+
+/*footer*/
+.footericons{
+    text-indent: -999em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 1.5em;
+    color:black;
+    background-position: center;
+}
+
+.footericons a{
+    display: block;
 }
 
 /*ECCEZIONI CALENDARIO*/
