@@ -22,10 +22,10 @@
 
     if($connOk){
         if(isset($_POST["loginsubmit"])){
-            $email=$_POST["loginemail"];
-            $password=$_POST["loginpass"];
-            if($db->verifyUser($email) && ($password===$db->getUserPassword($email))){
-                $db->getAuthUserInfo($email);
+            $username=$_POST["loginusername"];
+            $password=$_POST["loginpassword"];
+            if($db->verifyUser($username) && ($password===$db->getUserPassword($username))){
+                $db->getAuthUserInfo($username);
                 die("<script>location.href='index.php'</script>");
             }
             else{

@@ -21,7 +21,7 @@
     $db=new DB\DBAccess;
     $connOk=$db->openDBConnection();
     
-    [$nome, $cognome, $mail] = $db->getAuthUserInfo($mail);
+    [$nome, $cognome, $mail] = $db->getAuthUserInfo($_SESSION["username"]);
 
 
 

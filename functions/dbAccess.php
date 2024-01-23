@@ -25,8 +25,8 @@
         public function getConnection(){
             return $this->connection;
         }
-        public function verifyUser($email){
-            $query="SELECT * FROM utenti WHERE email='$email'";
+        public function verifyUser($username){
+            $query="SELECT * FROM utenti WHERE username='$username'";
             try{
                 $queryResult = mysqli_query($this -> connection, $query);
             }catch(\Exception $e){
@@ -39,8 +39,8 @@
             }
         }
 
-        public function getUserPassword($email){
-            $query="SELECT password FROM utenti WHERE email='$email'";
+        public function getUserPassword($username){
+            $query="SELECT password FROM utenti WHERE username='$username'";
             try{
                 $queryResult = mysqli_query($this -> connection, $query);
            
@@ -58,21 +58,22 @@
             }
         }
 
-        public function getAuthUserInfo($email){
-            $query="SELECT nome, cognome, admin FROM utenti WHERE email='$email'";
+        public function getAuthUserInfo($username){
+            $query="SELECT nome, cognome, email, admin FROM utenti WHERE username='$username'";
             try{
                 $queryResult = mysqli_query($this -> connection, $query);
             
             if(mysqli_num_rows($queryResult) != 0){
                 $result = array();
                 while($row = mysqli_fetch_array($queryResult)){
-                    $_SESSION["email"]=$email;
+                    $_SESSION["email"]=$row["email"];
+                    $_SESSION["username"]=$username;
                     $_SESSION["firstname"] = $row["nome"];
                     $_SESSION["lastname"] = $row["cognome"];
                     if($row["admin"]==1){
                         $_SESSION["admin"]=true;
                     }
-                    $result = array($row["nome"], $row["cognome"], $email);
+                    $result = array($row["nome"], $row["cognome"], $row["email"]);
                 }
                 $queryResult -> free();
                 return $result;
