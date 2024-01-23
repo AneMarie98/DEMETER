@@ -17,7 +17,7 @@ $results = array();
 
 try {
     if($connOk){
-        $results = $db->searchRifiuto($rifiuto);
+        $results = $db->searchRifiuto(strtolower($rifiuto));
         $processedResults = array();
 
         foreach ($results as $row) {
