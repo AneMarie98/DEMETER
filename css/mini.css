@@ -48,6 +48,7 @@ body{
 
 header{
     background-color: var(--headerBgColor);
+    border-bottom:5px solid black;
 }
 
 .navigationhelp{
@@ -69,12 +70,11 @@ header h1{
     display: inline-block;
 }
 
-header  #breadcrumb{
-    padding: 0em;
+header #breadcrumb{
+    padding: 0.5em;
     margin: auto;
     font-size: 1.75em;
     background-color: var(--headerBgColor);
-    border-bottom:3px solid black;
     text-align: center;
     line-height: 1.5em;
 }
