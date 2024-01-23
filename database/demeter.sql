@@ -72,9 +72,7 @@ INSERT INTO `rifiuti` (`nome`, `fkSvuotB`) VALUES
 ('contenitore di plastica', 'Plastica'),
 ('fondi di caffè', 'Umido '),
 ('guscio di uova', 'Umido'),
-('medicinali', 'Appositi Contenitori'),
 ('pezzo di carta', 'Carta'),
-('pile esauste', 'Appositi Contenitori'),
 ('sacchetto di plastica', 'Plastica'),
 ('scarti alimentari', 'Umido'),
 ('scatola della pizza', 'Carta'),
@@ -124,13 +122,12 @@ CREATE TABLE `svuotamenti` (
 --
 
 INSERT INTO `svuotamenti` (`bidone`, `giorno`, `intervallo`, `giornoRif`) VALUES
-('Appositi Contenitori', -1, 0, '2023-12-07'),
-('Carta ', 4, 2, '2023-12-07'),
-('Plastica ', 4, 2, '2023-12-14'),
-('Secco ', 5, 2, '2023-12-01'),
-('Umido ', 1, 1, '2023-12-04'),
-('Umido ', 5, 1, '2023-12-01'),
-('Vetro ', 4, 4, '2023-12-14');
+('Carta', 4, 2, '2023-12-07'),
+('Plastica', 4, 2, '2023-12-14'),
+('Secco', 5, 2, '2023-12-01'),
+('Umido', 1, 1, '2023-12-04'),
+('Umido', 5, 1, '2023-12-01'),
+('Vetro', 4, 4, '2023-12-14');
 
 -- --------------------------------------------------------
 
