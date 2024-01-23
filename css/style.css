@@ -101,6 +101,10 @@ header > h1{
     text-transform: uppercase; 
 }
 
+#menu ul li a{
+    display: block;
+}
+
 #breadcrumb{
     background-color: var(--bgColor);
 }

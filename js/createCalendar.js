@@ -87,17 +87,17 @@ function limitCalendar(newDateDisp){
     let d=new Date(newDateDisp);
     if(d.getFullYear()==(td.getFullYear()-1)){
         document.getElementById("monthLeft").removeAttribute("onclick");
-        //document.getElementById("monthLeft").innerHTML="";
+        document.getElementById("monthLeft").style.display="none";
     }
     else if(d.getFullYear()==(td.getFullYear()+1)){
         document.getElementById("monthRight").removeAttribute("onclick");
-        //document.getElementById("monthRight").innerHTML="";
+        document.getElementById("monthRight").style.display="none";
     }
     else{
         document.getElementById("monthLeft").setAttribute("onclick","changeMonth(-1)");
-        //document.getElementById("monthLeft").innerHTML="&lt;";
+        document.getElementById("monthLeft").style.display="block";
         document.getElementById("monthRight").setAttribute("onclick","changeMonth(1)");
-        //document.getElementById("monthRight").innerHTML="&gt;";
+        document.getElementById("monthRight").style.display="block";
     }
 }
 
