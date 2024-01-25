@@ -9,7 +9,7 @@ function caricamentoSegnalazione(){
 
 function caricamentoNotizia(){
     let inputTitolo = document.getElementById("titolo");
-    inputTitolo.onblur = function (){validateIndirizzo(this)};
+    inputTitolo.onblur = function (){validateTitolo(this)};
     let inputData = document.getElementById("data");
     inputData.onblur = function (){validateData(this)};
     let inputArticolo = document.getElementById("articolo");
@@ -17,7 +17,7 @@ function caricamentoNotizia(){
     let inputDescrizione = document.getElementById("descrizione");
     inputDescrizione.onblur = function (){validateTesto(this)};
     let inputUrl = document.getElementById("urlImg");
-    inputUrl.onblur = function (){validateTesto(this)};
+    inputUrl.onblur = function (){validateUrl(this)};
 }
 
 function caricamentoRegistrazione(){
@@ -57,8 +57,8 @@ function validateIndirizzo(input){
     if(input.value.length <= 5 || !input.includes(',')){
         showError(input, "Indirizzo non valido!"); 
 
-        inputURL.focus(); 
-        inputURL.select(); 
+        input.focus(); 
+        input.select(); 
         return false;
     }
     return true;
@@ -69,8 +69,8 @@ function validateData(input){
     if(input.value.search(/^\d{4}\-\d{2}\-\d{2}$/)!=0){
         showError(input, input.value + " non è una data valida!"); 
 
-        inputURL.focus(); 
-        inputURL.select(); 
+        input.focus(); 
+        input.select(); 
         return false;
     }
     return true;
@@ -78,16 +78,22 @@ function validateData(input){
 
 function validateTesto(input){
     removeChildInput(input);
+    if(input.value.search(/^[a-zA-ZÀ-ÿ.,()'\s]+$/)!=0 || input.value.length <= 10 || input.value.length >= 500){
+        showError(input, "Questo non è un testo valido!"); 
+
+        input.focus(); 
+        return false;
+    }
     return true;
 }
 
 function validateTitolo(input){
     removeChildInput(input);
-    if(input.value.length <= 10 || !input.includes(',')){
-        showError(input, input.value + " non è un titolo valido!"); 
+    if(input.value.length <= 10 || input.value.length >= 50 || input.value.search(/^[a-zA-ZÀ-ÿ.,()'\s]+$/)!=0){
+        showError(input, "Questo non è un titolo valido!"); 
 
-        inputURL.focus(); 
-        inputURL.select(); 
+        input.focus(); 
+        input.select(); 
         return false;
     }
     return true;
@@ -95,11 +101,11 @@ function validateTitolo(input){
 
 function validateDescrizione(input){
     removeChildInput(input);
-    if(input.value.length >= 25){
+    if(input.value.length <= 5 && input.value.length >= 25 && /^[a-zA-ZÀ-ÿ.,()'\s]+$/){
         showError(input, input.value + " è una descrizione troppo lunga!"); 
 
-        inputURL.focus(); 
-        inputURL.select(); 
+        input.focus(); 
+        input.select(); 
         return false;
     }
     return true;
@@ -107,12 +113,11 @@ function validateDescrizione(input){
 
 function validateUrl(input){
     removeChildInput(input);
-    //check input like img/folder/file.png with a regular expression: some chars, a slash, chars, a dot, 2/4 chars
     if(input.value.search(/^[a-zA-Z0-9._%-]+\/[a-zA-Z0-9._%-]+\/[a-zA-Z0-9._%-]+\.(png|jpg|jpeg|gif)$/)!=0){
         showError(input, input.value + " non è un percorso valido!"); 
 
-        inputURL.focus(); 
-        inputURL.select(); 
+        input.focus(); 
+        input.select(); 
         return false;
     }
     return true;
@@ -123,8 +128,8 @@ function validateNome(input){
     if(input.value.search(/^[a-zA-Z]{2,}$/)!=0){
         showError(input, input.value + " non è un nome valido!"); 
 
-        inputURL.focus(); 
-        inputURL.select(); 
+        input.focus(); 
+        input.select(); 
         return false;
     }
     return true;
@@ -132,11 +137,11 @@ function validateNome(input){
 
 function validateEmail(input){
     removeChildInput(input);
-    if(input.value.search(/^[a-zA-Z0-9._%-$&+]{8,}$/)!=0){
+    if(input.value.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)!=0){
         showError(input, input.value + " non è una email valida!"); 
 
-        inputURL.focus(); 
-        inputURL.select(); 
+        input.focus(); 
+        input.select(); 
         return false;
     }
     return true;
@@ -144,11 +149,11 @@ function validateEmail(input){
 
 function validateUsername(input){
     removeChildInput(input);
-    if(input.value.search(/^[a-zA-Z0-9._%-]{8,}$/)!=0){
+    if(input.value.search(/^[a-zA-Z0-9._%\-]{8,}$/)!=0){
         showError(input, input.value + " non è un username valido!"); 
 
-        inputURL.focus(); 
-        inputURL.select(); 
+        input.focus(); 
+        input.select(); 
         return false;
     }
     return true;
@@ -156,11 +161,11 @@ function validateUsername(input){
 
 function validatePassword(input){
     removeChildInput(input);
-    if(input.value.search(/^[a-zA-Z0-9._%-]{8,}$/)!=0){
+    if(input.value.search(/^[a-zA-Z0-9._%\-]{8,}$/)!=0){
         showError(input, input.value + " non è una password valida!"); 
 
-        inputURL.focus(); 
-        inputURL.select(); 
+        input.focus(); 
+        input.select(); 
         return false;
     }
     return true;
@@ -171,8 +176,8 @@ function validateConfermaPassword(input){
     if(input.value==inputPassword.value){
         showError(input, "Le password non coincidono!"); 
 
-        inputURL.focus(); 
-        inputURL.select(); 
+        input.focus(); 
+        input.select(); 
         return false;
     }
     return true;

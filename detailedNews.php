@@ -2,7 +2,7 @@
     ini_set('display_errors',1);
     ini_set('display_startup_errors',1);
     setlocale(LC_ALL,'it_IT');
-
+    session_start();
     require_once "functions/dbAccess.php";
     require_once "functions/functions.php";
 
@@ -47,7 +47,8 @@
         dynamicDetailedNewsCSS('css/mini.css',$cssNewContent);
     } 
     else{
-        $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
+        //$htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
+        header("Location: p503.html");
     }
 
     

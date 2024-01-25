@@ -5,7 +5,7 @@
 
     require_once "functions/dbAccess.php";
     require_once "functions/functions.php";
-
+    session_start();
     $db=new DB\DBAccess;
     $connOk=$db->openDBConnection();
     $newsFromDB = array();
@@ -44,13 +44,13 @@
             } 
        }else{
         //$htmlToInsert .= "<p>Al momento non ci sono novità!</p>"; 
-        header("Location: templates/p503.html");
+        header("Location: p503.html");
        }
        
     }
     else{
         //$htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
-       header("Location: templates/p503.html");
+       header("Location: p503.html");
     }
 
     //inizio modifica al css

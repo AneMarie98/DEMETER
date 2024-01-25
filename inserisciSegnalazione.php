@@ -18,6 +18,11 @@
         $profile=$_SESSION["firstname"];
         $profilelink="profilo.php";
 
+        if(isset($_SESSION["admin"])){
+            $profile="Dashboard";
+        $profilelink="dashboard.php";
+        }
+
 
         if(isset($_POST["indirizzo"]) && isset($_POST["data"]) && isset($_POST["testo"])&&$connOk){
             $indirizzo=cleanInput($_POST["indirizzo"], $db->getConnection());
@@ -41,7 +46,6 @@
                 <fieldset>
                     <div class=\"form-linegroup\">
                         <label for=\"indirizzo\">Indirizzo:</label>
-    
                         <input type=\"text\" id=\"indirizzo\" name=\"indirizzo\" placeholder=\"Piazza San Marco\" required>
     
                     </div>

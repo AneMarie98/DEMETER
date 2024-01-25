@@ -4,7 +4,7 @@
     setlocale(LC_ALL,'it_IT');
 
     require_once "functions/dbAccess.php";
-
+    session_start();
     $db=new DB\DBAccess;
     $connOk=$db->openDBConnection();
     $id_segnalazione = $_GET["id"];
@@ -40,7 +40,7 @@
         }
        
     } else{
-        $htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
+        header("Location: p503.html"); 
     }
 
 

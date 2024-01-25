@@ -50,7 +50,7 @@
                             <label for=\"descrizione\">Descrizione in breve:</label>
                             <input type=\"text\" id=\"descrizione\" name=\"descrizione\" placeholder=\"Descrizione dell'articolo\" required >    
                         </div>
-                        <div class=\"form-linegroup\"></div>
+                        <div class=\"form-linegroup\">
                             <label for=\"articolo\">Testo:</label>
                             <textarea id=\"articolo\" name=\"articolo\" placeholder=\"Testo dell'articolo\"></textarea>   
                         </div>

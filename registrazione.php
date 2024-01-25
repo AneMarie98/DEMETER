@@ -7,7 +7,7 @@
     require_once "functions/functions.php";
 
   
-
+    session_start();
     $paginaHTML=file_get_contents("templates/registrazioneTemplate.html");
 
     if(!isset($_SESSION["email"])){
@@ -35,7 +35,7 @@
                 }
             }
             else{
-                $htmlToInsert .= "<p>Errore di connessione al database. Ti invitiamo a riprovare ad <a href=\"registrazione.php\"> effettuare la registrazione </a></p>";
+                header("Location: 503.html");
             }
         }
     }

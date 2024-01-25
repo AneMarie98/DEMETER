@@ -16,12 +16,10 @@
                 if($db->updateSegnalazione($idSegnalazione, $inCarico)){
                     header("Location: segnalazioni.php");
                 }else{
-                    //TODO: gestire errore connessione
-                    //TODO: pagina 503
+                    header("Location: 503.html");
                 }
             }else{
-                //TODO: gestire errore connessione
-                //TODO: pagina 503
+                header("Location: 503.html");
             }
 
         }else{
