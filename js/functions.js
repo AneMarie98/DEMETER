@@ -84,12 +84,6 @@ function searchResults() {
                         bidonedd.textContent = item.bidone;
                         dlElement.appendChild(bidonedt);
                         dlElement.appendChild(bidonedd);
-                        var giornodt = document.createElement('dt');
-                        giornodt.textContent = "Giorno: ";
-                        var giornodd = document.createElement('dd');
-                        giornodd.textContent = assignDay(item.giorno);
-                        dlElement.appendChild(giornodt);
-                        dlElement.appendChild(giornodd);
                         results.appendChild(dlElement);
                     });
                   
