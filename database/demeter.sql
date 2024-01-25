@@ -151,7 +151,7 @@ CREATE TABLE `utenti` (
 
 INSERT INTO `utenti` (`idUtente`, `nome`, `cognome`, `email`, `username`, `password`, `admin`) VALUES
 (1, 'Olivia', 'Benson', 'obenson@demeter.com', 'admin', 'admin', 1),
-(2, 'Lorelai', 'Gilmore', 'lobelia.gilmore@gmail.com', 'lgilmore', 'lgilmore', 0),
+(2, 'Lorelai', 'Gilmore', 'lorelai.gilmore@gmail.com', 'lgilmore', 'lgilmore', 0),
 (3, 'Michele', 'Liguori', 'liguorim@gmail.com', 'user', 'user', 0),
 (4, 'Sheldon', 'Cooper', 'scooper@caltech.com', 'scooper', 'scooper', 0),
 (5, 'Henrietta', 'Lang', 'lang.h@hotmail.com', 'langhenrietta', 'langhenrietta', 0),
