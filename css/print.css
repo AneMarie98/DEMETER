@@ -50,9 +50,22 @@ body{
 header{
     background-color: var(--headerBgColor);
     color: var(--headerTxtColor);
-    padding: 1em;
+    padding: 1em 1em 0em 1em;
     border-bottom: 3px solid var(--headerTxtColor); 
     border-radius: 3px;
+}
+
+header > h1{
+    text-indent: -999em;
+    content: url("../img/icons/logo.png");
+    line-height: 1.5em;
+    height: 2em;
+    width: 2em;
+
+    color:var(--headerTxtColor);
+    font-size: 3em;
+    margin:0.2em auto 0.2em auto;
+    text-align: center;
 }
 
 .navigationhelp{
@@ -62,9 +75,6 @@ header{
 
 header nav #menu{
     display: none;
-    margin-left: 10%;
-    text-align: right;
-    font-size: 1em;
 }
 
 a:link{
@@ -75,32 +85,18 @@ a:visited{
     color: var(--visitedLinkColor);
 }
 
-header > h1{
-    float: left;
-    width: 20%;
-    margin-right: 0em;
-    font-size: 2.3em;
+#menu ul{
+    display: none;
 }
 
 #menu-toggle{
     display: none;
 }
 
-#menu ul{
-    display: none;
-    margin-left: 10%;
-    text-align: right;
-    font-size: 1em;
-    padding: 1em;
-    list-style-type: none;
-}
-
 #breadcrumb{
-    padding: 1em;
-    padding-left: 0;
-    padding-bottom: 0;
+
     margin: auto;
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-left: 0em;
 }
 
@@ -138,34 +134,6 @@ main{
     display: none;
 }
 
-
-/* footer */
-footer{
-    background-color: var(--footerBgColor);
-    color: var(--footerTxtColor);
-    padding: 1.0em;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 0px;
-    width: 80%;
-    border-top: 3px solid var(--footerTxtColor); 
-    border-radius: 3px;
-}
-
-#socialList{
-    max-width: 1024px;
-    margin: auto;
-    padding: 1em;
-    list-style-type: none;
-    text-align: center;
-}
-
-#socialList li{
-    display: inline-block;
-    width: 15%;
-    margin: 0 0.5em;
-    
-}
 
 /* News */
 
@@ -777,14 +745,8 @@ input:focus{
 
 
 /*SEGNALAZIONI*/
-
-main#content.FormSegnalazione{
-    margin-top: 1em;
-}
-
-main#content.FormSegnalazione h2{ 
-    text-align: left;
-    margin-bottom: 1em;
+main#content.segnalazioni h2{ 
+    text-align: center;
 } 
 
 .segnalazioni table {
@@ -797,7 +759,7 @@ main#content.FormSegnalazione h2{
 .segnalazioni th, .segnalazioni td {
     padding: 12px;
     text-align: center;
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
 }
 
 .segnalazioni tr:nth-child(even) {
@@ -1040,6 +1002,18 @@ main#content .dashboard h2{
 }
 
 /*footer*/
+footer{
+    background-color: var(--footerBgColor);
+    color: var(--footerTxtColor);
+    padding: 1.0em;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 0px;
+    width: 80%;
+    border-top: 3px solid var(--footerTxtColor); 
+    border-radius: 3px;
+}
+
 .footericons{
     text-indent: -999em;
     background-repeat: no-repeat;
@@ -1053,6 +1027,32 @@ main#content .dashboard h2{
     display: block;
 }
 
+#facebook{
+    content: url("../img/icons/facebook.png");
+}
+
+#instagram{
+    content: url("../img/icons/instagram.png");
+}
+
+#x{
+    content: url("../img/icons/x.png");
+}
+
+#socialList{
+    max-width: 1024px;
+    margin: auto;
+    padding: 1em;
+    list-style-type: none;
+    text-align: center;
+}
+
+#socialList li{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 1.25em;
+}
 /*ECCEZIONI CALENDARIO*/
 .eccezionicalendario li{
     border: 1px solid black;
