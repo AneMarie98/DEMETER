@@ -19,16 +19,11 @@
     --calTitleBgColor: #ffffff;
     --calHeaderWeekBgColor: #d2d2d2;
     --calHeaderWeekendBgColor: #afafaf;
-    --calToday: #aaaaaa;
+    --calToday:#a4a4a4;
     --calTitleColor: #000000;
     --calBgColor: #000000;
     --calElemBgColor: #ffffff;
-    --bidU: #474747;
-    --bidS: #474747;
-    --bidC: #474747;
-    --bidP: #474747;
-    --bidV: #474747;
-    --warningmsg: #474747;
+    --warningmsg: #000000;
 }
 
 html{
@@ -853,7 +848,7 @@ main#content .dashboard h2{
 #calendar{
     margin-top: 2em;
     height:30em;
-    margin-bottom: 0.3em;
+    margin-bottom: 13em;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
     grid-template-rows: 3.5em 2em auto auto auto auto auto auto;
@@ -861,11 +856,6 @@ main#content .dashboard h2{
     padding:1px;
     background-color: var(--calBgColor);
 }
-
-.legend :last-child{
-    margin-bottom: 2em;
-}
-
 
 #calTitle{
     background-color:var(--calTitleBgColor);
@@ -909,6 +899,7 @@ main#content .dashboard h2{
     font-size: 1em;
     color:var(--warningmsg);
     margin-bottom:0.5em;
+    margin-top: 1em;
 }
 
 .calHeaderWeek{
@@ -948,6 +939,18 @@ main#content .dashboard h2{
     display: block;
 }
 
+
+.bidsvuot{
+    float:right;
+    height:2em;
+    width:2em;
+    border-radius: 1em;
+    text-align: center;
+    line-height: 2em;  
+    margin: 0.4em;
+    border: 1px solid black;
+}
+
 .bidsvuotlegend{
     float:left;
     height:2em;
@@ -956,20 +959,26 @@ main#content .dashboard h2{
     text-align: center;
     line-height: 2em;  
     margin-right:1em;
+    margin-left:1em;
+    border: 1px solid black;
+}
+
+.legenditem{
+    float:left;
 }
 
 .legend{
-    width: 66%;
+    display: flex;
+    flex-direction: row;
     margin:auto;
-    margin-bottom: 6em;
+    width:66%;
 }
 
 .legend p{
     float: left;
     line-height: 2em;
-    margin-right:5em;
-    margin-bottom:0.1em;
-    margin-top: 0.1em;
+    margin-left: 0.7em;
+    margin-right:  0.7em;
 }
 
 #legendV{
@@ -977,37 +986,32 @@ main#content .dashboard h2{
 }
 
 .bidC{
-    background-color: var(--bidC);
-    color:white;
-    margin-bottom:0.1em;
-    margin-top: 0.1em;
+    background-color: white;
+    color:black;
 }
 
 .bidP{
-    background-color: var(--bidP);
-    color:white;
-    margin-bottom:0.1em;
-    margin-top: 0.1em;
+    background-color:white;
+    color:black;
 }
 
 .bidU{
-    background-color: var(--bidU);
-    color:white;
-    margin-left: -0.2em;
-    margin-bottom:0.1em;
-    margin-top: 0.1em;
+    background-color:white;
+    color:black;
 }
 
 .bidS{
-    background-color: var(--bidS);
-    color:white;
-    margin-bottom:0.1em;
-    margin-top: 0.1em;
+    background-color:white;
+    color:black;
 }
 
 .bidV{
-    background-color: var(--bidV);
-    color:white;
+    background-color:white;
+    color:black;
+}
+
+.accessDay{
+    display: none;
 }
 
 /*footer*/
