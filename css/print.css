@@ -1072,19 +1072,19 @@ footer{
 /*ECCEZIONI CALENDARIO*/
 .eccezionicalendario li{
     border: 1px solid black;
-    padding: 1em;
-    margin: 1em;
+    padding: 0.6em;
+    margin: 0.6em;
     border-radius: 10px;
     list-style: none;
 }
 
 .eccezionicalendario h3{
-    margin: 2em;
+    margin: 0.5em;
     text-align: center;
 }
 
 .eccezionicalendario p{
-    margin: 2em;
+    margin: 0.5em;
     text-align: center;
 }
 
