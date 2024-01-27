@@ -32,6 +32,7 @@ html{
     line-height: 1.5em;
     margin: auto;
     font-size:12pt;
+    text-align: justify;
     /*background-image: url(../images/bg.png);*/
 }
 
@@ -251,8 +252,13 @@ main{
 }
 
 #servizi_wrapper {
-display: block;
+    display: block;
 }
+
+#servizi_wrapper p{
+    text-align: justify;
+}
+
 
 #servizi_wrapper > .left{
     margin-bottom: 3em;
@@ -317,7 +323,7 @@ display: block;
 }
 
 #servizi_section3{
-    text-align: left;
+    text-align: justify;
     margin-top: 3em;
 }
 
@@ -359,7 +365,7 @@ display: block;
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer p{
-    text-align: left;
+    text-align: justify;
 }
 
 
@@ -934,7 +940,7 @@ main#content .dashboard h2{
 }
 
 #calwarning{
-    text-align: left;
+    text-align: justify;
     font-size: 1em;
     color:var(--warningmsg);
     margin-bottom:0.5em;
