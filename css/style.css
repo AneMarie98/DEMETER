@@ -28,6 +28,7 @@
     --bidP:#ffd500;
     --bidV:#337b2b;
     --warningmsg:#a00000;
+    --bgButtonColor: #9cbfa5;
 }
 
 html{
@@ -1410,9 +1411,9 @@ footer p{
 }
 
 #index_segnalazioni-button{
-    background-color: white;
-    border: 3px solid var(--headerBgColor);
-    border-radius: 20px;
+    background-color: var(--bgButtonColor);
+    border: 2px solid black;
+    border-radius: 10px;
     margin: 1em auto 3em auto;
     max-width: 400px;
     text-align: center;

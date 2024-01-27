@@ -29,6 +29,7 @@
     --bidP:#ffd500;
     --bidV:#337b2b;
     --warningmsg:#a00000;
+    --bgButtonColor: #9cbfa5;
 }
 
 
@@ -691,7 +692,7 @@ main h2{
 
 #wrapper .left p{
     margin-bottom:1em;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.5em;
 }
 
@@ -712,8 +713,8 @@ main h2{
 }
 
 #index_segnalazioni-button{
-    background-color: white;
-    border: 7px solid var(--headerBgColor);
+    background-color: var(--headerBgColor);
+    border: 3px solid black;
     border-radius: 20px;
     margin:2em 0em;
     padding:0;
@@ -728,12 +729,12 @@ main h2{
 }
 
 footer h3{
-    font-size: 2em;
+    font-size: 2.25em;
     line-height: 1.5em;
 }
 
 footer p{
-    font-size: 1.25em;
+    font-size: 1.75em;
 }
 
 .footericons{
