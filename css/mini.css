@@ -680,7 +680,7 @@ main#content .dashboard{
 
 
 /* Miglioramenti */
-.home h2{
+main h2{
     font-size: 2.5em;
     line-height: 1.5em;
 }
@@ -746,4 +746,18 @@ footer p{
 
 #partnerList li{
     margin: 0.5em 1em;
+}
+
+#calwarning{
+    font-size: 1.5em;
+    margin-bottom:1em;
+}
+
+.legend{
+    margin:0em auto 3em auto;
+}
+
+.legenditem{
+    font-size: 2em;
+    margin-bottom:0.5em;
 }

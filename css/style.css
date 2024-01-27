@@ -1429,3 +1429,15 @@ footer p{
 main h2{
     margin-top:1em;
 }
+
+#calendar{
+    margin-top:1em;
+}
+
+.legend{
+    margin-bottom:2em;
+}
+
+#calwarning{
+    line-height: 1.5em;
+}
