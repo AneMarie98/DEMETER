@@ -48,6 +48,7 @@ function assignDay(num) {
     return dayofweek;
 }
 
+
 /**
  * Ricerca da SearchBar in DoveLoButto e visualizza risultati 
 */
@@ -92,12 +93,19 @@ function searchResults() {
                     results.appendChild(document.createTextNode('Nessun risultato trovato'));
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+
+                var  results = document.getElementById('searchResults');
+                results.appendChild(document.createTextNode('Nessun risultato trovato'));
+
+            });
         } catch (error) {
-            console.error('Error:', error);
+            var  results = document.getElementById('searchResults');
+                results.appendChild(document.createTextNode('Nessun risultato trovato'));
         }
     });
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     searchResults();

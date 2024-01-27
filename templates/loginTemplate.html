@@ -33,17 +33,20 @@
         </header>
         <main id="content">
             <h2>Accedi</h2>
+            <p>Se ancora non possiedi un account, effettua la <a href="registrazione.php">registrazione</a>.</p>
+
             <form action="login.php" method="post">
                 <fieldset>
                     <legend>Dati</legend>
                     <label for="loginusername">Username: </label>
-                    <input type="text" id="loginusername" name="loginusername" placeholder="username">
+                    <input type="text" id="loginusername" name="loginusername" placeholder="username" autocomplete="on">
                     <label for="loginpassword">Password: </label>
-                    <input type="password" id="loginpassword" name="loginpassword" placeholder="password">
+                    <input type="password" id="loginpassword" name="loginpassword" placeholder="password" autocomplete="on">
                     <input type="submit" value="Accedi" name="loginsubmit">
                 </fieldset>
+                {error}
             </form>
-            <span id="loginerror"></span>
+            
         </main>
         <footer>
             <h3>Segui i nostri canali social</h3>

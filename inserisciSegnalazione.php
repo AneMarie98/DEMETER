@@ -41,9 +41,10 @@
             }
         }else{
             $htmlToInsert .= " 
-            <legend>Segnalazione</legend>
+            
             <form id=\"segnalazione\" action=\"inserisciSegnalazione.php\" method=\"GET\" onsubmit=\"validazioneFormSegnalazione()\">
                 <fieldset>
+                <legend>Segnalazione</legend>
                     <div class=\"form-linegroup\">
                         <label for=\"indirizzo\">Indirizzo:</label>
                         <input type=\"text\" id=\"indirizzo\" name=\"indirizzo\" placeholder=\"Piazza San Marco\" required>
@@ -66,7 +67,7 @@
     }else{
         $profile="Accedi";
         $profilelink="login.php";
-        $htmlToInsert .= "<p>Per effettuare una segnalazione devi eseguire il login o registrarti</p>";
+        $htmlToInsert .= "<p>Per effettuare una segnalazione devi eseguire il <a href=\"login.php\">login</a> o <a href=\"registrazione.php\">registrarti</a></p>";
     }   
 
    

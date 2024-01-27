@@ -71,4 +71,3 @@
     $paginaHTML=str_replace("{news}",$htmlToInsert,$paginaHTML);
     echo $paginaHTML;
 
-?>
