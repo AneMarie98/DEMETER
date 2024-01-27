@@ -40,6 +40,8 @@ body{
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--bgColor);
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
 }
 
 header{
@@ -773,6 +775,7 @@ main#content.segnalazioni h2{
     padding: 0.5em;
 }
 
+/* versione con i content invece dei background image
 .segnalazioni td.inCarico {
     position: relative;
     content: url(../img/icons/yes.png);
@@ -785,6 +788,16 @@ main#content.segnalazioni h2{
     padding-right:  33%;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+}*/
+
+.segnalazioni td.inCarico {
+    position: relative;
+    background-image: url(../img/icons/yes.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1em;
+    height: 1em; 
 }
 
 .segnalazioni td span{
@@ -802,6 +815,17 @@ main#content.segnalazioni h2{
 
 .segnalazioni td.NonInCarico {
     position: relative;
+    background-image: url(../img/icons/no.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1em;
+    height: 1em; 
+}
+
+/* versione con i content invece dei background image
+.segnalazioni td.NonInCarico {
+    position: relative;
     content: url(../img/icons/no.png);
     background-image: none;
     font-size: 1em;
@@ -812,7 +836,7 @@ main#content.segnalazioni h2{
     padding-right:  33%;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-}
+}*/
 
 /*DASHBOARD*/
 .dashboard div.dashboard-button {
@@ -1001,6 +1025,25 @@ footer{
     border-radius: 3px;
 }
 
+#partner_boseum{
+    background-image: url("../img/icons/partner_boseum.png");
+}
+
+#partnerList{
+    max-width: 1024px;
+    margin: auto;
+    padding: 1em;
+    list-style-type: none;
+    text-align: center;
+}
+
+#partnerList li{
+    display: inline-block;
+    width: 15%;
+    margin: 0 0.5em;
+}
+
+
 .footericons{
     text-indent: -999em;
     background-repeat: no-repeat;
@@ -1141,9 +1184,4 @@ main#content.p503 h1{
 main#content.p503 p {
     text-align: center;
     padding: 2em;
-}
-
-body{
-    -webkit-print-color-adjust:exact !important;
-    print-color-adjust:exact !important;
 }
