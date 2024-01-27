@@ -16,7 +16,7 @@
                 <a href="#content">Vai al contenuto</a>
             </nav>
             <h1>Demeter</h1>
-            <button id="togglemenu" onclick="toggleMenu()"></button>
+            <button id="togglemenu" onclick="toggleMenu()">Apri menù</button>
             <nav id="menu">
                 <ul>
                     <li><span lang="en">Home</span></li>
@@ -43,6 +43,7 @@
                         Unisciti a noi accendendo al nostro portale e richiedendo subito il servizio che più ti interessa. Oppure contattaci direttamente 
                         all'indirizzo demeter@gmail.com per ottenere informazioni e chiarire i dubbi in merito al nostro servizio.
                     </p>
+                    <div class="right" id="mobilehomepic"></div>
                     <p>
                         Consulta il <a href="calendario.php">calendario</a> e rimani aggiornato su tutto ciò che accade nel mondo, nel nostro mondo. Aiutaci a migliorare la nostra casa, 
                         in modo tale che sia vivibile ancora per migliaia di anni. Ognuno di noi, sebbene possa sembrare poco, è importante e insieme riusciremo 
@@ -51,17 +52,24 @@
                     <p>Hai bisogno di un nostro intervento? Accedi al tuo profilo e inviaci una segnalazione cliccando qui sotto!</p>
 
                 </div>
-                <div class="right"></div>
+                <div class="right" id="desktophomepic"></div>
             </div>
             <div id="index_segnalazioni-button">
                 <a href="inserisciSegnalazione.php">Invia segnalazione</a>
             </div>
         </main>
         <footer>
+            <h3>Dai un'occhiata ai nostri partner</h3>
+            <p>
+                I nostri partner ci aiutano a garantire un servizio sempre migliore. Prova a dare loro un'occhiata.
+            </p>
+            <ul id="partnerList">
+                <li id="partner_boseum" class="footericons"><a href="https://github.com/rmdevv/ProgettoTecWeb"><span lang="en">Partner: Boseum</span></a></li>
+            </ul>
             <h3>Segui i nostri canali social</h3>
             <p>
                 Seguici su <span lang="en">Facebook</span>, <span lang="en">Instagram</span> e <span lang="en">X</span> per rimanere
-                aggiornato su tutte le iniziative e i progetti futuri. <span>Per un mondo più libero e verde.</span>
+                aggiornato su tutte le iniziative e i progetti futuri. Per un mondo più libero e verde.
             </p>
             <ul id="socialList">
                 <li id="facebook" class="footericons"><a href=""><span lang="en">Facebook</span></a></li>
