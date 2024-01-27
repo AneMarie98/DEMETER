@@ -81,19 +81,21 @@ a:visited{
     color: var(--visitedLinkColor);
 }
 
+#togglemenu{
+    display: none;
+}
+
 #menu ul{
     display: none;
 }
 
-#menu-toggle{
-    display: none;
-}
-
-#breadcrumb{
-
+#breadcrumb {
     margin: auto;
-    margin-top: 0.5em;
+    margin-top: 0;
     margin-left: 0em;
+    text-align: left;
+    padding:0;
+    
 }
 
 main{
@@ -848,7 +850,7 @@ main#content .dashboard h2{
 #calendar{
     margin-top: 2em;
     height:30em;
-    margin-bottom: 13em;
+    margin-bottom: 4em;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
     grid-template-rows: 3.5em 2em auto auto auto auto auto auto;
@@ -923,22 +925,20 @@ main#content .dashboard h2{
 }
 
 .calElemToday{
-    background-color: var(--calToday);
-    border:1px solid black;
-    border-collapse: collapse;
+    background-color: var(--bgColor);
 }
 
 .calElemToday span{
-    padding:0.3em;
-    display: block;
-    font-weight: bold;
+    display: none;
 }
 
 .calElem span{
-    padding:0.3em;
-    display: block;
+    display: none;
 }
 
+.calElemToday p{
+    font-weight: normal;
+}
 
 .bidsvuot{
     float:right;
@@ -948,7 +948,6 @@ main#content .dashboard h2{
     text-align: center;
     line-height: 2em;  
     margin: 0.4em;
-    border: 1px solid black;
 }
 
 .bidsvuotlegend{
@@ -960,7 +959,6 @@ main#content .dashboard h2{
     line-height: 2em;  
     margin-right:1em;
     margin-left:1em;
-    border: 1px solid black;
 }
 
 .legenditem{
@@ -985,30 +983,6 @@ main#content .dashboard h2{
     margin-right:0;
 }
 
-.bidC{
-    background-color: white;
-    color:black;
-}
-
-.bidP{
-    background-color:white;
-    color:black;
-}
-
-.bidU{
-    background-color:white;
-    color:black;
-}
-
-.bidS{
-    background-color:white;
-    color:black;
-}
-
-.bidV{
-    background-color:white;
-    color:black;
-}
 
 .accessDay{
     display: none;
@@ -1169,3 +1143,7 @@ main#content.p503 p {
     padding: 2em;
 }
 
+body{
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
+}
