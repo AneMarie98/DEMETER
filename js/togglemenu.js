@@ -1,10 +1,10 @@
 function toggleMenu(){
-    if(document.getElementById("menu").style.display=="block"){
-        document.getElementById("menu").style.display="none";
+    if(document.getElementById("menu").className=="tmenushow"){
+        document.getElementById("menu").className="tmenuhidden";
         document.getElementById("togglemenu").innerHTML="Apri menù";
     }
     else{
-        document.getElementById("menu").style.display="block";
+        document.getElementById("menu").className="tmenushow";
         document.getElementById("togglemenu").innerHTML="Chiudi menù";
     }
 }
