@@ -298,7 +298,7 @@ footer{
     grid-column: 1;
 }
 
-#content.detailedNews h3{
+#content.detailedNews p{
     margin-top: 0.5em;
     font-weight: normal;
     font-size: 1em;
@@ -942,16 +942,16 @@ footer{
 }
 
 /*LOGIN*/
-#content h2 {
+#content-login h2,  #content-login p{
     text-align: center;
 }
 
-#content legend {
+#content-login legend {
     text-align: left;
     font-size: 20px;  
 } 
 
-#content fieldset {
+#content-login fieldset {
     border-radius: 10px;
     text-align: center;
     padding: 2em;

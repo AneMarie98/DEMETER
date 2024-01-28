@@ -35,7 +35,7 @@
         [$titolo, $articolo, $urlImg, $data] = $db -> getDetailedNews($id_news);
         $htmlToInsert .= 
         "<h2>".$titolo."</h2> 
-        <h3>".$data."</h3>
+        <p> <time datetime=\"".$data."\">".convertDateFormatString($data)."</time></p>
         <div id=\"detailedNewsImage\"></div>
         <div class=\"newsArticle\">".$articolo."</div>"; // le immagini non devono essere di contenuto
 
