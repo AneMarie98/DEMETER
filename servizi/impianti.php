@@ -9,18 +9,21 @@
 
     $paginaHTML=file_get_contents("../templates/servizi/impiantiTemplate.html");
 
-    if(isset($_SESSION["email"])){
-        if(($_SESSION["admin"])){
+    if(!isset($_SESSION["email"])){
+        $profile="Accedi";
+        $profilelink="login.php";
+
+    }else{
+        if(isset($_SESSION["admin"])){
             $profile="Dashboard";
             $profilelink="dashboard.php";
+           
+            
         }else{
             $profile=$_SESSION["firstname"];
             $profilelink="profilo.php";
         }
-    }
-    else{
-        $profile="Accedi";
-        $profilelink="login.php";
+       
     }
 
 
