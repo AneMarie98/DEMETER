@@ -53,6 +53,7 @@ function changeMonth(index){
     document.getElementById("calMonth").dataset.mm=(newDateDisp.getMonth()+1);
     setCalArrows(getMY(new Date(tda.setMonth(tda.getMonth()-1))),getMY(new Date(tda.setMonth(tda.getMonth()+2))));
     updateCalendar(getStartingB(newDateDisp.getFullYear(),newDateDisp.getMonth()),daysInMonth(newDateDisp.getFullYear(),newDateDisp.getMonth()+1),(newDateDisp.getMonth()+1),newDateDisp.getFullYear());
+    readAgain(index);
 }
 
 function updateCalendar(startingB,daysinMonth,newMonthDisp,newYearDisp){
@@ -87,17 +88,17 @@ function limitCalendar(newDateDisp){
     let d=new Date(newDateDisp);
     if(d.getFullYear()==(td.getFullYear()-1)){
         document.getElementById("monthLeft").removeAttribute("onclick");
-        document.getElementById("monthLeft").style.display="none";
+        document.getElementById("monthLeft").className="calarrowhidden";
     }
     else if(d.getFullYear()==(td.getFullYear()+1)){
         document.getElementById("monthRight").removeAttribute("onclick");
-        document.getElementById("monthRight").style.display="none";
+        document.getElementById("monthRight").className="calarrowhidden";
     }
     else{
         document.getElementById("monthLeft").setAttribute("onclick","changeMonth(-1)");
-        document.getElementById("monthLeft").style.display="block";
+        document.getElementById("monthLeft").className="calarrowshow";
         document.getElementById("monthRight").setAttribute("onclick","changeMonth(1)");
-        document.getElementById("monthRight").style.display="block";
+        document.getElementById("monthRight").className="calarrowshow";
     }
 }
 
@@ -107,7 +108,7 @@ function setDataDisp(id,data){
 
 function setLabel(id,data){
     day=assignDay(data);
-    document.getElementById(id).setAttribute("aria-labelledby",day+" "+id);
+    document.getElementById(id).setAttribute("aria-labelledby",day+" "+id+" calMonth");
 }
 
 function assignDay(data){
@@ -241,5 +242,15 @@ function getSvuotPhp(monthDisp,startingB){
         .catch((error) => {
              // This is where you handle errors.
         });
-        
+}
+
+function readAgain(index){
+    if(index==1){
+        document.getElementById("monthRight").blur();
+        document.getElementById("monthRight").focus();
+    }
+    else{
+        document.getElementById("monthLeft").blur();
+        document.getElementById("monthLeft").focus();
+    }
 }

@@ -1450,3 +1450,11 @@ main h2{
 .tmenushow{
     display: block;
 }
+
+.calarrowhidden{
+    display: none;
+}
+
+.calarrowshow{
+    display: block;
+}
