@@ -18,7 +18,7 @@ function createCalendar(){
         setLabel("numd"+i,(td.getMonth()+1)+"/"+i+"/"+td.getFullYear());
         if(i==td.getDate()){highlightToday("numd"+i);}
     }
-    getSvuot((td.getMonth()+1)+"/1/"+td.getFullYear(),startingB);
+    getSvuotPhp((td.getMonth()+1)+"/1/"+td.getFullYear(),startingB);
 }
 
 function getMY(d){
@@ -79,7 +79,7 @@ function updateCalendar(startingB,daysinMonth,newMonthDisp,newYearDisp){
         removeLabel("numd"+i);
     }
     limitCalendar(newMonthDisp+"/1/"+newYearDisp);
-    getSvuot(new Date(newMonthDisp+"/1/"+newYearDisp),startingB);
+    getSvuotPhp(new Date(newMonthDisp+"/1/"+newYearDisp),startingB);
 }
 
 function limitCalendar(newDateDisp){
@@ -165,7 +165,7 @@ function highlightToday(id){
     }
 }
 
-function getSvuot(monthDisp,startingB){
+function getSvuot(monthDisp,startingB,svuot){
     const td=new Date();
     let d=new Date(monthDisp);
     const svuotdays=new Array();
@@ -224,4 +224,22 @@ function getSvuotElemId(svuotElem){
         default: svuotId="";break;
     }
     return svuotId;
+}
+
+function getSvuotPhp(monthDisp,startingB){
+    fetch("functions/svuotCalendar.php")
+        .then((response) => {
+            if(!response.ok){
+                throw new Error("Something went wrong!");
+            }
+            return response.json(); // Parse the JSON data.
+        })
+        .then((data) => {
+             // This is where you handle what to do with the response.
+             getSvuot(monthDisp,startingB,data);
+        })
+        .catch((error) => {
+             // This is where you handle errors.
+        });
+        
 }
