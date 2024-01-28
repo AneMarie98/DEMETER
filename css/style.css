@@ -512,6 +512,11 @@ footer{
     padding: 0.5em;
 }
 
+.impianti_menu-impianti h3{
+    text-align: left;
+
+}
+
 .impianti_container ul li {
     list-style: none;
     margin-left: 1em;
