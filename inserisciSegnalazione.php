@@ -54,7 +54,7 @@
                         <label for=\"data\">Data:</label>
                         <input type=\"date\" id=\"data\" name=\"data\" required >    
                     </div>
-                    <div class=\"form-linegroup\"></div>
+                    <div class=\"form-linegroup\">
                         <label for=\"testo\">Testo:</label>
                         <textarea id=\"testo\" name=\"testo\" placeholder=\"Rifiuti abbandonati sul ciglio della strada\"></textarea>   
                     </div>
