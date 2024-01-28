@@ -13,13 +13,10 @@
         if(($_SESSION["admin"])){
             $profile="Dashboard";
             $profilelink="dashboard.php";
-        }
-        else{
+        }else{
             $profile=$_SESSION["firstname"];
             $profilelink="profilo.php";
         }
-        $profile=$_SESSION["firstname"];
-        $profilelink="profilo.php";
     }
     else{
         $profile="Accedi";
