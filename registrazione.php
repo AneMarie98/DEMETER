@@ -11,6 +11,10 @@
     $paginaHTML=file_get_contents("templates/registrazioneTemplate.html");
 
     if(!isset($_SESSION["email"])){
+        $profile=$_SESSION["firstname"];
+        $profilelink="profilo.php";
+        $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
+        $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
         echo $paginaHTML;
     }else if(isset($_POST["username"])){
         $db=new DB\DBAccess;

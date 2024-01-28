@@ -10,12 +10,22 @@
     $paginaHTML=file_get_contents("../templates/servizi/smaltimentoTemplate.html");
 
     if(isset($_SESSION["email"])){
+        if(($_SESSION["admin"])){
+            $profile="Dashboard";
+            $profilelink="dashboard.php";
+        }
+        else{
+            $profile=$_SESSION["firstname"];
+            $profilelink="profilo.php";
+        }
         $profile=$_SESSION["firstname"];
+        $profilelink="profilo.php";
     }
     else{
         $profile="Accedi";
         $profilelink="login.php";
     }
+
 
     $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
     $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
