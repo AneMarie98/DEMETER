@@ -56,7 +56,7 @@
                         </div>
                         <div class=\"form-linegroup\">
                             <label for=\"urlImg\">Percorso dell'immagine :</label>
-                            <input type=\"text\" id=\"urlImg\" name=\"urlImg\" placeholder=\"img/news/img.png\"required >    
+                            <input type=\"text\" id=\"urlImg\" name=\"urlImg\" placeholder=\"img/news/img.png\" required >    
                         </div>
                         <div class=\"form-linegroup\">
                             <button type=\"submit\">Inserisci</button>
