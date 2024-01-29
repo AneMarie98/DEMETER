@@ -895,11 +895,18 @@ footer{
 
 /*Search*/
 #searchContainer{
-    border-top: var(--headerBgColor) 0.3em solid;
-    margin-top: 0.3em;
-    border-bottom: var(--headerBgColor) 0.3em solid;
+    border:5px solid var(--headerBgColor);
+    margin-top: 1.5em;
     margin-bottom: 0.3em;
+    border-radius: 20px;
+    padding-bottom:1em;
 }
+
+#searchContainer h3{
+    text-align: center;
+    padding-top:1em;
+}
+
 #searchBar{
     width: 100%;
     display: flex;
@@ -912,6 +919,7 @@ footer{
     border-radius: 10px;
     flex: 1 1 70%;
     padding: 10px;
+    margin-left:3em;
 }
  
 #searchButton {
@@ -922,10 +930,7 @@ footer{
     border-radius: 10px;
     background-color: var(--headerBgColor);
     color: var(--headerTxtColor);
-}
- 
-#searchInput:hover{
-    background-color: var(--visitedLinkColor);
+    margin-right:3em;
 }
  
 /*Search Result*/
@@ -991,11 +996,6 @@ input#loginpass {
     border-radius: 10px;
     background-color: white;
     color: var(--txtColor);
-}
-
-input:hover{
-    background-color: var(--visitedLinkColor);
-    color: var(--bgColor);
 }
 
 input:focus{
@@ -1541,4 +1541,22 @@ main h2{
     padding:1em;
     max-width: 400px;
     margin:1em auto 3em;
+}
+
+.waste-category details{
+    margin:1em 0em 1em 2em;
+    width:95%;
+}
+
+.waste-category details ul{
+    margin-left:2em;
+}
+
+.waste-category{
+    margin-top:3em;
+}
+
+.waste-category p{
+    width:95%;
+    margin:auto;
 }

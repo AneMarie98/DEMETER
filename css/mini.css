@@ -841,3 +841,64 @@ footer{
     margin-top: 1em;
     padding:1em;
 }
+
+.waste-category details{
+    margin:1em 0em 1em 0.5em;
+    width:95%;
+}
+
+.waste-category details ul{
+    margin-left:1.5em;
+}
+
+.waste-category p{
+    width:100%;
+}
+
+#searchContainer h3{
+    text-align: center;
+    padding:0.5em 0.5em 0em 0.5em;
+    font-size: 1.1em;
+}
+
+#searchBar{
+    width: 100%;
+    display: block;
+    padding:0em 0.5em 0em 0.5em;
+} 
+ 
+#searchInput{
+    width:100%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    background-color: var(--bgColor);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+    margin-left:0em;
+}
+ 
+#searchButton {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+    width:100%;
+    font-size: 1em;
+}
+
+#searchResults dl{
+    border-bottom:1px solid black;
+}
+
+#searchResults dl:first-of-type{
+    border-top:1px solid black;
+    margin-top:1em;
+}
+
+#searchResults dt,#searchResults dd{
+    display: block;
+    margin:0;
+    width: 100%;
+    text-align: center;
+}

@@ -48,18 +48,18 @@ function dynamicDetailedNewsCSS($cssFilePath, $cssContent){
     if (file_exists($cssFilePath)) {
         // Ottieni il contenuto attuale del file CSS
         $existingContent = file_get_contents($cssFilePath);
-        $cssAllNewContent = '#detailedNewsImage{'.$cssContent."\n}";
+        $cssAllNewContent = '.detailedNewsImage{'.$cssContent."\n}";
         // Normalizzo i testi
         $normalizedExistingContent = str_replace(["\r\n", "\r", "\n", ' '], '', $existingContent);
         $normalizedCssContent = str_replace(["\r\n", "\r", "\n", ' '], '', $cssAllNewContent);
         if (strpos($normalizedExistingContent, $normalizedCssContent) === false) {
             // Siamo nel caso in cui il nuovo contenuto non è già presente nell css
-            if (!strpos($normalizedExistingContent, "#detailedNewsImage{") === false) {
+            if (!strpos($normalizedExistingContent, ".detailedNewsImage{") === false) {
                 // Siamo nel caso in cui non ci sia
-                $pos = strpos($existingContent, "#detailedNewsImage{");
+                $pos = strpos($existingContent, ".detailedNewsImage{");
                 if ($pos !== false) {
                     // Posiziona il cursore dopo il commento
-                    $pos += strlen("#detailedNewsImage{\n");
+                    $pos += strlen(".detailedNewsImage{\n");
                     // Trova la fine della riga corrente da sostituire
                     $endOfLinePos = strpos($existingContent, ";", $pos);
                     $endOfLinePos += strlen(";");
