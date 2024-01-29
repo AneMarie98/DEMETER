@@ -931,3 +931,29 @@ form#segnalazione textarea{
 form#segnalazione input#subformsegn{
     margin:1em 0em 1em 0em;
 }
+
+.FormNotizia p{
+    text-align: left;
+}
+
+form#notizia legend{
+    font-size: 1em;
+}
+
+form#notizia fieldset{
+    border-radius: 0px 20px 20px 20px;
+    padding:0.75em;
+    width:100%;
+}
+
+form#notizia div.form-linegroup:first-of-type label{
+    margin-top:0;
+}
+
+form#notizia textarea{
+    height:40vh;
+}
+
+form#notizia input#subformnot{
+    margin:1em 0em 1em 0em;
+}

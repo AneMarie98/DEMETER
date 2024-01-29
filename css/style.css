@@ -1598,6 +1598,7 @@ form#segnalazione input{
 
 form#segnalazione input#subformsegn{
     margin:2em 0em 2em 0em;
+    cursor: pointer;
 }
 
 form#segnalazione input#data{
@@ -1642,4 +1643,64 @@ form#segnalazione textarea:focus{
     padding:1em;
     max-width: 400px;
     margin:1em auto 3em;
+}
+
+.FormNotizia p{
+    max-width: 1024px;
+    margin:auto;
+    text-align: center;
+    margin-bottom:1em;
+}
+
+form#notizia{
+    margin-bottom: 3em;
+}
+
+form#notizia label{
+    display: block;
+    padding-left:1em;
+    font-size: 1em;
+    margin-top:1em;
+}
+
+form#notizia fieldset{
+    border-radius: 0px 20px 20px 20px;
+    padding:1em;
+    width:50%;
+}
+
+form#notizia legend{
+    padding-left:0.25em;
+}
+
+form#notizia input{
+    margin:0;
+    width:100%;
+    font-size: 1em;
+    padding:1em;
+    border:2px solid black;
+}
+
+form#notizia input#subformnot{
+    margin:2em 0em 2em 0em;
+    cursor: pointer;
+}
+
+form#notizia input#data{
+    padding:1.231em;
+}
+
+form#notizia textarea{
+    resize: none;
+    width:100%;
+    border-radius: 10px;
+    padding:0.5em;
+    height:20vh;
+    background-color: var(--bgButtonColor);
+    border:2px solid black;
+    font-size: 1em;
+}
+
+form#notizia textarea:focus{
+    outline: 3px solid #007bff;
 }

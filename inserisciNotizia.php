@@ -59,7 +59,7 @@
                             <input type=\"text\" id=\"urlImg\" name=\"urlImg\" placeholder=\"img/news/img.png\" required >    
                         </div>
                         <div class=\"form-linegroup\">
-                            <button type=\"submit\">Inserisci</button>
+                            <input type=\"submit\" value='Inserisci notizia' id='subformnot'>
                         </div>
                 </fieldset>
 
