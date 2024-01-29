@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Creato il: Gen 29, 2024 alle 14:21
+-- Creato il: Gen 29, 2024 alle 21:09
 -- Versione del server: 10.6.12-MariaDB-0ubuntu0.22.04.1
 -- Versione PHP: 8.1.2-1ubuntu2.14
 
@@ -88,7 +88,7 @@ CREATE TABLE `segnalazioni` (
   `testo` text NOT NULL,
   `indirizzo` varchar(255) NOT NULL,
   `dataS` date NOT NULL,
-  `inCarico` tinyint(1) NOT NULL,
+  `inCarico` tinyint(1) NOT NULL DEFAULT 0,
   `fkUtenteS` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
