@@ -681,7 +681,7 @@ main#content .dashboard{
 
 /* Miglioramenti */
 main h2{
-    font-size: 2.5em;
+    font-size: 2em;
     line-height: 1.5em;
 }
 
@@ -728,16 +728,16 @@ main h2{
 }
 
 footer h3{
-    font-size: 2.25em;
+    font-size: 1.75em;
     line-height: 1.5em;
 }
 
 footer p{
-    font-size: 1.75em;
+    font-size: 1em;
 }
 
 .footericons{
-    font-size: 2em;
+    font-size: 1em;
 }
 
 #socialList li{
