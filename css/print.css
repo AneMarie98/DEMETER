@@ -204,8 +204,8 @@ main{
 
 /* Detailed News */
 
-#detailedNewsImage{
-	background-image: url('../img/news/bidoni.jpg');
+#detnewstitlemobile{
+    display: none;
 }
 
 #content.detailedNews{
