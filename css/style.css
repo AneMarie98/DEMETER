@@ -1065,6 +1065,21 @@ main#content.segnalazioni h2{
     height: 1em; 
 }
 
+.detailedSegnalazione h3{
+    font-size: 1.1em;
+    text-align: center;
+    margin-top:1em;
+}
+
+.detailedSegnalazione h3::first-letter{
+    text-transform: uppercase;
+}
+
+.detailedSegnalazione p{
+    max-width: 768px;
+    margin: 1em auto 0em;
+}
+
 /*DASHBOARD*/
 .dashboard div.dashboard-button {
     text-align: center;
@@ -1509,4 +1524,21 @@ main h2{
 
 #detnewstitlemobile{
     display: none;
+}
+
+#isInCarico{
+    text-align: center;
+    margin-top:1em;
+    margin-bottom:0em;
+}
+
+.changesegnstatus{
+    text-align: center;
+    display: block;
+    background-color: var(--bgButtonColor);
+    border: 3px solid black;
+    border-radius: 20px;
+    padding:1em;
+    max-width: 400px;
+    margin:1em auto 3em;
 }
