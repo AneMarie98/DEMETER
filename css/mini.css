@@ -226,7 +226,7 @@ footer{
     padding:0;
 }
 
-#content.detailedNews p{ 
+#content.detailedNews #datapubblicazione{ 
     padding:0;
     text-align: center;
     margin:0em 0em 1em 0em;
