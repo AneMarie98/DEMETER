@@ -27,8 +27,8 @@ function getMY(d){
 }
 
 function setCalArrows(leftA,rightA){
-    document.getElementById("monthLeft").setAttribute("aria-label","Vedi "+leftA);
-    document.getElementById("monthRight").setAttribute("aria-label","Vedi "+rightA);
+    document.getElementById("monthLeft").innerHTML="Vedi "+leftA;
+    document.getElementById("monthRight").innerHTML="Vedi "+rightA;
 }
 
 function daysInMonth(year,month){
