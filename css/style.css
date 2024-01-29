@@ -255,7 +255,6 @@ footer{
 }
 
 #content.news .newsImg{
-    /*le immagini vanno messe con rateo 3:2*/
     background-color: var(--articleBgColor);
     background-size:cover;
     background-position: center;
