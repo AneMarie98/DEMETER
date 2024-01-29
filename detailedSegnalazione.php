@@ -38,6 +38,8 @@
         }else{
             $htmlToInsert .= "<p class='isInCarico'>Questa segnalazione non è presa in carico:</p><a class='changesegnstatus' href=\"updateSegnalazione.php?id=" .$id_segnalazione. "&inCarico=1\">Segnala come presa in carico </a>";
         }
+
+        $htmlToInsert .= "<a id =\"deleteSegnalazione\" class='delete-button' href=\"deleteSegnalazione.php?id=".$id_segnalazione."\">Elimina segnalazione</a>";
        
     } else{
         header("Location: p503.html"); 

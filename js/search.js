@@ -1,22 +1,3 @@
-function cleanInput(value) {
-    value = value.trim();   //rimuove gli spazi bianchi
-    value = value.replace(/<(?!p|ul|li|\/p|\/ul|\/li)[^>]+>/g, ''); //rimuove tutti i tag html tranne <p>, <ul> e <li>
-    value = value.replace(/&/g, '&amp;')
-                 .replace(/</g, '&lt;')
-                 .replace(/>/g, '&gt;')
-                 .replace(/"/g, '&quot;')
-                 .replace(/'/g, '&#039;'); //rimuove i caratteri speciali
-    return value;
-}
-
-
-/**
- * aggiorna la segnalazione con l'inCarico specificato
- */
-function updateSegnalazione(id, isChecked) {
-    window.location.href = "updateSegnalazione.php?id=" + id + "&inCarico=" + isChecked;
-}
-
 function assignDay(num) {
     let dayofweek = "";
     switch (num) {
@@ -110,3 +91,7 @@ function searchResults() {
 document.addEventListener('DOMContentLoaded', function() {
     searchResults();
 });
+
+
+
+  

@@ -1,3 +1,19 @@
+/*
+* Questo file contiene le funzioni per la validazione dei form
+*/
+
+function cleanInput(value) {
+    console.log("sono qui"+ value);
+    value = value.trim();   //rimuove gli spazi bianchi
+    value = value.replace(/<(?!p|ul|li|\/p|\/ul|\/li)[^>]+>/g, ''); //rimuove tutti i tag html tranne <p>, <ul> e <li>
+    value = value.replace(/&/g, '&amp;')
+                 .replace(/</g, '&lt;')
+                 .replace(/>/g, '&gt;')
+                 .replace(/"/g, '&quot;')
+                 .replace(/'/g, '&#039;'); //rimuove i caratteri speciali
+    return value;
+}
+
 function caricamentoSegnalazione(){
     let inputIndirizzo = document.getElementById("indirizzo");
     inputIndirizzo.onblur = function (){validateIndirizzo(this)};
@@ -53,7 +69,8 @@ function removeChildInput(tag){
 
 function validateIndirizzo(input){
     removeChildInput(input);
-
+    
+    input.value = cleanInput(input.value);
     if(input.value.length <= 5 || !input.includes(',')){
         showError(input, "Indirizzo non valido!"); 
 
@@ -66,6 +83,7 @@ function validateIndirizzo(input){
 
 function validateData(input){
     removeChildInput(input);
+    input.value = cleanInput(input.value);
     if(input.value.search(/^\d{4}\-\d{2}\-\d{2}$/)!=0){
         showError(input, input.value + " Non è una data valida!"); 
 
@@ -78,6 +96,8 @@ function validateData(input){
 
 function validateTesto(input){
     removeChildInput(input);
+
+    input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-ZÀ-ÿ(),.'\s\/]*$/)!=0 || input.value.length <= 10 || input.value.length >= 500){
         showError(input, "Questo non è un testo valido!"); 
 
@@ -89,6 +109,7 @@ function validateTesto(input){
 
 function validateTitolo(input){
     removeChildInput(input);
+    input.value = cleanInput(input.value);
     if(input.value.length <= 10 || input.value.length >= 50 || input.value.search(/^[a-zA-ZÀ-ÿ.,()'\s]+$/)!=0){
         showError(input, "Questo non è un titolo valido!"); 
 
@@ -101,6 +122,7 @@ function validateTitolo(input){
 
 function validateDescrizione(input){
     removeChildInput(input);
+    input.value = cleanInput(input.value);
     if(input.value.length <= 5 && input.value.length >= 25 && /^[a-zA-ZÀ-ÿ.,()'\s]+$/){
         showError(input, input.value + " è una descrizione troppo lunga!"); 
 
@@ -113,6 +135,7 @@ function validateDescrizione(input){
 
 function validateUrl(input){
     removeChildInput(input);
+    input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-Z0-9._%-]+\/[a-zA-Z0-9._%-]+\/[a-zA-Z0-9._%-]+\.(png|jpg|jpeg|gif)$/)!=0){
         showError(input, input.value + " non è un percorso valido!"); 
 
@@ -125,6 +148,7 @@ function validateUrl(input){
 
 function validateNome(input){
     removeChildInput(input);
+    input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-Z]{2,}$/)!=0){
         showError(input, input.value + " non è un nome valido!"); 
 
@@ -137,6 +161,7 @@ function validateNome(input){
 
 function validateEmail(input){
     removeChildInput(input);
+    input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)!=0){
         showError(input, input.value + " non è una email valida!"); 
 
@@ -149,6 +174,7 @@ function validateEmail(input){
 
 function validateUsername(input){
     removeChildInput(input);
+    input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-Z0-9._%\-]{8,}$/)!=0){
         showError(input, input.value + " non è un username valido!"); 
 
@@ -161,6 +187,7 @@ function validateUsername(input){
 
 function validatePassword(input){
     removeChildInput(input);
+    input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-Z0-9._%\-]{8,}$/)!=0){
         showError(input, input.value + " non è una password valida!"); 
 
@@ -173,6 +200,7 @@ function validatePassword(input){
 
 function validateConfermaPassword(input){
     removeChildInput(input);
+    input.value = cleanInput(input.value);
     if(input.value==inputPassword.value){
         showError(input, "Le password non coincidono!"); 
 

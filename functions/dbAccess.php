@@ -207,8 +207,7 @@
         cleanInput($data, $this->connection);
         cleanInput($testo, $this->connection);
         $idUtente = $this->getUserId($email);  
-        $query="INSERT INTO segnalazioni (indirizzo, dataS, testo, fkUtenteS) VALUES ('$indirizzo', '$data', '$testo', '$idUtente')";
-        echo $query;
+        $query="INSERT INTO segnalazioni (indirizzo, dataS, testo, fkUtenteS) VALUES (\"$indirizzo\", \"$data\", \"$testo\", \"$idUtente\")";
         try{
             $queryResult = mysqli_query($this -> connection, $query);
         }catch(\Exception $e){
@@ -249,7 +248,8 @@
     }
 
     public function insertNotizia($titolo,$articolo,$descrizione,$urlImg,$dataN){
-        $query="INSERT INTO notizie (titolo, articolo, urlImg, dataN) VALUES ('$titolo','$articolo','$urlImg','$dataN')";
+        $query="INSERT INTO notizie (titolo, articolo, descrizione, urlImg, dataN) VALUES (\"$titolo\",\"$articolo\",\"$descrizione\", \"$urlImg\",\"$dataN\")";
+        echo $query;
         try{
             $queryResult = mysqli_query($this -> connection, $query);
         }catch(\Exception $e){
@@ -260,6 +260,16 @@
 
     public function updateSegnalazione($idSegnalazione, $inCarico){
         $query="UPDATE segnalazioni SET inCarico='$inCarico' WHERE idSegnalazione='$idSegnalazione'";
+        try{
+            $queryResult = mysqli_query($this -> connection, $query);
+        }catch(\Exception $e){
+
+        }
+        return mysqli_affected_rows($this->connection) >0;
+    }
+
+    public function deleteSegnalazione($idSegnalazione){
+        $query="DELETE FROM segnalazioni WHERE idSegnalazione='$idSegnalazione'";
         try{
             $queryResult = mysqli_query($this -> connection, $query);
         }catch(\Exception $e){

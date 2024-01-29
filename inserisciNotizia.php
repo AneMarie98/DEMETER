@@ -11,9 +11,9 @@
     require_once("functions/functions.php");
 
     if(isset($_SESSION["email"]) && isset($_POST["titolo"])){
+        $db=new DB\DBAccess;
+        $connOk=$db->openDBConnection();
         if($connOk){
-            $db=new DB\DBAccess;
-            $connOk=$db->openDBConnection();
             $titolo = cleanInput($_POST['titolo'], $db->getConnection());
             $data = cleanInput($_POST['data'], $db->getConnection());
             $articolo = cleanInput($_POST['articolo'], $db->getConnection());
@@ -21,7 +21,7 @@
             $urlImg = cleanInput($_POST['urlImg'], $db->getConnection());
             $db->insertNotizia($titolo,$articolo,$descrizione,$urlImg,$data);    
         }else{
-            header("Location: p503.html");
+           header("Location: p503.html");
         }
        
     }

@@ -27,11 +27,11 @@
         if(isset($_POST["indirizzo"]) && isset($_POST["data"]) && isset($_POST["testo"])&&$connOk){
             $indirizzo=cleanInput($_POST["indirizzo"], $db->getConnection());
             $data=cleanInput($_POST["data"],$db->getConnection());
-            $testo=cleanInput($$_POST["testo"], $db->getConnection());
+            $testo=cleanInput($_POST["testo"], $db->getConnection());
             $db=new DB\DBAccess;
             $connOk=$db->openDBConnection();
             if($connOk){
-               if( $db->insertSegnalazione($indirizzo,$data,$testo,$$_SESSION["email"])){
+               if( $db->insertSegnalazione($indirizzo,$data,$testo,$_SESSION["email"])){
                     $htmlToInsert .= "<p>Segnalazione inserita correttamente. Torna alla <a href=\"index.php\" lang=\"en\"> Home </a></p>";
                }
             }
@@ -42,7 +42,7 @@
         }else{
             $htmlToInsert .= " 
             
-            <form id=\"segnalazione\" action=\"inserisciSegnalazione.php\" method=\"GET\" onsubmit=\"validazioneFormSegnalazione()\">
+            <form id=\"segnalazione\" action=\"inserisciSegnalazione.php\" method=\"POST\" onsubmit=\"validazioneFormSegnalazione()\">
                 <fieldset>
                 <legend>Segnalazione</legend>
                     <div class=\"form-linegroup\">
