@@ -181,10 +181,11 @@ footer{
 }
 
 #content.news .newsImg{
+    /*le immagini vanno messe con rateo 3:2*/
     background-color: var(--articleBgColor);
     background-size:cover;
     background-position: center;
-    height: 15.5em;
+    height: 15.5em; /*tmp*/
     width: 23.25em;
     display: block;
     margin: auto;
@@ -207,7 +208,7 @@ footer{
 
 /* Detailed News */
 .detailedNewsImage{
-	background-image: url('../img/news/educazione.jpg');
+	background-image: url('../img/news/alluvione.jpg');
 }
 
 #content.detailedNews{
@@ -904,4 +905,30 @@ footer{
 
 .eccezionicalendario li{
     text-align: center;
+}
+
+.FormSegnalazione p{
+    text-align: left;
+}
+
+form#segnalazione legend{
+    font-size: 1em;
+}
+
+form#segnalazione fieldset{
+    border-radius: 0px 20px 20px 20px;
+    padding:0.75em;
+    width:100%;
+}
+
+form#segnalazione div.form-linegroup:first-of-type label{
+    margin-top:0;
+}
+
+form#segnalazione textarea{
+    height:40vh;
+}
+
+form#segnalazione input#subformsegn{
+    margin:1em 0em 1em 0em;
 }

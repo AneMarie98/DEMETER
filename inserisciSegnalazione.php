@@ -59,7 +59,7 @@
                         <textarea id=\"testo\" name=\"testo\" placeholder=\"Rifiuti abbandonati sul ciglio della strada\"></textarea>   
                     </div>
                     <div class=\"form-linegroup\">
-                        <button type=\"submit\">Invia</button>
+                        <input id='subformsegn' type=\"submit\" value='Invia segnalazione'>
                     </div>
                 </fieldset>
             </form>";    

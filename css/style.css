@@ -255,6 +255,7 @@ footer{
 }
 
 #content.news .newsImg{
+    /*le immagini vanno messe con rateo 3:2*/
     background-color: var(--articleBgColor);
     background-size:cover;
     background-position: center;
@@ -281,7 +282,7 @@ footer{
 
 /* Detailed News */
 .detailedNewsImage{
-	background-image: url('../img/news/educazione.jpg');
+	background-image: url('../img/news/alluvione.jpg');
 }
 
 #content.detailedNews{
@@ -919,6 +920,7 @@ footer{
     flex: 1 1 70%;
     padding: 10px;
     margin-left:3em;
+    border:2px solid black;
 }
  
 #searchButton {
@@ -930,6 +932,7 @@ footer{
     background-color: var(--headerBgColor);
     color: var(--headerTxtColor);
     margin-right:3em;
+    border:2px solid black;
 }
  
 /*Search Result*/
@@ -1563,4 +1566,69 @@ main h2{
 
 .eccezionicalendario ul:last-of-type{
     margin-bottom:3em;
+}
+
+form#segnalazione{
+    margin-bottom: 3em;
+}
+
+form#segnalazione label{
+    display: block;
+    padding-left:1em;
+    font-size: 1em;
+    margin-top:1em;
+}
+
+form#segnalazione fieldset{
+    border-radius: 0px 20px 20px 20px;
+    padding:1em;
+    width:50%;
+}
+
+form#segnalazione legend{
+    padding-left:0.25em;
+}
+
+form#segnalazione input{
+    margin:0;
+    width:100%;
+    font-size: 1em;
+    padding:1em;
+    border:2px solid black;
+}
+
+form#segnalazione input#subformsegn{
+    margin:2em 0em 2em 0em;
+}
+
+form#segnalazione input#data{
+    padding:1.231em;
+}
+
+form#segnalazione textarea{
+    resize: none;
+    width:100%;
+    border-radius: 10px;
+    padding:0.5em;
+    height:20vh;
+    background-color: var(--bgButtonColor);
+    border:2px solid black;
+    font-size: 1em;
+}
+
+form#segnalazione textarea:focus{
+    outline: 3px solid #007bff;
+}
+
+.FormSegnalazione p{
+    max-width: 1024px;
+    margin:auto;
+    text-align: center;
+    margin-bottom:1em;
+}
+
+.errorSuggestion{
+    display: block;
+    text-align: center;
+    color:var(--warningmsg);
 }

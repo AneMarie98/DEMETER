@@ -67,7 +67,7 @@ function validateIndirizzo(input){
 function validateData(input){
     removeChildInput(input);
     if(input.value.search(/^\d{4}\-\d{2}\-\d{2}$/)!=0){
-        showError(input, input.value + " non è una data valida!"); 
+        showError(input, input.value + " Non è una data valida!"); 
 
         input.focus(); 
         input.select(); 
