@@ -15,7 +15,7 @@ function caricamentoNotizia(){
     let inputArticolo = document.getElementById("articolo");
     inputArticolo.onblur = function (){validateTesto(this)};
     let inputDescrizione = document.getElementById("descrizione");
-    inputDescrizione.onblur = function (){validateTesto(this)};
+    inputDescrizione.onblur = function (){validateDescrizione(this)};
     let inputUrl = document.getElementById("urlImg");
     inputUrl.onblur = function (){validateUrl(this)};
 }
@@ -78,7 +78,7 @@ function validateData(input){
 
 function validateTesto(input){
     removeChildInput(input);
-    if(input.value.search(/^[a-zA-ZÀ-ÿ.,()'\s]+$/)!=0 || input.value.length <= 10 || input.value.length >= 500){
+    if(input.value.search(/^[a-zA-ZÀ-ÿ(),.'\s\/]*$/)!=0 || input.value.length <= 10 || input.value.length >= 500){
         showError(input, "Questo non è un testo valido!"); 
 
         input.focus(); 

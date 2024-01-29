@@ -1,6 +1,6 @@
 function cleanInput(value) {
     value = value.trim();   //rimuove gli spazi bianchi
-    value = value.replace(/<[^>]+>/g, ''); //rimuove tutti i tag html
+    value = value.replace(/<(?!p|ul|li|\/p|\/ul|\/li)[^>]+>/g, ''); //rimuove tutti i tag html tranne <p>, <ul> e <li>
     value = value.replace(/&/g, '&amp;')
                  .replace(/</g, '&lt;')
                  .replace(/>/g, '&gt;')
