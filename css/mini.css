@@ -569,25 +569,8 @@ section.impianti_impianti {
 }
 
 /*LOGIN*/
-#content fieldset{
-    width: 100%;
-    padding: 5em;
-}
-
-input#loginemail{
-    padding: 3em;
-}
-
-input#loginpass{
-    padding: 3em;
-}
-
 input{
     padding: 2em;
-}
-
-legend{
-    font-size: 40%;
 }
 
 /*DASHBOARD*/
@@ -955,5 +938,27 @@ form#notizia textarea{
 }
 
 form#notizia input#subformnot{
+    margin:1em 0em 1em 0em;
+}
+
+#content-login p{
+    text-align: left;
+}
+
+form#formlogin legend{
+    font-size: 1em;
+}
+
+form#formlogin fieldset{
+    border-radius: 0px 20px 20px 20px;
+    padding:0.75em;
+    width:100%;
+}
+
+form#formlogin label:first-of-type{
+    margin-top:0;
+}
+
+form#formlogin input#subformlogin{
     margin:1em 0em 1em 0em;
 }
