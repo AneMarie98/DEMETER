@@ -1,9 +1,6 @@
 # DEMETER
-## NOTE
 
-### Relazione:
- 
- [DEMETER](https://docs.google.com/document/d/1VeiM7UjxuieDsXCvlyHot3A8Q-D6VrHWb0FopTJx--E/edit?usp=sharing)
+### Relazione: [DEMETER](https://docs.google.com/document/d/1VeiM7UjxuieDsXCvlyHot3A8Q-D6VrHWb0FopTJx--E/edit?usp=sharing) )
 
 
 ### In corso d'opera
