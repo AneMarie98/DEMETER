@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <title>Detailed News-Demeter</title>
-  <meta name="keywords" content="Demeter, News,Raccolta, Rifiuti,Notizia,Aggiornamento">
-  <meta name="description" content="Scopri le ultime notizie e aggiornamenti su Demeter,azienda all'avanguardia da sempre impegnata nel rispetto dell'ambiente">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" media="screen"> 
-  <link rel="stylesheet" href="css/mini.css" media="screen and (max-width: 768px)">
-  <link rel="stylesheet" href="css/print.css"  media="print">
-  <script src="js/togglemenu.js"></script>
-</head>
-<body>
-  <header>
-    <nav aria-label="Aiuti alla navigazione" class="navigationhelp">
-        <a href="#content">Vai al contenuto</a>
-    </nav>
-    <h1>Demeter</h1>
-    <button id="togglemenu" onclick="toggleMenu()">Apri menù</button>
-    <nav id="menu" class="tmenuhidden">
-        <ul>
-            <li><a href="index.php"><span lang="en">Home</span></a></li>
-            <li><a href="calendario.php">Calendario</a></li>
-            <li><a href="servizi.php">Servizi</a></li>
-            <li><a href="doveLoButto.php">Dove lo butto?</a></li>
-            <li><a href="news.php"><span lang="en">News</span></a></li>
-            <li><a href="{profilelink}">{profile}</a></li>
-        </ul>
-    </nav>
-    <nav id="breadcrumb">
-        <p>Ti trovi in: <a lang="en" href="index.php">Home</a> &gt;&gt; <a lang="en" href="news.php">News</a> &gt;&gt; <span lang="en">News</span> dettagliata</p>
-    </nav>
-</header>
-<main id="content" class = "detailedNews">
- {detailedArticle}
-</main>
-<footer>
-    <h3>Dai un'occhiata ai nostri partner</h3>
-    <p>
-        I nostri partner ci aiutano a garantire un servizio sempre migliore. Prova a dare loro un'occhiata.
-    </p>
-    <ul id="partnerList">
-        <li id="partner_boseum" class="footericons"><a href="https://github.com/rmdevv/ProgettoTecWeb"><span lang="en">Partner: Boseum</span></a></li>
-    </ul>
-    <h3>Segui i nostri canali social</h3>
-    <p>
-        Seguici su <span lang="en">Facebook</span>, <span lang="en">Instagram</span> e <span lang="en">X</span> per rimanere
-        aggiornato su tutte le iniziative e i progetti futuri. Per un mondo più libero e verde.
-    </p>
-    <ul id="socialList">
-        <li id="facebook" class="footericons"><a href=""><span lang="en">Facebook</span></a></li>
-        <li id="instagram" class="footericons"><a href=""><span lang="en">Instagram</span></a></li>
-        <li id="x" class="footericons"><a href=""><span lang="en">X</span></a></li>
-    </ul>
-</footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Detailed News-Demeter</title>
+        <meta name="keywords" content="Demeter, News,Raccolta, Rifiuti,Notizia,Aggiornamento">
+        <meta name="description" content="Scopri le ultime notizie e aggiornamenti su Demeter,azienda all'avanguardia da sempre impegnata nel rispetto dell'ambiente">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" media="screen"> 
+        <link rel="stylesheet" href="css/mini.css" media="screen and (max-width: 768px)">
+        <link rel="stylesheet" href="css/print.css"  media="print">
+        <script src="js/togglemenu.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav aria-label="Aiuti alla navigazione" class="navigationhelp">
+                <a href="#content">Vai al contenuto</a>
+            </nav>
+            <h1>Demeter</h1>
+            <button id="togglemenu" onclick="toggleMenu()">Apri menù</button>
+            <nav id="menu" class="tmenuhidden">
+                <ul>
+                    <li><a href="index.php"><span lang="en">Home</span></a></li>
+                    <li><a href="calendario.php">Calendario</a></li>
+                    <li><a href="servizi.php">Servizi</a></li>
+                    <li><a href="doveLoButto.php">Dove lo butto?</a></li>
+                    <li><a href="news.php"><span lang="en">News</span></a></li>
+                    <li><a href="{profilelink}">{profile}</a></li>
+                </ul>
+            </nav>
+            <nav id="breadcrumb">
+                <p>Ti trovi in: <a lang="en" href="index.php">Home</a> &gt;&gt; <a lang="en" href="news.php">News</a> &gt;&gt; <span lang="en">News</span> dettagliata</p>
+            </nav>
+        </header>
+        <main id="content" class = "detailedNews">
+            {detailedArticle}
+        </main>
+        <footer>
+            <h3>Dai un'occhiata ai nostri partner</h3>
+            <p>
+                I nostri partner ci aiutano a garantire un servizio sempre migliore. Prova a dare loro un'occhiata.
+            </p>
+            <ul id="partnerList">
+                <li id="partner_boseum" class="footericons"><a href="https://github.com/rmdevv/ProgettoTecWeb"><span lang="en">Partner: Boseum</span></a></li>
+            </ul>
+            <h3>Segui i nostri canali social</h3>
+            <p>
+                Seguici su <span lang="en">Facebook</span>, <span lang="en">Instagram</span> e <span lang="en">X</span> per rimanere
+                aggiornato su tutte le iniziative e i progetti futuri. Per un mondo più libero e verde.
+            </p>
+            <ul id="socialList">
+                <li id="facebook" class="footericons"><a href=""><span lang="en">Facebook</span></a></li>
+                <li id="instagram" class="footericons"><a href=""><span lang="en">Instagram</span></a></li>
+                <li id="x" class="footericons"><a href=""><span lang="en">X</span></a></li>
+            </ul>
+        </footer>
+    </body>
 </html>

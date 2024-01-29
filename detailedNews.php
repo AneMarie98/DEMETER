@@ -34,9 +34,11 @@
         // modifica html
         [$titolo, $articolo, $urlImg, $data] = $db -> getDetailedNews($id_news);
         $htmlToInsert .= 
-        "<h2>".$titolo."</h2> 
-        <p> <time datetime=\"".$data."\">".convertDateFormatString($data)."</time></p>
-        <div id=\"detailedNewsImage\"></div>
+        "
+        <div id='detnewstitledesktop'><div id=\"detailedNewsImage\"><div class='detnewstitle'><h2>".$titolo."</h2> 
+        <p> <time datetime=\"".$data."\">Data: ".convertDateFormatString($data)."</time></p></div></div></div>
+        <div id='detnewstitlemobile'><div class='detnewstitle'><h2>".$titolo."</h2> 
+        <p> <time datetime=\"".$data."\">Data: ".convertDateFormatString($data)."</time></p></div><div id=\"detailedNewsImage\"></div></div>
         <div class=\"newsArticle\">".$articolo."</div>"; // le immagini non devono essere di contenuto
 
         // modifica css
