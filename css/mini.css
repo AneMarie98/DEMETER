@@ -181,11 +181,10 @@ footer{
 }
 
 #content.news .newsImg{
-    /*le immagini vanno messe con rateo 3:2*/
     background-color: var(--articleBgColor);
     background-size:cover;
     background-position: center;
-    height: 15.5em; /*tmp*/
+    height: 15.5em;
     width: 23.25em;
     display: block;
     margin: auto;
@@ -208,7 +207,7 @@ footer{
 
 /* Detailed News */
 .detailedNewsImage{
-	background-image: url('../img/news/alluvione.jpg');
+	background-image: url('../img/news/educazione.jpg');
 }
 
 #content.detailedNews{
