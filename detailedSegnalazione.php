@@ -34,9 +34,9 @@
         $htmlToInsert .= "<h3>".$indirizzo." | ".$data."</h3>";
         $htmlToInsert .= "<p>".$testo."</p>";
         if($inCarico){
-            $htmlToInsert .= "<p id='isInCarico'>Questa segnalazione è presa in carico, se non fosse così:</p><a class='changesegnstatus' href=\"updateSegnalazione.php?id=" .$id_segnalazione. "&inCarico=0\">Segnala come non presa in carico </a>";
+            $htmlToInsert .= "<p class='isInCarico'>Questa segnalazione è presa in carico, se non fosse così:</p><a class='changesegnstatus' href=\"updateSegnalazione.php?id=" .$id_segnalazione. "&inCarico=0\">Segnala come non presa in carico </a>";
         }else{
-            $htmlToInsert .= "<p id='isInCarico'>Questa segnalazione non è presa in carico:</p><a class='changesegnstatus' href=\"updateSegnalazione.php?id=" .$id_segnalazione. "&inCarico=1\">Segnala come presa in carico </a>";
+            $htmlToInsert .= "<p class='isInCarico'>Questa segnalazione non è presa in carico:</p><a class='changesegnstatus' href=\"updateSegnalazione.php?id=" .$id_segnalazione. "&inCarico=1\">Segnala come presa in carico </a>";
         }
        
     } else{

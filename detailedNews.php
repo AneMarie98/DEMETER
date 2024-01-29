@@ -35,10 +35,10 @@
         [$titolo, $articolo, $urlImg, $data] = $db -> getDetailedNews($id_news);
         $htmlToInsert .= 
         "
-        <div id='detnewstitledesktop'><div id=\"detailedNewsImage\"><div class='detnewstitle'><h2>".$titolo."</h2> 
-        <p id='datapubblicazione'> <time datetime=\"".$data."\">Data: ".convertDateFormatString($data)."</time></p></div></div></div>
+        <div id='detnewstitledesktop'><div class=\"detailedNewsImage\"><div class='detnewstitle'><h2>".$titolo."</h2> 
+        <p class='datapubblicazione'> <time datetime=\"".$data."\">Data: ".convertDateFormatString($data)."</time></p></div></div></div>
         <div id='detnewstitlemobile'><div class='detnewstitle'><h2>".$titolo."</h2> 
-        <p> <time datetime=\"".$data."\">Data: ".convertDateFormatString($data)."</time></p></div><div id=\"detailedNewsImage\"></div></div>
+        <p class='datapubblicazione'> <time datetime=\"".$data."\">Data: ".convertDateFormatString($data)."</time></p></div><div class=\"detailedNewsImage\"></div></div>
         <div class=\"newsArticle\">".$articolo."</div>"; // le immagini non devono essere di contenuto
 
         // modifica css

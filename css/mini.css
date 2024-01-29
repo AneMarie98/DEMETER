@@ -207,7 +207,7 @@ footer{
 }
 
 /* Detailed News */
-#detailedNewsImage{
+.detailedNewsImage{
 	background-image: url('../img/news/alluvione.jpg');
 }
 
@@ -226,7 +226,7 @@ footer{
     padding:0;
 }
 
-#content.detailedNews #datapubblicazione{ 
+#content.detailedNews .datapubblicazione{ 
     padding:0;
     text-align: center;
     margin:0em 0em 1em 0em;
@@ -240,7 +240,7 @@ footer{
     font-size: 1em;
 }
 
-#content.detailedNews #detailedNewsImage {
+#content.detailedNews .detailedNewsImage {
     /*le immagini vanno messe con rateo 3:2*/
     background-color: var(--bgColor);
     background-size:cover;
@@ -825,7 +825,7 @@ footer{
     width:100%;
 }
 
-#isInCarico{
+.isInCarico{
     text-align: center;
     margin-top:2em;
     margin-bottom:0em;
