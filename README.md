@@ -1,36 +1,36 @@
 # DEMETER
 
-### Relazione: [DEMETER](https://docs.google.com/document/d/1VeiM7UjxuieDsXCvlyHot3A8Q-D6VrHWb0FopTJx--E/edit?usp=sharing) )
+### ( Relazione: [DEMETER](https://docs.google.com/document/d/1VeiM7UjxuieDsXCvlyHot3A8Q-D6VrHWb0FopTJx--E/edit?usp=sharing) )
 
 
-### In corso d'opera
-* Header delle pagine non ha senso che lo facciamo tutti, anche perche deve essere uguale, quindi tanto vale che lo faccia uno solo. Lo facciamo come quello del LAB PTN
-* Titolo delle pagine (visualizzato scheda browser): DEMETER  
-* Lingua ITALIANO per la parola DEMETER
-* Nomeclatura: id e classi di servizi.html saranno "servizi_...", di news.html saranno "news_...", di doveLoButto.html saranno "dove_..."
-* Dimensioni schermi, punti di rottura: 0-768px , 769-1200px
-* COLORI:
-  * --headerBgColor: #9cbfa5;
-  * --headerTxtColor:#000000;
-  * --bgColor: #f5fbe4;
-  * --txtColor:#0b0b0b; 
-  * --footerBgColor: #f5fbe4;
-  *  --footerTxtColor: #0b0b0b; 
-  *  --linkColor: #3f3401;
-  *  --visitedLinkColor:#7c0048;
-  *  --flagColor: rgb(218,103,66);
-  * --font-body-family: "Futura", sans-serif;
+Progetto svolto per il corso di Tecnologie Web presso l'Università di Padova nell'anno accademico 2023-2024. 
+Componenti del gruppo:
+- [Edoardo Gallo](https://github.com/EdoGallo02)
+- [Derek Gusatto](https://github.com/DerekGusatto02)
+- [Ane-Marie Margarit](https://github.com/AneMarie98)
+- [Silvio Nardo](https://github.com/SilvioNardo)
 
-### Appunti presi al seminario sull'accessibilità:
+## DEMETER: abstract
+Demeter è stato sviluppato per fornire all’omonima azienda un mezzo moderno per la promozione di uno stile di vita sostenibile e rispettoso dell’ambiente. La missione principale di Demeter è guidare il cambiamento verso un futuro più verde e prospero, ponendo particolare attenzione alla salvaguardia del nostro pianeta, impegnandosi nella produzione di soluzioni ecologiche, garantendo le normative di legge per il riciclo dei rifiuti. 
+Il nome scelto è un riferimento alla dea Demetra, anche conosciuta come “Madre terra”. Nella mitologia greca Demetra è la dea dell’agricoltura, costante nutrice della gioventù e della terra verde. 
+Lo spirito dell’azienda Demeter, quindi, è intrecciato con la vitalità della natura stessa rappresentata dalla dea Demetra, simbolo del rispetto per la natura.
+Sul sito è disponibile una raccolta di pagine riguardanti informazioni tecniche sulle modalità di riciclo corrette utili al singolo cittadino; sono presenti inoltre diversi servizi ecologici per ogni tipo di gestione dei rifiuti, come anche notizie locali riguardanti progetti o attività locali. 
+Una volta effettuato l’accesso al sito, esso permette all’utente di effettuare segnalazioni, garantendo così delle risorse tempestive per ogni singola richiesta. 
 
-- Cambiare keywords per ogni pagina così che il motore di ricerca attraverso le keywords capiti direttamente nella pagina interessata
-- Aggiungere alternative testuali a ogni oggetto della pagina (???) per far capire alle persone con disabilità visiva su che elemento viene fatto il focus
-- Un utilizzo sapiente dei colori può aiutare gli utenti con disabilità visiva. I colori intensi in contrasto con bianco e nero sono da preferire, vengono percepiti meglio, ma dipende anche dal tipo di disabilità. Il tema scuro aiuta a far capire agli utenti con disabilità visiva se si apre una schermata (percezione di luce/buio)
-- Creare un file PDF per il calendario e/o brochure (per "dove lo butto" eventualmente) da stampare, e fare in modo di renderlo accessibile.
 
-## MILESTONES
-1. HTML: creazione degli scheletri con HTML + TESTI
-2. CSS: dopo la decisione di uno stile comune, applicarlo alle pagine create
-3. RELAZIONE: aggiornamento progressivo della relazione 
-4. PHP: 
+## Specifiche del progetto
+- Il sito web deve essere realizzato con lo standard HTML5, le pagine devono degradare in modo elegante e devono rispettare la sintassi XML;
+- Il layout deve essere realizzato con CSS puri (CSS2 o CSS3);
+- L’uso dei layout Flex e Grid, se sviluppati in maniera corretta ed utilizzati ragionevolmente, vengono valutati molto positivamente;
+- Il sito web deve rispettare la completa separazione tra contenuto, presentazione e comportamento;
+- Il sito web deve essere accessibile a tutte le categorie di utenti;
+- Il sito web deve organizzare i propri contenuti in modo da poter essere facilmente reperiti da qualsiasi utente;
+- Il sito web deve contenere pagine che utilizzino script PHP per collezionare e pubblicare dati inseriti dagli utenti (deve essere sviluppata anche la possibilità di modifica e cancellazione dei dati stessi);
+- Tra gli input richiesti all'utente deve esserci almeno un campo di testo libero;
+- Deve essere presente una forma di controllo dell’input inserito dall’utente, sia lato client che lato server;
+- I dati inseriti dagli utenti devono essere salvati in un database ed è preferibile che il database sia in forma normale.
+- Il progetto deve essere accompagnato da una relazione che ne illustri le fasi di progettazione, realizzazione e test ed evidenzi il ruolo svolto dai singoli componenti del gruppo, viene richiesta un'analisi iniziale delle caratteristiche degli utenti che il sito si propone di raggiungere e le possibili ricerche sui motori di ricerca a cui il sito deve rispondere.  Inoltre si devono indicare le azioni intraprese per migliorare il ranking del sito.
+- Le pagine web devono essere accessibili indipendentemente dal browser e dalle dimensioni dello schermo del dispositivo degli utenti. Considerazioni riguardanti diversi dispositivi (laddove possibile) verranno valutate positivamente.
+
+  
 
