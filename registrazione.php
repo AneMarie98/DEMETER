@@ -27,7 +27,7 @@
             $nome=cleanInput($_POST["nome"], $db->getConnection());
             $cognome=cleanInput($_POST["cognome"], $db->getConnection());
             if($connOk){
-                if( $db->insertUtente($username,$password,$email,$nome,$cognome)){
+                if( $db->insertUtente($username, password_hash($password, PASSWORD_DEFAULT),$email,$nome,$cognome)){
                     session_start();
                     $_SESSION["email"]=$email;
                     $_SESSION["firstname"]=$nome;

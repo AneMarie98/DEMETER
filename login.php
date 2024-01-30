@@ -25,7 +25,7 @@
         if(isset($_POST["loginsubmit"])){
             $username=$_POST["loginusername"];
             $password=$_POST["loginpassword"];
-            if($db->verifyUser($username) && ($password===$db->getUserPassword($username))){
+            if($db->verifyUser($username) && (password_verify($password, $db->getUserPassword($username)))){
                 $db->getAuthUserInfo($username);
                 header("Location: index.php");
             }
