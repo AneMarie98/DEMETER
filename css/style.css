@@ -1707,3 +1707,47 @@ form#formlogin input#subformlogin{
 .newsArticle p{
     margin-bottom:1em;
 }
+
+form#registrazione{
+    margin-bottom: 3em;
+}
+
+form#registrazione label{
+    display: block;
+    padding-left:1em;
+    font-size: 1em;
+    margin-top:1em;
+}
+
+form#registrazione fieldset{
+    border-radius: 0px 20px 20px 20px;
+    padding:1em;
+    width:50%;
+}
+
+form#registrazione legend{
+    padding-left:0.25em;
+}
+
+form#registrazione input{
+    margin:0;
+    width:100%;
+    font-size: 1em;
+    padding:1em;
+    border:2px solid black;
+}
+
+form#registrazione input#subformreg{
+    margin:2em 0em 2em 0em;
+    cursor: pointer;
+}
+
+.FormRegistrazione p{
+    max-width: 1024px;
+    margin:auto;
+    text-align: center;
+}
+
+.FormRegistrazione>p:last-of-type{
+    margin-bottom: 1em;
+}

@@ -962,3 +962,25 @@ form#formlogin input#subformlogin{
 .profilo a{
     padding:1.25em 0em;
 }
+
+.FormRegistrazione p{
+    text-align: left;
+}
+
+form#registrazione legend{
+    font-size: 1em;
+}
+
+form#registrazione fieldset{
+    border-radius: 0px 20px 20px 20px;
+    padding:0.75em;
+    width:100%;
+}
+
+form#registrazione div.form-linegroup:first-of-type label{
+    margin-top:0;
+}
+
+form#registrazione input#subformreg{
+    margin:1em 0em 1em 0em;
+}

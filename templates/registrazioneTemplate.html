@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/mini.css" media="screen and (max-width:768px)">
         <link rel="stylesheet" href="css/print.css"  media="print">
+        <script src="js/formcheck.js"></script>
         <script src="js/togglemenu.js"></script>
     </head>
     <body onload="caricamentoRegistrazione()">
@@ -32,12 +33,11 @@
                 <p>Ti trovi in: <a href="index.php" lang="en">Home</a> &gt;&gt; Registrazione</p>
             </nav>
         </header>
-        <main id="content">
+        <main id="content" class="FormRegistrazione">
             <h2>Registrazione</h2>
-            <p>Inserisci il tuo nome, cognome, indirizzo e-mail ed un username che contenga almeno 8 caratteritra lettere maiuscole, minuscole, numeri o i simboli . _ % -.</p>
-            <p>Inserisci una password di almeno 8 caratteri che contenga lettere maiuscole, minuscole, numeri o i simboli . _ % - $ & + </p>
+            <p>Inserisci il tuo nome, cognome, indirizzo e-mail ed un username che contenga almeno 8 caratteri tra lettere maiuscole, minuscole, numeri o i simboli . _ % -.</p>
+            <p>Inserisci una password di almeno 8 caratteri che contenga lettere maiuscole, minuscole, numeri o i simboli . _ % - $ & +. </p>
             <form id="registrazione" action="#" method="post" onsubmit="return validazioneRegistrazione()">
-
                 <fieldset>
                     <legend>Registrazione</legend>
                         <div class="form-linegroup">
@@ -56,7 +56,6 @@
                             <label for="mail">Indirizzo e-mail: </label>
                             <input type="email" id="mail" name="mail" placeholder="indirizzo@mail.com" required autocomplete="on">    
                         </div>
-
                         <div class="form-linegroup">
                             <label for="password">Password: </label>
                             <input type="password" id="password" name="password" required autocomplete="on">    
@@ -66,10 +65,9 @@
                             <input type="password" id="confermapassword" name="confermapassword" required autocomplete="on">    
                         </div>
                         <div class="form-linegroup">
-                            <button type="submit">Registrati!</button>
+                            <input type="submit" id="subformreg" value="Registrati!">
                         </div>
                 </fieldset>
-
             </form> 
         </main>
         <footer>
