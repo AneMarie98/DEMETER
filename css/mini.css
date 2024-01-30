@@ -308,12 +308,12 @@ main.home h2{
 /* servizi*/
 #servizi_wrapper{
     display: block;
-    text-align: center;
-    margin: 1em;
 }
 
 #servizi_wrapper > .left{
     margin-bottom: 3em;
+    padding:0.75em;
+    font-size: 1em;
 }
 
 #servizi_wrapper > .right {
@@ -358,17 +358,15 @@ main.home h2{
 
 #servizi_section2 div.servizi_serviceBoxContainer h3 a{
     background-color: var(--headerBgColor) ;
-    color: var(--linkColor);
     text-align: center;
-    padding-left: 0;
     border-radius: 10px;
-    padding: 0.5em; 
+    padding: 1em; 
     width: 100%; 
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
     line-height: 1.5em;
-    font-size: 1.2em;
+    font-size: 0.75em;
 }
 
 #servizi_section2 p {
@@ -377,14 +375,9 @@ main.home h2{
     font-size: 1.5em;
 }
 
-#servizi_section2 h3 {
-    font-size: 1.5em;
-}
-
 #servizi_section3{
     text-align: center;
-    margin-top: 4em;
-    font-size: 1.3em;
+    margin-top: 2em;
 }
 
 #servizi_section4 div.servizi_reasonContainer{
@@ -396,13 +389,14 @@ main.home h2{
 }
 
 #servizi_section4 div.servizi_reasonContainer h4{
-    font-size: 1.2em;
     text-align: center;
     padding-right: 0em;
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer div.servizi_reasonContent p{
-    text-align: center;
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.5em;
 }
 
 #servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer div.servizi_reasonContent {
@@ -1081,4 +1075,28 @@ table tbody tr:last-of-type,table tbody tr:last-of-type td:last-of-type{
     padding: 0em 0.5em 1em 0.5em;
     margin-bottom: 0em;
     font-size: 0.9em;
+}
+
+#servizi_section2 div.servizi_serviceBoxContainer{
+    padding:0;
+    margin-bottom:1em;
+}
+
+#servizi_section3 p{
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin-bottom: 0;
+}
+
+#servizi_section4{
+    margin-top:2.5em;
+}
+
+#servizi_section4 h3{
+    margin-bottom:0;
+}
+
+#servizi_section4 div.servizi_reasonContainer div.servizi_reasonBoxContainer{
+    padding: 0em;
+    padding-top:1em;
 }
