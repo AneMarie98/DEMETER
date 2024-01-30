@@ -16,29 +16,6 @@
         $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
         $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);
         echo $paginaHTML;
-    }else if(isset($_POST["username"])){
-        $db=new DB\DBAccess;
-        $connOk=$db->openDBConnection();
-        if($connOk){
-            
-            $username=cleanInput($_POST["username"], $db->getConnection());
-            $password=cleanInput($_POST["password"], $db->getConnection());
-            $email=cleanInput($_POST["email"], $db->getConnection());
-            $nome=cleanInput($_POST["nome"], $db->getConnection());
-            $cognome=cleanInput($_POST["cognome"], $db->getConnection());
-            if($connOk){
-                if( $db->insertUtente($username, password_hash($password, PASSWORD_DEFAULT),$email,$nome,$cognome)){
-                    session_start();
-                    $_SESSION["email"]=$email;
-                    $_SESSION["firstname"]=$nome;
-                    $_SESSION["lastname"]=$cognome;
-                    $htmlToInsert .= "<p>Registrazione effettuata correttamente. Torna alla <a href=\"index.php\" lang=\"en\"> Home </a></p>";
-                }
-            }
-            else{
-                header("Location: 503.html");
-            }
-        }
     }else{
         header("Location: profilo.php");
     }
