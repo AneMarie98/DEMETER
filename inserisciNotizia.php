@@ -55,8 +55,8 @@
                             <textarea id=\"articolo\" name=\"articolo\" placeholder=\"Testo dell'articolo\"></textarea>   
                         </div>
                         <div class=\"form-linegroup\">
-                            <label for=\"urlImg\">Percorso dell'immagine :</label>
-                            <input type=\"text\" id=\"urlImg\" name=\"urlImg\" placeholder=\"img/news/img.png\" required >    
+                            <label for=\"urlImg\">Percorso dell'immagine all'interno della cartella img/news/:</label>
+                            <input type=\"text\" id=\"urlImg\" name=\"urlImg\" placeholder=\"image.png\" required >    
                         </div>
                         <div class=\"form-linegroup\">
                             <input type=\"submit\" value='Inserisci notizia' id='subformnot'>

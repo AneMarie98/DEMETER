@@ -133,10 +133,13 @@ function validateDescrizione(input){
     return true;
 }
 
+/**
+ * Accetta un percorso o un file
+ */
 function validateUrl(input){
     removeChildInput(input);
     input.value = cleanInput(input.value);
-    if(input.value.search(/^[a-zA-Z0-9._%-]+\/[a-zA-Z0-9._%-]+\/[a-zA-Z0-9._%-]+\.(png|jpg|jpeg|gif)$/)!=0){
+    if(input.value.search(/^(?:[a-zA-Z0-9._%-]+\/)*[a-zA-Z0-9._%-]+\.(png|jpg|jpeg|gif)$/)!=0){
         showError(input, input.value + " non è un percorso valido!"); 
 
         input.focus(); 
