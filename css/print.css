@@ -454,7 +454,7 @@ form#notizia textarea:focus{
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
-    padding: 0.5em; 
+    padding: 0.7em; 
     border: solid black;
 }
 
@@ -462,6 +462,7 @@ form#notizia textarea:focus{
     border: solid black;
     border-radius: 10px;
     padding: 0.5em;
+    width: 60%;
 }
 
 #impianto1-wrapper{
@@ -488,7 +489,7 @@ form#notizia textarea:focus{
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
-    padding: 0.5em;
+    padding: 0.7em;
     border: solid black; 
 }
 
@@ -497,6 +498,7 @@ form#notizia textarea:focus{
     border-radius: 10px;
     padding: 0.5em;
     margin-top: 1em;
+    width: 60%;
 }
 
 #impianto2-wrapper ul li {
@@ -519,7 +521,7 @@ form#notizia textarea:focus{
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
-    padding: 1em;
+    padding: 0.7em;
     border: solid black;
 }
 
@@ -528,6 +530,7 @@ form#notizia textarea:focus{
     border-radius: 10px;
     padding: 0.5em;
     margin-top: 1em;
+    width: 60%;
 }
 
 #impianto3-wrapper #impianti_img3{
@@ -546,7 +549,7 @@ form#notizia textarea:focus{
     text-align: left;
     background-color:var(--headerBgColor) ;
     border-radius: 10px;
-    padding: 1em;
+    padding: 0.7em;
     border: solid black;
 }
 
@@ -555,6 +558,7 @@ form#notizia textarea:focus{
     border-radius: 10px;
     padding: 0.5em;
     margin-top: 1em;
+    width: 60%;
 }
 
 #impianto4-wrapper ul li {
