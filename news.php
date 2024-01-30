@@ -37,11 +37,11 @@
             // <img src=\"./img/news/".$news["urlImg"]."\" alt=\"\" >
             $htmlToInsert .= 
             "<article>
+                <div id=\"news_".$news["idNotizia"]."\" class=\"newsImg\"></div>
                 <div class='newsArtText'>
                     <h3><a href=\"./detailedNews.php?id=".$news["idNotizia"]."\">". $news["titolo"] ."</a></h3>
                     <p> ". $news["descrizione"]."</p>
                 </div>
-                <div id=\"news_".$news["idNotizia"]."\" class=\"newsImg\"></div>
             </article> ";
             } 
        }else{

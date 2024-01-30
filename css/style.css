@@ -248,6 +248,7 @@ footer{
     margin:0em auto 2em;
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
 }
 
 #content.news article:last-of-type{
@@ -261,10 +262,13 @@ footer{
     height: 17em; 
     width: 35%;
     display: block;
+    border-radius: 20px;
+    margin:auto;
+    float: left;
 }
 
 .newsArtText{
-    width:48%;
+    width:50%;
 }
  
 #content.news h3{
@@ -277,7 +281,7 @@ footer{
 
 /* Detailed News */
 .detailedNewsImage{
-	background-image: url('../img/news/calendario.jpg');
+	background-image: url('../img/news/alluvione.jpg');
 }
 
 #content.detailedNews{

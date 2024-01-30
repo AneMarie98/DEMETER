@@ -34,7 +34,7 @@
 
 
 html{
-    font-size: 150%; /*??????*/
+    font-size: 125%; /*??????*/
     font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
@@ -185,30 +185,45 @@ footer{
     background-color: var(--articleBgColor);
     background-size:cover;
     background-position: center;
-    height: 15.5em; /*tmp*/
-    width: 23.25em;
+    height: 40vw;
+    width: 100%;
     display: block;
     margin: auto;
-    border-radius: 1em; 
+    border-radius: 20px 20px 0px 0px; 
+    border-bottom:1px solid black;
 }
 
 #content.news h3{
-    margin-top: 0.5em;
+    margin-top: 0em;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 
 #content.news article{
-    display: block;
-    border: 0.05em solid var(--headerTxtColor); 
-    border-radius: 0.5em; 
-    padding: 1em; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border: 2 solid black; 
+    border-radius: 20px; 
+    padding: 0em; 
     margin-bottom: 1em;
     background-color: var(--articleBgColor);
 }
 
+.newsArtText{
+    width:100%;
+    display: block;
+    padding:0.5em;
+}
+
+#content.news article p{
+    line-height: 1.5em;
+    font-size: 0.75em;
+    margin-top:0.25em;
+}
+
 /* Detailed News */
 .detailedNewsImage{
-	background-image: url('../img/news/calendario.jpg');
+	background-image: url('../img/news/alluvione.jpg');
 }
 
 #content.detailedNews{
