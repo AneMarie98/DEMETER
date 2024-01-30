@@ -30,7 +30,7 @@
                 header("Location: index.php");
             }
             else{
-                $errormsg="Username o Password non coincidono";
+                $errormsg="<p class='errorSuggestion'>Username o Password non coincidono</p>";
             }
         }
     }

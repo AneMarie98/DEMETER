@@ -208,7 +208,7 @@ footer{
 
 /* Detailed News */
 .detailedNewsImage{
-	background-image: url('../img/news/alluvione.jpg');
+	background-image: url('../img/news/calendario.jpg');
 }
 
 #content.detailedNews{
@@ -590,16 +590,8 @@ main#content .dashboard{
 
 /*PROFILO*/
 .profilo p{
-    padding: 1.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    width: 70%;
-    text-align: center;
-    background-color: var(--headerBgColor);
-    font-size: x-large;
+    font-size: 1em;
+    border:3px solid black;
 }
 
 /* CALENDARIO */
@@ -961,4 +953,12 @@ form#formlogin label:first-of-type{
 
 form#formlogin input#subformlogin{
     margin:1em 0em 1em 0em;
+}
+
+.profilo p{
+    padding:1.25em 0em;
+}
+
+.profilo a{
+    padding:1.25em 0em;
 }

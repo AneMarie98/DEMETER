@@ -36,10 +36,12 @@
         foreach ($newsFromDB as $news) {
             // <img src=\"./img/news/".$news["urlImg"]."\" alt=\"\" >
             $htmlToInsert .= 
-            "<article class >
-            <div id=\"news_".$news["idNotizia"]."\" class=\"newsImg\"></div>
-            <h3><a href=\"./detailedNews.php?id=".$news["idNotizia"]."\">". $news["titolo"] ."</a></h3>
-            <p> ". $news["descrizione"]."</p>
+            "<article>
+                <div class='newsArtText'>
+                    <h3><a href=\"./detailedNews.php?id=".$news["idNotizia"]."\">". $news["titolo"] ."</a></h3>
+                    <p> ". $news["descrizione"]."</p>
+                </div>
+                <div id=\"news_".$news["idNotizia"]."\" class=\"newsImg\"></div>
             </article> ";
             } 
        }else{
