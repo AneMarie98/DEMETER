@@ -501,7 +501,7 @@ footer{
 }
 
 #impianti_content p{
-    margin-top: 1em;
+    margin-top: 0.5em;
 }
 
 .impianti_menu-impianti {
@@ -511,7 +511,6 @@ footer{
 
 .impianti_menu-impianti h3{
     text-align: left;
-
 }
 
 .impianti_container ul li {
@@ -522,54 +521,67 @@ footer{
 #impianto1-wrapper h2 {
     text-align: left;
     background-color:var(--headerBgColor) ;
-    border-radius: 10px;
     padding: 1em; 
-    border: solid black;
+    margin:0;
+    border:0;
+    font-size: 1.2em;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 2px solid black;
 }
 
 #impianto1-wrapper h3 {
-    border: solid black;
-    border-radius: 10px;
-    padding: 0.5em;
+    padding: 1em;
+    text-align: left;
+    border:0;
+    border-radius: 0px;
+    border-top:2px solid black;
+    border-bottom:1px solid black;
+    margin-top:1.5em;
 }
 
 #impianto1-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
 }
 
 #impianto1-wrapper #impianti_img1{
-    border-radius: 10px;
     background-image: url(../img/impianti_img1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 1em;
     height: 300px;
+    border-radius: 0px 0px 20px 20px;
+    border-top:2px solid black;
+    margin-top:1em;
+    margin-bottom: 0;
 }
 
 #impianto2-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
 }
 
 #impianto2-wrapper h2 {
     text-align: left;
     background-color:var(--headerBgColor) ;
-    border-radius: 10px;
-    padding: 1em;
-    border: solid black; 
+    padding: 1em; 
+    margin:0;
+    border:0;
+    font-size: 1.2em;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 2px solid black;
 }
 
 #impianto2-wrapper h3 {
-    border: solid black;
-    border-radius: 10px;
-    padding: 0.5em;
-    margin-top: 1em;
+    padding: 1em;
+    text-align: left;
+    border:0;
+    border-radius: 0px;
+    border-top:2px solid black;
+    border-bottom:1px solid black;
+    margin-top:1.5em;
 }
 
 #impianto2-wrapper ul li {
@@ -578,67 +590,82 @@ footer{
 }
 
 #impianto2-wrapper #impianti_img2{
-    border-radius: 10px;
     background-image: url(../img/impianti_img2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 1em;
     height: 300px;
+    border-radius: 0px 0px 20px 20px;
+    border-top:2px solid black;
+    margin-top:1em;
+    margin-bottom: 0;
 }
 
 #impianto3-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
 }
 
 #impianto3-wrapper h2 {
     text-align: left;
     background-color:var(--headerBgColor) ;
-    border-radius: 10px;
-    padding: 1em;
-    border: solid black;
+    padding: 1em; 
+    margin:0;
+    border:0;
+    font-size: 1.2em;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 2px solid black;
 }
 
 #impianto3-wrapper h3 {
-    border: solid black;
-    border-radius: 10px;
-    padding: 0.5em;
-    margin-top: 1em;
+    padding: 1em;
+    text-align: left;
+    border:0;
+    border-radius: 0px;
+    border-top:2px solid black;
+    border-bottom:1px solid black;
+    margin-top:1.5em;
 }
 
 #impianto3-wrapper #impianti_img3{
-    border-radius: 10px;
     background-image: url(../img/impianti_rifiutipericolosi.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 1em;
     height: 300px;
+    border-radius: 0px 0px 20px 20px;
+    border-top:2px solid black;
+    margin-top:1em;
+    margin-bottom: 0;
 }
 
 #impianto4-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
+    margin-bottom:3em;
 }
 
 #impianto4-wrapper h2 {
     text-align: left;
     background-color:var(--headerBgColor) ;
-    border-radius: 10px;
-    padding: 1em;
-    border: solid black;
+    padding: 1em; 
+    margin:0;
+    border:0;
+    font-size: 1.2em;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 2px solid black;
 }
 
 #impianto4-wrapper h3 {
-    border: solid black;
-    border-radius: 10px;
-    padding: 0.5em;
-    margin-top: 1em;
+    padding: 1em;
+    text-align: left;
+    border:0;
+    border-radius: 0px;
+    border-top:2px solid black;
+    border-bottom:1px solid black;
+    margin-top:1.5em;
 }
 
 #impianto4-wrapper ul li {
@@ -647,27 +674,38 @@ footer{
 }
 
 #impianto4-wrapper #impianti_img4{
-    border-radius: 10px;
     background-image: url(../img/impianti_acque.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 1em;
     height: 300px;
+    border-radius: 0px 0px 20px 20px;
+    border-top:2px solid black;
+    margin-top:1em;
+    margin-bottom: 0;
+}
+
+#impianto1-wrapper,#impianto2-wrapper,#impianto3-wrapper,#impianto4-wrapper {
+    max-width: 100%;
+    text-align: left;
+    border:3px solid black;
+    border-radius: 20px;
+    grid-gap: 0em;
+    margin-top:2em; 
 }
 
 /*SMALTIMENTO*/
 #smaltimento_content-wrapper{
     display: grid; 
     grid-template-rows: repeat(1,0.4fr) ; 
-    grid-gap: 2em; 
     grid-template-areas: "t" "i" ;
+    margin-bottom:2em;
 }
 
 #smaltimento_content-wrapper h2 {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom:0.5em;
 }
 
 #smaltimento_content-wrapper h3 {
@@ -675,31 +713,44 @@ footer{
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    margin-top:0.5em;
+}
+
+#smaltimento_content-wrapper p {
+    padding: 0em 1em 1em 1em;
+    margin-bottom: 0em;
+}
+
+#smaltimento_content-wrapper ul {
+    margin-left:2em;
+    margin-bottom:1em;
 }
 
 #smaltimento_content-wrapper ul li {
     list-style: circle;
-    margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom:0.5em;
 }
 
 #smaltimento_content-wrapper #smaltimento_img1{
-    border-radius: 10px;
+    border-radius: 20px;
     background-image: url(../img/smaltimento.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     height: 300px;
 }
 
 /*RECUPERO E RACCOLTA*/
+#raccolta_content{
+    margin-bottom:2em;
+}
+
 #raccolta_content h2 {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 #raccolta_content h3 {
@@ -707,21 +758,34 @@ footer{
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    margin-top:0.5em;
+}
+
+#raccolta_content p {
+    padding: 0em 1em 1em 1em;
+    margin-bottom: 0em;
+}
+
+#raccolta_content ul {
+    margin-left:2em;
+    margin-bottom:1em;
 }
 
 #raccolta_content ul li {
     list-style: circle;
-    margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom:0.5em;
 }
 
 /*BONIFICHE*/
+#bonifiche_content{
+    margin-bottom:2em;
+}
+
 #bonifiche_content h2 {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 #bonifiche_content h3 {
@@ -729,21 +793,34 @@ footer{
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    margin-top:0.5em;
+}
+
+#bonifiche_content p {
+    padding: 0em 1em 1em 1em;
+    margin-bottom: 0em;
+}
+
+#bonifiche_content ul {
+    margin-left:2em;
+    margin-bottom:1em;
 }
 
 #bonifiche_content ul li {
     list-style: circle;
-    margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom:0.5em;
 }
 
 /* PRONTO INTERVENTO */
+#intervento_content{
+    margin-bottom:2em;
+}
+
 #intervento_content h2 {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 #intervento_content h3 {
@@ -751,14 +828,23 @@ footer{
     border: solid black;
     padding: 1em;
     border-radius: 10px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    margin-top:0.5em;
+}
+
+#intervento_content p {
+    padding: 0em 1em 1em 1em;
+    margin-bottom: 0em;
+}
+
+#intervento_content ul {
+    margin-left:2em;
+    margin-bottom:1em;
 }
 
 #intervento_content ul li {
     list-style: circle;
-    margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom:0.5em;
 }
 
 /*DOVE LO BUTTO */
@@ -1767,4 +1853,11 @@ table tbody .rowth{
 table tbody .rowth a{
     display: block;
     padding:0.5em;
+}
+
+.impianti_impianti-container p{
+    text-align: left;
+    font-size: 1em;
+    padding:0em 1.25em 0em 1.25em;
+    margin:0;
 }
