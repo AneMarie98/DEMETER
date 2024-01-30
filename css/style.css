@@ -1263,7 +1263,6 @@ main#content.p503 p {
 
 /* CALENDARIO */
 #calendar{
-    height:80vh;
     margin-top:2em;
     margin-bottom: 0.3em;
     display: grid;
@@ -1387,6 +1386,7 @@ main#content.p503 p {
     text-align: center;
     line-height: 2em;  
     margin-right:1em;
+    margin-bottom: 1em;
 }
 
 .bidsvuotlegend{

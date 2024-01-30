@@ -677,21 +677,22 @@ main#content .dashboard{
 
 .calElemToday p{
     float: left;
-    font-size: 1em;
+    font-size: 1.25em;
     line-height: 1.5em;
 }
 
 .calElem p{
     float: left;
-    font-size: 1em;
+    font-size: 1.25em;
     line-height: 1.5em;
 }
 
 .bidsvuot{
-    margin-top:0.4em;
+    margin-top:0.45em;
     border-radius: 1.25em;
-    font-size: 1.25em;
+    font-size: 1.5em;
     margin-right:0.5em;
+    margin-bottom: 0;
 }
 
 
@@ -776,7 +777,7 @@ footer p{
 }
 
 .legenditem{
-    font-size: 1em;
+    font-size: 1.25em;
     margin-bottom:0.5em;
 }
 
