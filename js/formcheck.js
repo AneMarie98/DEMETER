@@ -3,7 +3,6 @@
 */
 
 function cleanInput(value) {
-    console.log("sono qui"+ value);
     value = value.trim();   //rimuove gli spazi bianchi
     value = value.replace(/<(?!p|ul|li|\/p|\/ul|\/li)[^>]+>/g, ''); //rimuove tutti i tag html tranne <p>, <ul> e <li>
     value = value.replace(/&/g, '&amp;')
@@ -43,11 +42,11 @@ function caricamentoRegistrazione(){
     inputCognome.onblur = function (){validateNome(this)};
     let inputUsername = document.getElementById("username");
     inputUsername.onblur = function (){validateUsername(this)};
-    let inputEmail = document.getElementById("email");
+    let inputEmail = document.getElementById("mail");
     inputEmail.onblur = function (){validateEmail(this)};
     let inputPassword = document.getElementById("password");
     inputPassword.onblur = function (){validatePassword(this)};
-    let inputConfermaPassword = document.getElementById("confermaPassword");
+    let inputConfermaPassword = document.getElementById("confermapassword");
     inputConfermaPassword.onblur = function (){validateConfermaPassword(this)};
 }
 
