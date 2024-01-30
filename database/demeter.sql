@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Creato il: Gen 29, 2024 alle 21:09
--- Versione del server: 10.6.12-MariaDB-0ubuntu0.22.04.1
+-- Creato il: Gen 30, 2024 alle 09:15
+-- Versione del server: 10.6.16-MariaDB-0ubuntu0.22.04.1
 -- Versione PHP: 8.1.2-1ubuntu2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -97,7 +97,7 @@ CREATE TABLE `segnalazioni` (
 --
 
 INSERT INTO `segnalazioni` (`idSegnalazione`, `testo`, `indirizzo`, `dataS`, `inCarico`, `fkUtenteS`) VALUES
-(1, 'La presente segnalazione riguarda un presunto caso di smaltimento non corretto di rifiuti nella città di Padova. Il segnalante ha notato la presenza di rifiuti abbandonati, tra cui materiali plastici, carta e altri rifiuti non biodegradabili, in una zona dove il corretto smaltimento dei rifiuti dovrebbe essere garantito.La zona segnalata mostra segni evidenti di abbandono di rifiuti, con sacchi strappati, rifiuti sparsi e mancanza di contenitori adatti. Questo comportamento non solo compromette la pulizia e l\'aspetto dell\'area, ma potrebbe anche avere conseguenze ambientali negative, oltre a violare normative locali in materia di smaltimento dei rifiuti.', 'via Margherita Hack 25,Padova', '2024-01-24', 0, 4),
+(1, 'La presente segnalazione riguarda un presunto caso di smaltimento non corretto di rifiuti nella città di Padova. Il segnalante ha notato la presenza di rifiuti abbandonati, tra cui materiali plastici, carta e altri rifiuti non biodegradabili, in una zona dove il corretto smaltimento dei rifiuti dovrebbe essere garantito.La zona segnalata mostra segni evidenti di abbandono di rifiuti, con sacchi strappati, rifiuti sparsi e mancanza di contenitori adatti. Questo comportamento non solo compromette la pulizia e l\'aspetto dell\'area, ma potrebbe anche avere conseguenze ambientali negative, oltre a violare normative locali in materia di smaltimento dei rifiuti.', 'via Margherita Hack 25, Padova', '2024-01-24', 0, 4),
 (2, 'Presunte violazioni delle norme ambientali riguardo allo smaltimento dei rifiuti industriali presso un impianto situato all’indirizzo Via Dante 58 a Maserà di Padova. Ho osservato comportamenti sospetti che indicano possibili pratiche non conformi alla legislazione vigente in materia ambientale. L\'area circostante l\'impianto industriale presenta segni di smaltimento inappropriato di rifiuti, con la presenza di sostanze chimiche visibili e rifiuti industriali non trattati. Tale situazione solleva preoccupazioni per la potenziale contaminazione ambientale e la mancata aderenza alle procedure di gestione dei rifiuti pericolosi.', 'via Dante 58, Maserà di Padova', '2024-01-15', 0, 7),
 (3, 'Incontrollato abbandono di rifiuti nella città di Mestrino: ho notato la presenza di rifiuti vari, inclusi sacchetti di plastica, cartoni e altro, abbandonati lungo i marciapiedi e in prossimità di contenitori per la raccolta differenziata.', 'Via Albert Camus 99, Mestrino', '2024-01-13', 1, 2),
 (4, 'Possibile contaminazione ambientale che richiede un\'attenta bonifica presso Arquà Petrarca .Il segnalante ha notato segni evidenti di presenza di sostanze nocive nel suolo, con potenziali rischi per la salute umana e l\'ecosistema circostante.', 'Via Antonio Vivaldi 2, Arquà Petrarca', '2024-01-05', 0, 8);
