@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/mini.css" media="screen and (max-width:768px)">
         <link rel="stylesheet" href="css/print.css"  media="print">
+        <script src="functions/usernames.php"></script>
         <script src="js/formcheck.js"></script>
         <script src="js/togglemenu.js"></script>
     </head>
@@ -37,7 +38,7 @@
             <h2>Registrazione</h2>
             <p>Inserisci il tuo nome, cognome, indirizzo e-mail ed un username che contenga almeno 8 caratteri tra lettere maiuscole, minuscole, numeri o i simboli . _ % -.</p>
             <p>Inserisci una password di almeno 8 caratteri che contenga lettere maiuscole, minuscole, numeri o i simboli . _ % - $ & +. </p>
-            <form id="registrazione" action="#" method="post" onsubmit="return validazioneRegistrazione()">
+            <form id="registrazione" action="registrazione.php" method="post" onsubmit="return validazioneRegistrazione()">
                 <fieldset>
                     <legend>Registrazione</legend>
                         <div class="form-linegroup">

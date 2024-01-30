@@ -47,7 +47,8 @@ function caricamentoRegistrazione(){
     let inputPassword = document.getElementById("password");
     inputPassword.onblur = function (){validatePassword(this)};
     let inputConfermaPassword = document.getElementById("confermapassword");
-    inputConfermaPassword.onblur = function (){validateConfermaPassword(this)};
+    inputConfermaPassword.onblur = function (){validateConfermaPassword(document.getElementById("password"), this)};
+
 }
 
 
@@ -164,7 +165,7 @@ function validateNome(input){
 function validateEmail(input){
     removeChildInput(input);
     input.value = cleanInput(input.value);
-    if(input.value.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)!=0){
+    if(input.value.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)!=0 || emails.includes(input.value)){
         showError(input, input.value + " non è una email valida!"); 
 
         input.focus(); 
@@ -177,7 +178,7 @@ function validateEmail(input){
 function validateUsername(input){
     removeChildInput(input);
     input.value = cleanInput(input.value);
-    if(input.value.search(/^[a-zA-Z0-9._%\-]{8,}$/)!=0){
+    if(input.value.search(/^[a-zA-Z0-9._%\-]{8,}$/)!=0 || usernames.includes(input.value)){
         showError(input, input.value + " non è un username valido!"); 
 
         input.focus(); 
@@ -200,10 +201,11 @@ function validatePassword(input){
     return true;
 }
 
-function validateConfermaPassword(input){
+function validateConfermaPassword(password, input){
     removeChildInput(input);
+    password.value = cleanInput(password.value);
     input.value = cleanInput(input.value);
-    if(input.value==inputPassword.value){
+    if(input.value!=password.value){
         showError(input, "Le password non coincidono!"); 
 
         input.focus(); 
@@ -237,5 +239,5 @@ function validazioneFormRegistrazione(){
     let inputEmail = document.getElementById("email");
     let inputPassword = document.getElementById("password");
     let inputConfermaPassword = document.getElementById("confermaPassword");
-    return validateNome(inputNome) && validateNome(inputCognome) && validateUsername(inputUsername) && validateEmail(inputEmail) && validatePassword(inputPassword) && validateConfermaPassword(inputConfermaPassword);
+    return validateNome(inputNome) && validateNome(inputCognome) && validateUsername(inputUsername) && validateEmail(inputEmail) && validatePassword(inputPassword) && validateConfermaPassword(inputPassword, inputConfermaPassword);
 }

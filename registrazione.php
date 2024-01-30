@@ -26,9 +26,6 @@
             $email=cleanInput($_POST["email"], $db->getConnection());
             $nome=cleanInput($_POST["nome"], $db->getConnection());
             $cognome=cleanInput($_POST["cognome"], $db->getConnection());
-            $dataNascita=cleanInput($_POST["dataNascita"], $db->getConnection());
-            $residenza=cleanInput($_POST["residenza"], $db->getConnection());
-            $telefono=cleanInput($_POST["telefono"], $db->getConnection());
             if($connOk){
                 if( $db->insertUtente($username,$password,$email,$nome,$cognome)){
                     session_start();

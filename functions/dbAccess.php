@@ -277,6 +277,48 @@
         }
         return mysqli_affected_rows($this->connection) >0;
     }
+
+    public function getUsernames(){
+        $query = "SELECT username FROM utenti";
+        try{
+            $queryResult = mysqli_query($this -> connection, $query);
+            if(mysqli_num_rows($queryResult) != 0){
+                $result = array();
+                while($row = mysqli_fetch_array($queryResult)){
+                    $result[] = $row;
+                }
+                $queryResult -> free();
+                return $result;
+               
+            }else{
+                return null;
+            }
+        }catch(\Exception $e){
+
+        }
+        return null;
+    }
+
+    public function getEmails(){
+        $query = "SELECT email FROM utenti";
+        try{
+            $queryResult = mysqli_query($this -> connection, $query);
+            if(mysqli_num_rows($queryResult) != 0){
+                $result = array();
+                while($row = mysqli_fetch_array($queryResult)){
+                    $result[] = $row;
+                }
+                $queryResult -> free();
+                return $result;
+               
+            }else{
+                return null;
+            }
+        }catch(\Exception $e){
+
+        }
+        return null;
+    }
 }
 
 
