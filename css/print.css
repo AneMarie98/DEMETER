@@ -976,6 +976,54 @@ form#segnalazione textarea:focus{
     margin:1em auto 1em;
 }
 
+/*Registrazione*/
+
+form#registrazione{
+    margin-bottom: 0.5em;
+}
+
+form#registrazione label{
+    display: block;
+    padding-left:1em;
+    padding-right:1em;
+    font-size: 1em;
+    margin-top:0.5em;
+}
+
+form#registrazione fieldset{
+    border-radius: 0px 20px 20px 20px;
+    padding:1em;
+    width:80%;
+}
+
+form#registrazione legend{
+    padding-left:0.25em;
+}
+
+form#registrazione input{
+    margin:0;
+    width:100%;
+    font-size: 1em;
+    padding:0.7em;
+    border:2px solid black;
+}
+
+form#registrazione input#subformreg{
+    margin:0.7em 0em 0.7em 0em;
+    cursor: pointer;
+}
+
+.FormRegistrazione p{
+    max-width: 1024px;
+    margin:auto;
+    text-align: justify;
+}
+
+.FormRegistrazione>p:last-of-type{
+    margin-bottom: 1em;
+}
+
+
 /*DASHBOARD*/
 .dashboard div.dashboard-button {
     text-align: center;
