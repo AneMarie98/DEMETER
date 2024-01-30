@@ -247,20 +247,20 @@ main{
 }
 
 form#notizia{
-    margin-bottom: 3em;
+    margin-bottom: 0.5em;
 }
 
 form#notizia label{
     display: block;
     padding-left:1em;
     font-size: 1em;
-    margin-top:1em;
+    margin-top:0.5em;
 }
 
 form#notizia fieldset{
     border-radius: 0px 20px 20px 20px;
     padding:1em;
-    width:50%;
+    width:80%;
 }
 
 form#notizia legend{
@@ -271,17 +271,17 @@ form#notizia input{
     margin:0;
     width:100%;
     font-size: 1em;
-    padding:1em;
+    padding:0.7em;
     border:2px solid black;
 }
 
 form#notizia input#subformnot{
-    margin:2em 0em 2em 0em;
+    margin:0.7em 0em 0.7em 0em;
     cursor: pointer;
 }
 
 form#notizia input#data{
-    padding:1.231em;
+    padding:0.7em;
 }
 
 form#notizia textarea{
@@ -289,7 +289,7 @@ form#notizia textarea{
     width:100%;
     border-radius: 10px;
     padding:0.5em;
-    height:20vh;
+    height:7vh;
     background-color: var(--bgButtonColor);
     border:2px solid black;
     font-size: 1em;
@@ -781,7 +781,7 @@ form#notizia textarea:focus{
     padding: 2em;
     display: flex;
     flex-direction: column;
-    margin: 1em; 
+    margin: 0 1em 1em 1em; 
     margin-bottom: 2em;
     width: 60%;
 }
@@ -892,14 +892,14 @@ main#content.segnalazioni h2{
 /*Inserisci Segnalazione*/
 
 form#segnalazione{
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 form#segnalazione label{
     display: block;
     padding-left:1em;
     font-size: 1em;
-    margin-top:0em;
+    margin-top:0.5em;
 }
 
 form#segnalazione fieldset{
@@ -1131,7 +1131,7 @@ footer{
     background-color: var(--footerBgColor);
     color: var(--footerTxtColor);
     padding: 1.0em;
-    text-align: center;
+    text-align: justify;
     margin: auto;
     margin-bottom: 0px;
     width: 80%;
