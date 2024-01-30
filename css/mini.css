@@ -564,8 +564,11 @@ section.impianti_impianti {
 }
 
 .segnalazioni td.inCarico {
-    font-size: 2em;
-    height: 2em; 
+    font-size: 3em;
+}
+
+.segnalazioni td.NonInCarico {
+    font-size: 3em;
 }
 
 /*LOGIN*/
@@ -983,4 +986,12 @@ form#registrazione div.form-linegroup:first-of-type label{
 
 form#registrazione input#subformreg{
     margin:1em 0em 1em 0em;
+}
+
+table tbody tr:first-of-type,table tbody tr:first-of-type .rowth{
+    border-radius: 10px 10px 0px 0px;
+}
+
+table tbody tr:last-of-type,table tbody tr:last-of-type td:last-of-type{
+    border-radius: 0px 0px 10px 10px;
 }

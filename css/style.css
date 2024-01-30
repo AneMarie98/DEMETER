@@ -981,8 +981,8 @@ main#content.segnalazioni h2{
 .segnalazioni table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    margin-bottom: 3em;
+    margin-top: 1em;
 }
   
 .segnalazioni th, .segnalazioni td {
@@ -1023,7 +1023,7 @@ main#content.segnalazioni h2{
 
 .segnalazioni td a{
     display: block;
-    height: 1em;
+    height: 100%;
 }
 
 .segnalazioni td.NonInCarico {
@@ -1537,6 +1537,7 @@ form#segnalazione{
 form#segnalazione label{
     display: block;
     padding-left:1em;
+    padding-right:1em;
     font-size: 1em;
     margin-top:1em;
 }
@@ -1622,6 +1623,7 @@ form#notizia{
 form#notizia label{
     display: block;
     padding-left:1em;
+    padding-right:1em;
     font-size: 1em;
     margin-top:1em;
 }
@@ -1675,6 +1677,7 @@ form#formlogin{
 form#formlogin label{
     display: block;
     padding-left:1em;
+    padding-right:1em;
     font-size: 1em;
     margin-top:1em;
     text-align: left;
@@ -1715,6 +1718,7 @@ form#registrazione{
 form#registrazione label{
     display: block;
     padding-left:1em;
+    padding-right:1em;
     font-size: 1em;
     margin-top:1em;
 }
@@ -1750,4 +1754,13 @@ form#registrazione input#subformreg{
 
 .FormRegistrazione>p:last-of-type{
     margin-bottom: 1em;
+}
+
+table tbody .rowth{
+    padding:0em;
+}
+
+table tbody .rowth a{
+    display: block;
+    padding:0.5em;
 }

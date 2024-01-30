@@ -25,7 +25,7 @@
                  foreach ($segnalazioniFromDB as $segnalazione) {
                      $htmlToInsert .= "
                      <tr>
-                         <th scope= \"row\"><a href=\"detailedSegnalazione.php?id=".$segnalazione["idSegnalazione"]."\">".$segnalazione["idSegnalazione"]."</a></th>
+                         <th scope= \"row\" class='rowth'><a href=\"detailedSegnalazione.php?id=".$segnalazione["idSegnalazione"]."\">".$segnalazione["idSegnalazione"]."</a></th>
                          <td data-title=\"Data\">  <time datetime=\"".$segnalazione["dataS"]."\">".convertDateFormatString($segnalazione["dataS"])."</time></td>
                          <td data-title=\"Indirizzo\"><address>".$segnalazione["indirizzo"]."</address></td>
                          <td";
