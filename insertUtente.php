@@ -18,10 +18,10 @@
             if($connOk){
                 if( $db->insertUtente($username, password_hash($password, PASSWORD_DEFAULT),$email,$nome,$cognome)){
                     session_start();
-                    echo "qui";
                     $_SESSION["email"]=$email;
                     $_SESSION["firstname"]=$nome;
                     $_SESSION["lastname"]=$cognome;
+                    $_SESSION["username"]=$username;
                     header("Location: profilo.php");
                 }
             }

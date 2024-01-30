@@ -238,7 +238,8 @@
     }
 
     public function insertUtente($username,$password,$email,$nome,$cognome){
-        $query="INSERT INTO utenti (username, password, email, nome, cognome) VALUES ('$username','$password','$email','$nome','$cognome')";
+        $query="INSERT INTO utenti (username, password, email, nome, cognome, admin) VALUES ('$username','$password','$email','$nome','$cognome', '0')";
+
         try{
             $queryResult = mysqli_query($this -> connection, $query);
         }catch(\Exception $e){
@@ -249,7 +250,7 @@
 
     public function insertNotizia($titolo,$articolo,$descrizione,$urlImg,$dataN){
         $query="INSERT INTO notizie (titolo, articolo, descrizione, urlImg, dataN) VALUES (\"$titolo\",\"$articolo\",\"$descrizione\", \"$urlImg\",\"$dataN\")";
-        echo $query;
+
         try{
             $queryResult = mysqli_query($this -> connection, $query);
         }catch(\Exception $e){
