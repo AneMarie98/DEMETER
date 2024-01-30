@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Creato il: Gen 30, 2024 alle 13:09
+-- Creato il: Gen 30, 2024 alle 17:10
 -- Versione del server: 10.6.16-MariaDB-0ubuntu0.22.04.1
 -- Versione PHP: 8.1.2-1ubuntu2.14
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `dgusatto`
 --
+CREATE DATABASE IF NOT EXISTS `dgusatto` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `dgusatto`;
 
 -- --------------------------------------------------------
 
@@ -27,14 +29,15 @@ SET time_zone = "+00:00";
 -- Struttura della tabella `notizie`
 --
 
-CREATE TABLE `notizie` (
-  `idNotizia` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `notizie` (
+  `idNotizia` int(11) NOT NULL AUTO_INCREMENT,
   `titolo` varchar(255) NOT NULL,
   `articolo` text NOT NULL,
   `descrizione` text NOT NULL,
   `dataN` date NOT NULL,
-  `urlImg` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `urlImg` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idNotizia`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dump dei dati per la tabella `notizie`
@@ -52,9 +55,11 @@ INSERT INTO `notizie` (`idNotizia`, `titolo`, `articolo`, `descrizione`, `dataN`
 -- Struttura della tabella `rifiuti`
 --
 
-CREATE TABLE `rifiuti` (
+CREATE TABLE IF NOT EXISTS `rifiuti` (
   `nome` varchar(255) NOT NULL,
-  `fkSvuotB` varchar(255) NOT NULL
+  `fkSvuotB` varchar(255) NOT NULL,
+  PRIMARY KEY (`nome`,`fkSvuotB`),
+  KEY `fkSvuotB` (`fkSvuotB`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -63,19 +68,46 @@ CREATE TABLE `rifiuti` (
 
 INSERT INTO `rifiuti` (`nome`, `fkSvuotB`) VALUES
 ('barattolo di vetro', 'Vetro'),
+('bicchieri di vetro', 'Vetro'),
 ('bottiglia di plastica', 'Plastica '),
 ('bottiglia di vetro', 'Vetro'),
 ('busta di carta', 'Carta'),
+('carta alluminio', 'Secco'),
+('carta oleata', 'Secco'),
+('carta stagnola', 'Secco'),
+('cartone della pizza pulito', 'Carta'),
+('cartone della pizza sporco (solo le parti unte/sporche)', 'Umido'),
+('cartucce d\'inchiostro', 'Appositi Contenitori'),
 ('cd', 'Secco '),
 ('contenitore di plastica', 'Plastica'),
+('copertina di libro', 'Carta'),
+('cotone idrofilo', 'Secco'),
+('fazzoletti di carta usati', 'Umido'),
+('fogli di carta stampati', 'Carta'),
 ('fondi di caffè', 'Umido '),
 ('guscio di uova', 'Umido'),
+('indumenti usati', 'Appositi Contenitori'),
+('lampadina bruciata', 'Secco'),
+('medicinali scaduti', 'Appositi Contenitori'),
+('pannolino usa e getta', 'Secco'),
+('penna esausta', 'Secco'),
 ('pezzo di carta', 'Carta'),
+('piatti di carta', 'Carta'),
+('pile esauste', 'Appositi Contenitori'),
+('rasoio usa e getta', 'Secco'),
 ('sacchetto di plastica', 'Plastica'),
 ('scarti alimentari', 'Umido'),
-('scatola della pizza', 'Carta'),
 ('scatola di cartone', 'Carta '),
-('vasetto di vetro', 'Vetro ');
+('schiuma da barba vuota', 'Plastica'),
+('scontrino', 'Secco'),
+('spazzolino da denti esausto', 'Secco'),
+('spugna da cucina', 'Secco'),
+('tappo di plastica', 'Plastica'),
+('tappo di sughero', 'Secco'),
+('tovaglioli di carta usati', 'Umido'),
+('tubo di dentifricio vuoto', 'Plastica'),
+('vasetto di vetro', 'Vetro '),
+('vecchio giornale', 'Carta');
 
 -- --------------------------------------------------------
 
@@ -83,14 +115,16 @@ INSERT INTO `rifiuti` (`nome`, `fkSvuotB`) VALUES
 -- Struttura della tabella `segnalazioni`
 --
 
-CREATE TABLE `segnalazioni` (
-  `idSegnalazione` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `segnalazioni` (
+  `idSegnalazione` int(11) NOT NULL AUTO_INCREMENT,
   `testo` text NOT NULL,
   `indirizzo` varchar(255) NOT NULL,
   `dataS` date NOT NULL,
   `inCarico` tinyint(1) NOT NULL DEFAULT 0,
-  `fkUtenteS` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `fkUtenteS` int(11) NOT NULL,
+  PRIMARY KEY (`idSegnalazione`),
+  KEY `fkUtenteS` (`fkUtenteS`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dump dei dati per la tabella `segnalazioni`
@@ -108,11 +142,12 @@ INSERT INTO `segnalazioni` (`idSegnalazione`, `testo`, `indirizzo`, `dataS`, `in
 -- Struttura della tabella `svuotamenti`
 --
 
-CREATE TABLE `svuotamenti` (
+CREATE TABLE IF NOT EXISTS `svuotamenti` (
   `bidone` varchar(255) NOT NULL,
   `giorno` tinyint(4) NOT NULL,
   `intervallo` tinyint(4) NOT NULL,
-  `giornoRif` date NOT NULL
+  `giornoRif` date NOT NULL,
+  PRIMARY KEY (`bidone`,`giorno`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -120,6 +155,7 @@ CREATE TABLE `svuotamenti` (
 --
 
 INSERT INTO `svuotamenti` (`bidone`, `giorno`, `intervallo`, `giornoRif`) VALUES
+('Appositi Contenitori', 2, 1, '2024-01-02'),
 ('Carta', 4, 2, '2023-12-07'),
 ('Plastica', 4, 2, '2023-12-14'),
 ('Secco', 5, 2, '2023-12-01'),
@@ -133,15 +169,18 @@ INSERT INTO `svuotamenti` (`bidone`, `giorno`, `intervallo`, `giornoRif`) VALUES
 -- Struttura della tabella `utenti`
 --
 
-CREATE TABLE `utenti` (
-  `idUtente` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `utenti` (
+  `idUtente` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
   `cognome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `admin` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `admin` tinyint(1) NOT NULL,
+  PRIMARY KEY (`idUtente`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dump dei dati per la tabella `utenti`
@@ -154,66 +193,6 @@ INSERT INTO `utenti` (`idUtente`, `nome`, `cognome`, `email`, `username`, `passw
 (4, 'Sheldon', 'Cooper', 'scooper@caltech.com', 'scooper', '$2y$10$R5Lb5IMhbhGt/N0qDCTbyenDVP7M6NgGIik3FXcSNjnPP3C/ghvI6', 0),
 (7, 'Mitchell', 'Pritchett', 'mprichett@hotmail.com', 'mprichett', '$2y$10$I23ySqeCxBUZFnPJfL3GauPQR5KfhBgUUf2/VQkkDnM3CAZipZzmO', 0),
 (8, 'Penelope', 'Garcia', 'garcia@bau.com', 'garciap', '$2y$10$0w5eJITUCzL/f85hxZHxsuw5WFDgkfe4H1a6e.Gopfw.PN/3yVpHC', 0);
-
---
--- Indici per le tabelle scaricate
---
-
---
--- Indici per le tabelle `notizie`
---
-ALTER TABLE `notizie`
-  ADD PRIMARY KEY (`idNotizia`);
-
---
--- Indici per le tabelle `rifiuti`
---
-ALTER TABLE `rifiuti`
-  ADD PRIMARY KEY (`nome`,`fkSvuotB`),
-  ADD KEY `fkSvuotB` (`fkSvuotB`);
-
---
--- Indici per le tabelle `segnalazioni`
---
-ALTER TABLE `segnalazioni`
-  ADD PRIMARY KEY (`idSegnalazione`),
-  ADD KEY `fkUtenteS` (`fkUtenteS`);
-
---
--- Indici per le tabelle `svuotamenti`
---
-ALTER TABLE `svuotamenti`
-  ADD PRIMARY KEY (`bidone`,`giorno`);
-
---
--- Indici per le tabelle `utenti`
---
-ALTER TABLE `utenti`
-  ADD PRIMARY KEY (`idUtente`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `username` (`username`);
-
---
--- AUTO_INCREMENT per le tabelle scaricate
---
-
---
--- AUTO_INCREMENT per la tabella `notizie`
---
-ALTER TABLE `notizie`
-  MODIFY `idNotizia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT per la tabella `segnalazioni`
---
-ALTER TABLE `segnalazioni`
-  MODIFY `idSegnalazione` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT per la tabella `utenti`
---
-ALTER TABLE `utenti`
-  MODIFY `idUtente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Limiti per le tabelle scaricate
