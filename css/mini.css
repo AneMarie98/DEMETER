@@ -890,6 +890,7 @@ footer{
 
 #searchResults dl{
     border-bottom:1px solid black;
+    padding:0.25em;
 }
 
 #searchResults dl:first-of-type{
