@@ -165,7 +165,7 @@
 
 
         public function getSvuotDays(){
-            $query="SELECT * FROM svuotamenti";
+            $query="SELECT * FROM svuotamenti WHERE bidone != 'Appositi Contenitori' ";
             try{
                 $queryResult = mysqli_query($this -> connection, $query);
                 if(mysqli_num_rows($queryResult) != 0){
