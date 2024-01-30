@@ -238,6 +238,67 @@ main{
     margin-left: 1em;
 }
 
+/*Inserisci Notizia*/
+.FormNotizia p{
+    max-width: 1024px;
+    margin:auto;
+    text-align: justify;
+    margin-bottom:1em;
+}
+
+form#notizia{
+    margin-bottom: 3em;
+}
+
+form#notizia label{
+    display: block;
+    padding-left:1em;
+    font-size: 1em;
+    margin-top:1em;
+}
+
+form#notizia fieldset{
+    border-radius: 0px 20px 20px 20px;
+    padding:1em;
+    width:50%;
+}
+
+form#notizia legend{
+    padding-left:0.25em;
+}
+
+form#notizia input{
+    margin:0;
+    width:100%;
+    font-size: 1em;
+    padding:1em;
+    border:2px solid black;
+}
+
+form#notizia input#subformnot{
+    margin:2em 0em 2em 0em;
+    cursor: pointer;
+}
+
+form#notizia input#data{
+    padding:1.231em;
+}
+
+form#notizia textarea{
+    resize: none;
+    width:100%;
+    border-radius: 10px;
+    padding:0.5em;
+    height:20vh;
+    background-color: var(--bgButtonColor);
+    border:2px solid black;
+    font-size: 1em;
+}
+
+form#notizia textarea:focus{
+    outline: 3px solid #007bff;
+}
+
 /* SERVIZI */
 
 #servizi_content.servizi h2 {
@@ -720,8 +781,8 @@ main{
     padding: 2em;
     display: flex;
     flex-direction: column;
-    margin: 1.5em; 
-    margin-bottom: 5em;
+    margin: 1em; 
+    margin-bottom: 2em;
     width: 60%;
 }
 
@@ -794,20 +855,6 @@ main#content.segnalazioni h2{
     padding: 0.5em;
 }
 
-/* versione con i content invece dei background image
-.segnalazioni td.inCarico {
-    position: relative;
-    content: url(../img/icons/yes.png);
-    background-image: none;
-    font-size: 1em;
-
-    width: 100%;
-    height: 3em;
-    padding-left: 33%;
-    padding-right:  33%;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}*/
 
 .segnalazioni td.inCarico {
     position: relative;
@@ -842,20 +889,68 @@ main#content.segnalazioni h2{
     height: 1em; 
 }
 
-/* versione con i content invece dei background image
-.segnalazioni td.NonInCarico {
-    position: relative;
-    content: url(../img/icons/no.png);
-    background-image: none;
-    font-size: 1em;
+/*Inserisci Segnalazione*/
 
-    width: 100%;
-    height: 3em;
-    padding-left: 33%;
-    padding-right:  33%;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}*/
+form#segnalazione{
+    margin-bottom: 1em;
+}
+
+form#segnalazione label{
+    display: block;
+    padding-left:1em;
+    font-size: 1em;
+    margin-top:0em;
+}
+
+form#segnalazione fieldset{
+    border-radius: 0px 20px 20px 20px;
+    padding:1em;
+    width:80%;
+}
+
+form#segnalazione legend{
+    padding-left:0.25em;
+}
+
+form#segnalazione input{
+    margin:0;
+    width:100%;
+    font-size: 1em;
+    padding:0.7em;
+    border:2px solid black;
+}
+
+form#segnalazione input#subformsegn{
+    margin:0.7em 0em 0.7em 0em;
+    cursor: pointer;
+}
+
+form#segnalazione input#data{
+    padding:0.7em;
+}
+
+form#segnalazione textarea{
+    resize: none;
+    width:100%;
+    border-radius: 10px;
+    padding:0.5em;
+    height:7vh;
+    background-color: var(--bgButtonColor);
+    border:2px solid black;
+    font-size: 1em;
+}
+
+form#segnalazione textarea:focus{
+    outline: 3px solid #007bff;
+}
+
+.FormSegnalazione p{
+    max-width: 1024px;
+    margin:auto;
+    text-align: justify;
+    margin-bottom:1em;
+}
+
 
 /*DASHBOARD*/
 .dashboard div.dashboard-button {
