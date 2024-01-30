@@ -295,10 +295,6 @@ form#notizia textarea{
     font-size: 1em;
 }
 
-form#notizia textarea:focus{
-    outline: 3px solid #007bff;
-}
-
 /* SERVIZI */
 
 #servizi_content.servizi h2 {
@@ -804,6 +800,7 @@ input{
     background-color: var(--headerBgColor);
 }
 
+
 input#loginemail {
     padding: 1.5em;
     border-radius: 10px;
@@ -816,15 +813,6 @@ input#loginpass {
     border-radius: 10px;
     background-color: white;
     color: var(--txtColor);
-}
-
-input:hover{
-    background-color: var(--visitedLinkColor);
-    color: var(--bgColor);
-}
-
-input:focus{
-    outline: 3px solid #007bff;
 }
 
 
@@ -851,7 +839,7 @@ main#content.segnalazioni h2{
     background-color: #f2f2f2;
 }
 
-.segnalazioni tr:hover, .segnalazioni thead {
+.segnalazioni thead {
     background-color: #e5e5e5;
 }
 
@@ -942,10 +930,6 @@ form#segnalazione textarea{
     background-color: var(--bgButtonColor);
     border:2px solid black;
     font-size: 1em;
-}
-
-form#segnalazione textarea:focus{
-    outline: 3px solid #007bff;
 }
 
 .FormSegnalazione p{
@@ -1203,6 +1187,7 @@ main#content .dashboard h2{
 }
 
 /*footer*/
+
 footer{
     background-color: var(--footerBgColor);
     color: var(--footerTxtColor);
@@ -1213,6 +1198,15 @@ footer{
     width: 80%;
     border-top: 3px solid var(--footerTxtColor); 
     border-radius: 3px;
+}
+
+.footericons{
+    text-indent: -999em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 1.5em;
+    color:black;
+    background-position: center;
 }
 
 #partner_boseum{
@@ -1233,14 +1227,8 @@ footer{
     margin: 0 0.5em;
 }
 
-
-.footericons{
-    text-indent: -999em;
-    background-repeat: no-repeat;
-    background-size: contain;
+footer p{
     line-height: 1.5em;
-    color:black;
-    background-position: center;
 }
 
 .footericons a{
@@ -1248,18 +1236,15 @@ footer{
 }
 
 #facebook{
-    content: url("../img/icons/facebook.png");
-    background-image: none;
+    background-image: url("../img/icons/facebook.png");
 }
 
 #instagram{
-    content: url("../img/icons/instagram.png");
-    background-image: none;
+    background-image: url("../img/icons/instagram.png");
 }
 
 #x{
-    content: url("../img/icons/x.png");
-    background-image: none;
+    background-image: url("../img/icons/x.png");
 }
 
 #socialList{
@@ -1272,10 +1257,10 @@ footer{
 
 #socialList li{
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    margin: 0 1.25em;
+    width: 15%;
+    margin: 0 0.5em;
 }
+
 /*ECCEZIONI CALENDARIO*/
 .eccezionicalendario li{
     border: 1px solid black;
