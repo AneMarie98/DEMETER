@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Creato il: Gen 30, 2024 alle 09:15
+-- Creato il: Gen 30, 2024 alle 13:09
 -- Versione del server: 10.6.16-MariaDB-0ubuntu0.22.04.1
 -- Versione PHP: 8.1.2-1ubuntu2.14
 
@@ -148,12 +148,12 @@ CREATE TABLE `utenti` (
 --
 
 INSERT INTO `utenti` (`idUtente`, `nome`, `cognome`, `email`, `username`, `password`, `admin`) VALUES
-(1, 'Olivia', 'Benson', 'obenson@demeter.com', 'admin', 'admin', 1),
-(2, 'Lorelai', 'Gilmore', 'lorelai.gilmore@gmail.com', 'lgilmore', 'lgilmore', 0),
-(3, 'Michele', 'Liguori', 'liguorim@gmail.com', 'user', 'user', 0),
-(4, 'Sheldon', 'Cooper', 'scooper@caltech.com', 'scooper', 'scooper', 0),
-(7, 'Mitchell', 'Pritchett', 'mprichett@hotmail.com', 'mprichett', 'mprichett', 0),
-(8, 'Penelope', 'Garcia', 'garcia@bau.com', 'garciap', 'garciap', 0);
+(1, 'Olivia', 'Benson', 'obenson@demeter.com', 'admin', '$2y$10$AOUDqzrtO0w6skGAmCLt3esoQxfRiSVRbItaNjdErWGoc5PqZKNCm', 1),
+(2, 'Lorelai', 'Gilmore', 'lorelai.gilmore@gmail.com', 'lgilmore', '$2y$10$9r8REZQWZqOvzPIhOl1ZSOnS3pOi6fypBx6WXdFAEavO35EcsShHS', 0),
+(3, 'Michele', 'Liguori', 'liguorim@gmail.com', 'user', '$2y$10$dwUE22FJbcxjK/n1C2E.QuM5SMpm2aSCAtaEypnJwGZqu44HyGpS.', 0),
+(4, 'Sheldon', 'Cooper', 'scooper@caltech.com', 'scooper', '$2y$10$R5Lb5IMhbhGt/N0qDCTbyenDVP7M6NgGIik3FXcSNjnPP3C/ghvI6', 0),
+(7, 'Mitchell', 'Pritchett', 'mprichett@hotmail.com', 'mprichett', '$2y$10$I23ySqeCxBUZFnPJfL3GauPQR5KfhBgUUf2/VQkkDnM3CAZipZzmO', 0),
+(8, 'Penelope', 'Garcia', 'garcia@bau.com', 'garciap', '$2y$10$0w5eJITUCzL/f85hxZHxsuw5WFDgkfe4H1a6e.Gopfw.PN/3yVpHC', 0);
 
 --
 -- Indici per le tabelle scaricate
