@@ -1,3 +1,17 @@
+/*
+* Nella barra di ricerca del rifiuto, se si preme invio, viene eseguita la ricerca
+*/
+document.addEventListener('DOMContentLoaded', (event) => {
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+    
+    searchInput.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            searchButton.click();
+        }
+    });
+});
+
 function assignDay(num) {
     let dayofweek = "";
     switch (num) {
