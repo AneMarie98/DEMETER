@@ -1,10 +1,11 @@
 function createCalendar(){
     const td=new Date();
     const tda=new Date();
+    const firstofmonth=new Date(tda.getFullYear(),tda.getMonth(),"01");
     document.getElementById("calMonth").innerHTML=getMY(td);
     document.getElementById("calMonth").dataset.yyyy=td.getFullYear();
     document.getElementById("calMonth").dataset.mm=(td.getMonth()+1);
-    setCalArrows(getMY(new Date(tda.setMonth(tda.getMonth()-1))),getMY(new Date(tda.setMonth(tda.getMonth()+2))));
+    setCalArrows(getMY(new Date(firstofmonth.setMonth(firstofmonth.getMonth()-1))),getMY(new Date(firstofmonth.setMonth(firstofmonth.getMonth()+2))));
     let startingB=getStartingB(td.getFullYear(),td.getMonth());
     let daysinMonth=daysInMonth(td.getFullYear(),td.getMonth());
     for(let i=startingB;i<=daysinMonth+startingB-1;i++){
