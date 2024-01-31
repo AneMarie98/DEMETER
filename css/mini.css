@@ -1101,3 +1101,49 @@ table tbody tr:last-of-type,table tbody tr:last-of-type td:last-of-type{
     padding: 0em;
     padding-top:1em;
 }
+
+main#content.p404{
+    background-color: var(--bgColor);
+    margin: 0 auto;
+}
+
+main#content.p404 h1{
+    text-align: center;
+    background-color: var(--headerBgColor);
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1em;
+    line-height: 1.5em;
+    font-size: 1.25em;
+    margin-top:2em;
+}
+
+main#content.p404 p {
+    text-align: left;
+    padding: 0.5em;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+main#content.p503{
+    background-color: var(--bgColor);
+    margin: 0 auto;
+}
+
+main#content.p503 h1{
+    text-align: center;
+    background-color: var(--headerBgColor);
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1em;
+    line-height: 1.5em;
+    font-size: 1.25em;
+    margin-top:2em;
+}
+
+main#content.p503 p {
+    text-align: left;
+    padding: 0.5em;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}

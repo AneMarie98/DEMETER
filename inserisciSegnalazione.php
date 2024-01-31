@@ -19,8 +19,8 @@
         $profilelink="profilo.php";
 
         if(isset($_SESSION["admin"])){
-            $profile="Dashboard";
-        $profilelink="dashboard.php";
+            $profile="<span lang='en'>Dashboard</span>";
+            $profilelink="dashboard.php";
         }
 
 

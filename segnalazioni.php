@@ -17,7 +17,7 @@
 
     if(isset($_SESSION["email"])){
         if(isset($_SESSION["admin"])&&$_SESSION["admin"]){
-            $profile="Dashboard";
+            $profile="<span lang='en'>Dashboard</span>";
             $profilelink="dashboard.php";
             if($connOk){
                 $segnalazioniFromDB = $db->getSegnalazioni();

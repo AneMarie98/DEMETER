@@ -11,7 +11,7 @@
 
     }else{
         if(isset($_SESSION["admin"])){
-        $profile="Dashboard";
+        $profile="<span lang='en'>Dashboard</span>";
         $profilelink="dashboard.php";
         $paginaHTML=str_replace("{profile}",$profile,$paginaHTML);
         $paginaHTML=str_replace("{profilelink}",$profilelink,$paginaHTML);

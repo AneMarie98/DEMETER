@@ -1258,7 +1258,7 @@ main#content.p503 h1{
 
 main#content.p503 p {
     text-align: center;
-    padding: 2em;
+    padding: 1.5em;
 }
 
 /* CALENDARIO */
@@ -1676,7 +1676,7 @@ form#segnalazione textarea:focus{
 .FormSegnalazione p{
     max-width: 1024px;
     margin:auto;
-    text-align: center;
+    text-align: left;
     margin-bottom:1em;
 }
 
@@ -1701,8 +1701,12 @@ form#segnalazione textarea:focus{
 .FormNotizia p{
     max-width: 1024px;
     margin:auto;
-    text-align: center;
+    text-align: left;
     margin-bottom:1em;
+}
+
+.FormNotizia p:first-of-type{
+    text-align: center;
 }
 
 form#notizia{
@@ -1838,7 +1842,7 @@ form#registrazione input#subformreg{
 .FormRegistrazione p{
     max-width: 1024px;
     margin:auto;
-    text-align: center;
+    text-align: left;
 }
 
 .FormRegistrazione>p:last-of-type{
