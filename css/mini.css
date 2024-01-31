@@ -201,7 +201,7 @@ footer{
 #content.news article{
     display: flex;
     flex-direction: column;
-    border: 2 solid black; 
+    border: 2px solid black; 
     border-radius: 20px; 
     padding: 0em; 
     margin-bottom: 1em;
