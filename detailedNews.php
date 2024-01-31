@@ -13,6 +13,11 @@
     $htmlToInsert = "";
     $paginaHTML=file_get_contents("templates/detailedNewsTemplate.html");
 
+    if(!isset($_GET["id"])){
+        header("Location: news.php");
+    }
+
+
     if(!isset($_SESSION["email"])){
         $profile="Accedi";
         $profilelink="login.php";
