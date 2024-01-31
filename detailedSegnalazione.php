@@ -31,7 +31,7 @@
     if($connOk){
         [ $indirizzo, $data, $testo, $inCarico] = $db -> getDetailedSegnalazione($id_segnalazione);
        
-        $htmlToInsert .= "<h3>".$indirizzo." | ".$data."</h3>";
+        $htmlToInsert .= "<h2>".$indirizzo." | ".$data."</h3>";
         $htmlToInsert .= "<p>".$testo."</p>";
         if($inCarico){
             $htmlToInsert .= "<p class='isInCarico'>Questa segnalazione è presa in carico, se non fosse così:</p><a class='changesegnstatus' href=\"updateSegnalazione.php?id=" .$id_segnalazione. "&inCarico=0\">Segnala come non presa in carico </a>";
