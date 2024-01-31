@@ -1877,3 +1877,8 @@ table tbody .rowth a{
 .backtoimpianti:last-of-type{
     margin-bottom: 3em;
 }
+
+#searchInputLabel{
+    position: absolute;
+    text-indent: -999em;
+}
