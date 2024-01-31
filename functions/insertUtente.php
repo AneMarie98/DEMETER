@@ -3,8 +3,8 @@
     ini_set('display_startup_errors',1);
     setlocale(LC_ALL,'it_IT');
 
-    require_once "functions/dbAccess.php";
-    require_once "functions/functions.php"; 
+    require_once "dbAccess.php";
+    require_once "functions.php"; 
     
     if(isset($_POST["username"])){
         $db=new DB\DBAccess;
@@ -22,13 +22,13 @@
                     $_SESSION["firstname"]=$nome;
                     $_SESSION["lastname"]=$cognome;
                     $_SESSION["username"]=$username;
-                    header("Location: profilo.php");
+                    header("Location: ../profilo.php");
                 }
             }
             else{
-                header("Location: 503.html");
+                header("Location: ../503.html");
             }
         }
     }else{
-        header("Location: registrazione.php");
+        header("Location: ../registrazione.php");
     }    

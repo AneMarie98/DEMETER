@@ -30,9 +30,9 @@
                          <td data-title=\"Indirizzo\"><address>".$segnalazione["indirizzo"]."</address></td>
                          <td";
                      if($segnalazione["inCarico"] == 1){
-                         $htmlToInsert .= " class=\"inCarico\"><a href=\"updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=0\"><span>Si</span></a>";
+                         $htmlToInsert .= " class=\"inCarico\"><a href=\"functions/updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=0\"><span>Si</span></a>";
                      }else{
-                         $htmlToInsert .= " class=\"NonInCarico\"><a href=\"updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=1\"><span>No</span></a>";
+                         $htmlToInsert .= " class=\"NonInCarico\"><a href=\"functions/updateSegnalazione.php?id=" .$segnalazione["idSegnalazione"]. "&inCarico=1\"><span>No</span></a>";
                      }
                      $htmlToInsert .= " </td>
          

@@ -31,9 +31,6 @@
         $profilelink="dashboard.php";
        
         $htmlToInsert .="
-        <h2>Inserisci una nuova notizia</h2>
-            <p>Inserisci un titolo, una data di riferimento, il testo dell'articolo e un'immagine di presentazione:</p>
-            <p>Il titolo e la descrizione devono avere lunghezza compresa tra 10 e 50 caratteri, l'articolo invece deve avere lunghezza tra 10 e 500 caratteri. Tutti i testi possono contenere anche i simboli . , ( ) e '. I formati di immagine supportati sono jpg, png, jpeg e gif. </p>
 
         <form id=\"notizia\" action=\"inserisciNotizia.php\" method=\"post\" onsubmit=\"return validazioneFormNotizia()\">
 
