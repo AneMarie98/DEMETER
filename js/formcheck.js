@@ -18,8 +18,8 @@ function caricamentoSegnalazione(){
     inputIndirizzo.onblur = function (){validateIndirizzo(this)};
     let inputData = document.getElementById("data");
     inputData.onblur = function (){validateData(this)};
-    let inputArticolo = document.getElementById("testo");
-    inputArticolo.onblur = function (){validateTesto(this)};
+    let inputDescrizione = document.getElementById("testo");
+    inputDescrizione.onblur = function (){validateTesto(this)};
 }
 
 function caricamentoNotizia(){
@@ -30,7 +30,7 @@ function caricamentoNotizia(){
     let inputArticolo = document.getElementById("articolo");
     inputArticolo.onblur = function (){validateTesto(this)};
     let inputDescrizione = document.getElementById("descrizione");
-    inputDescrizione.onblur = function (){validateDescrizione(this)};
+    inputDescrizione.onblur = function (){validateTitolo(this)};
     let inputUrl = document.getElementById("urlImg");
     inputUrl.onblur = function (){validateUrl(this)};
 }
@@ -71,7 +71,7 @@ function validateIndirizzo(input){
     removeChildInput(input);
     
     input.value = cleanInput(input.value);
-    if(input.value.length <= 5 || !input.includes(',')){
+    if(input.value.length <= 5 || (!input.value.includes('via') || !input.value.includes('Via') || !input.value.includes('piazza') || !input.value.includes('Piazza') || !input.includes('viale') || !input.includes('Viale'))){
         showError(input, "Indirizzo non valido!"); 
 
         input.focus(); 
@@ -123,7 +123,7 @@ function validateTitolo(input){
 function validateDescrizione(input){
     removeChildInput(input);
     input.value = cleanInput(input.value);
-    if(input.value.length <= 5 && input.value.length >= 25 && /^[a-zA-ZÀ-ÿ.,()'\s]+$/){
+    if(input.value.length <= 5 || input.value.length >= 25 || /^[a-zA-ZÀ-ÿ.,()'\s]+$/){
         showError(input, input.value + " è una descrizione troppo lunga!"); 
 
         input.focus(); 
@@ -229,7 +229,7 @@ function validazioneFormNotizia(){
     let inputArticolo = document.getElementById("articolo");
     let inputDescrizione = document.getElementById("descrizione");
     let inputUrl = document.getElementById("urlImg");
-    return validateTitolo(inputTitolo) && validateData(inputData) && validateTesto(inputArticolo) && validateDescrizione(inputDescrizione) && validateUrl(inputUrl);
+    return validateTitolo(inputTitolo) && validateData(inputData) && validateTesto(inputArticolo) && validateTitolo(inputDescrizione) && validateUrl(inputUrl);
 }
 
 function validazioneFormRegistrazione(){
