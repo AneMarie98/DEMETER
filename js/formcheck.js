@@ -191,7 +191,7 @@ function validateUsername(input){
 function validatePassword(input){
     removeChildInput(input);
     input.value = cleanInput(input.value);
-    if(input.value.search(/^[a-zA-Z0-9._%$&+\-]{8,}$/)!=0){
+    if(input.value.search(/^[a-zA-Z0-9._%$+\-]{8,}$/)!=0){
         showError(input, input.value + " non è una password valida!"); 
 
         input.focus(); 
