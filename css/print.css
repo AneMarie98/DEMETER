@@ -941,6 +941,10 @@ form#segnalazione textarea{
 
 /*Detailed Segnalazioni*/
 
+.detailedSegnalazione h2{
+    margin-bottom: 1em;
+}
+
 .changesegnstatus{
     text-align: center;
     display: block;
