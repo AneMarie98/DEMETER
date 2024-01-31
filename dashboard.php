@@ -9,6 +9,8 @@
         
     if(!isset($_SESSION["email"])){
 
+        header("Location: login.php");
+
     }else{
         if(isset($_SESSION["admin"])){
         $profile="<span lang='en'>Dashboard</span>";
