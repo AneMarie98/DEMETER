@@ -74,8 +74,8 @@ function validateIndirizzo(input){
     if(input.value.length <= 5 || (!input.value.includes('via') || !input.value.includes('Via') || !input.value.includes('piazza') || !input.value.includes('Piazza') || !input.includes('viale') || !input.includes('Viale'))){
         showError(input, "Indirizzo non valido!"); 
 
-        input.focus(); 
-        input.select(); 
+        //input.focus(); 
+        //input.select(); 
         return false;
     }
     return true;
@@ -87,8 +87,8 @@ function validateData(input){
     if(input.value.search(/^\d{4}\-\d{2}\-\d{2}$/)!=0){
         showError(input, input.value + " Non è una data valida!"); 
 
-        input.focus(); 
-        input.select(); 
+        //input.focus(); 
+        //input.select(); 
         return false;
     }
     return true;
@@ -101,7 +101,7 @@ function validateTesto(input){
     if(input.value.search(/^[a-zA-ZÀ-ÿ(),.'\s\/]*$/)!=0 || input.value.length <= 10 || input.value.length >= 500){
         showError(input, "Questo non è un testo valido!"); 
 
-        input.focus(); 
+        //input.focus(); 
         return false;
     }
     return true;
@@ -113,8 +113,8 @@ function validateTitolo(input){
     if(input.value.length <= 10 || input.value.length >= 50 || input.value.search(/^[a-zA-ZÀ-ÿ.,()'\s]+$/)!=0){
         showError(input, "Questo non è un titolo valido!"); 
 
-        input.focus(); 
-        input.select(); 
+        //input.focus(); 
+        //input.select(); 
         return false;
     }
     return true;
@@ -126,8 +126,8 @@ function validateDescrizione(input){
     if(input.value.length <= 5 || input.value.length >= 25 || /^[a-zA-ZÀ-ÿ.,()'\s]+$/){
         showError(input, input.value + " è una descrizione troppo lunga!"); 
 
-        input.focus(); 
-        input.select(); 
+        //input.focus(); 
+        //input.select(); 
         return false;
     }
     return true;
@@ -142,8 +142,8 @@ function validateUrl(input){
     if(input.value.search(/^(?:[a-zA-Z0-9._%-]+\/)*[a-zA-Z0-9._%-]+\.(png|jpg|jpeg|gif)$/)!=0){
         showError(input, input.value + " non è un percorso valido!"); 
 
-        input.focus(); 
-        input.select(); 
+        //input.focus(); 
+        //input.select(); 
         return false;
     }
     return true;
@@ -155,8 +155,8 @@ function validateNome(input){
     if(input.value.search(/^[a-zA-Z]{2,}$/)!=0){
         showError(input, input.value + " non è un nome valido!"); 
 
-        input.focus(); 
-        input.select(); 
+        //input.focus(); 
+        //input.select(); 
         return false;
     }
     return true;
@@ -168,8 +168,8 @@ function validateEmail(input){
     if(input.value.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)!=0 || emails.includes(input.value)){
         showError(input, input.value + " non è una email valida!"); 
 
-        input.focus(); 
-        input.select(); 
+        //input.focus(); 
+        //input.select(); 
         return false;
     }
     return true;
@@ -181,8 +181,8 @@ function validateUsername(input){
     if(input.value.search(/^[a-zA-Z0-9._%\-]{8,}$/)!=0 || usernames.includes(input.value)){
         showError(input, input.value + " non è un username valido!"); 
 
-        input.focus(); 
-        input.select(); 
+        //input.focus(); 
+        //input.select(); 
         return false;
     }
     return true;
@@ -194,8 +194,8 @@ function validatePassword(input){
     if(input.value.search(/^[a-zA-Z0-9._%\$+\-]{8,}$/)!=0){
         showError(input, input.value + " non è una password valida!"); 
 
-        input.focus(); 
-        input.select(); 
+        //input.focus(); 
+        //input.select(); 
         return false;
     }
     return true;
@@ -208,8 +208,8 @@ function validateConfermaPassword(password, input){
     if(input.value!=password.value){
         showError(input, "Le password non coincidono!"); 
 
-        input.focus(); 
-        input.select(); 
+        //input.focus(); 
+        //input.select(); 
         return false;
     }
     return true;
