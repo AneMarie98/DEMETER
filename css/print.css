@@ -1369,3 +1369,10 @@ main#content.p503 p {
     text-align: center;
     padding: 2em;
 }
+
+/*TORNA SU*/
+
+#divTornaSu {
+    display: none;
+}
+
