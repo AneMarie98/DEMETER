@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/print.css"  media="print">
         <script src="js/formcheck.js"></script>
         <script src="js/togglemenu.js"></script>
+        <script src="js/scrollToTop.js"></script>
     </head>
     <body onload="caricamentoNotizia()">
         <header>
@@ -38,6 +39,11 @@
             <p>Inserisci un titolo, una data di riferimento, il testo dell'articolo e un'immagine di presentazione:</p>
             <p>Il titolo e la descrizione devono avere lunghezza compresa tra 10 e 50 caratteri, l'articolo invece deve avere lunghezza tra 10 e 500 caratteri. Tutti i testi possono contenere anche i simboli . , ( ) e '. I formati di immagine supportati sono jpg, png, jpeg e gif. </p>
             {content}
+            <div id="TornaSu">
+                <button onclick="TotopFunction()" id="scrollTopBtn" title="Torna su">
+                  Torna su
+                </button>
+            </div>
         </main>
         <footer>
             <h3>Dai un'occhiata ai nostri partner</h3>

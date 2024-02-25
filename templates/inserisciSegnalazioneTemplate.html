@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/print.css"  media="print">
         <script src="js/formcheck.js"></script>
         <script src="js/togglemenu.js"></script>
+        <script src="js/scrollToTop.js"></script>
     </head>
     <body onload="caricamentoSegnalazione()">
         <header>
@@ -38,6 +39,11 @@
             <p>Inserisci un indirizzo di riferimento vicino ai rifiuti abbandonati che vuoi segnalare, la data in cui li hai visti ed un eventuale testo che descriva quello che vuoi segnalare. Ti ringraziamo per la collaborazione!</p>
             <p>L'indirizzo deve avere una lunghezza di almeno 5 caratteri ed indicare almeno via, viale o piazza. La descrizione, di lunghezza compresa tra 10 e 500 caratteri, può contenere anche i simboli . , ( ) e ' </p>
             {form}
+            <div id="TornaSu">
+                <button onclick="TotopFunction()" id="scrollTopBtn" title="Torna su">
+                  Torna su
+                </button>
+            </div>
         </main>
         <footer>
             <h3>Dai un'occhiata ai nostri partner</h3>

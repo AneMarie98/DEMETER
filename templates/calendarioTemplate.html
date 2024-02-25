@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/print.css"  media="print">
         <script src="js/createCalendar.js"></script>
         <script src="js/togglemenu.js"></script>
+        <script src="js/scrollToTop.js"></script>
     </head>
     <body onload="createCalendar()">
         <header>
@@ -94,6 +95,11 @@
                 <div class="legenditem"><div class="bidsvuotlegend bidS">S</div><p id="legendS">Secco</p></div>
                 <div class="legenditem"><div class="bidsvuotlegend bidU">U</div><p id="legendU">Umido</p></div>
                 <div class="legenditem"><div class="bidsvuotlegend bidV">V</div><p id="legendV">Vetro</p></div>
+            </div>
+            <div id="TornaSu">
+                <button onclick="TotopFunction()" id="scrollTopBtn" title="Torna su">
+                  Torna su
+                </button>
             </div>
         </main>
         <footer>

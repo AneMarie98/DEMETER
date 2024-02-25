@@ -1885,7 +1885,7 @@ table tbody .rowth a{
 
 
 /*TORNA SU */
-#divTornaSu {
+#TornaSu {
     width: 100%;
     padding-bottom: 1em;
     display: none;
@@ -1898,10 +1898,13 @@ table tbody .rowth a{
     width: 6.5em;
     height: 2.5em;
     margin-left: auto;
-    margin-right: 0;
+    margin-right: 1em;
     display: block;
+    border-radius: 10px;
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+    border:2px solid black;
 
-    margin-top: 1em;
 }
 
 footer .copyright{

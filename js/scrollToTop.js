@@ -1,17 +1,21 @@
 function insertButton() {
-    var divTornaSu = document.getElementById("divTornaSu");
+    var divTornaSu = document.getElementById("TornaSu");
   
     if (divTornaSu) {
       divTornaSu.style.display = "none";
   
-      let hasScrollbar = window.innerHeight < document.body.clientHeight;
-      if (hasScrollbar) {
-        divTornaSu.style.display = "block";
+      window.onscroll = function() {
+        let hasScrolled = window.scrollY > 0;
+        if (hasScrolled) {
+          divTornaSu.style.display = "block";
+        } else {
+          divTornaSu.style.display = "none";
+        }
       }
     }
   }
   
-  function topFunction() {
+  function ToTopFunction() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   
