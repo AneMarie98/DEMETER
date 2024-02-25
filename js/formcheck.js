@@ -69,9 +69,8 @@ function removeChildInput(tag){
 
 function validateIndirizzo(input){
     removeChildInput(input);
-    
-    input.value = cleanInput(input.value);
-    if(input.value.length <= 5 || (!input.value.includes('via') || !input.value.includes('Via') || !input.value.includes('piazza') || !input.value.includes('Piazza') || !input.includes('viale') || !input.includes('Viale'))){
+    //input.value = cleanInput(input.value);
+    if(input.value.length <= 5 || !(input.value.includes("via") || input.value.includes("Via") || input.value.includes("viale") || input.value.includes("Viale")|| input.value.includes("piazza")|| input.value.includes("Piazza")|| input.value.includes("contrada")|| input.value.includes("Contrada"))){
         showError(input, "Indirizzo non valido!"); 
 
         //input.focus(); 
@@ -83,7 +82,7 @@ function validateIndirizzo(input){
 
 function validateData(input){
     removeChildInput(input);
-    input.value = cleanInput(input.value);
+    //input.value = cleanInput(input.value);
     if(input.value.search(/^\d{4}\-\d{2}\-\d{2}$/)!=0){
         showError(input, input.value + " Non è una data valida!"); 
 
@@ -97,7 +96,7 @@ function validateData(input){
 function validateTesto(input){
     removeChildInput(input);
 
-    input.value = cleanInput(input.value);
+    //input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-ZÀ-ÿ(),.'\s\/]*$/)!=0 || input.value.length <= 10 || input.value.length >= 500){
         showError(input, "Questo non è un testo valido!"); 
 
@@ -109,7 +108,7 @@ function validateTesto(input){
 
 function validateTitolo(input){
     removeChildInput(input);
-    input.value = cleanInput(input.value);
+    //input.value = cleanInput(input.value);
     if(input.value.length <= 10 || input.value.length >= 50 || input.value.search(/^[a-zA-ZÀ-ÿ.,()'\s]+$/)!=0){
         showError(input, "Questo non è un titolo valido!"); 
 
@@ -122,7 +121,7 @@ function validateTitolo(input){
 
 function validateDescrizione(input){
     removeChildInput(input);
-    input.value = cleanInput(input.value);
+    //input.value = cleanInput(input.value);
     if(input.value.length <= 5 || input.value.length >= 25 || /^[a-zA-ZÀ-ÿ.,()'\s]+$/){
         showError(input, input.value + " è una descrizione troppo lunga!"); 
 
@@ -138,7 +137,7 @@ function validateDescrizione(input){
  */
 function validateUrl(input){
     removeChildInput(input);
-    input.value = cleanInput(input.value);
+    //input.value = cleanInput(input.value);
     if(input.value.search(/^(?:[a-zA-Z0-9._%-]+\/)*[a-zA-Z0-9._%-]+\.(png|jpg|jpeg|gif)$/)!=0){
         showError(input, input.value + " non è un percorso valido!"); 
 
@@ -151,7 +150,7 @@ function validateUrl(input){
 
 function validateNome(input){
     removeChildInput(input);
-    input.value = cleanInput(input.value);
+    //input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-Z]{2,}$/)!=0){
         showError(input, input.value + " non è un nome valido!"); 
 
@@ -164,7 +163,7 @@ function validateNome(input){
 
 function validateEmail(input){
     removeChildInput(input);
-    input.value = cleanInput(input.value);
+    //input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)!=0 || emails.includes(input.value)){
         showError(input, input.value + " non è una email valida!"); 
 
@@ -177,7 +176,7 @@ function validateEmail(input){
 
 function validateUsername(input){
     removeChildInput(input);
-    input.value = cleanInput(input.value);
+    //input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-Z0-9._%\-]{8,}$/)!=0 || usernames.includes(input.value)){
         showError(input, input.value + " non è un username valido!"); 
 
@@ -190,7 +189,7 @@ function validateUsername(input){
 
 function validatePassword(input){
     removeChildInput(input);
-    input.value = cleanInput(input.value);
+    //input.value = cleanInput(input.value);
     if(input.value.search(/^[a-zA-Z0-9._%\$+\-]{8,}$/)!=0){
         showError(input, input.value + " non è una password valida!"); 
 
@@ -203,8 +202,8 @@ function validatePassword(input){
 
 function validateConfermaPassword(password, input){
     removeChildInput(input);
-    password.value = cleanInput(password.value);
-    input.value = cleanInput(input.value);
+    //password.value = cleanInput(password.value);
+    //input.value = cleanInput(input.value);
     if(input.value!=password.value){
         showError(input, "Le password non coincidono!"); 
 
@@ -217,27 +216,41 @@ function validateConfermaPassword(password, input){
 
 function validazioneFormSegnalazione(){
     let inputIndirizzo = document.getElementById("indirizzo");
+    inputIndirizzo.value = cleanInput(inputIndirizzo.value);
     let inputData = document.getElementById("data");
+    inputData.value = cleanInput(inputData.value);
     let inputTesto = document.getElementById("testo");
+    inputTesto.value = cleanInput(inputTesto.value);
     return validateIndirizzo(inputIndirizzo) && validateData(inputData) && validateTesto(inputTesto);
 
 }
 
 function validazioneFormNotizia(){
     let inputTitolo = document.getElementById("titolo");
+    inputTitolo.value = cleanInput(inputTitolo.value);
     let inputData = document.getElementById("data");
+    inputData.value = cleanInput(inputData.value);
     let inputArticolo = document.getElementById("articolo");
+    inputArticolo.value = cleanInput(inputArticolo.value);
     let inputDescrizione = document.getElementById("descrizione");
+    inputDescrizione.value = cleanInput(inputDescrizione.value);
     let inputUrl = document.getElementById("urlImg");
+    inputUrl.value = cleanInput(inputUrl.value);
     return validateTitolo(inputTitolo) && validateData(inputData) && validateTesto(inputArticolo) && validateTitolo(inputDescrizione) && validateUrl(inputUrl);
 }
 
 function validazioneFormRegistrazione(){
     let inputNome = document.getElementById("nome");
+    inputNome.value = cleanInput(inputNome.value);
     let inputCognome = document.getElementById("cognome");
+    inputCognome.value = cleanInput(inputCognome.value);
     let inputUsername = document.getElementById("username");
+    inputUsername.value = cleanInput(inputUsername.value);
     let inputEmail = document.getElementById("email");
+    inputEmail.value = cleanInput(inputEmail.value);
     let inputPassword = document.getElementById("password");
+    inputPassword.value = cleanInput(inputPassword.value);
     let inputConfermaPassword = document.getElementById("confermaPassword");
+    inputConfermaPassword.value = cleanInput(inputConfermaPassword.value);
     return validateNome(inputNome) && validateNome(inputCognome) && validateUsername(inputUsername) && validateEmail(inputEmail) && validatePassword(inputPassword) && validateConfermaPassword(inputPassword, inputConfermaPassword);
 }
