@@ -574,7 +574,7 @@ section.impianti_impianti {
 
 .segnalazioni td[data-title]:before{
     content: attr(data-title) ":\00A0"; /*SPAZIO*/
-    font-weight: bold;;
+    font-weight: bold;
 }
 
 .segnalazioni tr{
