@@ -27,7 +27,12 @@
             $password=$_POST["loginpassword"];
             if($db->verifyUser($username) && (password_verify($password, $db->getUserPassword($username)))){
                 $db->getAuthUserInfo($username);
-                header("Location: index.php");
+                if ($username == "admin"){
+                    header("Location: dashboard.php");
+                } else {
+                    header("Location: profilo.php");
+                }
+                
             }
             else{
                 $errormsg="<p class='errorSuggestion'>Username o Password non coincidono</p>";
