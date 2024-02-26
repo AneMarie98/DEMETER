@@ -30,10 +30,11 @@ function getMY(d){ //Restituisce mese (completo) e anno della data passata
 function setCalArrows(leftA,rightA){ //Inserisce ai relativi bottoni di cambio mese la loro etichetta
     document.getElementById("monthLeft").innerHTML="Vedi "+leftA;
     document.getElementById("monthRight").innerHTML="Vedi "+rightA;
+    document.getElementById("monthLeft").setAttribute("aria-label","Vedi "+leftA);
+    document.getElementById("monthRight").setAttribute("aria-label","Vedi "+rightA);
 }
 
 function daysInMonth(year,month){ //Calcola quanti giorni ci sono nel mese selezionato
-    console.log(month);
     return new Date(year,month+1,0).getDate();
 }
 
@@ -166,7 +167,6 @@ function highlightToday(id){ //Al blocco passato cambia la classe in modo da far
     }
     else{ //Se si cambia mese il blocco viene resettato
         document.getElementById(id).parentElement.className="calElem"; 
-        document.getElementById("navigationHelpCal").removeAttribute("href");
     }
 }
 
@@ -247,14 +247,3 @@ function getSvuotPhp(monthDisp,startingB){ //Tramite fetch prende le informazion
              // Errori
         });
 }
-
-/*function readAgain(index){
-    if(index==1){
-        document.getElementById("monthRight").blur();
-        document.getElementById("monthRight").focus();
-    }
-    else{
-        document.getElementById("monthLeft").blur();
-        document.getElementById("monthLeft").focus();
-    }
-}*/
