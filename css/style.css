@@ -215,19 +215,19 @@ footer{
 }
 
 /* News */
-#news_4{
+.news_4{
 	background-image: url('../img/news/bidoni.jpg');
 }
 
-#news_3{
+.news_3{
 	background-image: url('../img/news/calendario.jpg');
 }
 
-#news_2{
+.news_2{
 	background-image: url('../img/news/educazione.jpg');
 }
 
-#news_1{
+.news_1{
 	background-image: url('../img/news/alluvione.jpg');
 }
 
@@ -280,9 +280,7 @@ footer{
 }
 
 /* Detailed News */
-.detailedNewsImage{
-	background-image: url('../img/news/alluvione.jpg');
-}
+
 
 #content.detailedNews{
     margin-top: 2em;

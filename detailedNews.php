@@ -40,18 +40,19 @@
         [$titolo, $articolo, $urlImg, $data] = $db -> getDetailedNews($id_news);
         $htmlToInsert .= 
         "
-        <div id='detnewstitledesktop'><div class=\"detailedNewsImage\"><div class='detnewstitle'><h2>".$titolo."</h2> 
+        <div id='detnewstitledesktop'><div class=\"news_".$id_news."  detailedNewsImage\"><div class='detnewstitle'><h2>".$titolo."</h2> 
         <p class='datapubblicazione'> <time datetime=\"".$data."\">Data: ".convertDateFormatString($data)."</time></p></div></div></div>
         <div id='detnewstitlemobile'><div class='detnewstitle'><h2>".$titolo."</h2> 
-        <p class='datapubblicazione'> <time datetime=\"".$data."\">Data: ".convertDateFormatString($data)."</time></p></div><div class=\"detailedNewsImage\"></div></div>
+        <p class='datapubblicazione'> <time datetime=\"".$data."\">Data: ".convertDateFormatString($data)."</time></p></div><div class=\"news_".$id_news."  detailedNewsImage\"></div></div>
         <div class=\"newsArticle\">".$articolo."</div>"; // le immagini non devono essere di contenuto
 
+        /*
         // modifica css
         $cssNewContent = "\n\tbackground-image: url('../img/news/".$urlImg."');";
         //desktop style
         dynamicDetailedNewsCSS('css/style.css',$cssNewContent);
         //mini
-        dynamicDetailedNewsCSS('css/mini.css',$cssNewContent);
+        dynamicDetailedNewsCSS('css/mini.css',$cssNewContent);*/
     } 
     else{
         //$htmlToInsert .= "<p>I nostri sistemi sono momentaneamente fuori servizi, stiamo lavorando per risolvere il problema.</p>"; 
