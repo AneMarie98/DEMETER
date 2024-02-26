@@ -1904,7 +1904,7 @@ table tbody .rowth a{
     background-color: var(--headerBgColor);
     color: var(--headerTxtColor);
     border:2px solid black;
-
+    cursor: pointer;
 }
 
 footer .copyright{
