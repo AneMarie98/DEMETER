@@ -3,6 +3,7 @@ function createCalendar(){ //Caricando la pagina crea il calendario
     const tda=new Date();
     const firstofmonth=new Date(tda.getFullYear(),tda.getMonth(),"01");
     document.getElementById("calMonth").innerHTML=getMY(td);
+    document.getElementById("calMonth").setAttribute("aria-label","Mese corrente: "+getMY(td));
     document.getElementById("calMonth").dataset.yyyy=td.getFullYear();
     document.getElementById("calMonth").dataset.mm=(td.getMonth()+1);
     setCalArrows(getMY(new Date(firstofmonth.setMonth(firstofmonth.getMonth()-1))),getMY(new Date(firstofmonth.setMonth(firstofmonth.getMonth()+2))));
@@ -52,6 +53,7 @@ function changeMonth(index){ //Cambia il mese visualizzato secondo un indice (-1
     let newDateDisp = new Date(dateDisp.setMonth(dateDisp.getMonth()+index));
     let tda=new Date(newDateDisp);
     document.getElementById("calMonth").innerHTML=getMY(newDateDisp); //Aggiorna il titolo del mese
+    document.getElementById("calMonth").setAttribute("aria-label","Mese corrente: "+getMY(newDateDisp));
     document.getElementById("calMonth").dataset.yyyy=newDateDisp.getFullYear();
     document.getElementById("calMonth").dataset.mm=(newDateDisp.getMonth()+1);
     setCalArrows(getMY(new Date(tda.setMonth(tda.getMonth()-1))),getMY(new Date(tda.setMonth(tda.getMonth()+2))));
