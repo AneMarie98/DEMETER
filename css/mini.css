@@ -221,9 +221,7 @@ footer{
 }
 
 /* Detailed News */
-.detailedNewsImage{
-	background-image: url('../img/news/alluvione.jpg');
-}
+
 
 #content.detailedNews{
     display: block;
