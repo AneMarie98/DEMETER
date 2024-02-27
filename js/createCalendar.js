@@ -17,9 +17,9 @@ function createCalendar(){ //Caricando la pagina crea il calendario
         document.getElementById("numd"+i).appendChild(accessDay); //Lo aggiunge in coda al blocco
         setDataDisp("numd"+i,(td.getMonth()+1)+"/"+(i-startingB+1)+"/"+td.getFullYear());
         setLabel("numd"+i,(td.getMonth()+1)+"/"+(i-startingB+1)+"/"+td.getFullYear());
-        highlightToday("numd"+i); //Se il blocco in costruzione ha la data di oggi esegue highlightToday()
     }
     getSvuotPhp((td.getMonth()+1)+"/1/"+td.getFullYear(),startingB);
+    highlightToday(); //Metti in risalto il blocco corrispondente al giorno corrente
 }
 
 function getMY(d){ //Restituisce mese (completo) e anno della data passata
@@ -65,7 +65,6 @@ function updateCalendar(startingB,daysinMonth,newMonthDisp,newYearDisp){ //Aggio
         document.getElementById("numd"+i).innerHTML="";
         removeDataDisp("numd"+i);
         removeLabel("numd"+i);
-        highlightToday("numd"+i);
     }
     for(let i=startingB;i<=daysinMonth+startingB-1;i++){ //Inserisce quelli del mese selezionato come in createCalendar()
         document.getElementById("numd"+i).innerHTML=i-startingB+1;
@@ -76,16 +75,15 @@ function updateCalendar(startingB,daysinMonth,newMonthDisp,newYearDisp){ //Aggio
         document.getElementById("numd"+i).appendChild(accessDay);
         setDataDisp("numd"+i,newMonthDisp+"/"+(i-startingB+1)+"/"+newYearDisp);
         setLabel("numd"+i,newMonthDisp+"/"+(i-startingB+1)+"/"+newYearDisp);
-        highlightToday("numd"+i);
     }
     for(let i=daysinMonth+startingB;i<=42;i++){ //Tutti i blocchi oltre la data di fine mese vengono eliminati
         document.getElementById("numd"+i).innerHTML="";
         removeDataDisp("numd"+i);
         removeLabel("numd"+i);
-        highlightToday("numd"+i);
     }
     limitCalendar(newMonthDisp+"/1/"+newYearDisp);
     getSvuotPhp(new Date(newMonthDisp+"/1/"+newYearDisp),startingB);
+    highlightToday(); //Metti in risalto il blocco corrispondente al giorno corrente
 }
 
 function limitCalendar(newDateDisp){ //Se il mese mostrato è Dicembre dell'anno precedente a quello corrente o Gennaio dell'anno successivo, toglie la possibilità di andare indietro o avanti nel calendario
@@ -158,15 +156,17 @@ function removeLabel(id){ //Rimuove l'attributo aria-labelledby dal blocco
     document.getElementById(id).removeAttribute("aria-labelledby");
 }
 
-function highlightToday(id){ //Al blocco passato cambia la classe in modo da far risaltare maggiormente il giorno in questione
+function highlightToday(){ //Al blocco passato corrispondente alla data corrente cambia la classe in modo da far risaltare maggiormente il giorno in questione
     const td=new Date();
-    let dayRef=new Date(document.getElementById(id).dataset.datadisp);
-    if((td.getFullYear()==dayRef.getFullYear()) && (td.getMonth()==dayRef.getMonth()) && (td.getDate()==dayRef.getDate())){
-        document.getElementById(id).parentElement.className="calElemToday";
-        document.getElementById("navigationHelpCal").href="#"+id; //Aggiunge un link come ancora all'inizio del calendario in modo da navigarlo meglio
-    }
-    else{ //Se si cambia mese il blocco viene resettato
-        document.getElementById(id).parentElement.className="calElem"; 
+    for(let i=1;i<=42;i++){
+        let dayOfBlock=new Date(document.getElementById("numd"+i).dataset.datadisp);
+        if((td.getFullYear()==dayOfBlock.getFullYear()) && (td.getMonth()==dayOfBlock.getMonth()) && (td.getDate()==dayOfBlock.getDate())){
+            document.getElementById("numd"+i).parentElement.className="calElemToday";
+            document.getElementById("navigationHelpCal").href="#numd"+i; //Aggiunge un link come ancora all'inizio del calendario in modo da navigarlo meglio
+        }
+        else{ //Se si cambia mese il blocco viene resettato
+            document.getElementById("numd"+i).parentElement.className="calElem"; 
+        }
     }
 }
 
