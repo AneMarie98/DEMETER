@@ -250,3 +250,19 @@ function getSvuotPhp(monthDisp,startingB){ //Tramite fetch prende le informazion
              // Errori
         });
 }
+
+function showToday(){
+    const td=new Date();
+    let i=0;
+    refMonth=document.getElementById("calMonth");
+    if(refMonth.dataset.yyyy<td.getFullYear()) i=1;
+    if(refMonth.dataset.yyyy>td.getFullYear()) i=-1;
+    if(refMonth.dataset.yyyy==td.getFullYear()){
+        if(refMonth.dataset.mm<(td.getMonth()+1)) i=1;
+        if(refMonth.dataset.mm>(td.getMonth()+1)) i=-1;
+    }
+    console.log(i);
+    while(refMonth.dataset.mm!=(td.getMonth()+1)){
+        changeMonth(i);
+    }
+}
