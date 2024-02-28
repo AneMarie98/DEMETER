@@ -1293,7 +1293,7 @@ main#content.p503 p {
 #calMonth{
     display: inline;
     position: relative;
-    top:-0.45em;
+    top:-0.60em;
 }
 
 #monthLeft{
@@ -1333,15 +1333,15 @@ main#content.p503 p {
     background-image: url("../img/icons/calendar.png");
     background-repeat: no-repeat;
     background-size: contain;
-    height:2em;
-    width:2em;
+    height:2.25em;
+    width:2.25em;
     font-weight: bold;
     color:white;
     margin-left:1vw;
     font-size: 0.8em;
-    line-height: 2.6em;
+    line-height: 2.9em;
     position: relative;
-    top:-0.5em;
+    top:-0.65em;
 }
 
 #calwarning{

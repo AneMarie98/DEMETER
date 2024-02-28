@@ -58,18 +58,16 @@ function changeMonth(index){ //Cambia il mese visualizzato secondo un indice (-1
     document.getElementById("calMonth").dataset.mm=(newDateDisp.getMonth()+1);
     setCalArrows(getMY(new Date(tda.setMonth(tda.getMonth()-1))),getMY(new Date(tda.setMonth(tda.getMonth()+2))));
     updateCalendar(getStartingB(newDateDisp.getFullYear(),newDateDisp.getMonth()),daysInMonth(newDateDisp.getFullYear(),newDateDisp.getMonth()),(newDateDisp.getMonth()+1),newDateDisp.getFullYear());
-    document.getElementById("monthRight").blur();
-    document.getElementById("monthLeft").blur();
     document.getElementById("calMonth").focus();
-    console.log(newDateDisp.getMonth());
-    console.log(td.getMonth());
     if((newDateDisp.getMonth()!=td.getMonth()) || (newDateDisp.getFullYear()!=td.getFullYear())){
         document.getElementById("navigationHelpCal").setAttribute("onclick","showTodaysMonth()");
         document.getElementById("navigationHelpCal").setAttribute("aria-label","Vedi "+getMY(td));
+        document.getElementById("navigationHelpCal").innerHTML=getShortCurrentMonth();
     }
     else{
         document.getElementById("navigationHelpCal").setAttribute("onclick","showToday()");
         document.getElementById("navigationHelpCal").setAttribute("aria-label","Vai ad oggi");
+        document.getElementById("navigationHelpCal").innerHTML=td.getDate();
     }
 }
 
@@ -291,4 +289,36 @@ function findTodayBlock(){
             return i;
         }
     }
+}
+
+function getShortCurrentMonth(){
+    const td=new Date();
+    let res="";
+    switch(td.getMonth()){
+        case 0:
+            res="Gen";break;
+        case 1:
+            res="Feb";break;
+        case 2:
+            res="Mar";break;
+        case 3:
+            res="Apr";break;
+        case 4:
+            res="Mag";break;
+        case 5:
+            res="Giu";break;
+        case 6:
+            res="Lug";break;
+        case 7:
+            res="Ago";break;
+        case 8:
+            res="Set";break;
+        case 9:
+            res="Ott";break;
+        case 10:
+            res="Nov";break;
+        case 11:
+            res="Dic";break;
+    }
+    return res;
 }
