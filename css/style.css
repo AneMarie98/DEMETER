@@ -1292,11 +1292,13 @@ main#content.p503 p {
 
 #calMonth{
     display: inline;
+    position: relative;
+    top:-0.45em;
 }
 
 #monthLeft{
     float:left;
-    color:var(--calTitleColor);
+    color:white;
     margin-left:1.5em;
     text-decoration: none;
     cursor: pointer;
@@ -1311,7 +1313,7 @@ main#content.p503 p {
 
 #monthRight{
     float:right;
-    color:var(--calTitleColor);
+    color:white;
     margin-right:1.5em;
     text-decoration: none;
     cursor: pointer;
@@ -1325,8 +1327,21 @@ main#content.p503 p {
 }
 
 #navigationHelpCal{
-    position: absolute;
-    text-indent: -999em;
+    cursor: pointer;
+    background-color: var(--calTitleBgColor);
+    border:0;
+    background-image: url("../img/icons/calendar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:2em;
+    width:2em;
+    font-weight: bold;
+    color:white;
+    margin-left:1vw;
+    font-size: 0.8em;
+    line-height: 2.6em;
+    position: relative;
+    top:-0.5em;
 }
 
 #calwarning{

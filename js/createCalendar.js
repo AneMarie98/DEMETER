@@ -20,6 +20,7 @@ function createCalendar(){ //Caricando la pagina crea il calendario
     }
     getSvuotPhp((td.getMonth()+1)+"/1/"+td.getFullYear(),startingB);
     highlightToday(); //Metti in risalto il blocco corrispondente al giorno corrente
+    document.getElementById("navigationHelpCal").innerHTML=td.getDate();
 }
 
 function getMY(d){ //Restituisce mese (completo) e anno della data passata
@@ -46,6 +47,7 @@ function getStartingB(year,month){ //Dato mese e anno calcola con quale giorno d
 }
 
 function changeMonth(index){ //Cambia il mese visualizzato secondo un indice (-1 o 1)
+    const td=new Date();
     let currentMonthDisp=document.getElementById("calMonth").dataset.mm;
     let currentYearDisp=document.getElementById("calMonth").dataset.yyyy;
     let dateDisp=new Date(currentMonthDisp+"/1/"+currentYearDisp);
@@ -56,7 +58,19 @@ function changeMonth(index){ //Cambia il mese visualizzato secondo un indice (-1
     document.getElementById("calMonth").dataset.mm=(newDateDisp.getMonth()+1);
     setCalArrows(getMY(new Date(tda.setMonth(tda.getMonth()-1))),getMY(new Date(tda.setMonth(tda.getMonth()+2))));
     updateCalendar(getStartingB(newDateDisp.getFullYear(),newDateDisp.getMonth()),daysInMonth(newDateDisp.getFullYear(),newDateDisp.getMonth()),(newDateDisp.getMonth()+1),newDateDisp.getFullYear());
-    //readAgain(index);
+    document.getElementById("monthRight").blur();
+    document.getElementById("monthLeft").blur();
+    document.getElementById("calMonth").focus();
+    console.log(newDateDisp.getMonth());
+    console.log(td.getMonth());
+    if((newDateDisp.getMonth()!=td.getMonth()) || (newDateDisp.getFullYear()!=td.getFullYear())){
+        document.getElementById("navigationHelpCal").setAttribute("onclick","showTodaysMonth()");
+        document.getElementById("navigationHelpCal").setAttribute("aria-label","Vedi "+getMY(td));
+    }
+    else{
+        document.getElementById("navigationHelpCal").setAttribute("onclick","showToday()");
+        document.getElementById("navigationHelpCal").setAttribute("aria-label","Vai ad oggi");
+    }
 }
 
 function updateCalendar(startingB,daysinMonth,newMonthDisp,newYearDisp){ //Aggiorna i blocchi del calendario
@@ -162,7 +176,6 @@ function highlightToday(){ //Al blocco passato corrispondente alla data corrente
         let dayOfBlock=new Date(document.getElementById("numd"+i).dataset.datadisp);
         if((td.getFullYear()==dayOfBlock.getFullYear()) && (td.getMonth()==dayOfBlock.getMonth()) && (td.getDate()==dayOfBlock.getDate())){
             document.getElementById("numd"+i).parentElement.className="calElemToday";
-            document.getElementById("navigationHelpCal").href="#numd"+i; //Aggiunge un link come ancora all'inizio del calendario in modo da navigarlo meglio
         }
         else{ //Se si cambia mese il blocco viene resettato
             document.getElementById("numd"+i).parentElement.className="calElem"; 
@@ -252,6 +265,10 @@ function getSvuotPhp(monthDisp,startingB){ //Tramite fetch prende le informazion
 }
 
 function showToday(){
+    location.href="#numd"+findTodayBlock();
+}
+
+function showTodaysMonth(){
     const td=new Date();
     let i=0;
     refMonth=document.getElementById("calMonth");
@@ -261,8 +278,17 @@ function showToday(){
         if(refMonth.dataset.mm<(td.getMonth()+1)) i=1;
         if(refMonth.dataset.mm>(td.getMonth()+1)) i=-1;
     }
-    console.log(i);
     while(refMonth.dataset.mm!=(td.getMonth()+1)){
         changeMonth(i);
+    }
+}
+
+function findTodayBlock(){
+    const td=new Date();
+    for(let i=1;i<=42;i++){
+        let dayOfBlock=new Date(document.getElementById("numd"+i).dataset.datadisp);
+        if((td.getFullYear()==dayOfBlock.getFullYear()) && (td.getMonth()==dayOfBlock.getMonth()) && (td.getDate()==dayOfBlock.getDate())){
+            return i;
+        }
     }
 }
