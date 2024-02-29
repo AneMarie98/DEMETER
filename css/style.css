@@ -1298,7 +1298,7 @@ main#content.p503 p {
 
 #monthLeft{
     float:left;
-    color:white;
+    color:black;
     margin-left:1.5em;
     text-decoration: none;
     cursor: pointer;
@@ -1313,7 +1313,7 @@ main#content.p503 p {
 
 #monthRight{
     float:right;
-    color:white;
+    color:black;
     margin-right:1.5em;
     text-decoration: none;
     cursor: pointer;

@@ -639,7 +639,6 @@ main#content .dashboard{
     padding-top:1em;
     border-radius: 20px 20px 0px 0px;
     border:1px solid black;
-    height:3em;
     line-height: 0.9em;
 }
 
@@ -1144,4 +1143,16 @@ main#content.p503 p {
     padding: 0.5em;
     font-size: 0.9em;
     line-height: 1.5em;
+}
+
+#navigationHelpCal{
+    display: block;
+    margin:0;
+    width:100%;
+    margin-top:1.5em;
+    background-position: center;
+}
+
+#calMonth{
+    top:0;
 }
