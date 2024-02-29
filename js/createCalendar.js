@@ -108,7 +108,11 @@ function limitCalendar(newDateDisp){ //Se il mese mostrato è Dicembre dell'anno
 }
 
 function setDataDisp(id,data){ //Ad ogni blocco viene assegnato un data-datadisp per ricavare meglio la data del blocco
+    let dataInsert=new Date(data);
     document.getElementById(id).dataset.datadisp=data;
+    if((dataInsert.getDay()==0) || (dataInsert.getDay()==6)){
+        document.getElementById(id).classList.add("weekendMobile");
+    }
 }
 
 function setLabel(id,data){ //Ad ogni blocco del calendario aggiunge un aria-labelledby, così da leggere il giorno ogni volta ("Lunedì 1 Gennaio 2024")
@@ -252,7 +256,7 @@ function getSvuotPhp(monthDisp,startingB){ //Tramite fetch prende le informazion
         });
 }
 
-function showToday(){
+function showToday(){ //Cambia i mesi se presenti usando changeMonth() e poi porta al blocco corrispondente al giorno corrente
     const td=new Date();
     let i=0;
     refMonth=document.getElementById("calMonth");
@@ -268,7 +272,7 @@ function showToday(){
     location.href="#numd"+findTodayBlock();
 }
 
-function findTodayBlock(){
+function findTodayBlock(){ //Trova il blocco corrispondente al giorno corrente
     const td=new Date();
     for(let i=1;i<=42;i++){
         let dayOfBlock=new Date(document.getElementById("numd"+i).dataset.datadisp);

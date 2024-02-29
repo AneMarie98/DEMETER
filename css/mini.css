@@ -30,6 +30,7 @@
     --bidV:#337b2b;
     --warningmsg:#a00000;
     --bgButtonColor: #9cbfa5;
+    --weekendMobileColor:#cc0000;
 }
 
 html{
@@ -1155,4 +1156,8 @@ main#content.p503 p {
 
 #calMonth{
     top:0;
+}
+
+.weekendMobile{
+    color:var(--weekendMobileColor);
 }
