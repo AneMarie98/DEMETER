@@ -1,9 +1,7 @@
 # DEMETER
+### Indirizzo: [DEMETER](http://demeter.altervista.org/doveLoButto.php)
 
-### Indirizzo: [DEMETER](https://tecweb.studenti.math.unipd.it/dgusatto )
-(oppure su [macchina locale](https://localhost:8080/dgusatto) collegata tramite SSH)
-
-Progetto svolto per il corso di Tecnologie Web presso l'Università di Padova nell'anno accademico 2023-2024. 
+Progetto svolto per il corso di Tecnologie Web presso l'Università di Padova nell'anno accademico 2023-2024. Vincitore del primo premio del concorso ["**_Accattivante e Accessibile_**" edizione 2024](https://www.youtube.com/live/CWrohc1p7Yc?si=WDsYn9I8hMep-0Jm), organizzato dal Dipartimento di Matematica dell'Università di Padova. 
 Componenti del gruppo:
 - [Edoardo Gallo](https://github.com/EdoGallo02)
 - [Derek Gusatto](https://github.com/DerekGusatto02)
